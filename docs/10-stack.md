@@ -10,8 +10,8 @@
 | ORM | **Drizzle ORM** | TypeScript end-to-end; mais simples que Prisma; sem geração de código complicada |
 | IA | `@anthropic-ai/sdk` | Padrão Anthropic, atualizada com modelos novos |
 | Auth | A definir (magic link via e-mail) | 5 usuários, sem provedor externo necessário |
-| Hospedagem | **Render** | Você já conhece; auto-deploy de git; free tier suficiente pra MVP |
-| Dev local | `npm run dev` (opcional) | Iterar rápido quando precisar; deploy contínuo no Render é o padrão |
+| Hospedagem | **Render** | Você já conhece; auto-deploy de git; free tier suficiente pra MVP (quando MVP estiver pronto) |
+| Dev local | `npm run dev` + Postgres local | Caminho **primário** de desenvolvimento; iteração rápida, hot reload em ~1s |
 
 ## Estrutura do projeto
 

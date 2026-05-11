@@ -27,3 +27,9 @@ next-env.d.ts
 # Backups
 *.bak
 *.swp
+
+# Dados do Postgres local (docker compose)
+.postgres-data/
+
+# Drizzle output (gerado, recriavel via db:push/migrate)
+src/db/migrations/

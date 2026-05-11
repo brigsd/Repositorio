@@ -10,91 +10,100 @@ A documentação completa do projeto fica em [`docs/`](./docs/README.md).
 
 - **Next.js 15** (App Router) + TypeScript
 - **TailwindCSS** para estilo
-- **Postgres** (gerenciado pelo Render)
+- **Postgres** local (dev) → Render/Neon (produção)
 - **Drizzle ORM** para banco
 - **Anthropic SDK** para IA
-- **Render** para hospedagem (web + banco)
 
 Detalhes técnicos em [`docs/10-stack.md`](./docs/10-stack.md).
 
 ---
 
-## Setup local (opcional)
-
-Não é obrigatório se você for desenvolver direto no Render via push-to-deploy. Mas pra iterar rápido, vale a pena.
+## Setup local (caminho primário de desenvolvimento)
 
 ### 1. Pré-requisitos
 
-- **Node.js 20+** (recomendado: instalar via [nvm](https://github.com/nvm-sh/nvm))
+- **Node.js 20+** — instalar via [nvm](https://github.com/nvm-sh/nvm) ou pacote do SO
 - **Git**
-- Editor de código (VS Code é o mais comum)
+- **Postgres 16** — duas opções abaixo
+- Editor de código (VS Code recomendado)
 
-### 2. Instalar dependências
+### 2. Clone e instale dependências
 
 ```bash
+git clone https://github.com/brigsd/repositorio.git
+cd repositorio
+git checkout claude/adult-education-program-ppjiC
 npm install
 ```
 
-### 3. Configurar variáveis de ambiente
+### 3. Suba o Postgres local
 
-Copie o arquivo de exemplo e preencha:
+#### Opção A — Docker (recomendado se você já usa Docker)
+
+```bash
+docker compose up -d
+```
+
+Pronto. Banco rodando em `localhost:5432` com usuário `programa_dev`, senha `dev`, banco `programa_educacao`.
+
+Para parar: `docker compose down`. Para resetar dados: `docker compose down -v` (cuidado, apaga tudo).
+
+#### Opção B — Postgres nativo no sistema
+
+**Ubuntu/Debian:**
+```bash
+sudo apt install postgresql-16
+sudo service postgresql start
+sudo -u postgres psql -c "CREATE USER programa_dev WITH PASSWORD 'dev' SUPERUSER;"
+sudo -u postgres psql -c "CREATE DATABASE programa_educacao OWNER programa_dev;"
+```
+
+**Mac (Homebrew):**
+```bash
+brew install postgresql@16
+brew services start postgresql@16
+createuser -s programa_dev
+createdb -O programa_dev programa_educacao
+# Defina a senha:
+psql -d programa_educacao -c "ALTER USER programa_dev WITH PASSWORD 'dev';"
+```
+
+**Windows:** instale o [installer oficial](https://www.postgresql.org/download/windows/) e use o pgAdmin pra criar o usuário e banco com os mesmos nomes.
+
+### 4. Configure as variáveis de ambiente
 
 ```bash
 cp .env.example .env
 ```
 
-Você precisa:
-- **`DATABASE_URL`** — pegue no painel do Render (banco criado conforme passo abaixo) ou use um Postgres local
-- **`ANTHROPIC_API_KEY`** — gere em https://console.anthropic.com/settings/keys
-- **`AUTH_SECRET`** — gere com `openssl rand -base64 32`
-- **`APP_URL`** — `http://localhost:3000` em local
+Edite `.env` e preencha pelo menos:
+- `ANTHROPIC_API_KEY` — gere em https://console.anthropic.com/settings/keys
 
-### 4. Rodar migrações
+A `DATABASE_URL` já vem padrão pra Postgres local. `AUTH_SECRET` pode ficar como exemplo em dev.
+
+### 5. Aplique o esquema no banco
 
 ```bash
 npm run db:push
 ```
 
-### 5. Iniciar servidor de desenvolvimento
+Isso cria as 10 tabelas no banco vazio. Pode rodar quantas vezes quiser — em dev, o `db:push` sincroniza schema sem migrações intermediárias.
+
+### 6. Inicie o servidor de desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-Acesse http://localhost:3000.
+Acesse http://localhost:3000. Mudanças no código recarregam automaticamente.
 
----
+### 7. (Opcional) Drizzle Studio para inspecionar o banco
 
-## Deploy no Render
+```bash
+npm run db:studio
+```
 
-### Primeira configuração
-
-1. Acesse [render.com](https://render.com) e faça login com seu GitHub
-2. Clique em **New +** → **Blueprint**
-3. Selecione o repositório `brigsd/repositorio`
-4. O Render vai detectar o `render.yaml` automaticamente e criar:
-   - Um **Web Service** (a aplicação Next.js)
-   - Um **Postgres database** (free tier — 90 dias)
-5. Defina as variáveis sensíveis (que não vêm no `render.yaml`):
-   - **`ANTHROPIC_API_KEY`** — sua chave da Anthropic
-   - **`APP_URL`** — vai ficar tipo `https://programa-educacao.onrender.com` (descobre depois do primeiro deploy)
-6. Aguarde o primeiro deploy (5-10 min)
-
-### Após primeiro deploy
-
-7. **Rode as migrações do banco no Render:**
-   - Vá no Web Service → **Shell**
-   - Execute: `npm run db:push`
-
-8. Pronto. A aplicação está no ar.
-
-### Deploys subsequentes
-
-Cada `git push` para a branch `main` (ou a configurada) aciona auto-deploy. Build leva ~3-5 min no free tier.
-
-⚠️ **Atenção ao free tier:** o Web Service do Render dorme após 15 min sem uso. Primeiro acesso depois disso leva ~30s pra acordar. OK pra cobaia/5 alunos.
-
-⚠️ **Postgres free tier expira em 90 dias.** Quando se aproximar, migrar para **Neon** ou **Supabase** (Postgres free indefinido). É só trocar a `DATABASE_URL`.
+Abre interface web em http://localhost:4983 — útil pra ver/editar dados manualmente.
 
 ---
 
@@ -106,11 +115,27 @@ Cada `git push` para a branch `main` (ou a configurada) aciona auto-deploy. Buil
 | `npm run build` | Build de produção |
 | `npm start` | Roda o build de produção |
 | `npm run lint` | Checagem de lint |
-| `npm run typecheck` | Checagem de tipos TS |
-| `npm run db:generate` | Gera arquivos de migração a partir do schema |
-| `npm run db:push` | Aplica o schema direto no banco (sem migração intermediária — bom pra dev) |
-| `npm run db:migrate` | Aplica migrações geradas (bom pra produção) |
-| `npm run db:studio` | Abre Drizzle Studio (UI do banco) em http://localhost:4983 |
+| `npm run typecheck` | Checagem de tipos TS sem build |
+| `npm run db:push` | Sincroniza schema no banco (dev) |
+| `npm run db:generate` | Gera migração a partir do schema |
+| `npm run db:migrate` | Aplica migrações geradas (produção) |
+| `npm run db:studio` | Drizzle Studio (UI do banco) |
+
+---
+
+## Deploy no Render (produção, quando MVP estiver pronto)
+
+O `render.yaml` já está configurado. Quando for a hora:
+
+1. Acesse [render.com](https://render.com) com seu GitHub
+2. **New → Blueprint** → escolhe esse repositório
+3. Render cria automaticamente Web Service + Postgres
+4. Configure as variáveis sensíveis (`ANTHROPIC_API_KEY`, `APP_URL`)
+5. Após o primeiro deploy, abra Shell e rode `npm run db:push`
+
+⚠️ **Postgres free tier do Render expira em 90 dias.** Quando se aproximar, migrar pra **Neon** ou **Supabase** (Postgres free indefinido) — basta trocar `DATABASE_URL`.
+
+⚠️ **Web Service free tier dorme após 15 min idle.** Primeiro acesso depois disso leva ~30s pra acordar.
 
 ---
 
@@ -118,21 +143,21 @@ Cada `git push` para a branch `main` (ou a configurada) aciona auto-deploy. Buil
 
 ```
 .
-├── docs/                # Documentação do projeto
+├── docs/                    # Documentação do projeto (markdown)
 ├── src/
-│   ├── app/             # Rotas Next.js (App Router)
-│   ├── db/              # Schema e cliente Drizzle
-│   └── lib/             # Utilitários (IA, etc.)
-├── package.json
+│   ├── app/                 # Rotas Next.js (App Router)
+│   ├── db/                  # Schema e cliente Drizzle
+│   └── lib/                 # Utilitários (IA, etc.)
+├── docker-compose.yml       # Postgres local (opcional)
 ├── drizzle.config.ts
-├── render.yaml          # Infraestrutura Render
-└── README.md
+├── next.config.ts
+├── package.json
+├── render.yaml              # Infraestrutura Render
+└── tailwind.config.ts
 ```
 
 ---
 
 ## Branch de desenvolvimento
 
-Trabalho atual: `claude/adult-education-program-ppjiC`
-
-Quando quiser fazer deploy contínuo, configure o Render pra acompanhar essa branch (ou faça merge para `main`).
+Trabalho atual: `claude/adult-education-program-ppjiC`. Commits acontecem nessa branch; quando uma feature estiver estável, considerar merge pra `main`.

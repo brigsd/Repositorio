@@ -42,7 +42,7 @@
 | 36 | ORM: Drizzle (TypeScript end-to-end, mais simples que Prisma) | `10-stack.md` |
 | 37 | Hospedagem: Render com auto-deploy de git | `10-stack.md` |
 | 38 | Auth: magic link via e-mail (sem provedor externo) | `10-stack.md` |
-| 39 | Dev: local opcional, deploy contínuo no Render como padrão | `10-stack.md` |
+| 39 | Dev: local como padrão (Postgres local), Render só para produção | `10-stack.md` |
 
 ## Decisões pendentes (em ordem de prioridade)
 
@@ -139,3 +139,4 @@ Toda mudança de decisão importante registrar aqui com data e motivo.
 - **2026-05-11** — Nível C detalhado em 15 unidades. Decisões importantes: uso de "cor" em vez de "raça" (alinhado ao IBGE); literatura no Caminho A com Caminho B documentado como expansão futura; linguagem inclusiva tratada descritivamente; redação ENCCEJA em 5 unidades estruturadas; simulado final com escolha do aluno entre modo cronometrado e tempo livre. Arquivos renumerados: 05 = Nível C; ia-e-conteudo → 06; telemetria → 07; roadmap → 08.
 - **2026-05-11** — Diagnóstico inicial detalhado em 5 etapas (~15-20 min). Decisões: classificação por código determinístico (não prompt); regra de prudência (em incerteza, começar uma unidade antes); override sempre permitido com mini-teste pra avanço; re-diagnóstico opcional após blocos. Arquivos renumerados: 06 = Diagnóstico; ia-e-conteudo → 07; telemetria → 08; roadmap → 09.
 - **2026-05-11** — Stack técnica escolhida e setup inicial do projeto. Decisões: Next.js 15 + TypeScript + TailwindCSS; Postgres (Render free 90 dias → Neon free depois) em vez de SQLite (Render free não tem persistent disk); Drizzle ORM em vez de Prisma; deploy via Render auto-git; auth com magic link a definir. Criados: estrutura completa do projeto (package.json, configs, esquema do banco em `src/db/schema.ts`, render.yaml), README de setup, doc técnica em `10-stack.md`. Index.txt antigo de exercício de Git removido.
+- **2026-05-11** — Mudança de abordagem: desenvolvimento local-first em vez de deploy contínuo no Render. Adicionado `docker-compose.yml` (Postgres local opcional via Docker), README reformulado priorizando setup local com Postgres nativo OU Docker. Render fica para deploy quando MVP estiver pronto. `package-lock.json` adicionado pra builds reproduzíveis. Setup validado: npm install OK, db:push aplica schema, build limpo, typecheck limpo.
