@@ -62,8 +62,8 @@
 - [x] ~~Escolher stack web~~ → Next.js + Postgres + Render
 - [x] ~~Esquema do banco~~ → ver `src/db/schema.ts`
 - [x] ~~Esquema de hospedagem~~ → Render via `render.yaml`
-- [ ] Aplicar migrações iniciais no banco (`npm run db:push` no Render)
-- [ ] Seed das 45 unidades (catálogo curado A.1 a C.15) em `src/db/seed.ts`
+- [x] ~~Aplicar migrações iniciais no banco~~ → `npm run db:push` (validado local)
+- [x] ~~Seed das 45 unidades (catálogo curado A.1 a C.15)~~ → `src/db/seed.ts` + `npm run db:seed`
 - [ ] Auth simples (magic link)
 - [ ] Esqueleto da UI do aluno
 - [ ] Primeira unidade funcional (sugestão: U6 do Nível A)
@@ -140,3 +140,4 @@ Toda mudança de decisão importante registrar aqui com data e motivo.
 - **2026-05-11** — Diagnóstico inicial detalhado em 5 etapas (~15-20 min). Decisões: classificação por código determinístico (não prompt); regra de prudência (em incerteza, começar uma unidade antes); override sempre permitido com mini-teste pra avanço; re-diagnóstico opcional após blocos. Arquivos renumerados: 06 = Diagnóstico; ia-e-conteudo → 07; telemetria → 08; roadmap → 09.
 - **2026-05-11** — Stack técnica escolhida e setup inicial do projeto. Decisões: Next.js 15 + TypeScript + TailwindCSS; Postgres (Render free 90 dias → Neon free depois) em vez de SQLite (Render free não tem persistent disk); Drizzle ORM em vez de Prisma; deploy via Render auto-git; auth com magic link a definir. Criados: estrutura completa do projeto (package.json, configs, esquema do banco em `src/db/schema.ts`, render.yaml), README de setup, doc técnica em `10-stack.md`. Index.txt antigo de exercício de Git removido.
 - **2026-05-11** — Mudança de abordagem: desenvolvimento local-first em vez de deploy contínuo no Render. Adicionado `docker-compose.yml` (Postgres local opcional via Docker), README reformulado priorizando setup local com Postgres nativo OU Docker. Render fica para deploy quando MVP estiver pronto. `package-lock.json` adicionado pra builds reproduzíveis. Setup validado: npm install OK, db:push aplica schema, build limpo, typecheck limpo.
+- **2026-05-11** — Seed do catálogo de unidades implementado em `src/db/seed.ts`. As 45 unidades curadas (10 A + 20 B + 15 C) populam a tabela `unidades` com slug, nível, número, título e ordem. Idempotente via `ON CONFLICT DO UPDATE` (pode rodar várias vezes). Comando: `npm run db:seed`.
