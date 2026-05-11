@@ -176,10 +176,16 @@ Mensagem no onboarding. Adulto com trauma escolar pega gatilho de "vigiado e ava
 
 Para 5 alunos:
 
-- **SQLite** com tabela `eventos` (event log) + tabelas pequenas (`alunos`, `unidades`, `progresso`)
+- **Postgres** (gerenciado no Render free tier 90 dias, depois Neon free indefinido) com tabelas:
+  - `eventos` — event log para tudo o que não cabe nas tabelas estruturadas
+  - `alunos`, `unidades`, `progresso`, `tentativas` — dados estruturados
+  - `diagnosticos` — resultado do diagnóstico inicial
+  - `flags`, `diario_sessao`, `chamadas_ia` — apenas modo teste
 - View/função que gera relatório do aluno a partir do log
 - Botão admin de export markdown
 - Tarefa diária que checa condições de alerta
-- Roda em VPS pequeno (~R$ 25/mês) ou Cloudflare Workers + D1 grátis
+- Roda em Render Web Service (free tier)
 
-Estimativa: **<500 linhas pra toda a camada de telemetria**.
+Esquema completo em [`src/db/schema.ts`](../src/db/schema.ts). Detalhes da arquitetura em [`10-stack.md`](./10-stack.md).
+
+> **Nota histórica:** a primeira versão deste documento previa SQLite + VPS. Mudou-se para Postgres + Render pelo perfil "usar free tier" do usuário, evitando configuração manual de persistent disk. Funcionalmente equivalente para o caso de uso.

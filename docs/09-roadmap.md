@@ -37,7 +37,12 @@
 | 31 | Telemetria por sinal, não por volume | `08-telemetria.md` |
 | 32 | Dois modos (teste/produção), mesmo motor | `08-telemetria.md` |
 | 33 | Cobaia inicial: o próprio curador | `08-telemetria.md` |
-| 34 | Stack: SQLite + serviço pequeno | `08-telemetria.md` |
+| 34 | Stack técnica: Next.js 15 + TypeScript + TailwindCSS | `10-stack.md` |
+| 35 | Banco: Postgres (no Render free 90 dias → Neon free depois) | `10-stack.md` |
+| 36 | ORM: Drizzle (TypeScript end-to-end, mais simples que Prisma) | `10-stack.md` |
+| 37 | Hospedagem: Render com auto-deploy de git | `10-stack.md` |
+| 38 | Auth: magic link via e-mail (sem provedor externo) | `10-stack.md` |
+| 39 | Dev: local opcional, deploy contínuo no Render como padrão | `10-stack.md` |
 
 ## Decisões pendentes (em ordem de prioridade)
 
@@ -54,13 +59,18 @@
 
 ### Técnicas
 
-- [ ] Escolher stack web (frontend + backend) — provavelmente Next.js + SQLite ou similar leve
-- [ ] Definir formato dos prompts (templates) por tipo de tarefa
-- [ ] Esquema do banco (tabelas, eventos, índices) — incluindo tabela do diagnóstico
+- [x] ~~Escolher stack web~~ → Next.js + Postgres + Render
+- [x] ~~Esquema do banco~~ → ver `src/db/schema.ts`
+- [x] ~~Esquema de hospedagem~~ → Render via `render.yaml`
+- [ ] Aplicar migrações iniciais no banco (`npm run db:push` no Render)
+- [ ] Seed das 45 unidades (catálogo curado A.1 a C.15) em `src/db/seed.ts`
+- [ ] Auth simples (magic link)
+- [ ] Esqueleto da UI do aluno
+- [ ] Primeira unidade funcional (sugestão: U6 do Nível A)
+- [ ] Definir formato dos prompts (templates) por tipo de tarefa em `src/lib/prompts/`
 - [ ] Painel admin do curador (visualização de relatórios, flags, diários)
 - [ ] Mecanismo de export do "contexto do aluno" como markdown
-- [ ] Esquema de hospedagem (VPS, Cloudflare, outro?)
-- [ ] **Implementar lógica de classificação do diagnóstico** como código determinístico (não prompt)
+- [ ] **Implementar lógica de classificação do diagnóstico** como código determinístico em `src/lib/classificacao.ts`
 
 ### Operacionais
 
@@ -128,3 +138,4 @@ Toda mudança de decisão importante registrar aqui com data e motivo.
 - **2026-05-11** — Nível B detalhado em 20 unidades. Crônica/conto movidos pra bloco próprio. Princípio "ancoragem de propósito" formalizado e aplicado retroativamente ao Nível A. Estrutura de arquivos renumerada (04 = Nível B; ia-e-conteudo → 05; telemetria → 06; roadmap → 07).
 - **2026-05-11** — Nível C detalhado em 15 unidades. Decisões importantes: uso de "cor" em vez de "raça" (alinhado ao IBGE); literatura no Caminho A com Caminho B documentado como expansão futura; linguagem inclusiva tratada descritivamente; redação ENCCEJA em 5 unidades estruturadas; simulado final com escolha do aluno entre modo cronometrado e tempo livre. Arquivos renumerados: 05 = Nível C; ia-e-conteudo → 06; telemetria → 07; roadmap → 08.
 - **2026-05-11** — Diagnóstico inicial detalhado em 5 etapas (~15-20 min). Decisões: classificação por código determinístico (não prompt); regra de prudência (em incerteza, começar uma unidade antes); override sempre permitido com mini-teste pra avanço; re-diagnóstico opcional após blocos. Arquivos renumerados: 06 = Diagnóstico; ia-e-conteudo → 07; telemetria → 08; roadmap → 09.
+- **2026-05-11** — Stack técnica escolhida e setup inicial do projeto. Decisões: Next.js 15 + TypeScript + TailwindCSS; Postgres (Render free 90 dias → Neon free depois) em vez de SQLite (Render free não tem persistent disk); Drizzle ORM em vez de Prisma; deploy via Render auto-git; auth com magic link a definir. Criados: estrutura completa do projeto (package.json, configs, esquema do banco em `src/db/schema.ts`, render.yaml), README de setup, doc técnica em `10-stack.md`. Index.txt antigo de exercício de Git removido.

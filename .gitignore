@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+
+# Build do Next.js
+.next/
+out/
+build/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editores
+.vscode/
+.idea/
+.DS_Store
+
+# TypeScript
+next-env.d.ts
+*.tsbuildinfo
+
+# Backups
+*.bak
+*.swp

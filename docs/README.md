@@ -13,11 +13,12 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 7. [IA e Conteúdo](./07-ia-e-conteudo.md) — uso de IA, alucinação, modelos, custos
 8. [Telemetria e Modos](./08-telemetria.md) — logs, relatórios, modo teste vs produção
 9. [Roadmap](./09-roadmap.md) — decisões tomadas, pendências, próximos passos
+10. [Stack e Arquitetura](./10-stack.md) — tecnologias, estrutura do projeto, decisões técnicas
 
 ## Status atual
 
-- **Fase:** planejamento pedagógico **completo** (níveis A, B, C + diagnóstico inicial)
-- **Próximo passo:** trabalho técnico — escolha de stack, esquema de banco, protótipo de unidade
+- **Fase:** planejamento pedagógico **completo** + setup técnico inicial em curso
+- **Próximo passo:** seed das unidades + auth simples + primeira unidade funcional
 - **MVP previsto:** versão "modo teste" com curador (eu) como cobaia única antes de admitir os 5 alunos
 
 ## Como usar esta documentação
