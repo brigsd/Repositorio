@@ -1,4 +1,4 @@
-# 08 — Roadmap
+# 09 — Roadmap
 
 ## Decisões fechadas (registro)
 
@@ -25,14 +25,19 @@
 | 19 | Uso de "cor" em vez de "raça" (alinhado ao IBGE) | `05-nivel-c.md` |
 | 20 | Literatura no Caminho A (leve), com pincelada de contexto histórico | `05-nivel-c.md` |
 | 21 | Linguagem inclusiva tratada descritivamente (não-prescritiva) | `05-nivel-c.md` |
-| 22 | Bloco de redação ENCCEJA com 5 unidades (anatomia, intro, argumentação, conclusão, redação completa) | `05-nivel-c.md` |
+| 22 | Redação ENCCEJA em 5 unidades (anatomia, intro, argumentação, conclusão, redação completa) | `05-nivel-c.md` |
 | 23 | Simulado ENCCEJA final com modo à escolha (cronometrado ou tempo livre) | `05-nivel-c.md` |
-| 24 | Estratégia de mitigação de alucinação em 7 frentes | `06-ia-e-conteudo.md` |
-| 25 | Conteúdo crítico curado pelo curador; derivado pela IA | `06-ia-e-conteudo.md` |
-| 26 | Telemetria por sinal, não por volume | `07-telemetria.md` |
-| 27 | Dois modos (teste/produção), mesmo motor | `07-telemetria.md` |
-| 28 | Cobaia inicial: o próprio curador | `07-telemetria.md` |
-| 29 | Stack: SQLite + serviço pequeno | `07-telemetria.md` |
+| 24 | Diagnóstico inicial em 5 etapas (~15-20 min) | `06-diagnostico.md` |
+| 25 | Classificação por código determinístico, não por prompt | `06-diagnostico.md` |
+| 26 | Regra de prudência: em incerteza, começa uma unidade antes | `06-diagnostico.md` |
+| 27 | Override pelo aluno sempre permitido; avanço com mini-teste | `06-diagnostico.md` |
+| 28 | Re-diagnóstico opcional após cada bloco; completo após 30+ dias parado | `06-diagnostico.md` |
+| 29 | Estratégia de mitigação de alucinação em 7 frentes | `07-ia-e-conteudo.md` |
+| 30 | Conteúdo crítico curado pelo curador; derivado pela IA | `07-ia-e-conteudo.md` |
+| 31 | Telemetria por sinal, não por volume | `08-telemetria.md` |
+| 32 | Dois modos (teste/produção), mesmo motor | `08-telemetria.md` |
+| 33 | Cobaia inicial: o próprio curador | `08-telemetria.md` |
+| 34 | Stack: SQLite + serviço pequeno | `08-telemetria.md` |
 
 ## Decisões pendentes (em ordem de prioridade)
 
@@ -41,7 +46,8 @@
 - [ ] **Selecionar textos âncora** para cada unidade dos 3 níveis (notícias, artigos, crônicas, contos, propagandas, contratos, manuais, poemas, redações exemplares)
 - [ ] **Curar lista de repertório** para argumentação (dados verificados, citações canônicas, exemplos históricos) — Nível C
 - [ ] **Selecionar fontes de checagem** confiáveis a apresentar na U3 do Nível C
-- [ ] **Definir o formato do diagnóstico inicial** (perguntas, classificação, ponto de entrada na trilha)
+- [ ] **Curar materiais do diagnóstico** — 3-5 notícias da Etapa 2, cenários da Etapa 3, pares de frases da Etapa 4
+- [ ] **Escrever templates de devolutiva** do diagnóstico ao aluno
 - [ ] **Escrever os textos motivacionais** (trailers, aberturas de bloco, "por que importa") com tom autoral, ancorado nos alunos reais
 - [ ] **Decidir tom/personalidade do tutor IA** (formal? caloroso? como o aluno chama o sistema?)
 - [ ] **Definir o que conta como "concluir o Nível C"** com critério replicável (rubrica final + critérios mínimos por unidade)
@@ -50,10 +56,11 @@
 
 - [ ] Escolher stack web (frontend + backend) — provavelmente Next.js + SQLite ou similar leve
 - [ ] Definir formato dos prompts (templates) por tipo de tarefa
-- [ ] Esquema do banco (tabelas, eventos, índices)
+- [ ] Esquema do banco (tabelas, eventos, índices) — incluindo tabela do diagnóstico
 - [ ] Painel admin do curador (visualização de relatórios, flags, diários)
 - [ ] Mecanismo de export do "contexto do aluno" como markdown
 - [ ] Esquema de hospedagem (VPS, Cloudflare, outro?)
+- [ ] **Implementar lógica de classificação do diagnóstico** como código determinístico (não prompt)
 
 ### Operacionais
 
@@ -94,19 +101,20 @@ Esses só entram **depois** da validação completa do módulo de Letramento.
 
 ## Próximos passos imediatos
 
-1. **Esboço do diagnóstico inicial** — define ponto de entrada na trilha (A, B ou C)
-2. **Escolher stack técnica** e arquitetura mínima
+1. **Escolher stack técnica** e arquitetura mínima
+2. **Esquema do banco** com tabelas de evento, aluno, progresso, diagnóstico
 3. **Protótipo de uma única unidade** — sugestão: Unidade 6 do Nível A ("palavras que todo mundo erra"), por ser representativa do padrão geral
 4. **Iteração da cobaia** — curador passa pela unidade protótipo, usa flags e diário, ajusta tudo, repete
+5. **Implementar o diagnóstico** como segundo marco técnico, em paralelo à curadoria dos materiais dele
 
 ## Critérios para considerar o MVP pronto
 
+- [ ] Diagnóstico inicial funcionando com classificação determinística
 - [ ] Nível A completo e funcional na plataforma
-- [ ] Diagnóstico inicial implementado
 - [ ] Telemetria do modo teste capturando os sinais definidos
 - [ ] Relatório por aluno gerando markdown exportável
 - [ ] Alertas automáticos nos 4 gatilhos
-- [ ] Curador completou o Nível A inteiro como cobaia
+- [ ] Curador completou o diagnóstico + Nível A inteiro como cobaia
 - [ ] Ajustes pós-cobaia aplicados
 - [ ] Termo de consentimento redigido
 
@@ -119,3 +127,4 @@ Toda mudança de decisão importante registrar aqui com data e motivo.
 - **2026-05-11** — Documentação inicial criada após sessão de planejamento (Níveis 0 e 1 descartados; trilha A→B→C; modelo misto; telemetria com modos teste/prod).
 - **2026-05-11** — Nível B detalhado em 20 unidades. Crônica/conto movidos pra bloco próprio. Princípio "ancoragem de propósito" formalizado e aplicado retroativamente ao Nível A. Estrutura de arquivos renumerada (04 = Nível B; ia-e-conteudo → 05; telemetria → 06; roadmap → 07).
 - **2026-05-11** — Nível C detalhado em 15 unidades. Decisões importantes: uso de "cor" em vez de "raça" (alinhado ao IBGE); literatura no Caminho A com Caminho B documentado como expansão futura; linguagem inclusiva tratada descritivamente; redação ENCCEJA em 5 unidades estruturadas; simulado final com escolha do aluno entre modo cronometrado e tempo livre. Arquivos renumerados: 05 = Nível C; ia-e-conteudo → 06; telemetria → 07; roadmap → 08.
+- **2026-05-11** — Diagnóstico inicial detalhado em 5 etapas (~15-20 min). Decisões: classificação por código determinístico (não prompt); regra de prudência (em incerteza, começar uma unidade antes); override sempre permitido com mini-teste pra avanço; re-diagnóstico opcional após blocos. Arquivos renumerados: 06 = Diagnóstico; ia-e-conteudo → 07; telemetria → 08; roadmap → 09.

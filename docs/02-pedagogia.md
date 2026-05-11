@@ -58,11 +58,12 @@ Análise de discurso, reconhecimento de manipulação (fake news, falácias, vie
 
 ## Sequência e progressão
 
-- Diagnóstico inicial (~15-20 min disfarçado de conversa) define entrada
+- **Diagnóstico inicial** (~15-20 min disfarçado de conversa) define entrada → ver detalhamento em [`06-diagnostico.md`](./06-diagnostico.md)
 - Trilha **completa A → B → C**, mas com possibilidade de pular o que já domina
 - Critério de avanço **por unidade**, não por tempo
 - Possibilidade ilimitada de pedir "mais prática" sem sair da unidade
 - Padrão de erro detectado → IA oferece micro-revisão antes de nova tentativa
+- **Re-diagnóstico opcional** após cada bloco concluído pra ajuste fino sem refazer tudo
 
 ## Ancoragem de propósito (princípio aplicado em todos os níveis)
 
