@@ -9,6 +9,8 @@
 
 Toda unidade abre com um **problema concreto** onde a habilidade faz diferença visível. A regra aparece **depois**, como explicação do problema, não como ponto de partida.
 
+Aplicamos também o princípio de **ancoragem de propósito** (ver `02-pedagogia.md`): cada unidade tem uma seção curta "Por que isso importa" que ancora a competência na vida real.
+
 ## Unidades
 
 ### Unidade 1 — Trailer do nível *(orientação, ~10 min, sem exercício)*
@@ -23,12 +25,14 @@ Mostrar três cenas reais:
 ### Unidade 2 — Registros: o mesmo recado em mundos diferentes
 
 - **Conceito:** existe escrita pra cada situação; nenhuma é "certa" sempre
+- **Por que importa:** escrever no tom errado fecha portas no trabalho e na burocracia. Saber adequar te dá controle sobre a impressão que causa.
 - **Atividades:** IA gera 3 situações personalizadas; aluno reescreve em 2 registros (informal vs. formal)
 - **Critério de avanço:** 1 reescrita aprovada pela rubrica
 
 ### Unidade 3 — A vírgula que muda o sentido
 
 - **Conceito:** vírgula como recurso de sentido, não como regra a decorar
+- **Por que importa:** uma vírgula muda o sentido da frase. Em contrato, mensagem ao chefe ou cláusula — pode te beneficiar ou te prejudicar.
 - **Abertura:** *"Vamos comer, vovó"* vs. *"Vamos comer vovó"*
 - **Atividades:** aluno pontua frases ambíguas; IA mostra os dois sentidos possíveis
 - **Critério:** 8/10 em pontuação contextual
@@ -36,12 +40,14 @@ Mostrar três cenas reais:
 ### Unidade 4 — Os outros sinais (ponto, ponto-e-vírgula, dois pontos, travessão)
 
 - **Conceito:** cada sinal tem uma função; aprendemos pela função, não pela regra
+- **Por que importa:** pontuação é a respiração do texto. Ela cria pausa, ênfase, hierarquia. Texto mal pontuado fica truncado e cansa quem lê.
 - **Atividades:** parágrafo sem pontuação → aluno reconstrói
 - **Critério:** reconstrução com sentido preservado
 
 ### Unidade 5 — Acentos que mudam tudo
 
 - **Foco:** pares que mudam sentido — *está/esta, pôde/pode, sábia/sabia, dúvida/duvida*
+- **Por que importa:** alguns acentos parecem detalhe, mas mudam totalmente o sentido. Em texto formal, errar isso afeta a credibilidade da mensagem.
 - **Não cobrir** todas as regras de acentuação; focar nas armadilhas reais
 - **Atividades:** corrigir texto com acentos fora do lugar
 - **Critério:** 8/10
@@ -49,6 +55,7 @@ Mostrar três cenas reais:
 ### Unidade 6 — As palavras que todo mundo erra
 
 - **Foco:** *mas/mais, mau/mal, há/a, porque/por que/porquê/por quê, mim/eu, onde/aonde, senão/se não*
+- **Por que importa:** essas armadilhas você escreve no automático. Aprender qual é qual te protege em qualquer texto formal — currículo, e-mail, post, contrato.
 - **Tratamento:** "armadilha conhecida", não regra escolar
 - **Atividades:** lacunas em situações reais geradas pela IA
 - **Critério:** 8/10
@@ -56,6 +63,7 @@ Mostrar três cenas reais:
 ### Unidade 7 — Concordância verbal essencial
 
 - **Casos cobertos:** *houve/houveram, faz X anos (impessoal), sujeito composto, sujeito posposto*
+- **Por que importa:** concordância errada em currículo ou e-mail formal é uma das primeiras coisas que tira credibilidade. Saber identificar e corrigir te dá segurança.
 - **Não cobrir** todas as regras; cobrir o que o adulto vai usar
 - **Atividades:** identificar e corrigir em textos curtos
 - **Critério:** 7/10
@@ -63,12 +71,14 @@ Mostrar três cenas reais:
 ### Unidade 8 — Concordância nominal essencial
 
 - **Casos cobertos:** *em anexo segue/seguem, é proibido/proibida entrada, meio cansada/meia cansada*
+- **Por que importa:** mesma lógica da verbal — detalhe que aparece em comunicação formal e separa "bem escrito" de "amador".
 - **Atividades:** corrigir trechos
 - **Critério:** 7/10
 
 ### Unidade 9 — Regência: tropeços clássicos
 
 - **Lista enxuta:** *assistir a, preferir... a, ir a/em, implicar (algo, não com algo)*
+- **Por que importa:** preposição errada faz parecer descuido em situações onde detalhe importa. São poucos casos críticos; resolver eles cobre 80% dos tropeços.
 - ~8-10 casos que mais causam erro
 - **Atividades:** situações cotidianas
 - **Critério:** 7/10
@@ -76,6 +86,7 @@ Mostrar três cenas reais:
 ### Unidade 10 — Projeto integrador
 
 - **Tarefa:** aluno escolhe um documento real pra escrever — pedido de aumento, reclamação a empresa, e-mail formal a um órgão público, resposta a notificação
+- **Por que importa:** é onde tudo se junta. Você produz um documento de verdade, do mundo real, que poderia mandar amanhã. Sair do Nível A com isso na mão é prova concreta de evolução.
 - **Avaliação:** IA aplica rubrica que cobre **todos os pontos do Nível A**
 - **Critério final do nível:** rubrica aprovada (com possibilidade de revisão e nova entrega)
 
@@ -107,6 +118,7 @@ Mostrar três cenas reais:
 - Lista de "armadilhas" de cada unidade (acima)
 - Rubricas de avaliação (1 por unidade + a integradora da U10)
 - 2-3 textos âncora por unidade que servem de referência
+- Texto curto de "Por que importa" de cada unidade (autoral, do mundo dos alunos)
 
 **A IA faz toda hora:**
 - Gera variações dos exercícios
@@ -119,7 +131,7 @@ Mostrar três cenas reais:
 
 | Risco | Mitigação |
 |---|---|
-| Parecer "isso eu já sei" | Princípio "problema antes da regra"; Unidade 1 deixa claro o motivo |
+| Parecer "isso eu já sei" | Princípio "problema antes da regra"; Unidade 1 deixa claro o motivo; "Por que importa" em cada unidade ancora utilidade |
 | Cair em preconceito linguístico | Linguagem de "diferente do contexto", nunca "errado"; respeito a variação |
 | IA inventar regra que não existe | Tarefa fechada com lista pré-definida de armadilhas; rubrica explícita; verificação amostral pelo curador |
 | Cansaço/abandono no meio do nível | Sessões curtas (20-30 min); critério permite micro-vitórias; tempo entre unidades livre |

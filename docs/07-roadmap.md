@@ -1,4 +1,4 @@
-# 06 — Roadmap
+# 07 — Roadmap
 
 ## Decisões fechadas (registro)
 
@@ -14,22 +14,28 @@
 | 8 | Gêneros textuais diversificados no Nível B | `02-pedagogia.md` |
 | 9 | Redação ENCCEJA como produção principal do C | `02-pedagogia.md` |
 | 10 | Princípio "problema antes da regra" | `02-pedagogia.md` |
-| 11 | Nível A com 10 unidades estruturadas | `03-nivel-a.md` |
-| 12 | Estratégia de mitigação de alucinação em 7 frentes | `04-ia-e-conteudo.md` |
-| 13 | Conteúdo crítico curado pelo curador; derivado pela IA | `04-ia-e-conteudo.md` |
-| 14 | Telemetria por sinal, não por volume | `05-telemetria.md` |
-| 15 | Dois modos (teste/produção), mesmo motor | `05-telemetria.md` |
-| 16 | Cobaia inicial: o próprio curador | `05-telemetria.md` |
-| 17 | Stack: SQLite + serviço pequeno | `05-telemetria.md` |
+| 11 | Princípio "ancoragem de propósito" em 3 escalas | `02-pedagogia.md` |
+| 12 | Nível A com 10 unidades estruturadas | `03-nivel-a.md` |
+| 13 | Nível B com 20 unidades em 8 blocos | `04-nivel-b.md` |
+| 14 | Crônica/conto em bloco próprio (primeira literatura) | `04-nivel-b.md` |
+| 15 | Coesão/coerência antes de resumo/paráfrase | `04-nivel-b.md` |
+| 16 | Argumentativo curto incluso no B (ponte pro C) | `04-nivel-b.md` |
+| 17 | Texto instrucional como gênero de produção (utilidade pros alunos mecânico/soldador) | `04-nivel-b.md` |
+| 18 | Estratégia de mitigação de alucinação em 7 frentes | `05-ia-e-conteudo.md` |
+| 19 | Conteúdo crítico curado pelo curador; derivado pela IA | `05-ia-e-conteudo.md` |
+| 20 | Telemetria por sinal, não por volume | `06-telemetria.md` |
+| 21 | Dois modos (teste/produção), mesmo motor | `06-telemetria.md` |
+| 22 | Cobaia inicial: o próprio curador | `06-telemetria.md` |
+| 23 | Stack: SQLite + serviço pequeno | `06-telemetria.md` |
 
 ## Decisões pendentes (em ordem de prioridade)
 
 ### Pedagógicas
 
-- [ ] **Detalhar o Nível B** com a mesma profundidade do A (unidades, critérios, rubricas)
-- [ ] **Detalhar o Nível C** com foco especial na progressão de redação argumentativa
-- [ ] **Selecionar textos âncora** para cada unidade do Nível A
-- [ ] **Definir o formato do diagnóstico inicial** (perguntas, classificação, ponto de entrada)
+- [ ] **Detalhar o Nível C** com foco especial na progressão de redação argumentativa estilo ENCCEJA
+- [ ] **Selecionar textos âncora** para cada unidade dos Níveis A e B (notícias, artigos, crônicas, contos, propagandas, contratos, manuais)
+- [ ] **Definir o formato do diagnóstico inicial** (perguntas, classificação, ponto de entrada na trilha)
+- [ ] **Escrever os textos motivacionais** ("trailer", "aberturas de bloco", "por que importa") com tom autoral, ancorado nos alunos reais
 - [ ] **Decidir tom/personalidade do tutor IA** (formal? caloroso? como o aluno chama o sistema?)
 
 ### Técnicas
@@ -49,7 +55,7 @@
 
 ## Próximos passos imediatos
 
-1. **Detalhar Nível B** (próximo trabalho pedagógico) — equivalente ao detalhamento já feito do A
+1. **Detalhar Nível C** — última peça pedagógica antes do trabalho técnico
 2. **Esboço do diagnóstico inicial** — define o ponto de entrada na trilha
 3. **Escolher stack técnica** e fazer protótipo mínimo de uma única unidade (sugestão: Unidade 6 do Nível A, "palavras que todo mundo erra" — é representativa do padrão geral)
 4. **Iteração da cobaia** — curador passa pela unidade protótipo, usa flags e diário, ajusta tudo, repete
@@ -71,4 +77,5 @@ Só depois disso admite os primeiros alunos reais.
 
 Toda mudança de decisão importante registrar aqui com data e motivo.
 
-- **2026-05-11** — Documentação inicial criada após sessão de planejamento.
+- **2026-05-11** — Documentação inicial criada após sessão de planejamento (Níveis 0 e 1 descartados; trilha A→B→C; modelo misto; telemetria com modos teste/prod).
+- **2026-05-11** — Nível B detalhado em 20 unidades. Crônica/conto movidos pra bloco próprio. Princípio "ancoragem de propósito" formalizado e aplicado retroativamente ao Nível A. Estrutura de arquivos renumerada (04 = Nível B; ia-e-conteudo → 05; telemetria → 06; roadmap → 07).

@@ -6,15 +6,16 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 
 1. [Projeto](./01-projeto.md) — visão geral, público-alvo, escopo, decisões fundamentais
 2. [Pedagogia](./02-pedagogia.md) — modelo de aprendizado, estrutura dos níveis, referências
-3. [Nível A — detalhado](./03-nivel-a.md) — letramento formal: 10 unidades completas
-4. [IA e Conteúdo](./04-ia-e-conteudo.md) — uso de IA, alucinação, modelos, custos
-5. [Telemetria e Modos](./05-telemetria.md) — logs, relatórios, modo teste vs produção
-6. [Roadmap](./06-roadmap.md) — decisões tomadas, pendências, próximos passos
+3. [Nível A — detalhado](./03-nivel-a.md) — letramento formal: 10 unidades
+4. [Nível B — detalhado](./04-nivel-b.md) — interpretação e produção: 20 unidades em 8 blocos
+5. [IA e Conteúdo](./05-ia-e-conteudo.md) — uso de IA, alucinação, modelos, custos
+6. [Telemetria e Modos](./06-telemetria.md) — logs, relatórios, modo teste vs produção
+7. [Roadmap](./07-roadmap.md) — decisões tomadas, pendências, próximos passos
 
 ## Status atual
 
-- **Fase:** validação pedagógica concluída para o Nível A; pendente Nível B e C
-- **Próximo passo:** detalhar Nível B (interpretação e produção textual)
+- **Fase:** validação pedagógica concluída para Níveis A e B; pendente Nível C
+- **Próximo passo:** detalhar Nível C (leitura crítica e redação dissertativo-argumentativa estilo ENCCEJA)
 - **MVP previsto:** versão "modo teste" com curador (eu) como cobaia única antes de admitir os 5 alunos
 
 ## Como usar esta documentação

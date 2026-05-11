@@ -64,6 +64,16 @@ Análise de discurso, reconhecimento de manipulação (fake news, falácias, vie
 - Possibilidade ilimitada de pedir "mais prática" sem sair da unidade
 - Padrão de erro detectado → IA oferece micro-revisão antes de nova tentativa
 
+## Ancoragem de propósito (princípio aplicado em todos os níveis)
+
+Adulto precisa enxergar **utilidade antes de aceitar esforço**. Antes de cada conteúdo, três escalas de "por que isso importa":
+
+1. **Trailer do nível** — na entrada do nível, 2-3 cenas reais onde essas competências mudam a vida concretamente
+2. **Abertura de bloco** — na entrada de cada bloco de unidades, parágrafo curto sobre o que esse grupo vai dar de poder concreto
+3. **"Por que isso importa"** — no início de cada unidade, 1-2 frases ancoradas no mundo real do aluno
+
+A ancoragem **não** substitui o "problema antes da regra" — ela vem **junto**. O problema concreto causa impacto emocional; o "por que importa" articula em texto curto a utilidade. Os dois somados são o motor da aderência do adulto.
+
 ## Tom e UX (princípios)
 
 - **Sem cara de prova.** Avaliações são "sondagens", "desafios", "missões"
