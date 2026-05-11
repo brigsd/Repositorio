@@ -8,14 +8,15 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 2. [Pedagogia](./02-pedagogia.md) — modelo de aprendizado, estrutura dos níveis, referências
 3. [Nível A — detalhado](./03-nivel-a.md) — letramento formal: 10 unidades
 4. [Nível B — detalhado](./04-nivel-b.md) — interpretação e produção: 20 unidades em 8 blocos
-5. [IA e Conteúdo](./05-ia-e-conteudo.md) — uso de IA, alucinação, modelos, custos
-6. [Telemetria e Modos](./06-telemetria.md) — logs, relatórios, modo teste vs produção
-7. [Roadmap](./07-roadmap.md) — decisões tomadas, pendências, próximos passos
+5. [Nível C — detalhado](./05-nivel-c.md) — leitura crítica e redação: 15 unidades em 5 blocos
+6. [IA e Conteúdo](./06-ia-e-conteudo.md) — uso de IA, alucinação, modelos, custos
+7. [Telemetria e Modos](./07-telemetria.md) — logs, relatórios, modo teste vs produção
+8. [Roadmap](./08-roadmap.md) — decisões tomadas, pendências, próximos passos
 
 ## Status atual
 
-- **Fase:** validação pedagógica concluída para Níveis A e B; pendente Nível C
-- **Próximo passo:** detalhar Nível C (leitura crítica e redação dissertativo-argumentativa estilo ENCCEJA)
+- **Fase:** validação pedagógica **completa** para os 3 níveis do módulo de Letramento
+- **Próximo passo:** iniciar trabalho técnico — diagnóstico inicial, escolha de stack, protótipo de unidade
 - **MVP previsto:** versão "modo teste" com curador (eu) como cobaia única antes de admitir os 5 alunos
 
 ## Como usar esta documentação

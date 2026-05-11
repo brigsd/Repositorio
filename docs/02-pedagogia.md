@@ -52,9 +52,9 @@ Fundação do letramento formal. Tipologias, gêneros textuais variados, identif
 
 ### Nível C — Leitura crítica e produção autônoma
 
-Análise de discurso, reconhecimento de manipulação (fake news, falácias, vieses), comparação de textos, variação linguística (sem preconceito), literatura (leitura de contos, crônicas, poemas com contexto histórico mínimo), e **redação dissertativo-argumentativa completa estilo ENCCEJA** como produção principal.
+Análise de discurso, reconhecimento de manipulação (fake news, falácias, vieses), comparação crítica de textos, variação linguística (sem preconceito, usando "cor" em vez de "raça" — termo do IBGE), literatura ampliada (poesia, narrativa, contexto histórico mínimo) e **redação dissertativo-argumentativa estilo ENCCEJA** como produção principal. 15 unidades em 5 blocos. Inclui simulado ENCCEJA final com escolha do aluno entre modo cronometrado e tempo livre.
 
-**Pendente detalhamento.**
+→ Ver detalhamento completo em [`05-nivel-c.md`](./05-nivel-c.md).
 
 ## Sequência e progressão
 
