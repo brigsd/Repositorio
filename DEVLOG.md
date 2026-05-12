@@ -30,15 +30,22 @@
 
 ## Entradas
 
-### 2026-05-12 — Claude Code
-**Resumo:** Implementação da Fase 2 de exercícios: tipo `escrita_lacuna` com campo inline dentro da frase. A.6 ganhou 8 exercícios de escrita (4 para mas/mais + 4 para por que/porque) com cenários diferentes dos de múltipla escolha.
+### 2026-05-12 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
+**Resumo:** Sessão completa de expansão das unidades A.5 e A.6. Implementação da Fase 2 (exercícios de escrita com campo inline), cobertura total de todos os pares, currículo da A.5 criado, remoção do tempo estimado, e correção de erro gramatical identificado pelo curador.
 **Arquivos alterados:**
 - `src/lib/exercicios/tipos.ts` — Adicionado `"escrita_lacuna"` ao union tipo
-- `src/app/unidade/[slug]/ExercicioClient.tsx` — Renderização inline do campo de digitação, estado `inputEscrita`, normalização, foco automático após erro, Enter para confirmar
-- `src/lib/exercicios/a6-palavras.ts` — 8 novos exercícios (a6-ex6 a a6-ex13): 4 de mas/mais + 4 de por que/porque, intercalados (mas→mais→mais→mas e pq→porque→porque→pq)
-**Decisões documentadas:** Cenários diferentes para fase de escrita (retrieval genuíno, não memória da frase). Feedback imediato frase a frase. Largura fixa w-28 para o campo inline.
-**Estado atual:** A.6 tem 13 exercícios no total: 5 múltipla escolha + 8 escrita (2 pares cobertos).
-**Próximo passo sugerido:** Adicionar escrita para os demais pares da A.6 (há/a, mau/mal, mim/eu) e equivalente na A.5. Revisar tempo estimado das unidades.
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — Campo inline de digitação para escrita_lacuna: estado `inputEscrita`, foco automático após erro, Enter para confirmar, botão desabilitado até digitar
+- `src/lib/exercicios/a6-palavras.ts` — A.6 completa: 7 pares MC + 28 exercícios de escrita (35 total). Corrigi uso incorreto de "com ___" → "para ___" nos exercícios mim/eu (per Bechara: "com mim" não existe, forma obrigatória é "comigo")
+- `src/lib/exercicios/a5-acentos.ts` — A.5 completa: 6 pares MC + 24 exercícios de escrita (30 total)
+- `src/lib/curriculo/a5-acentos.ts` — [NOVO] Currículo da A.5 com ancoraPropósito e 6 armadilhas (necessário para exibir "Por que isso importa" e "O que você vai aprender")
+- `src/app/unidade/[slug]/page.tsx` — Tempo estimado removido da exibição; página usa mapa de currículos em vez de `if isA6`
+**Decisões tomadas:**
+- Fase de escrita: feedback imediato frase a frase (não ao final do bloco) — reduz ansiedade (Bandura)
+- Cenários de escrita diferentes dos de múltipla escolha — retrieval genuíno, não memória da frase (Roediger)
+- Tempo estimado removido — pressão implícita contradiz princípio de ritmo livre do projeto
+- "com mim" é gramaticalmente incorreto em português normativo — substituído por "para mim" nos exercícios
+**Estado atual:** A.5 (30 ex) e A.6 (35 ex) completas com MC + escrita para todos os pares. Currículo de ambas presente. Tempo estimado removido.
+**Próximo passo sugerido:** Fazer merge do branch para main, testar localmente, depois avançar para onboarding ou diagnóstico.
 
 ### 2026-05-12 11:40 — Antigravity — trabalho
 **Resumo:** Unidade A.5 (Acentos) criada com 6 exercícios curados. Refatoração dos exercícios para sistema modular. Página de entrada redesenhada com Progressive Disclosure. Guia de criação de unidades (docs/13) criado com pesquisa científica completa.
