@@ -31,6 +31,16 @@
 ## Entradas
 
 ### 2026-05-12 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
+**Resumo:** Correção de dois exercícios gramaticalmente incorretos no par senão/se não da A.6.
+**Arquivos alterados:**
+- `src/lib/exercicios/a6-palavras.ts` — a6-ex5c: "___ você não me avisar" → "___ me avisar antes" (eliminada dupla negação + sujeito explícito que tornava a frase agramatical); a6-ex30-escrita: "___ você confirmar" → "___ confirmar" ("se não você confirmar" é ordem não-natural em PT normativo)
+**Decisões tomadas:**
+- "Se não" como conjunção condicional deve ligar diretamente ao verbo; inserir sujeito explícito entre "se não" e o verbo produz ordem não-natural ("se não você confirmar") ou dupla negação ("se não você não avisar")
+- Feedbacks atualizados para remover referências ao "você" que foi excluído
+**Estado atual:** A.6 com todos os 35 exercícios gramaticalmente corretos. Branch pronto para merge.
+**Próximo passo sugerido:** Merge para main, testar localmente, avançar para onboarding ou diagnóstico.
+
+### 2026-05-12 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
 **Resumo:** Sessão completa de expansão das unidades A.5 e A.6. Implementação da Fase 2 (exercícios de escrita com campo inline), cobertura total de todos os pares, currículo da A.5 criado, remoção do tempo estimado, e correção de erro gramatical identificado pelo curador.
 **Arquivos alterados:**
 - `src/lib/exercicios/tipos.ts` — Adicionado `"escrita_lacuna"` ao union tipo

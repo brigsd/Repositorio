@@ -104,7 +104,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex5c",
     tipo: "lacuna_unica",
-    enunciado: "___ você não me avisar, não poderei te ajudar.",
+    enunciado: "___ me avisar antes, não poderei te ajudar.",
     opcoes: ["Se não", "Senão"],
     gabarito: "Se não",
     armadilhaId: "senao_se_nao",
@@ -112,8 +112,8 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '**Se não** (separado) aparece quando você tem uma condição: "se não acontecer X, então Y".\nJá **senão** (junto) aparece como alternativa ou consequência, com sentido de "caso contrário" ou "além disso".\nUma dica: tenta trocar por "caso não". Se funcionar, é **se não** separado.',
     feedbackErro: [
       "A frase está colocando uma condição, ou apresentando uma alternativa?",
-      'Tenta trocar por "caso não me avisar": funcionou? Quando tem uma condição ("caso não", "se não for o caso"), usa-se **se não** separado. O **senão** junto aparece como "caso contrário": "Estude, senão vai se arrepender."',
-      '"Se não" separado é a resposta. A frase tem uma condição: "se você não avisar → não posso ajudar". Quando há condição com "se", a negação é sempre separada. **Senão** junto é para "caso contrário": "Chegue cedo, senão perde a vaga."',
+      'Tenta trocar por "caso não me avisar": funcionou? Quando tem uma condição ("caso não"), usa-se **se não** separado. O **senão** junto aparece como "caso contrário": "Estude, senão vai se arrepender."',
+      '"Se não" separado é a resposta. A frase tem uma condição: "se não avisar → não posso ajudar". Quando há condição com "se", a negação é sempre separada. **Senão** junto é para "caso contrário": "Chegue cedo, senão perde a vaga."',
     ],
   },
 
@@ -471,14 +471,14 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex30-escrita",
     tipo: "escrita_lacuna",
-    enunciado: "___ você confirmar até amanhã, perderá a vaga.",
+    enunciado: "___ confirmar até amanhã, perderá a vaga.",
     gabarito: "Se não",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
       '**Se não** separado aparece quando há uma condição: "se não acontecer X, então Y".\nJá o **senão** junto é equivalente a "caso contrário" ou "além disso".\nUma dica: tenta trocar por **caso não**. "Caso não confirmar até amanhã..." Funcionou? Então é **se não** separado.',
     feedbackErro: [
       "A frase está impondo uma condição ou apresentando uma alternativa?",
-      'Há uma condição: "se você não confirmar → perde a vaga". Tenta trocar por "caso não": funcionou? Então é **se não** separado. O **senão** junto seria: "Confirme, senão perderá a vaga."',
+      'Há uma condição: "se não confirmar → perde a vaga". Tenta trocar por "caso não": funcionou? Então é **se não** separado. O **senão** junto seria: "Confirme, senão perderá a vaga."',
       '"Se não" separado é a resposta. A frase tem uma condição com "se". Quando o "não" faz parte da condição introduzida por "se", escreve separado. O **senão** junto equivale a "caso contrário".',
     ],
   },
