@@ -176,15 +176,15 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex18-escrita",
     tipo: "escrita_lacuna",
-    enunciado: "O relatório foi escrito muito ___, cheio de erros.",
+    enunciado: "O relatório foi muito ___ escrito, cheio de erros.",
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito ou como alguém está.\nJá o **mau** descreve como algo ou alguém é: "mau caráter", "mau exemplo".\nUma dica: tenta trocar por **de forma ruim**. "O relatório foi escrito de forma ruim." Funcionou? Então é **mal**.',
+      '**Mal** descreve como algo foi feito ou como alguém está.\nJá o **mau** descreve como algo ou alguém é: "mau caráter", "mau exemplo".\nUma dica: tenta trocar por **de forma ruim**. "O relatório foi muito mal escrito" → feito de forma ruim. Funcionou? Então é **mal**.',
     feedbackErro: [
       "A palavra está descrevendo como o relatório foi escrito, ou como o relatório é?",
       'A frase diz como ele foi escrito — de forma ruim. Tenta trocar por "de forma ruim": funcionou? Então é **mal**. O **mau** seria para descrever o relatório como coisa: "um mau relatório".',
-      '"Mal" é a resposta. Ele descreve como a ação foi feita: "escrito de forma ruim". O **mau** descreveria a qualidade da coisa em si: "um mau documento", "um mau funcionário".',
+      '"Mal" é a resposta. Ele descreve como a ação foi feita: escrito de forma ruim. O **mau** descreveria a qualidade da coisa em si: "um mau documento", "um mau funcionário".',
     ],
   },
   {
