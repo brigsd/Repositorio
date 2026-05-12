@@ -64,11 +64,11 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mas** liga duas ideias que se opõem.\nO teste: troca por **porém**. "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é **mas**.\nO **mais** seria para quantidade, como em "preciso de mais tempo".',
+      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, exemplo: "preciso de **mais** tempo". \nUma dica: se você consegue trocar o **mas** por **porém** e a frase continua fazendo sentido, use **mas** e não **mais**. ',
     feedbackErro: [
       "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
-      '"Mais" fala de quantidade: mais café, mais tempo, mais dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
-      '"Mas" é a resposta. Ele conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". "Mais" seria para quantidade, como em "preciso de mais tempo".',
+      '**Mais** fala de quantidade: **mais** café, **mais** tempo, **mais** dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
+      '**Mas** é a resposta correta para este exercício. Porque essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
     ],
   },
   {
@@ -79,7 +79,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**Há** fala de tempo que já passou.\nO teste: troca por **faz**. "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é **há**.\nO **a** seria para tempo futuro, como em "vou sair daqui a duas horas".',
+      '**Há** indica tempo que já passou.\nUma dica: tenta trocar por **faz**. "Trabalho nesta oficina faz cinco anos." Soou natural? Então é **há**.\nJá o **a** indica tempo que ainda vem, como em "vou sair daqui a duas horas".',
     feedbackErro: [
       "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
       'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
@@ -94,7 +94,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Por que** separado aparece em perguntas, quando você quer saber o motivo de algo.\nAqui a frase está perguntando, então é **por que** separado.\nNa resposta, aí usa **porque** junto: "Não avisei porque esqueci."',
+      '**Por que** separado aparece quando você está fazendo uma pergunta.\nAqui a frase está pedindo o motivo de algo, então é **por que** separado.\nQuando você está respondendo ou explicando o motivo, aí usa **porque** junto. Por exemplo: "Não avisei porque esqueci."',
     feedbackErro: [
       "Essa frase está fazendo uma pergunta ou dando uma resposta?",
       'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
@@ -109,7 +109,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito.\nO teste: troca por **de forma ruim**. "O serviço ficou feito de forma ruim." Ficou natural? Então é **mal**.\nO **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
+      '**Mal** descreve como algo foi feito.\nUma dica: tenta trocar por **de forma ruim**. "O serviço ficou feito de forma ruim." Soou natural? Então é **mal**.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
     feedbackErro: [
       "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
       'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa ("um mau serviço"), mas aqui estamos falando de como ele foi executado.',
@@ -124,7 +124,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nO teste: troca por **ele**. "Podem deixar o orçamento com ele." Ficou natural? Então é **mim**.\nO **eu** aparece quando você é quem faz a ação: "Eu vou resolver."',
+      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento com ele." Soou natural? Então é **mim**.\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."',
     feedbackErro: [
       'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
       'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
@@ -375,10 +375,10 @@ export default function ExercicioClient({ armadilhas, slug }: Props) {
                   correto
                     ? "border-emerald-500 bg-emerald-50 text-emerald-800"
                     : errado
-                    ? "border-rose-300 bg-rose-50 text-rose-800"
-                    : selecionado
-                    ? "border-stone-900 bg-stone-900 text-white"
-                    : "border-stone-200 bg-white text-stone-800 hover:border-stone-400 hover:bg-stone-50",
+                      ? "border-rose-300 bg-rose-50 text-rose-800"
+                      : selecionado
+                        ? "border-stone-900 bg-stone-900 text-white"
+                        : "border-stone-200 bg-white text-stone-800 hover:border-stone-400 hover:bg-stone-50",
                 ].join(" ")}
               >
                 {opcao}
@@ -399,16 +399,16 @@ export default function ExercicioClient({ armadilhas, slug }: Props) {
             resposta.acertou
               ? "border-emerald-200 bg-emerald-50 text-emerald-900"
               : tentativas <= 1
-              ? "border-amber-200 bg-amber-50 text-amber-900"
-              : "border-blue-200 bg-blue-50 text-blue-900",
+                ? "border-amber-200 bg-amber-50 text-amber-900"
+                : "border-blue-200 bg-blue-50 text-blue-900",
           ].join(" ")}
         >
-          <p className="mb-0.5 text-xs font-semibold uppercase tracking-widest opacity-60">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest opacity-60">
             {resposta.acertou
               ? "Tutor"
               : tentativas === 1
-              ? "Tutor · pista"
-              : "Tutor · explicação"}
+                ? "Tutor · pista"
+                : "Tutor · explicação"}
           </p>
           {resposta.mensagem.split('\n').map((paragrafo, i) => (
             <p key={i} className={i > 0 ? 'mt-2' : ''}>{renderTextoFormatado(paragrafo)}</p>

@@ -30,6 +30,15 @@
 
 ## Entradas
 
+### 2026-05-12 09:55 — Antigravity — trabalho
+**Resumo:** Criação do guia de escrita do feedback do tutor (docs/12). Tom conversacional, negrito nas palavras-chave, ordem dos parágrafos ajustada pelo curador (papel → contraste → dica). Curador editou Ex.1 manualmente como referência.
+**Arquivos alterados:**
+- `docs/12-guia-feedback-tutor.md` — [NOVO] Guia completo com regras, exemplos (certo/errado), checklist e exemplo de referência
+- `docs/README.md` — Adicionados docs 11 e 12 no índice, status atualizado
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — Função `renderTextoFormatado` para negrito (`**`), feedbacks com `**` em vez de aspas, espaçamento no label TUTOR (`mb-3`), Ex.1 editado manualmente pelo curador
+**Estado atual:** A.6 funcional com feedbacks em refinamento. Guia de escrita pronto para uso em unidades futuras.
+**Próximo passo sugerido:** Curador finalizar textos da A.6 usando o guia. Depois: commitar tudo e seguir para auth + diagnóstico.
+
 ### 2026-05-12 09:12 — Antigravity — trabalho
 **Resumo:** Separação visual dos feedbacks de acerto em 3 parágrafos (papel / teste+aplicação / contraste). Regra documentada na D-07.
 **Arquivos alterados:**

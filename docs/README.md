@@ -14,12 +14,14 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 8. [Telemetria e Modos](./08-telemetria.md) — logs, relatórios, modo teste vs produção
 9. [Roadmap](./09-roadmap.md) — decisões tomadas, pendências, próximos passos
 10. [Stack e Arquitetura](./10-stack.md) — tecnologias, estrutura do projeto, decisões técnicas
+11. [Decisões de Design](./11-decisoes-design.md) — histórico de mudanças de design com justificativa (D-01 a D-07)
+12. [Guia de Feedback do Tutor](./12-guia-feedback-tutor.md) — como escrever os textos da caixa de feedback (tom, estrutura, checklist)
 
 ## Status atual
 
-- **Fase:** planejamento pedagógico **completo** + setup técnico inicial em curso
-- **Próximo passo:** seed das unidades + auth simples + primeira unidade funcional
-- **MVP previsto:** versão "modo teste" com curador (eu) como cobaia única antes de admitir os 5 alunos
+- **Fase:** setup técnico + primeira unidade funcional (A.6) testada como cobaia
+- **Próximo passo:** curador ajustar textos da A.6, depois auth + diagnóstico
+- **MVP previsto:** versão "modo teste" com curador como cobaia única antes de admitir os 5 alunos
 
 ## Como usar esta documentação
 
