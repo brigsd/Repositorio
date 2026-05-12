@@ -64,7 +64,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '"Mas" liga duas ideias que se opõem.\nO teste: troca por "porém". "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é "mas".\nO "mais" seria para quantidade, como em "preciso de mais tempo".',
+      '**Mas** liga duas ideias que se opõem.\nO teste: troca por **porém**. "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é **mas**.\nO **mais** seria para quantidade, como em "preciso de mais tempo".',
     feedbackErro: [
       "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
       '"Mais" fala de quantidade: mais café, mais tempo, mais dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
@@ -79,7 +79,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '"Há" fala de tempo que já passou.\nO teste: troca por "faz". "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é "há".\nO "a" seria para tempo futuro, como em "vou sair daqui a duas horas".',
+      '**Há** fala de tempo que já passou.\nO teste: troca por **faz**. "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é **há**.\nO **a** seria para tempo futuro, como em "vou sair daqui a duas horas".',
     feedbackErro: [
       "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
       'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
@@ -94,7 +94,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '"Por que" separado aparece em perguntas, quando você quer saber o motivo de algo.\nAqui a frase está perguntando, então é "por que" separado.\nNa resposta, aí usa "porque" junto: "Não avisei porque esqueci."',
+      '**Por que** separado aparece em perguntas, quando você quer saber o motivo de algo.\nAqui a frase está perguntando, então é **por que** separado.\nNa resposta, aí usa **porque** junto: "Não avisei porque esqueci."',
     feedbackErro: [
       "Essa frase está fazendo uma pergunta ou dando uma resposta?",
       'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
@@ -109,7 +109,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '"Mal" descreve como algo foi feito.\nO teste: troca por "de forma ruim". "O serviço ficou feito de forma ruim." Ficou natural? Então é "mal".\nO "mau" descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
+      '**Mal** descreve como algo foi feito.\nO teste: troca por **de forma ruim**. "O serviço ficou feito de forma ruim." Ficou natural? Então é **mal**.\nO **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
     feedbackErro: [
       "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
       'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa ("um mau serviço"), mas aqui estamos falando de como ele foi executado.',
@@ -124,7 +124,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '"Mim" vem depois de palavras como "com", "para", "por", "de" e "sem".\nO teste: troca por "ele". "Podem deixar o orçamento com ele." Ficou natural? Então é "mim".\nO "eu" aparece quando você é quem faz a ação: "Eu vou resolver."',
+      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nO teste: troca por **ele**. "Podem deixar o orçamento com ele." Ficou natural? Então é **mim**.\nO **eu** aparece quando você é quem faz a ação: "Eu vou resolver."',
     feedbackErro: [
       'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
       'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
@@ -132,6 +132,24 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
 ];
+
+// ────────────────────────────────────────────────────────────────────────────
+// Renderiza texto com **negrito** para palavras-chave
+// ────────────────────────────────────────────────────────────────────────────
+
+function renderTextoFormatado(texto: string) {
+  const partes = texto.split(/(\*\*[^*]+\*\*)/g);
+  return partes.map((parte, i) => {
+    if (parte.startsWith('**') && parte.endsWith('**')) {
+      return (
+        <strong key={i} className="font-semibold">
+          {parte.slice(2, -2)}
+        </strong>
+      );
+    }
+    return parte;
+  });
+}
 
 // ────────────────────────────────────────────────────────────────────────────
 // Seleciona o feedback correto conforme acerto e número de tentativas
@@ -393,7 +411,7 @@ export default function ExercicioClient({ armadilhas, slug }: Props) {
               : "Tutor · explicação"}
           </p>
           {resposta.mensagem.split('\n').map((paragrafo, i) => (
-            <p key={i} className={i > 0 ? 'mt-2' : ''}>{paragrafo}</p>
+            <p key={i} className={i > 0 ? 'mt-2' : ''}>{renderTextoFormatado(paragrafo)}</p>
           ))}
         </div>
       )}
