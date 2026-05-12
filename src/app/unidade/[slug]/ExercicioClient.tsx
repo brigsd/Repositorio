@@ -98,11 +98,13 @@ interface Props {
 export default function ExercicioClient({ armadilhas, exercicios, slug }: Props) {
   const [exercicioIdx, setExercicioIdx] = useState(0);
   const [opcaoSelecionada, setOpcaoSelecionada] = useState<string | null>(null);
+  const [inputEscrita, setInputEscrita] = useState("");
   const [tentativas, setTentativas] = useState(0);
   const [resposta, setResposta] = useState<RespostaIA | null>(null);
   const [concluiu, setConcluiu] = useState(false);
   const [acertosPorExercicio, setAcertosPorExercicio] = useState<boolean[]>([]);
   const feedbackRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const exercicio = exercicios[exercicioIdx];
   const totalExercicios = exercicios.length;
@@ -121,21 +123,29 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
   }
 
   function handleConfirmar() {
-    if (!opcaoSelecionada || !exercicio) return;
+    if (!exercicio) return;
 
-    const fb = gerarFeedbackLocal(exercicio, opcaoSelecionada, tentativas);
+    const resposta_aluno =
+      exercicio.tipo === "escrita_lacuna" ? inputEscrita : opcaoSelecionada;
+    if (!resposta_aluno) return;
+
+    const fb = gerarFeedbackLocal(exercicio, resposta_aluno, tentativas);
     setResposta(fb);
 
     if (!fb.acertou) {
       setTentativas((t) => t + 1);
-      setOpcaoSelecionada(null); // Limpa para nova tentativa
+      setOpcaoSelecionada(null);
+      setInputEscrita("");
+      setTimeout(() => inputRef.current?.focus(), 50);
     }
   }
 
   function handleProximo() {
     if (!resposta || !exercicio) return;
 
-    const acertou = resposta.acertou || opcaoSelecionada === exercicio.gabarito;
+    const respostaFinal =
+      exercicio.tipo === "escrita_lacuna" ? inputEscrita : opcaoSelecionada;
+    const acertou = resposta.acertou || respostaFinal === exercicio.gabarito;
     setAcertosPorExercicio((prev) => [...prev, acertou]);
 
     if (exercicioIdx + 1 >= totalExercicios) {
@@ -143,6 +153,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
     } else {
       setExercicioIdx((i) => i + 1);
       setOpcaoSelecionada(null);
+      setInputEscrita("");
       setResposta(null);
       setTentativas(0);
     }
@@ -246,16 +257,44 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
 
       {/* Enunciado */}
       <div className="rounded-2xl border border-stone-200 bg-white px-6 py-6">
-        <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-stone-400">
-          Complete a frase
+        <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">
+          {exercicio.tipo === "escrita_lacuna" ? "Escreva a palavra certa" : "Complete a frase"}
         </p>
-        <p className="text-lg font-medium leading-relaxed text-stone-900">
-          {exercicio.enunciado.replace("___", "______")}
-        </p>
+        {exercicio.tipo === "escrita_lacuna" ? (
+          <p className="text-lg font-medium leading-relaxed text-stone-900">
+            {exercicio.enunciado.split("___")[0]}
+            <input
+              ref={inputRef}
+              type="text"
+              value={inputEscrita}
+              onChange={(e) => setInputEscrita(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter" && inputEscrita.trim()) handleConfirmar(); }}
+              disabled={!!resposta?.acertou}
+              autoCapitalize="off"
+              autoCorrect="off"
+              autoComplete="off"
+              spellCheck={false}
+              aria-label="Digite a resposta"
+              className={[
+                "mx-1 inline-block w-28 border-b-2 bg-transparent pb-0.5 text-center font-semibold focus:outline-none",
+                resposta?.acertou
+                  ? "border-emerald-500 text-emerald-700"
+                  : resposta && !resposta.acertou
+                    ? "border-rose-400 text-rose-700"
+                    : "border-stone-900 text-stone-900",
+              ].join(" ")}
+            />
+            {exercicio.enunciado.split("___")[1]}
+          </p>
+        ) : (
+          <p className="text-lg font-medium leading-relaxed text-stone-900">
+            {exercicio.enunciado.replace("___", "______")}
+          </p>
+        )}
       </div>
 
-      {/* Opções */}
-      {exercicio.opcoes && (
+      {/* Opções — apenas para múltipla escolha */}
+      {exercicio.tipo !== "escrita_lacuna" && exercicio.opcoes && (
         <div
           className="grid grid-cols-2 gap-3"
           role="group"
@@ -264,8 +303,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
           {exercicio.opcoes.map((opcao) => {
             const selecionado = opcaoSelecionada === opcao;
             const correto = resposta?.acertou && opcao === exercicio.gabarito;
-            const errado =
-              resposta && !resposta.acertou && selecionado;
+            const errado = resposta && !resposta.acertou && selecionado;
 
             return (
               <button
@@ -324,7 +362,11 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
         {!resposta || !resposta.acertou && tentativas < 3 ? (
           <button
             onClick={handleConfirmar}
-            disabled={!opcaoSelecionada}
+            disabled={
+              exercicio.tipo === "escrita_lacuna"
+                ? !inputEscrita.trim()
+                : !opcaoSelecionada
+            }
             className="w-full rounded-xl bg-stone-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-40 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2"
           >
             Confirmar

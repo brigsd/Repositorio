@@ -30,6 +30,16 @@
 
 ## Entradas
 
+### 2026-05-12 — Claude Code
+**Resumo:** Implementação da Fase 2 de exercícios: tipo `escrita_lacuna` com campo inline dentro da frase. A.6 ganhou 8 exercícios de escrita (4 para mas/mais + 4 para por que/porque) com cenários diferentes dos de múltipla escolha.
+**Arquivos alterados:**
+- `src/lib/exercicios/tipos.ts` — Adicionado `"escrita_lacuna"` ao union tipo
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — Renderização inline do campo de digitação, estado `inputEscrita`, normalização, foco automático após erro, Enter para confirmar
+- `src/lib/exercicios/a6-palavras.ts` — 8 novos exercícios (a6-ex6 a a6-ex13): 4 de mas/mais + 4 de por que/porque, intercalados (mas→mais→mais→mas e pq→porque→porque→pq)
+**Decisões documentadas:** Cenários diferentes para fase de escrita (retrieval genuíno, não memória da frase). Feedback imediato frase a frase. Largura fixa w-28 para o campo inline.
+**Estado atual:** A.6 tem 13 exercícios no total: 5 múltipla escolha + 8 escrita (2 pares cobertos).
+**Próximo passo sugerido:** Adicionar escrita para os demais pares da A.6 (há/a, mau/mal, mim/eu) e equivalente na A.5. Revisar tempo estimado das unidades.
+
 ### 2026-05-12 11:40 — Antigravity — trabalho
 **Resumo:** Unidade A.5 (Acentos) criada com 6 exercícios curados. Refatoração dos exercícios para sistema modular. Página de entrada redesenhada com Progressive Disclosure. Guia de criação de unidades (docs/13) criado com pesquisa científica completa.
 **Arquivos alterados:**

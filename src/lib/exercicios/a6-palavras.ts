@@ -83,4 +83,122 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Mim" é a resposta. Depois de preposições como "com", "para", "de", "por" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "com eu" não funciona.',
     ],
   },
+
+  // ── Fase 2: escrita (cenários novos, intercalados) ────────────────────────
+
+  // Par mas/mais — 2 de cada, intercalados: mas → mais → mais → mas
+  {
+    slug: "a6-ex6-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Gostei da proposta, ___ o prazo ficou curto demais.",
+    gabarito: "mas",
+    armadilhaId: "mas_mais",
+    feedbackAcerto:
+      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, como em "preciso de mais tempo".\nUma dica: se você consegue trocar por **porém** sem mudar o sentido, use **mas**.',
+    feedbackErro: [
+      "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
+      'Gostar da proposta e o prazo ser curto são ideias que se contradizem. Qual palavra conecta ideias opostas: **mas** ou **mais**?',
+      '**Mas** é a resposta. Ele conecta dois lados que se opõem: você gostou, mas o prazo foi um problema. **Mais** seria para quantidade: "preciso de mais tempo".',
+    ],
+  },
+  {
+    slug: "a6-ex7-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Ela entende muito ___ de vendas do que eu.",
+    gabarito: "mais",
+    armadilhaId: "mas_mais",
+    feedbackAcerto:
+      '**Mais** aparece quando você está comparando quantidade ou intensidade.\nJá o **mas** conecta ideias opostas, como em "quero ir, mas não posso".\nUma dica: se você consegue trocar por **menos** e a frase ainda faz sentido (mesmo que com significado contrário), é **mais**.',
+    feedbackErro: [
+      "A frase está comparando o quanto duas pessoas entendem, ou está ligando duas ideias contrárias?",
+      'Está comparando: ela entende mais, eu entendo menos. Comparação de quantidade usa **mais**, não **mas**.',
+      '**Mais** é a resposta. A frase compara o quanto cada um sabe. Para comparações e quantidades, use **mais**. O **mas** serve para ligar ideias opostas: "quero ir, mas não posso".',
+    ],
+  },
+  {
+    slug: "a6-ex8-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Preciso de ___ um dia para revisar esse contrato.",
+    gabarito: "mais",
+    armadilhaId: "mas_mais",
+    feedbackAcerto:
+      '**Mais** indica quantidade, seja de tempo, dinheiro, esforço ou qualquer outra coisa.\nJá o **mas** conecta duas ideias contrárias.\nUma dica: se a palavra se refere a quanto de algo você precisa ou quer, é **mais**.',
+    feedbackErro: [
+      "A frase está pedindo uma quantidade de tempo, ou ligando duas ideias opostas?",
+      'Você está pedindo quantidade: mais um dia. Para quantidade, use **mais**, não **mas**.',
+      '**Mais** é a resposta. Sempre que a frase fala de quantidade (mais tempo, mais dinheiro, mais dias), use **mais**. O **mas** conecta ideias contrárias: "quero terminar, mas preciso de mais tempo".',
+    ],
+  },
+  {
+    slug: "a6-ex9-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "A reunião foi longa, ___ valeu a pena.",
+    gabarito: "mas",
+    armadilhaId: "mas_mais",
+    feedbackAcerto:
+      '**Mas** liga duas ideias que se contradizem: ser longa (ruim) e ter valido a pena (bom).\nJá o **mais** é para quantidade.\nUma dica: troca por **porém** e veja se a frase continua fazendo sentido.',
+    feedbackErro: [
+      "As duas partes da frase estão de acordo, ou uma contradiz a outra?",
+      'Uma reunião longa geralmente é cansativa, mas ela valeu a pena. São ideias contrárias. Qual palavra conecta ideias opostas?',
+      '**Mas** é a resposta. A frase tem duas ideias que se contradizem: foi longa (ponto negativo) e valeu a pena (ponto positivo). O **mas** faz exatamente esse trabalho.',
+    ],
+  },
+
+  // Par por que/porque — 2 de cada, intercalados: por que → porque → porque → por que
+  {
+    slug: "a6-ex10-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "___ o pedido ainda não saiu para entrega?",
+    gabarito: "Por que",
+    armadilhaId: "porque_family",
+    feedbackAcerto:
+      '**Por que** separado aparece nas perguntas, quando você quer saber o motivo de algo.\nJá o **porque** junto aparece nas respostas, quando você está explicando o motivo.\nUma dica: se a frase tem ponto de interrogação ou está pedindo uma explicação, use **por que** separado.',
+    feedbackErro: [
+      "A frase está fazendo uma pergunta ou dando uma resposta?",
+      'É uma pergunta sobre o motivo do atraso. Em perguntas, sempre **por que** separado. O **porque** junto aparece só nas respostas: "Não saiu porque teve um problema."',
+      '**Por que** separado é a resposta. A frase é uma pergunta: você quer saber o motivo. O **porque** junto só aparece quando você está explicando: "Não saiu porque o estoque zerou."',
+    ],
+  },
+  {
+    slug: "a6-ex11-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Não pude ir à reunião ___ estava com o carro na oficina.",
+    gabarito: "porque",
+    armadilhaId: "porque_family",
+    feedbackAcerto:
+      '**Porque** junto aparece quando você está explicando ou dando o motivo de algo.\nJá o **por que** separado aparece nas perguntas.\nUma dica: se você consegue trocar por **pois** e a frase continua fazendo sentido, é **porque** junto.',
+    feedbackErro: [
+      "A frase está fazendo uma pergunta ou explicando um motivo?",
+      'A frase explica um motivo: você não foi por causa do carro. Quando você explica o motivo, use **porque** junto. Tenta trocar por "pois": "Não pude ir pois estava com o carro na oficina." Funcionou? Então é **porque**.',
+      '**Porque** é a resposta. A frase explica o motivo da ausência. Sempre que você está justificando ou explicando algo, use **porque** junto. O **por que** separado seria para perguntar: "Por que você não foi?"',
+    ],
+  },
+  {
+    slug: "a6-ex12-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Assinei o contrato ___ as condições eram boas.",
+    gabarito: "porque",
+    armadilhaId: "porque_family",
+    feedbackAcerto:
+      '**Porque** junto introduz a razão ou o motivo de algo que foi feito.\nJá o **por que** separado é para perguntas.\nUma dica: tenta trocar por **pois**. "Assinei o contrato pois as condições eram boas." Ficou natural? Então é **porque**.',
+    feedbackErro: [
+      "A frase está pedindo um motivo ou explicando um motivo?",
+      'A frase explica por que o contrato foi assinado. Tenta trocar por "pois": ficou natural? Então é **porque** junto.',
+      '**Porque** é a resposta. Você está dando o motivo da assinatura. Quando a frase explica ou justifica algo, use **porque** junto. Para perguntar o motivo, aí seria **por que** separado.',
+    ],
+  },
+  {
+    slug: "a6-ex13-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Você sabe ___ o chefe cancelou a visita?",
+    gabarito: "por que",
+    armadilhaId: "porque_family",
+    feedbackAcerto:
+      '**Por que** separado aparece em perguntas sobre motivo, diretas ou indiretas.\nJá o **porque** junto aparece nas respostas e explicações.\nUma dica: mesmo que a frase não termine com ponto de interrogação, se ela está pedindo uma informação sobre o motivo, é **por que** separado.',
+    feedbackErro: [
+      "Essa frase está pedindo uma informação (motivo do cancelamento) ou explicando algo?",
+      'Mesmo sem ponto de interrogação, a frase está perguntando: "você sabe o motivo?" Perguntas, diretas ou indiretas, usam **por que** separado.',
+      '**Por que** separado é a resposta. Mesmo sem "?", a frase é uma pergunta indireta: você está pedindo uma informação. O **porque** junto seria numa resposta: "Ele cancelou porque ficou doente."',
+    ],
+  },
 ];

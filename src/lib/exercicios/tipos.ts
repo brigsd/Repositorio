@@ -7,7 +7,7 @@
 
 export interface ExercicioGerado {
   slug: string;
-  tipo: "lacuna_unica" | "identificar_erro";
+  tipo: "lacuna_unica" | "identificar_erro" | "escrita_lacuna";
   enunciado: string;
   opcoes?: string[];
   gabarito: string;
