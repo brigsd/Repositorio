@@ -2,6 +2,7 @@ import Link from "next/link";
 import { db } from "@/db";
 import { unidades } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { A5_ACENTOS } from "@/lib/curriculo/a5-acentos";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
@@ -25,8 +26,11 @@ export default async function UnidadePage({ params }: Props) {
   if (!unidade) notFound();
 
   // Currículo completo (com âncora, armadilhas, etc.)
-  const isA6 = slug === "a-6-palavras-armadilha";
-  const curriculo = isA6 ? A6_PALAVRAS_ARMADILHA : null;
+  const CURRICULOS: Record<string, typeof A6_PALAVRAS_ARMADILHA> = {
+    "a-5-acentos": A5_ACENTOS,
+    "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
+  };
+  const curriculo = CURRICULOS[slug] ?? null;
 
   // Exercícios interativos (registro central)
   const temExercicios = obterExercicios(slug) !== null;
