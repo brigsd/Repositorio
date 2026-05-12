@@ -330,6 +330,20 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Senão" junto é a resposta. Ele equivale a "caso contrário". Use **senão** quando a frase diz o que vai acontecer se nada for feito. O **se não** separado ficaria em: "Se não anotar, vai esquecer."',
     ],
   },
+  {
+    slug: "a6-ex31b-escrita",
+    tipo: "escrita_lacuna",
+    enunciado: "Anote o número, ___ você vai se esquecer.",
+    gabarito: "porque",
+    armadilhaId: "porque_family",
+    feedbackAcerto:
+      '**Porque** explica o motivo da ação — você deve anotar *por causa* do risco de esquecer.\nPerceba a diferença com a frase anterior: "Anote, **senão** vai esquecer" avisa a consequência. "Anote, **porque** vai se esquecer" explica o motivo.\nMesma frase, conector diferente, sentido diferente.',
+    feedbackErro: [
+      "A frase está explicando por que você deve anotar, ou avisando o que acontece se não anotar?",
+      'A segunda parte da frase dá o motivo da ação — você vai se esquecer, e é *por isso* que deve anotar. Quando a segunda parte explica o motivo, use **porque**. O "senão" seria para consequência: "Anote, senão vai esquecer."',
+      '"Porque" é a resposta. A frase dá o motivo: você deve anotar *porque* vai se esquecer. Compare com o exercício anterior: "Anote, **senão** vai esquecer" (= caso contrário). Mesma estrutura, significado diferente.',
+    ],
+  },
 
   // ── Rodada 3: mais | porque | há | mau | mim | onde | senão ──────────────
 
