@@ -63,9 +63,7 @@ export const A6_PALAVRAS_ARMADILHA: UnidadeCurriculo = {
       id: "mas_mais",
       titulo: "mas / mais",
       textoAncora: `
-"Mas" serve pra ligar duas ideias que vão em direções opostas. Funciona igual a "porém" ou "no entanto".
-"Mais" fala de quantidade ou intensidade. Você pode trocar por um número ou por "muito".
-
+"Mas" conecta ideias opostas, como "porém". "Mais" fala de quantidade ou intensidade, como em "preciso de mais tempo".
 Teste: tente trocar pela palavra "porém". Se ficou certo, use "mas". Se ficou estranho, use "mais".
 
 Exemplo: "Quero ir, porém não posso." Ficou certo? Então é "mas".
@@ -85,9 +83,7 @@ Exemplo: "Quero ir, porém não posso." Ficou certo? Então é "mas".
       id: "ha_a",
       titulo: "há / a",
       textoAncora: `
-"Há" fala de tempo que já passou ou de algo que existe. Você pode trocar por "faz" e o sentido fica igual.
-"A" aponta pra um lugar ou um tempo que ainda vai acontecer.
-
+"Há" indica tempo passado ou existência — troca por "faz" e funciona. "A" aponta lugar ou tempo futuro.
 Teste: tente trocar por "faz". Se ficou certo, use "há". Se ficou estranho, use "a".
 
 Exemplo: "Trabalho aqui faz dois anos." Ficou certo? Então é "há": "Trabalho aqui há dois anos."
@@ -107,9 +103,7 @@ Exemplo: "Trabalho aqui faz dois anos." Ficou certo? Então é "há": "Trabalho 
       id: "mau_mal",
       titulo: "mau / mal",
       textoAncora: `
-"Mau" descreve como uma coisa ou pessoa é. Você pode trocar por "ruim" e o sentido fica igual.
-"Mal" descreve como algo foi feito ou como alguém está se sentindo. Você pode trocar por "de forma ruim".
-
+"Mau" descreve como algo ou alguém é (troca por "ruim"). "Mal" descreve como algo foi feito ou como alguém se sente (troca por "de forma ruim").
 Teste: tente trocar por "ruim". Se ficou certo, use "mau". Se ficou estranho, use "mal".
 
 Exemplo: "Ele é um ruim funcionário." Ficou certo? Então é "mau": "Ele é um mau funcionário."
@@ -130,7 +124,8 @@ Outro: "Ele trabalha de forma ruim." Ficou certo? Então é "mal": "Ele trabalha
       id: "porque_family",
       titulo: "por que / porque / porquê / por quê",
       textoAncora: `
-São quatro formas. Calma, a lógica é simples:
+"Por que" (separado): perguntas. "Porque" (junto): respostas. "Por quê": final de frase. "Porquê": substantivo ("o porquê").
+O mais comum no dia a dia: pergunta usa "por que", resposta usa "porque".
 
 "Por que" (separado, sem acento): aparece em perguntas. "Por que você saiu?"
 "Porque" (junto, sem acento): aparece nas respostas. "Saí porque estava doente." Funciona como "pois".
@@ -160,8 +155,8 @@ O mais usado no dia a dia é a diferença entre os dois primeiros: pergunta usa 
       id: "mim_eu",
       titulo: "mim / eu",
       textoAncora: `
-"Eu" aparece antes do verbo, quando você é quem faz a ação.
-"Mim" aparece depois de palavras como "para", "por", "de", "com", "sem".
+"Eu" é sujeito — vem antes do verbo, quando você age. "Mim" vem depois de preposições: para mim, por mim, sem mim.
+"Mim" aparece depois de palavras como "para", "por", "de", "sem".
 
 Teste: se você pode trocar por "ele" ou "ela" sem precisar mudar mais nada na frase, use "eu". Se aparecer uma dessas palavras antes (para, por, de, com, sem), use "mim".
 
@@ -180,6 +175,48 @@ Atenção: "comigo" já está correto do jeito que está. Não precisa mudar.
         "❌ Isso é para eu. (quando 'eu' não é quem faz uma ação)",
       ],
       tiposErro: ["mim_como_sujeito", "eu_apos_preposicao"],
+    },
+    {
+      id: "onde_aonde",
+      titulo: "onde / aonde",
+      textoAncora: `
+"Onde" indica localização fixa — o lugar onde algo está ou acontece. "Aonde" indica destino, quando há movimento em direção a algum lugar.
+Teste: tente trocar por "para onde". Se ficou certo, use "aonde". Se ficou estranho, use "onde".
+
+Exemplo: "Para onde você vai?" Ficou certo? Então é "aonde": "Aonde você vai?"
+Outro: "Em que lugar você trabalha?" Ficou certo? Então é "onde": "Onde você trabalha?"
+      `.trim(),
+      exemplosCertos: [
+        "Aonde você vai? (= para onde)",
+        "A loja onde trabalho fica no centro. (lugar fixo)",
+        "Não sei aonde ir. (destino, movimento)",
+      ],
+      exemplosErrados: [
+        "❌ Aonde você mora? (mora = localização fixa → 'onde')",
+        "❌ Onde você vai? (vai = movimento → 'aonde')",
+      ],
+      tiposErro: ["onde_para_destino", "aonde_para_fixo"],
+    },
+    {
+      id: "senao_se_nao",
+      titulo: "senão / se não",
+      textoAncora: `
+"Senão" (junto) equivale a "caso contrário" — indica consequência. "Se não" (separado) abre uma condição com "se": "se não fizer X, então Y".
+Teste: tente trocar por "caso contrário". Se ficou certo, é "senão" junto. Se ficou estranho, é "se não" separado.
+
+Exemplo: "Estude, caso contrário vai reprovar." Ficou certo? Então é "senão": "Estude, senão vai reprovar."
+Outro: "Se você não confirmar, perde a vaga." Funciona com "caso não"? Então é "se não": "Se não confirmar, perde a vaga."
+      `.trim(),
+      exemplosCertos: [
+        "Chegue cedo, senão perde a vaga. (= caso contrário)",
+        "Se não confirmar até amanhã, perderá a vaga. (condição)",
+        "Se não houver assinatura, o contrato não vale. (condição)",
+      ],
+      exemplosErrados: [
+        "❌ Chegue cedo, se não perde a vaga. (aqui é consequência → 'senão')",
+        "❌ Senão confirmar, perde a vaga. (aqui é condição → 'se não')",
+      ],
+      tiposErro: ["senao_em_condicao", "se_nao_como_consequencia"],
     },
   ],
 
