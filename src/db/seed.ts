@@ -13,7 +13,7 @@
  */
 import { sql } from "drizzle-orm";
 import { db } from "./index";
-import { unidades } from "./schema";
+import { unidades, alunos } from "./schema";
 
 type NovaUnidade = {
   nivel: "A" | "B" | "C";
@@ -130,6 +130,29 @@ async function main() {
   console.log(`  Nivel A: ${contagem.filter((u) => u.nivel === "A").length}`);
   console.log(`  Nivel B: ${contagem.filter((u) => u.nivel === "B").length}`);
   console.log(`  Nivel C: ${contagem.filter((u) => u.nivel === "C").length}`);
+
+  // -------------------------------------------------------------------
+  // Seed do curador (admin)
+  // -------------------------------------------------------------------
+  console.log("\nCriando curador (admin)...");
+  await db
+    .insert(alunos)
+    .values({
+      nome: "Tiago Marcondes",
+      primeiroNome: "TIAGO",
+      email: "tiagomarcondechadeck@gmail.com",
+      isAdmin: true,
+      modo: "teste",
+    })
+    .onConflictDoUpdate({
+      target: alunos.email,
+      set: {
+        nome: sql`EXCLUDED.nome`,
+        primeiroNome: sql`EXCLUDED.primeiro_nome`,
+        isAdmin: sql`EXCLUDED.is_admin`,
+      },
+    });
+  console.log("Curador criado: TIAGO (admin)");
 }
 
 main()

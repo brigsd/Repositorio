@@ -30,6 +30,24 @@
 
 ## Entradas
 
+### 2026-05-12 10:30 — Antigravity — trabalho
+**Resumo:** Implementação completa do auth por primeiro nome (UPPERCASE). Login, logout, middleware, painel admin, seed do curador.
+**Arquivos alterados:**
+- `src/db/schema.ts` — Adicionados `primeiroNome` (UPPERCASE, unique) e `isAdmin` na tabela `alunos`
+- `src/lib/auth.ts` — [NOVO] JWT via jose, sessão em cookie httpOnly, normalização de nome
+- `src/middleware.ts` — [NOVO] Proteção de rotas (públicas, protegidas, admin)
+- `src/app/api/auth/login/route.ts` — [NOVO] POST login por primeiro nome
+- `src/app/api/auth/logout/route.ts` — [NOVO] POST limpa sessão
+- `src/app/api/admin/alunos/route.ts` — [NOVO] GET lista + POST cria aluno (admin only)
+- `src/app/login/page.tsx` — [NOVO] Tela de login minimalista
+- `src/app/admin/page.tsx` — [NOVO] Painel do curador (listar/adicionar alunos)
+- `src/app/LogoutButton.tsx` — [NOVO] Botão de logout client-side
+- `src/app/page.tsx` — Barra do usuário (Olá nome, Sair, Painel do curador)
+- `src/db/seed.ts` — Cria curador TIAGO como admin no seed
+- `package.json` — jose adicionado como dependência
+**Estado atual:** Auth funcional. Login por primeiro nome testado e aprovado. Curador TIAGO é admin.
+**Próximo passo sugerido:** Commitar, depois onboarding ou diagnóstico.
+
 ### 2026-05-12 09:55 — Antigravity — trabalho
 **Resumo:** Criação do guia de escrita do feedback do tutor (docs/12). Tom conversacional, negrito nas palavras-chave, ordem dos parágrafos ajustada pelo curador (papel → contraste → dica). Curador editou Ex.1 manualmente como referência.
 **Arquivos alterados:**

@@ -35,8 +35,10 @@ export const confiancaEnum = pgEnum("confianca", ["alta", "media", "baixa"]);
 export const alunos = pgTable("alunos", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
+  primeiroNome: text("primeiro_nome").notNull().unique(), // UPPERCASE, usado no login
   email: text("email").notNull().unique(),
-  pinHash: text("pin_hash"),
+  pinHash: text("pin_hash"), // mantido por compatibilidade, sem uso por enquanto
+  isAdmin: boolean("is_admin").notNull().default(false),
   modo: modoEnum("modo").notNull().default("prod"),
   criadoEm: timestamp("criado_em", { withTimezone: true })
     .defaultNow()

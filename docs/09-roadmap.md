@@ -72,7 +72,7 @@
 - [x] ~~Modelo de aluno~~ → `src/lib/modelo-aluno.ts`
 - [x] ~~Currículo curado da Unidade A.6~~ → `src/lib/curriculo/a6-palavras-armadilha.ts`
 - [x] ~~UI da unidade com exercícios interativos~~ → `src/app/unidade/[slug]/`
-- [ ] Auth simples (convite via WhatsApp + PIN)
+- [x] ~~Auth simples (login por primeiro nome, UPPERCASE)~~
 - [ ] Onboarding do aluno (contexto pessoal: ocupação, motivação)
 - [ ] Diagnóstico inicial como fluxo na plataforma
 - [ ] Painel admin do curador (relatórios, flags, diários)

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { db } from "@/db";
 import { unidades } from "@/db/schema";
 import { NIVEIS_INFO, type NivelChave } from "@/lib/niveis";
+import { obterSessao } from "@/lib/auth";
+import { LogoutButton } from "./LogoutButton";
 
 // Unidades com currículo interativo pronto
 const UNIDADES_ATIVAS = new Set(["a-6-palavras-armadilha"]);
@@ -10,6 +12,8 @@ const UNIDADES_ATIVAS = new Set(["a-6-palavras-armadilha"]);
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
+  const sessao = await obterSessao();
+
   const todasUnidades = await db
     .select()
     .from(unidades)
@@ -23,6 +27,26 @@ export default async function HomePage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      {/* Barra do usuário */}
+      {sessao && (
+        <div className="mb-6 flex items-center justify-between rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <p className="text-sm text-stone-700">
+            Olá, <strong>{sessao.nome}</strong>
+          </p>
+          <div className="flex items-center gap-3">
+            {sessao.isAdmin && (
+              <Link
+                href="/admin"
+                className="text-xs font-medium text-amber-700 hover:text-amber-900 transition"
+              >
+                Painel do curador
+              </Link>
+            )}
+            <LogoutButton />
+          </div>
+        </div>
+      )}
+
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Programa de Educação para Adultos
