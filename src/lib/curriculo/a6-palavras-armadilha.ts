@@ -122,7 +122,7 @@ Outro: "Ele trabalha de forma ruim." Ficou certo? Então é "mal": "Ele trabalha
     },
     {
       id: "porque_family",
-      titulo: "por que / porque / porquê / por quê",
+      titulo: "por que / porque",
       textoAncora: `
 "Por que" (separado): perguntas. "Porque" (junto): respostas. "Por quê": final de frase. "Porquê": substantivo ("o porquê").
 O mais comum no dia a dia: pergunta usa "por que", resposta usa "porque".
