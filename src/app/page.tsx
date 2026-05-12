@@ -127,10 +127,17 @@ export default async function HomePage() {
       </div>
 
       <footer className="mt-16 border-t border-stone-200 pt-6 text-sm text-stone-500">
-        Versão de desenvolvimento · Documentação completa em{" "}
-        <code className="rounded bg-stone-100 px-1.5 py-0.5 text-xs">
-          docs/
-        </code>
+        <div className="flex items-center justify-between">
+          <span>
+            Versão de desenvolvimento · Documentação em{" "}
+            <code className="rounded bg-stone-100 px-1.5 py-0.5 text-xs">
+              docs/
+            </code>
+          </span>
+          <code className="rounded bg-stone-100 px-1.5 py-0.5 text-xs text-stone-400">
+            {process.env.NEXT_PUBLIC_GIT_HASH}
+          </code>
+        </div>
       </footer>
     </div>
   );
