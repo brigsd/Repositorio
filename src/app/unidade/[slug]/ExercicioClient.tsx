@@ -68,7 +68,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     feedbackErro: [
       "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
       '**Mais** fala de quantidade: **mais** café, **mais** tempo, **mais** dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
-      '**Mas** é a resposta correta para este exercício. Porque essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
+      '**Mas** é a resposta deste exercício. Essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
     ],
   },
   {
@@ -79,7 +79,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**Há** indica tempo que já passou.\nUma dica: tenta trocar por **faz**. "Trabalho nesta oficina faz cinco anos." Soou natural? Então é **há**.\nJá o **a** indica tempo que ainda vem, como em "vou sair daqui a duas horas".',
+      '**Há** indica tempo que já passou.\nJá o **a** indica tempo que ainda vem, como em "vou sair daqui a duas horas".\nUma dica: tenta trocar por **faz**. "Trabalho nesta oficina faz cinco anos." Soou natural? Então é **há**.',
     feedbackErro: [
       "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
       'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
@@ -94,7 +94,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Por que** separado aparece quando você está fazendo uma pergunta.\nAqui a frase está pedindo o motivo de algo, então é **por que** separado.\nQuando você está respondendo ou explicando o motivo, aí usa **porque** junto. Por exemplo: "Não avisei porque esqueci."',
+      '**Por que** separado aparece quando você está fazendo uma pergunta.\nQuando você está respondendo ou explicando o motivo, aí usa **porque** junto. Por exemplo: "Não avisei porque esqueci."\nUma dica: se a frase tem ponto de interrogação ou está pedindo um motivo, use **por que** separado.',
     feedbackErro: [
       "Essa frase está fazendo uma pergunta ou dando uma resposta?",
       'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
@@ -109,7 +109,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito.\nUma dica: tenta trocar por **de forma ruim**. "O serviço ficou feito de forma ruim." Soou natural? Então é **mal**.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
+      '**Mal** descreve como algo foi feito.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".\nUma dica: tenta trocar por **de forma ruim**. "O serviço ficou feito de forma ruim." Soou natural? Então é **mal**.',
     feedbackErro: [
       "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
       'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa ("um mau serviço"), mas aqui estamos falando de como ele foi executado.',
@@ -124,7 +124,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento com ele." Soou natural? Então é **mim**.\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."',
+      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento com ele." Soou natural? Então é **mim**.',
     feedbackErro: [
       'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
       'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
