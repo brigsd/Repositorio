@@ -1,10 +1,12 @@
 import { asc } from "drizzle-orm";
+import Link from "next/link";
 import { db } from "@/db";
 import { unidades } from "@/db/schema";
 import { NIVEIS_INFO, type NivelChave } from "@/lib/niveis";
 
-// Em dev, sempre re-fetch (sem cache) pra refletir mudancas no banco
-// imediatamente. Em producao, o Next decide pelo conteudo.
+// Unidades com currículo interativo pronto
+const UNIDADES_ATIVAS = new Set(["a-6-palavras-armadilha"]);
+
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
@@ -52,23 +54,45 @@ export default async function HomePage() {
               </div>
 
               <ul className="space-y-2">
-                {unidadesDoNivel.map((u) => (
-                  <li key={u.id}>
-                    <article className="flex items-center justify-between gap-4 rounded-lg border border-stone-200 bg-white px-4 py-3 transition hover:border-stone-400">
-                      <div className="min-w-0">
-                        <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                          {u.nivel}.{u.numero}
-                        </span>
-                        <h3 className="mt-0.5 text-base font-medium text-stone-900">
-                          {u.titulo}
-                        </h3>
-                      </div>
-                      <span className="shrink-0 rounded-full bg-stone-100 px-2 py-1 text-xs font-medium uppercase tracking-wide text-stone-500">
-                        Não iniciado
-                      </span>
-                    </article>
-                  </li>
-                ))}
+                {unidadesDoNivel.map((u) => {
+                  const ativa = UNIDADES_ATIVAS.has(u.slug);
+                  return (
+                    <li key={u.id}>
+                      {ativa ? (
+                        <Link
+                          href={`/unidade/${u.slug}`}
+                          className="flex items-center justify-between gap-4 rounded-lg border border-stone-200 bg-white px-4 py-3 transition hover:border-stone-800 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-1"
+                        >
+                          <div className="min-w-0">
+                            <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
+                              {u.nivel}.{u.numero}
+                            </span>
+                            <h3 className="mt-0.5 text-base font-medium text-stone-900">
+                              {u.titulo}
+                            </h3>
+                          </div>
+                          <span className="shrink-0 rounded-full bg-stone-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                            Disponível
+                          </span>
+                        </Link>
+                      ) : (
+                        <article className="flex items-center justify-between gap-4 rounded-lg border border-stone-200 bg-white px-4 py-3 opacity-60">
+                          <div className="min-w-0">
+                            <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
+                              {u.nivel}.{u.numero}
+                            </span>
+                            <h3 className="mt-0.5 text-base font-medium text-stone-900">
+                              {u.titulo}
+                            </h3>
+                          </div>
+                          <span className="shrink-0 rounded-full bg-stone-100 px-2 py-1 text-xs font-medium uppercase tracking-wide text-stone-500">
+                            Em breve
+                          </span>
+                        </article>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </section>
           );
