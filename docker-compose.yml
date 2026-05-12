@@ -1,0 +1,17 @@
+# Postgres local para desenvolvimento.
+# Uso: `docker compose up -d` para iniciar, `docker compose down` para parar.
+# Os dados ficam em ./.postgres-data (gitignored).
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: programa-educacao-postgres
+    environment:
+      POSTGRES_USER: programa_dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: programa_educacao
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
