@@ -7,7 +7,10 @@ import { obterSessao } from "@/lib/auth";
 import { LogoutButton } from "./LogoutButton";
 
 // Unidades com currículo interativo pronto
-const UNIDADES_ATIVAS = new Set(["a-6-palavras-armadilha"]);
+const UNIDADES_ATIVAS = new Set([
+  "a-5-acentos",
+  "a-6-palavras-armadilha",
+]);
 
 export const dynamic = "force-dynamic";
 

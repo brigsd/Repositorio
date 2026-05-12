@@ -3,7 +3,7 @@ import { unidades } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
+import { obterExercicios } from "@/lib/exercicios";
 import ExercicioClient from "../ExercicioClient";
 
 export const dynamic = "force-dynamic";
@@ -23,10 +23,9 @@ export default async function ExercicioPage({ params }: Props) {
 
   if (!unidade) notFound();
 
-  const isA6 = slug === "a-6-palavras-armadilha";
-  const curriculo = isA6 ? A6_PALAVRAS_ARMADILHA : null;
+  const exercicios = obterExercicios(slug);
 
-  if (!curriculo) {
+  if (!exercicios) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-12 text-center">
         <p className="text-stone-500">Esta unidade ainda não tem exercícios interativos.</p>
@@ -69,7 +68,8 @@ export default async function ExercicioPage({ params }: Props) {
 
       {/* Exercícios interativos */}
       <ExercicioClient
-        armadilhas={curriculo.armadilhas ?? []}
+        armadilhas={[]}
+        exercicios={exercicios}
         slug={slug}
       />
     </div>
