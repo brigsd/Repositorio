@@ -55,11 +55,6 @@ export default async function UnidadePage({ params }: Props) {
           <span className="rounded-full bg-stone-900 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white">
             Nível {unidade.nivel} · Unidade {unidade.numero}
           </span>
-          {curriculo && (
-            <span className="text-sm text-stone-500">
-              ~{curriculo.duracaoEstimadaMin} min
-            </span>
-          )}
         </div>
         <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
           {unidade.titulo}
