@@ -120,6 +120,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
   const [concluiu, setConcluiu] = useState(false);
   const [acertosPorExercicio, setAcertosPorExercicio] = useState<boolean[]>([]);
   const [dicaVisivel, setDicaVisivel] = useState(false);
+  const [opcaoConfirmadaErrada, setOpcaoConfirmadaErrada] = useState<string | null>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -150,6 +151,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
     setResposta(fb);
 
     if (!fb.acertou) {
+      setOpcaoConfirmadaErrada(resposta_aluno);
       setTentativas((t) => t + 1);
       setOpcaoSelecionada(null);
       setInputEscrita("");
@@ -170,6 +172,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
     } else {
       setExercicioIdx((i) => i + 1);
       setOpcaoSelecionada(null);
+      setOpcaoConfirmadaErrada(null);
       setInputEscrita("");
       setResposta(null);
       setTentativas(0);
@@ -341,7 +344,7 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
           {exercicio.opcoes.map((opcao) => {
             const selecionado = opcaoSelecionada === opcao;
             const correto = resposta?.acertou && opcao === exercicio.gabarito;
-            const errado = resposta && !resposta.acertou && selecionado;
+            const errado = opcaoConfirmadaErrada === opcao;
 
             return (
               <button
