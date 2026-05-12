@@ -11,7 +11,7 @@
 **Contexto:** Revisão dos textos de `textoAncora` da Unidade A.6.
 
 ### Decisão
-Remover o travessão (—) dos textos que o aluno vai ler. Mantê-lo apenas em comentários de código (invisíveis ao aluno).
+Remover o travessão (—) dos textos que o aluno vai ler.
 
 ### Por que
 O travessão é pontuação válida em português — Chicago Style e Merriam-Webster o documentam como ferramenta para ênfase, pausas e inserção de informação. **Mas** a pesquisa confirma que é chamado de "the ChatGPT dash": LLMs o usam com frequência desproporcional, tornando-o um marcador visível de texto gerado por máquina.
@@ -33,7 +33,7 @@ Para o nosso público (letramento básico), o travessão cria dois problemas pr�
 **Contexto:** Revisão do tom e vocabulário dos `textoAncora` da Unidade A.6.
 
 ### Decisão
-Reescrever todos os textos de explicação eliminando termos gramaticais formais (adjetivo, advérbio, substantivo, preposição como classificação) e contradições internas. Manter tom de conversa entre colegas — nem acadêmico nem exageradamente informal.
+Reescrever todos os textos de explicação eliminando termos gramaticais formais (adjetivo, advérbio, substantivo, preposição como classificação) e contradições internas. Manter tom de conversa entre colegas ou seja, nem acadêmico nem exageradamente informal.
 
 ### Por que
 O público tem letramento funcional consolidado, mas sem letramento formal. Termos como "advérbio" e "qualifica um substantivo" pressupõem familiaridade com metalinguagem gramatical que esse aluno não tem. Usar esses termos cria a sensação de "voltei pra escola" — exatamente o que queremos evitar.
@@ -130,3 +130,75 @@ Coerência com D-01: o aluno não deve encontrar o travessão em nenhum texto da
 
 ### Arquivos alterados
 - `src/app/unidade/[slug]/ExercicioClient.tsx` — enunciado do exercício a6-ex4
+
+---
+
+## D-06 · Autenticação: convite via WhatsApp + PIN (substituiu magic link)
+
+**Data:** 2026-05-12
+**Contexto:** Definição do esquema de autenticação para os 5 alunos do projeto.
+
+### Decisão
+Substituir o plano original de magic link por e-mail por um esquema de **convite via WhatsApp + PIN numérico**.
+
+### Fluxo
+
+1. **Curador gera link de convite** personalizado na plataforma
+2. **Envia o link pelo WhatsApp** para o aluno (canal que o público já usa diariamente)
+3. **Aluno clica no link**, que abre a página de cadastro
+4. **Aluno informa e-mail e cria um PIN numérico** (funciona como senha)
+5. **Sistema cadastra o aluno no banco** com identificação única (e-mail + PIN)
+6. **Nas sessões seguintes**, aluno faz login com e-mail + PIN
+
+### Por que mudou
+
+O magic link parecia simples, mas tinha problemas práticos para esse público:
+
+| Aspecto | Magic link | Convite WhatsApp + PIN |
+|---|---|---|
+| Canal de entrada | E-mail (muitos não checam regularmente) | WhatsApp (usam todo dia) |
+| Dependência de e-mail | Total (se não chega, não entra) | Só no cadastro inicial |
+| Experiência de login | Ir no e-mail → achar o link → clicar → voltar | Abrir app → e-mail + PIN → entrar |
+| Risco de não funcionar | Alto (spam, caixa mal configurada, demora) | Baixo (PIN está na memória do aluno) |
+| Cadastro de novos alunos | Automático mas sem controle | Controlado pelo curador (por convite) |
+| Identificação individual | Sim | Sim (e-mail + PIN no banco) |
+
+**Vantagem extra:** o convite controlado evita cadastro indesejado. Só entra quem o curador convidou.
+
+### Arquivos a alterar (implementação pendente)
+- `src/db/schema.ts` — adicionar campo de PIN (hash) na tabela `alunos`; criar tabela `convites`
+- `src/app/(auth)/` — páginas de convite, cadastro e login
+- `docs/10-stack.md` — tabela de stack atualizada ✅
+- `docs/09-roadmap.md` — decisão e changelog atualizados ✅
+
+---
+
+## D-07 · Padronização da estrutura dos feedbacks de acerto
+
+**Data:** 2026-05-12
+**Contexto:** Auditoria dos textos de feedback da Unidade A.6 durante teste de cobaia.
+
+### Problemas detectados
+
+1. **Travessões (—) em 6 lugares** — violação de D-01 que havia passado despercebida nos feedbacks (estava corrigido apenas nos `textoAncora`)
+2. **Ex.1 (mas/mais) não usava o teste prático** — explicava com "direções opostas" e "pressão contrária" (abstrato), em vez do teste "troca por porém" definido no `textoAncora`
+3. **Textos não seguiam o padrão de 4 passos da D-02** — eram parágrafos corridos sem estrutura clara
+
+### Decisão
+
+Padronizar todos os 5 `feedbackAcerto` no formato de 4 frases curtas que seguem o padrão D-02:
+
+1. **Papel da palavra** em linguagem cotidiana (o que ela faz)
+2. **Teste prático** com palavra conhecida ("troca por X")
+3. **Teste aplicado** à frase do exercício ("ficou natural? então é Y")
+4. **Contraste** curto com a outra opção ("o Z seria para...")
+
+**Antes (Ex.1):**
+> "Mas" é o certo aqui porque as duas partes da frase puxam em direções opostas: você quer terminar o serviço, e o cliente esperando cria uma pressão contrária. Toda vez que uma ideia vai contra a outra, é "mas". Se fosse quantidade ou intensidade, aí seria "mais".
+
+**Depois (Ex.1):**
+> "Mas" liga duas ideias que se opõem. O teste: troca por "porém". "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é "mas". O "mais" seria para quantidade, como em "preciso de mais tempo".
+
+### Arquivos alterados
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — 5 `feedbackAcerto` reescritos + 1 `feedbackErro[1]` corrigido (travessão removido)
+- `src/app/unidade/[slug]/exercicio/page.tsx` — travessão removido da caixa "Lembre-se"

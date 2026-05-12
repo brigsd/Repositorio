@@ -62,7 +62,7 @@ export default async function ExercicioPage({ params }: Props) {
           </p>
           <p className="text-sm text-stone-800 leading-relaxed">
             Isso não é uma prova. O tutor vai te ajudar se você travar.
-            O objetivo é entender — não acertar de primeira.
+            O objetivo é entender, não acertar de primeira.
           </p>
         </div>
       </header>

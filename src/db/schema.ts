@@ -36,7 +36,25 @@ export const alunos = pgTable("alunos", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
   email: text("email").notNull().unique(),
+  pinHash: text("pin_hash"),
   modo: modoEnum("modo").notNull().default("prod"),
+  criadoEm: timestamp("criado_em", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+});
+
+// ============================================================================
+// Convites — links de convite gerados pelo curador (auth via WhatsApp + PIN)
+// ============================================================================
+
+export const convites = pgTable("convites", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  alunoId: uuid("aluno_id")
+    .notNull()
+    .references(() => alunos.id, { onDelete: "cascade" }),
+  token: text("token").notNull().unique(),
+  expiraEm: timestamp("expira_em", { withTimezone: true }).notNull(),
+  usadoEm: timestamp("usado_em", { withTimezone: true }),
   criadoEm: timestamp("criado_em", { withTimezone: true })
     .defaultNow()
     .notNull(),

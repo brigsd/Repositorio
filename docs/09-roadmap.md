@@ -41,12 +41,13 @@
 | 35 | Banco: Postgres (no Render free 90 dias → Neon free depois) | `10-stack.md` |
 | 36 | ORM: Drizzle (TypeScript end-to-end, mais simples que Prisma) | `10-stack.md` |
 | 37 | Hospedagem: Render com auto-deploy de git | `10-stack.md` |
-| 38 | Auth: magic link via e-mail (sem provedor externo) | `10-stack.md` |
+| 38 | Auth: convite via WhatsApp + PIN (sem provedor externo) | `10-stack.md`, `11-decisoes-design.md` |
 | 39 | Dev: local como padrão (Postgres local), Render só para produção | `10-stack.md` |
 | 40 | Feedback do tutor nos exercícios fechados: curado fixo, não API | `11-decisoes-design.md` |
 | 41 | Travessão (—) removido dos textos que o aluno lê (Níveis A e B) | `11-decisoes-design.md` |
 | 42 | Termos gramaticais formais removidos das explicações pedagógicas | `11-decisoes-design.md` |
 | 43 | Feedback em 3 camadas por exercício (socrático → pista → direto) | `11-decisoes-design.md` |
+| 44 | Feedback de acerto padronizado em 4 frases (papel → teste → aplicação → contraste) | `11-decisoes-design.md` |
 
 ## Decisões pendentes (em ordem de prioridade)
 
@@ -71,7 +72,7 @@
 - [x] ~~Modelo de aluno~~ → `src/lib/modelo-aluno.ts`
 - [x] ~~Currículo curado da Unidade A.6~~ → `src/lib/curriculo/a6-palavras-armadilha.ts`
 - [x] ~~UI da unidade com exercícios interativos~~ → `src/app/unidade/[slug]/`
-- [ ] Auth simples (magic link)
+- [ ] Auth simples (convite via WhatsApp + PIN)
 - [ ] Onboarding do aluno (contexto pessoal: ocupação, motivação)
 - [ ] Diagnóstico inicial como fluxo na plataforma
 - [ ] Painel admin do curador (relatórios, flags, diários)
@@ -123,3 +124,7 @@ Só depois disso admite os primeiros alunos reais. Níveis B e C são construíd
 - **2026-05-11** — Home funcional com os 3 níveis e 45 unidades.
 - **2026-05-11** — Lib de prompts adaptativa, spaced repetition, modelo de aluno, currículo A.6 e UI de exercícios criados.
 - **2026-05-11** — Travessão removido dos textos que o aluno lê (D-01). Linguagem das explicações reescrita sem termos gramaticais formais (D-02). Feedback do tutor definido como curado fixo em 3 camadas (D-03, D-04, D-05). Ver `11-decisoes-design.md`.
+- **2026-05-12** — Auth mudou de magic link para convite via WhatsApp + PIN (D-06). Ver `11-decisoes-design.md`.
+- **2026-05-12** — Feedbacks de acerto da A.6 padronizados em 4 frases (D-07). Travessões residuais removidos. Ver `11-decisoes-design.md`.
+- **2026-05-12** — DEVLOG.md e .ai-instructions.md criados para versionamento entre instâncias de IA.
+- **2026-05-12** — docs/10-stack.md atualizado: Neon já ativo, nota sobre comandos com admin.

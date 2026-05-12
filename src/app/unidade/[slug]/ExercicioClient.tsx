@@ -64,7 +64,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '"Mas" é o certo aqui porque as duas partes da frase puxam em direções opostas: você quer terminar o serviço, e o cliente esperando cria uma pressão contrária. Toda vez que uma ideia vai contra a outra, é "mas". Se fosse quantidade ou intensidade, aí seria "mais".',
+      '"Mas" liga duas ideias que se opõem. O teste: troca por "porém". "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é "mas". O "mais" seria para quantidade, como em "preciso de mais tempo".',
     feedbackErro: [
       "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
       '"Mais" fala de quantidade: mais café, mais tempo, mais dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
@@ -79,7 +79,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '"Há" é o certo porque o tempo já passou — você começou a trabalhar há cinco anos e segue até hoje. O teste simples: troca por "faz". "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é "há". Se fosse tempo futuro, como "vou sair daqui a duas horas", aí seria "a".',
+      '"Há" fala de tempo que já passou. O teste: troca por "faz". "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é "há". O "a" seria para tempo futuro, como em "vou sair daqui a duas horas".',
     feedbackErro: [
       "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
       'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
@@ -94,7 +94,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '"Por que" separado é o certo aqui porque a frase é uma pergunta — você está pedindo uma explicação de alguém. A regra é direta: pergunta usa "por que" separado. Quando a resposta vier, aí usa "porque" junto: "Não avisei porque esqueci."',
+      '"Por que" separado aparece em perguntas, quando você quer saber o motivo de algo. Aqui a frase está perguntando, então é "por que" separado. Na resposta, aí usa "porque" junto: "Não avisei porque esqueci."',
     feedbackErro: [
       "Essa frase está fazendo uma pergunta ou dando uma resposta?",
       'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
@@ -109,10 +109,10 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '"Mal" é o certo porque está descrevendo como o serviço foi feito — de forma ruim. O teste: troca por "de forma ruim". "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". Se fosse descrever como o serviço é em si (um serviço ruim por natureza), aí seria "mau serviço".',
+      '"Mal" descreve como algo foi feito. O teste: troca por "de forma ruim". "O serviço ficou feito de forma ruim." Ficou natural? Então é "mal". O "mau" descreve como algo é, tipo "mau serviço" ou "mau funcionário".',
     feedbackErro: [
       "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
-      'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa: "um mau serviço" — mas aqui estamos falando de como ele foi executado.',
+      'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa ("um mau serviço"), mas aqui estamos falando de como ele foi executado.',
       '"Mal" é a resposta. Ele descreve como algo foi feito ou como alguém está: "trabalhou mal", "se sentiu mal". O "mau" descreve como algo ou alguém é: "mau funcionário", "mau hábito". Aqui, o serviço foi feito de forma ruim, então é "mal".',
     ],
   },
@@ -124,7 +124,7 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '"Mim" é o certo porque vem depois de "com" — e depois de palavras como "para", "por", "de", "com" e "sem", sempre vem "mim". O teste: troca por "ele". "Podem deixar o orçamento com ele." Ficou natural? Então é "mim". O "eu" aparece antes do verbo, quando você é quem faz a ação: "Eu vou resolver."',
+      '"Mim" vem depois de palavras como "com", "para", "por", "de" e "sem". O teste: troca por "ele". "Podem deixar o orçamento com ele." Ficou natural? Então é "mim". O "eu" aparece quando você é quem faz a ação: "Eu vou resolver."',
     feedbackErro: [
       'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
       'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',

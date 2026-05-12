@@ -6,12 +6,12 @@
 |---|---|---|
 | Frontend + Backend | **Next.js 15** + TypeScript | Stack único (uma linguagem), ecossistema React, AI conhece bem para te ajudar a debugar |
 | Estilo | **TailwindCSS 3** | Classes na tag, mobile-responsivo de graça, sem CSS separado |
-| Banco | **Postgres** (Render → migrar pra Neon/Supabase depois de 90 dias) | Dados relacionais; gerenciado, sem servidor pra cuidar |
+| Banco | **Postgres** via **Neon** (free tier indefinido) — **já ativo** | Dados relacionais; gerenciado na nuvem, sem instalar nada. Schema e seed já aplicados. |
 | ORM | **Drizzle ORM** | TypeScript end-to-end; mais simples que Prisma; sem geração de código complicada |
 | IA | `@anthropic-ai/sdk` | Padrão Anthropic, atualizada com modelos novos |
-| Auth | A definir (magic link via e-mail) | 5 usuários, sem provedor externo necessário |
+| Auth | Convite via WhatsApp + PIN | 5 usuários; curador envia link de convite, aluno informa e-mail e cria PIN |
 | Hospedagem | **Render** | Você já conhece; auto-deploy de git; free tier suficiente pra MVP (quando MVP estiver pronto) |
-| Dev local | `npm run dev` + Postgres local | Caminho **primário** de desenvolvimento; iteração rápida, hot reload em ~1s |
+| Dev local | `npm run dev` + Neon (remoto) | Caminho **primário** de desenvolvimento; iteração rápida, hot reload em ~1s. Sem Postgres local — banco é o Neon direto. |
 
 ## Estrutura do projeto
 
@@ -88,13 +88,19 @@ A fonte da verdade do esquema é [`src/db/schema.ts`](../src/db/schema.ts). Driz
 **Produção com 5 alunos durante 90 dias:** R$ 0-30/mês.
 **Após 90 dias com migração pra Neon free:** R$ 0-30/mês (só IA).
 
+## Notas operacionais
+
+### Comandos de instalação
+O ambiente de desenvolvimento roda em máquina com conta administrativa. Comandos que instalam dependências (`npm install`, `npm install -g`, etc.) devem ser rodados **manualmente pelo desenvolvedor** no terminal com permissões de admin.
+
 ## Decisões técnicas importantes (com justificativa)
 
-### Postgres em vez de SQLite
-A decisão original era SQLite (registrada em `08-telemetria.md` na versão anterior). Mudada para Postgres por:
-- Render free tier **não** inclui persistent disk, então SQLite exigiria configuração paga
-- Postgres no Render é um clique, gerenciado, com backup automático
+### Postgres (Neon) em vez de SQLite
+A decisão original era SQLite. Mudada para Postgres por:
+- Neon oferece Postgres gerenciado com free tier **indefinido** (sem expiração de 90 dias como Render)
+- Sem instalar nada localmente — banco na nuvem acessível de qualquer máquina
 - SQL é mais transferível e melhor pra agregações de telemetria
+- **Status atual:** Neon já está ativo e em uso. Não há Postgres local — o dev aponta direto para o Neon.
 
 ### Drizzle em vez de Prisma
 - Drizzle é mais explícito (você escreve o esquema em TS, vê o SQL gerado)
@@ -102,10 +108,13 @@ A decisão original era SQLite (registrada em `08-telemetria.md` na versão ante
 - Menor curva de aprendizado pra iniciante
 - Tipos fluem direto do esquema
 
-### Magic link em vez de OAuth/senha
-- 5 usuários, sem necessidade de provedor externo
-- Adulto se confunde menos com magic link do que com senha
-- Sem ataque de força bruta a se preocupar
+### Convite via WhatsApp + PIN em vez de OAuth/magic link
+- Curador envia link de convite personalizado via WhatsApp
+- Aluno clica, informa e-mail e cria um PIN numérico (funciona como senha)
+- PIN simples é mais acessível que senha complexa para o público-alvo
+- WhatsApp é o canal natural desses alunos (já usam todo dia)
+- Sem dependência de entrega de e-mail (magic link falhava em caixas mal configuradas)
+- Cada aluno fica cadastrado no banco com identificação única (e-mail + PIN), permitindo progresso individual
 
 ### Modo teste vs produção em campo da tabela
 - Em vez de duas aplicações diferentes, o campo `alunos.modo` controla quais logs e UIs aparecem
