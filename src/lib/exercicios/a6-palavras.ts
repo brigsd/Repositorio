@@ -71,16 +71,16 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex5",
     tipo: "lacuna_unica",
-    enunciado: "Podem deixar o orçamento com ___.",
+    enunciado: "Podem deixar o orçamento para ___.",
     opcoes: ["mim", "eu"],
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem depois de palavras como "com", "para", "por", "de" e "sem".\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento com ele." Soou natural? Então é **mim**.',
+      '**Mim** vem depois de preposições como "para", "por", "de" e "sem".\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento para ele." Soou natural? Então é **mim**.',
     feedbackErro: [
       'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
-      'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
-      '"Mim" é a resposta. Depois de preposições como "com", "para", "de", "por" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "com eu" não funciona.',
+      'A palavra "para" vem antes. Depois de "para", "por", "de" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
+      '"Mim" é a resposta. Depois de preposições como "para", "por", "de" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "para eu" não funciona.',
     ],
   },
 
@@ -383,15 +383,15 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex24-escrita",
     tipo: "escrita_lacuna",
-    enunciado: "Esse assunto não é com ___.",
+    enunciado: "Esse recado é para ___.",
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem sempre depois de preposições como "com", "para", "por", "de" e "sem".\nJá o **eu** é para quando você pratica a ação.\nUma dica: tenta trocar por **ele**. "Não é com ele." Soou natural? Então é **mim**.',
+      '**Mim** vem sempre depois de preposições como "para", "por", "de" e "sem".\nJá o **eu** é para quando você pratica a ação.\nUma dica: tenta trocar por **ele**. "Esse recado é para ele." Soou natural? Então é **mim**.',
     feedbackErro: [
       'Qual palavra vem logo antes do espaço?',
-      'A preposição "com" vem antes. Depois de "com", sempre **mim**. O **eu** seria antes do verbo: "Eu resolvo isso".',
-      '"Mim" é a resposta. "Com" é uma preposição, e depois dela vem sempre **mim**. O **eu** ficaria antes do verbo: "Eu não me envolvo nisso".',
+      'A preposição "para" vem antes. Depois de "para", sempre **mim**. O **eu** seria antes do verbo: "Eu recebi o recado".',
+      '"Mim" é a resposta. Depois de preposições como "para", use sempre **mim**. O **eu** ficaria antes do verbo: "Eu entendo o recado".',
     ],
   },
   {
@@ -401,7 +401,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Eu",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Eu** aparece quando você é o sujeito — quem pratica a ação.\nJá o **mim** vem depois de preposições: "para mim", "com mim".\nUma dica: se a frase faz sentido com "Eu faço isso", é **eu**.',
+      '**Eu** aparece quando você é o sujeito — quem pratica a ação.\nJá o **mim** vem depois de preposições: "para mim", "de mim", "por mim".\nUma dica: se a frase faz sentido com "Eu faço isso", é **eu**.',
     feedbackErro: [
       "Quem é que chega antes do horário?",
       'Você é quem chega — é o sujeito da frase. Quando você pratica a ação, use **eu**. O **mim** ficaria depois de preposição: "eles confiam em mim".',
