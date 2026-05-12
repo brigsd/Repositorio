@@ -18,7 +18,6 @@ import { useState } from "react";
 interface ArmadilhaResumo {
   id: string;
   titulo: string;
-  resumo: string;
 }
 
 interface Props {
@@ -58,18 +57,12 @@ export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
       {/* Conteúdo expansível */}
       {aberto && (
         <div className="border-t border-stone-100 px-6 py-5 space-y-5">
-          {/* Lista de armadilhas */}
-          <ul className="space-y-2.5">
+          {/* Lista de pares — chips sem explicação */}
+          <ul className="flex flex-wrap gap-2">
             {armadilhas.map((a) => (
-              <li
-                key={a.id}
-                className="flex items-start gap-3"
-              >
-                <span className="mt-0.5 shrink-0 rounded-md bg-stone-100 px-2 py-1 font-mono text-xs font-semibold text-stone-700">
+              <li key={a.id}>
+                <span className="rounded-md bg-stone-100 px-2.5 py-1 font-mono text-xs font-semibold text-stone-700">
                   {a.titulo}
-                </span>
-                <span className="text-sm text-stone-600 leading-snug">
-                  {a.resumo}
                 </span>
               </li>
             ))}

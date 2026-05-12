@@ -97,7 +97,6 @@ export default async function UnidadePage({ params }: Props) {
               armadilhas={armadilhas.map((a) => ({
                 id: a.id,
                 titulo: a.titulo,
-                resumo: a.textoAncora.split("\n")[0],
               }))}
               exemploPratico={exemploPratico}
             />
