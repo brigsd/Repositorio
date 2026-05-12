@@ -31,10 +31,12 @@ interface ExercicioGerado {
   slug: string;
   tipo: "lacuna_unica" | "identificar_erro";
   enunciado: string;
-  opcoes?: string[];      // Para lacuna_unica
+  opcoes?: string[];
   gabarito: string;
   armadilhaId: string;
-  dica?: string;
+  // Feedback curado — explica o PORQUÊ, não só certo/errado
+  feedbackAcerto: string;
+  feedbackErro: [string, string, string]; // [socrático, pista, explicação direta]
 }
 
 interface RespostaIA {
@@ -45,7 +47,12 @@ interface RespostaIA {
 }
 
 // ────────────────────────────────────────────────────────────────────────────
-// Exercícios estáticos para a A6 (até ter a rota de API com IA)
+// Exercícios curados da A6
+// Cada exercício tem feedback em 3 camadas:
+//   feedbackAcerto     → explica o PORQUÊ da resposta certa
+//   feedbackErro[0]    → pergunta socrática (1ª tentativa errada)
+//   feedbackErro[1]    → pista com o raciocínio (2ª tentativa)
+//   feedbackErro[2]    → explicação direta + reforço (3ª tentativa)
 // ────────────────────────────────────────────────────────────────────────────
 
 const EXERCICIOS_A6: ExercicioGerado[] = [
@@ -56,7 +63,13 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     opcoes: ["mas", "mais"],
     gabarito: "mas",
     armadilhaId: "mas_mais",
-    dica: "Pense: a segunda parte da frase vai na mesma direção ou é oposta?",
+    feedbackAcerto:
+      '"Mas" é o certo aqui porque as duas partes da frase puxam em direções opostas: você quer terminar o serviço, e o cliente esperando cria uma pressão contrária. Toda vez que uma ideia vai contra a outra, é "mas". Se fosse quantidade ou intensidade, aí seria "mais".',
+    feedbackErro: [
+      "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
+      '"Mais" fala de quantidade: mais café, mais tempo, mais dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
+      '"Mas" é a resposta. Ele conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". "Mais" seria para quantidade, como em "preciso de mais tempo".',
+    ],
   },
   {
     slug: "a6-ex2",
@@ -65,7 +78,13 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     opcoes: ["há", "a"],
     gabarito: "há",
     armadilhaId: "ha_a",
-    dica: "Teste: dá pra trocar por 'faz cinco anos'? Se sim, é 'há'.",
+    feedbackAcerto:
+      '"Há" é o certo porque o tempo já passou — você começou a trabalhar há cinco anos e segue até hoje. O teste simples: troca por "faz". "Trabalho nesta oficina faz cinco anos." Ficou natural? Então é "há". Se fosse tempo futuro, como "vou sair daqui a duas horas", aí seria "a".',
+    feedbackErro: [
+      "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
+      'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
+      '"Há" é a resposta. Sempre que o tempo já começou no passado, use "há". O teste é trocar por "faz": "faz cinco anos" soa certo, então é "há cinco anos". O "a" ficaria errado porque ele aponta para o futuro.',
+    ],
   },
   {
     slug: "a6-ex3",
@@ -74,16 +93,28 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     opcoes: ["Por que", "Porque"],
     gabarito: "Por que",
     armadilhaId: "porque_family",
-    dica: "É uma pergunta ou uma resposta?",
+    feedbackAcerto:
+      '"Por que" separado é o certo aqui porque a frase é uma pergunta — você está pedindo uma explicação de alguém. A regra é direta: pergunta usa "por que" separado. Quando a resposta vier, aí usa "porque" junto: "Não avisei porque esqueci."',
+    feedbackErro: [
+      "Essa frase está fazendo uma pergunta ou dando uma resposta?",
+      'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
+      '"Por que" separado é a resposta. A frase é uma pergunta, então precisa do "por que" em duas palavras. O "porque" junto é só para respostas e explicações: "Fiz isso porque achei certo."',
+    ],
   },
   {
     slug: "a6-ex4",
     tipo: "lacuna_unica",
-    enunciado: "O serviço ficou ___ feito — precisa refazer.",
+    enunciado: "O serviço ficou ___ feito. Precisa refazer.",
     opcoes: ["mau", "mal"],
     gabarito: "mal",
     armadilhaId: "mau_mal",
-    dica: "Qualifica como foi feito o serviço (como?) ou como é o serviço (como é)?",
+    feedbackAcerto:
+      '"Mal" é o certo porque está descrevendo como o serviço foi feito — de forma ruim. O teste: troca por "de forma ruim". "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". Se fosse descrever como o serviço é em si (um serviço ruim por natureza), aí seria "mau serviço".',
+    feedbackErro: [
+      "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
+      'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa: "um mau serviço" — mas aqui estamos falando de como ele foi executado.',
+      '"Mal" é a resposta. Ele descreve como algo foi feito ou como alguém está: "trabalhou mal", "se sentiu mal". O "mau" descreve como algo ou alguém é: "mau funcionário", "mau hábito". Aqui, o serviço foi feito de forma ruim, então é "mal".',
+    ],
   },
   {
     slug: "a6-ex5",
@@ -92,13 +123,18 @@ const EXERCICIOS_A6: ExercicioGerado[] = [
     opcoes: ["mim", "eu"],
     gabarito: "mim",
     armadilhaId: "mim_eu",
-    dica: "Tem uma preposição ('com') antes do pronome?",
+    feedbackAcerto:
+      '"Mim" é o certo porque vem depois de "com" — e depois de palavras como "para", "por", "de", "com" e "sem", sempre vem "mim". O teste: troca por "ele". "Podem deixar o orçamento com ele." Ficou natural? Então é "mim". O "eu" aparece antes do verbo, quando você é quem faz a ação: "Eu vou resolver."',
+    feedbackErro: [
+      'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
+      'A palavra "com" vem antes. Depois de "com", "para", "de", "por" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
+      '"Mim" é a resposta. Depois de preposições como "com", "para", "de", "por" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "com eu" não funciona.',
+    ],
   },
 ];
 
 // ────────────────────────────────────────────────────────────────────────────
-// Feedback gerado localmente (até ter rota de API com IA)
-// Baseado nos princípios: nunca "errado", sempre orientado
+// Seleciona o feedback correto conforme acerto e número de tentativas
 // ────────────────────────────────────────────────────────────────────────────
 
 function gerarFeedbackLocal(
@@ -106,54 +142,26 @@ function gerarFeedbackLocal(
   respostaAluno: string,
   tentativas: number
 ): RespostaIA {
-  const acertou = respostaAluno.toLowerCase().trim() === exercicio.gabarito.toLowerCase().trim();
+  const acertou =
+    respostaAluno.toLowerCase().trim() ===
+    exercicio.gabarito.toLowerCase().trim();
 
   if (acertou) {
-    const mensagens = [
-      `Exatamente! "${exercicio.gabarito}" é a escolha certa aqui. Você pegou o padrão.`,
-      `Isso! Ficou perfeito. Essa daqui você já sabe.`,
-      `Certo. Esse é um dos mais importantes — agora vai ficar na memória.`,
-    ];
     return {
-      mensagem: mensagens[Math.floor(Math.random() * mensagens.length)]!,
+      mensagem: exercicio.feedbackAcerto,
       acertou: true,
       modoUsado: "celebracao",
     };
   }
 
-  // Errou — adapta o feedback ao número de tentativas
-  if (tentativas === 0) {
-    // Primeira tentativa errada — modo socrático
-    return {
-      mensagem:
-        exercicio.dica ??
-        `Quase lá. Pensa de novo: ${exercicio.enunciado.replace("___", `"${respostaAluno}"`)} — faz sentido assim?`,
-      acertou: false,
-      modoUsado: "socratico",
-    };
-  }
+  // Errou — seleciona a camada de feedback pelo número de tentativas
+  const camada = Math.min(tentativas, 2) as 0 | 1 | 2;
+  const modos: RespostaIA["modoUsado"][] = ["socratico", "scaffolding", "direta"];
 
-  if (tentativas === 1) {
-    // Segunda tentativa — modo scaffolding
-    const dicas: Record<string, string> = {
-      mas_mais: `Lembra: "mas" = porém (ideia oposta). "mais" = quantidade. Qual se encaixa aqui?`,
-      ha_a: `Testa trocar por "faz": "faz cinco anos" soa certo? Então é "há".`,
-      porque_family: `Pergunta = "por que" (separado). Resposta = "porque" (junto). Qual é esse caso?`,
-      mau_mal: `"mal" qualifica verbos (trabalha mal, sente mal). "mau" qualifica pessoas ou coisas (mau funcionário, mau jeito).`,
-      mim_eu: `Depois de preposição (para, com, de, por) → sempre "mim". Antes do verbo, sem preposição → "eu".`,
-    };
-    return {
-      mensagem: dicas[exercicio.armadilhaId] ?? `Não exatamente. Olha bem o contexto da frase.`,
-      acertou: false,
-      modoUsado: "scaffolding",
-    };
-  }
-
-  // Terceira tentativa+ — instrução direta
   return {
-    mensagem: `A resposta é "${exercicio.gabarito}". ${exercicio.dica ?? ""}. Agora você sabe — na próxima vai de primeira.`,
+    mensagem: exercicio.feedbackErro[camada],
     acertou: false,
-    modoUsado: "direta",
+    modoUsado: modos[camada] ?? "direta",
   };
 }
 
