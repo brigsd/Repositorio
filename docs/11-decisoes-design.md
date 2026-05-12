@@ -186,18 +186,34 @@ O magic link parecia simples, mas tinha problemas práticos para esse público:
 
 ### Decisão
 
-Padronizar todos os 5 `feedbackAcerto` no formato de 4 frases curtas que seguem o padrão D-02:
+Padronizar todos os 5 `feedbackAcerto` em **conteúdo** e **apresentação visual**.
+
+#### Conteúdo — 4 frases no formato D-02
 
 1. **Papel da palavra** em linguagem cotidiana (o que ela faz)
 2. **Teste prático** com palavra conhecida ("troca por X")
 3. **Teste aplicado** à frase do exercício ("ficou natural? então é Y")
 4. **Contraste** curto com a outra opção ("o Z seria para...")
 
+#### Apresentação visual — 3 parágrafos separados
+
+O texto é dividido em 3 blocos visuais com espaçamento entre eles (usa `\n` como delimitador, renderizado como `<p>` separados):
+
+1. **Parágrafo 1:** papel da palavra (frase 1)
+2. **Parágrafo 2:** teste + aplicação (frases 2 e 3 juntas)
+3. **Parágrafo 3:** contraste com a outra opção (frase 4)
+
+Isso respeita a carga cognitiva do público: adulto com letramento básico absorve melhor texto separado em blocos curtos do que um parágrafo corrido.
+
 **Antes (Ex.1):**
 > "Mas" é o certo aqui porque as duas partes da frase puxam em direções opostas: você quer terminar o serviço, e o cliente esperando cria uma pressão contrária. Toda vez que uma ideia vai contra a outra, é "mas". Se fosse quantidade ou intensidade, aí seria "mais".
 
 **Depois (Ex.1):**
-> "Mas" liga duas ideias que se opõem. O teste: troca por "porém". "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é "mas". O "mais" seria para quantidade, como em "preciso de mais tempo".
+> "Mas" liga duas ideias que se opõem.
+>
+> O teste: troca por "porém". "Quero terminar o serviço hoje, porém o cliente está esperando." Ficou natural? Então é "mas".
+>
+> O "mais" seria para quantidade, como em "preciso de mais tempo".
 
 ### Arquivos alterados
 - `src/app/unidade/[slug]/ExercicioClient.tsx` — 5 `feedbackAcerto` reescritos + 1 `feedbackErro[1]` corrigido (travessão removido)

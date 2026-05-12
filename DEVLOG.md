@@ -30,6 +30,14 @@
 
 ## Entradas
 
+### 2026-05-12 09:12 — Antigravity — trabalho
+**Resumo:** Separação visual dos feedbacks de acerto em 3 parágrafos (papel / teste+aplicação / contraste). Regra documentada na D-07.
+**Arquivos alterados:**
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — 5 `feedbackAcerto` com `\n` entre blocos + renderização com `<p>` separados
+- `docs/11-decisoes-design.md` — D-07 expandida com regra de apresentação visual (3 parágrafos)
+**Estado atual:** Feedbacks da A.6 com conteúdo e visual padronizados. Pronto para teste de cobaia.
+**Próximo passo sugerido:** Testar visualmente no browser, depois commitar.
+
 ### 2026-05-12 09:00 — Antigravity — trabalho
 **Resumo:** Auditoria e padronização dos feedbacks de acerto da A.6. Removidos travessões residuais (D-01) e aplicado padrão D-02 nos 5 exercícios.
 **Arquivos alterados:**
