@@ -26,7 +26,7 @@ export const A6_PALAVRAS_ARMADILHA: UnidadeCurriculo = {
   // Aparece ANTES de qualquer conteúdo — "por que isso importa pra mim?"
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Você já enviou uma mensagem importante — pra um cliente, pro chefe, pro RH — e depois percebeu um erro que te deu aquela sensação ruim? Essas palavras são armadilhas porque soam igual na fala mas têm significados completamente diferentes no texto. Quem lê sabe quando alguém errou. Depois desta unidade, você vai parar de errar essas — de vez.`,
+    corpo: `Você já enviou uma mensagem importante (pra um cliente, pro chefe, pro RH) e depois percebeu um erro que te deu aquela sensação ruim? Essas palavras são armadilhas porque soam igual na fala, mas têm significados completamente diferentes no texto. Quem lê sabe quando alguém errou. Depois desta unidade, você vai parar de errar essas de vez.`,
     exemploPrático: `Um mecânico enviou um orçamento pro cliente com "Vou verificar mais o motor amanhã" quando queria dizer "mas". O cliente cancelou o serviço achando que tinha mais problema do que esperava.`,
   },
 
@@ -58,16 +58,17 @@ export const A6_PALAVRAS_ARMADILHA: UnidadeCurriculo = {
     },
   ],
 
-  // ─── Armadilhas (conteúdo curado) ────────────────────────────────────────
   armadilhas: [
     {
       id: "mas_mais",
       titulo: "mas / mais",
       textoAncora: `
-"Mas" conecta ideias opostas. Funciona como "porém", "no entanto".
-"Mais" indica quantidade ou intensidade. Funciona como "além disso", pode virar número.
+"Mas" serve pra ligar duas ideias que vão em direções opostas. Funciona igual a "porém" ou "no entanto".
+"Mais" fala de quantidade ou intensidade. Você pode trocar por um número ou por "muito".
 
-Teste rápido: se você consegue trocar por "porém" → é "mas". Se consegue trocar por "além disso" ou um número → é "mais".
+Teste: tente trocar pela palavra "porém". Se ficou certo, use "mas". Se ficou estranho, use "mais".
+
+Exemplo: "Quero ir, porém não posso." Ficou certo? Então é "mas".
       `.trim(),
       exemplosCertos: [
         "Quero ir, mas não posso. (= porém não posso)",
@@ -84,20 +85,21 @@ Teste rápido: se você consegue trocar por "porém" → é "mas". Se consegue t
       id: "ha_a",
       titulo: "há / a",
       textoAncora: `
-"Há" vem do verbo haver — indica tempo passado que já aconteceu ou existência.
-"A" é preposição — indica direção ou tempo futuro.
+"Há" fala de tempo que já passou ou de algo que existe. Você pode trocar por "faz" e o sentido fica igual.
+"A" aponta pra um lugar ou um tempo que ainda vai acontecer.
 
-Teste rápido: se puder trocar por "faz" sem mudar o sentido → é "há".
-Se puder trocar por "daqui a" → é "a".
+Teste: tente trocar por "faz". Se ficou certo, use "há". Se ficou estranho, use "a".
+
+Exemplo: "Trabalho aqui faz dois anos." Ficou certo? Então é "há": "Trabalho aqui há dois anos."
       `.trim(),
       exemplosCertos: [
         "Trabalho aqui há dois anos. (= faz dois anos)",
-        "Vou voltar daqui a dois dias. (= daqui a)",
+        "Vou voltar daqui a dois dias. (tempo futuro)",
         "Há vagas disponíveis. (= existem vagas)",
       ],
       exemplosErrados: [
         "❌ Trabalho aqui a dois anos.",
-        "❌ Há duas horas vou sair. (futuro → deve ser 'daqui a')",
+        "❌ Há duas horas vou sair. (futuro: 'daqui a duas horas')",
       ],
       tiposErro: ["confusao_ha_a", "ha_no_futuro", "a_no_passado"],
     },
@@ -105,14 +107,17 @@ Se puder trocar por "daqui a" → é "a".
       id: "mau_mal",
       titulo: "mau / mal",
       textoAncora: `
-"Mau" é adjetivo — oposto de "bom". Qualifica um substantivo.
-"Mal" é advérbio — oposto de "bem". Qualifica um verbo ou adjetivo.
+"Mau" descreve como uma coisa ou pessoa é. Você pode trocar por "ruim" e o sentido fica igual.
+"Mal" descreve como algo foi feito ou como alguém está se sentindo. Você pode trocar por "de forma ruim".
 
-Teste rápido: se puder trocar por "bom" (mesmo que mude o sentido) → é "mau". Se puder trocar por "bem" → é "mal".
+Teste: tente trocar por "ruim". Se ficou certo, use "mau". Se ficou estranho, use "mal".
+
+Exemplo: "Ele é um ruim funcionário." Ficou certo? Então é "mau": "Ele é um mau funcionário."
+Outro: "Ele trabalha de forma ruim." Ficou certo? Então é "mal": "Ele trabalha mal."
       `.trim(),
       exemplosCertos: [
-        "Ele é um mau funcionário. (= ruim funcionário — oposto de bom)",
-        "Ele trabalha mal. (= trabalha de forma ruim — oposto de bem)",
+        "Ele é um mau funcionário. (= ruim funcionário)",
+        "Ele trabalha mal. (= trabalha de forma ruim)",
         "Está se sentindo mal hoje. (= se sentindo de forma ruim)",
       ],
       exemplosErrados: [
@@ -125,21 +130,23 @@ Teste rápido: se puder trocar por "bom" (mesmo que mude o sentido) → é "mau"
       id: "porque_family",
       titulo: "por que / porque / porquê / por quê",
       textoAncora: `
-São quatro formas, cada uma com uso específico:
+São quatro formas. Calma, a lógica é simples:
 
-"Por que" (separado, sem acento) → pergunta ou explicação de motivo no meio da frase.
-"Porque" (junto, sem acento) → resposta/explicação. Funciona como "pois", "já que".
-"Por quê" (separado, com acento) → pergunta no final da frase ou isolada.
-"Porquê" (junto, com acento) → substantivo. Você pode colocar "o" antes: "o porquê".
+"Por que" (separado, sem acento): aparece em perguntas. "Por que você saiu?"
+"Porque" (junto, sem acento): aparece nas respostas. "Saí porque estava doente." Funciona como "pois".
+"Por quê" (separado, com acento): é a versão da pergunta quando aparece no final da frase. "Não disse por quê."
+"Porquê" (junto, com acento): vira uma coisa, um objeto. Você pode colocar "o" antes. "Quero entender o porquê."
+
+O mais usado no dia a dia é a diferença entre os dois primeiros: pergunta usa "por que", resposta usa "porque".
       `.trim(),
       exemplosCertos: [
         "Por que você saiu cedo? (pergunta)",
-        "Saí cedo porque estava doente. (resposta — pois estava)",
+        "Saí cedo porque estava doente. (resposta)",
         "Saiu cedo, mas não disse por quê. (final de frase)",
-        "Quero entender o porquê da decisão. (= o motivo, o 'o' antes)",
+        "Quero entender o porquê da decisão. (= o motivo)",
       ],
       exemplosErrados: [
-        "❌ Porque você saiu cedo? (pergunta → precisa ser 'por que')",
+        "❌ Porque você saiu cedo? (pergunta precisa de 'por que')",
         "❌ Saí porque cedo. (não faz sentido como resposta)",
       ],
       tiposErro: [
@@ -153,21 +160,24 @@ São quatro formas, cada uma com uso específico:
       id: "mim_eu",
       titulo: "mim / eu",
       textoAncora: `
-"Eu" é sujeito — quem faz a ação.
-"Mim" é objeto — quem recebe a ação, sempre depois de preposição (para, por, de, com, sem).
+"Eu" aparece antes do verbo, quando você é quem faz a ação.
+"Mim" aparece depois de palavras como "para", "por", "de", "com", "sem".
 
-Teste rápido: se a frase funciona substituindo por "ele/ela" → é "eu". Se funciona substituindo por "ele/ela" depois da preposição → é "mim".
+Teste: se você pode trocar por "ele" ou "ela" sem precisar mudar mais nada na frase, use "eu". Se aparecer uma dessas palavras antes (para, por, de, com, sem), use "mim".
 
-Atenção: "comigo" não é "com mim" — é uma forma especial, mas o conceito é o mesmo.
+Exemplo: "Isso é para ele." Ficou certo? Então é "mim": "Isso é para mim."
+Outro: "Ela vai resolver." Ficou certo? Então é "eu": "Eu vou resolver."
+
+Atenção: "comigo" já está correto do jeito que está. Não precisa mudar.
       `.trim(),
       exemplosCertos: [
-        "Isso é para mim. (preposição 'para' antes → mim)",
-        "Eu vou resolver. (sujeito → eu)",
-        "Podem contar comigo. (= com mim — forma especial)",
+        "Isso é para mim. ('para' antes)",
+        "Eu vou resolver. (quem faz a ação)",
+        "Podem contar comigo. (já está certo assim)",
       ],
       exemplosErrados: [
-        "❌ Isso é para eu resolver. (mas: 'para eu resolver' pode ser correto — 'eu' é sujeito do 'resolver')",
         "❌ Podem contar com eu.",
+        "❌ Isso é para eu. (quando 'eu' não é quem faz uma ação)",
       ],
       tiposErro: ["mim_como_sujeito", "eu_apos_preposicao"],
     },
