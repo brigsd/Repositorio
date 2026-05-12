@@ -19,7 +19,7 @@ const PAR_NOME: Record<string, string> = {
   mas_mais: "mas / mais",
   ha_a: "há / a",
   mau_mal: "mau / mal",
-  porque_family: "por que / porque / porquê / por quê",
+  porque_family: "por que / porque",
   mim_eu: "mim / eu",
   onde_aonde: "onde / aonde",
   senao_se_nao: "senão / se não",
