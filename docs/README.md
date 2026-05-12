@@ -16,11 +16,12 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 10. [Stack e Arquitetura](./10-stack.md) — tecnologias, estrutura do projeto, decisões técnicas
 11. [Decisões de Design](./11-decisoes-design.md) — histórico de mudanças de design com justificativa (D-01 a D-07)
 12. [Guia de Feedback do Tutor](./12-guia-feedback-tutor.md) — como escrever os textos da caixa de feedback (tom, estrutura, checklist)
+13. [Guia de Criação de Unidades](./13-guia-criacao-unidades.md) — padronização: tipos de unidade, layout da página, checklist de criação
 
 ## Status atual
 
-- **Fase:** setup técnico + primeira unidade funcional (A.6) testada como cobaia
-- **Próximo passo:** curador ajustar textos da A.6, depois auth + diagnóstico
+- **Fase:** auth funcional + 2 unidades interativas (A.5 e A.6)
+- **Próximo passo:** expandir unidades do Nível A (A.3, A.7, A.8, A.9)
 - **MVP previsto:** versão "modo teste" com curador como cobaia única antes de admitir os 5 alunos
 
 ## Como usar esta documentação

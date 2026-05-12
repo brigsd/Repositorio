@@ -30,6 +30,24 @@
 
 ## Entradas
 
+### 2026-05-12 11:40 — Antigravity — trabalho
+**Resumo:** Unidade A.5 (Acentos) criada com 6 exercícios curados. Refatoração dos exercícios para sistema modular. Página de entrada redesenhada com Progressive Disclosure. Guia de criação de unidades (docs/13) criado com pesquisa científica completa.
+**Arquivos alterados:**
+- `src/lib/exercicios/tipos.ts` — [NOVO] Tipo ExercicioGerado extraído do ExercicioClient
+- `src/lib/exercicios/a5-acentos.ts` — [NOVO] 6 exercícios curados (está/esta, pôde/pode, sábia/sabia, dúvida/duvida, é/e, dá/da)
+- `src/lib/exercicios/a6-palavras.ts` — [NOVO] Exercícios A.6 extraídos do ExercicioClient
+- `src/lib/exercicios/index.ts` — [NOVO] Registro central de exercícios por slug
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — Recebe exercícios como prop (não mais hardcoded)
+- `src/app/unidade/[slug]/exercicio/page.tsx` — Usa registro central ao invés de import direto
+- `src/app/unidade/[slug]/page.tsx` — Redesenhada com Progressive Disclosure (propósito + CTA acima da dobra)
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — [NOVO] Componente expansível (armadilhas, exemplo prático)
+- `src/app/page.tsx` — A.5 adicionada ao UNIDADES_ATIVAS
+- `docs/13-guia-criacao-unidades.md` — [NOVO] Guia completo: 4 tipos de unidade, scaffolding, interleaving, proteção emocional (Bandura), regras do enunciado (Knowles), revisão espaçada, fase de digitação futura
+- `docs/README.md` — Doc 13 no índice, status atualizado
+**Pesquisa aplicada:** Knowles (andragogia), Sweller (CLT), Bandura (autoeficácia), Rohrer (interleaving), Bjork (desirable difficulties), Ebbinghaus (spaced repetition), NNG (progressive disclosure)
+**Estado atual:** 2 unidades interativas (A.5, A.6). Exercícios modulares. Guia de criação documentado.
+**Próximo passo sugerido:** Implementar intercalação (ambos os lados) nas A.5 e A.6, depois fase de digitação.
+
 ### 2026-05-12 10:30 — Antigravity — trabalho
 **Resumo:** Implementação completa do auth por primeiro nome (UPPERCASE). Login, logout, middleware, painel admin, seed do curador.
 **Arquivos alterados:**

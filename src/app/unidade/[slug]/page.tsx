@@ -3,7 +3,9 @@ import { db } from "@/db";
 import { unidades } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
+import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
+import { DetalhesUnidade } from "./DetalhesUnidade";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +16,6 @@ interface Props {
 export default async function UnidadePage({ params }: Props) {
   const { slug } = await params;
 
-  // Busca a unidade no banco
   const [unidade] = await db
     .select()
     .from(unidades)
@@ -23,9 +24,17 @@ export default async function UnidadePage({ params }: Props) {
 
   if (!unidade) notFound();
 
-  // Por ora só A6 tem currículo — estrutura pronta para expandir
+  // Currículo completo (com âncora, armadilhas, etc.)
   const isA6 = slug === "a-6-palavras-armadilha";
   const curriculo = isA6 ? A6_PALAVRAS_ARMADILHA : null;
+
+  // Exercícios interativos (registro central)
+  const temExercicios = obterExercicios(slug) !== null;
+
+  // Extrai dados simplificados para exibição
+  const proposito = curriculo?.ancoraPropósito.corpo ?? null;
+  const exemploPratico = curriculo?.ancoraPropósito.exemploPrático ?? null;
+  const armadilhas = curriculo?.armadilhas ?? [];
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-12">
@@ -41,7 +50,7 @@ export default async function UnidadePage({ params }: Props) {
       </nav>
 
       {/* Cabeçalho da unidade */}
-      <header className="mb-10">
+      <header className="mb-8">
         <div className="mb-3 flex items-center gap-3">
           <span className="rounded-full bg-stone-900 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white">
             Nível {unidade.nivel} · Unidade {unidade.numero}
@@ -57,102 +66,46 @@ export default async function UnidadePage({ params }: Props) {
         </h1>
       </header>
 
-      {curriculo ? (
-        <div className="space-y-10">
-          {/* Âncora de propósito — ANTES de qualquer conteúdo */}
-          {/* Princípio: adulto precisa saber o porquê antes de engajar (Knowles) */}
-          <section
-            aria-labelledby="ancora-titulo"
-            className="rounded-2xl border border-amber-200 bg-amber-50 px-6 py-6"
-          >
-            <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-amber-700">
-              Por que isso importa
-            </p>
-            <h2 id="ancora-titulo" className="sr-only">
-              Por que esta unidade importa
-            </h2>
-            <p className="mt-2 text-base leading-relaxed text-stone-800">
-              {curriculo.ancoraPropósito.corpo}
-            </p>
-            {curriculo.ancoraPropósito.exemploPrático && (
-              <blockquote className="mt-4 border-l-2 border-amber-400 pl-4 text-sm italic text-stone-600">
-                {curriculo.ancoraPropósito.exemploPrático}
-              </blockquote>
-            )}
-          </section>
-
-          {/* O que você vai aprender */}
-          {curriculo.armadilhas && (
-            <section aria-labelledby="armadilhas-titulo">
-              <h2
-                id="armadilhas-titulo"
-                className="mb-4 text-lg font-semibold text-stone-900"
-              >
-                As armadilhas desta unidade
-              </h2>
-              <ul className="space-y-3">
-                {curriculo.armadilhas.map((a) => (
-                  <li
-                    key={a.id}
-                    className="flex items-center gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3"
-                  >
-                    <span className="shrink-0 rounded-lg bg-stone-100 px-2.5 py-1.5 font-mono text-sm font-semibold text-stone-700">
-                      {a.titulo}
-                    </span>
-                    <span className="text-sm text-stone-600 leading-snug">
-                      {a.textoAncora.split("\n")[0]}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+      {(curriculo || temExercicios) ? (
+        <div className="space-y-6">
+          {/* ── Camada 1: Propósito (curto) ─────────────────────────── */}
+          {/* Princípio Knowles: adulto engaja quando sabe o "porquê" */}
+          {proposito && (
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 px-6 py-5">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-amber-700">
+                Por que isso importa
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-stone-800">
+                {proposito}
+              </p>
+            </div>
           )}
 
-          {/* CTA — começa a unidade interativa */}
-          <section className="rounded-2xl border-2 border-stone-900 bg-stone-900 px-6 py-8 text-center">
-            <p className="mb-2 text-sm text-stone-400">Pronto para começar?</p>
-            <h2 className="mb-4 text-xl font-bold text-white">
-              Vamos praticar essas armadilhas
-            </h2>
-            <p className="mb-6 text-sm text-stone-400 leading-relaxed">
-              Você vai receber situações reais e o tutor vai te ajudar a
-              entender cada uma. Sem prova, sem nota. Só aprendizado.
-            </p>
-            <Link
-              href={`/unidade/${slug}/exercicio`}
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-stone-900 transition hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900"
-            >
-              Começar esta unidade
-              <span aria-hidden="true">→</span>
-            </Link>
-          </section>
-
-          {/* O que você vai conseguir fazer depois */}
-          <section
-            aria-labelledby="resultado-titulo"
-            className="rounded-2xl border border-stone-200 bg-stone-50 px-6 py-5"
+          {/* ── Camada 2: CTA — acima da dobra ─────────────────────── */}
+          {/* Princípio: Fast-Track to Value — botão visível sem scroll */}
+          <Link
+            href={`/unidade/${slug}/exercicio`}
+            className="flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-stone-800"
           >
-            <h2
-              id="resultado-titulo"
-              className="mb-3 text-sm font-semibold uppercase tracking-widest text-stone-500"
-            >
-              Depois desta unidade você vai conseguir
-            </h2>
-            <ul className="space-y-2">
-              {curriculo.armadilhas?.map((a) => (
-                <li key={a.id} className="flex items-start gap-2 text-sm text-stone-700">
-                  <span className="mt-0.5 text-stone-400" aria-hidden="true">
-                    ✓
-                  </span>
-                  Usar <strong className="font-semibold">{a.titulo}</strong>{" "}
-                  sem errar em e-mail, currículo ou mensagem formal
-                </li>
-              ))}
-            </ul>
-          </section>
+            Começar exercícios
+            <span aria-hidden="true">→</span>
+          </Link>
+
+          {/* ── Camada 3: Detalhes sob demanda (Progressive Disclosure) */}
+          {/* Armadilhas, exemplo prático, competências — expande se quiser */}
+          {armadilhas.length > 0 && (
+            <DetalhesUnidade
+              armadilhas={armadilhas.map((a) => ({
+                id: a.id,
+                titulo: a.titulo,
+                resumo: a.textoAncora.split("\n")[0],
+              }))}
+              exemploPratico={exemploPratico}
+            />
+          )}
         </div>
       ) : (
-        /* Unidades sem currículo ainda — placeholder */
+        /* Unidades sem conteúdo ainda — placeholder */
         <div className="rounded-2xl border border-dashed border-stone-300 px-6 py-12 text-center">
           <p className="text-stone-500">
             Esta unidade ainda está sendo preparada.
