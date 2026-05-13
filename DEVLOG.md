@@ -31,6 +31,45 @@
 
 ## Entradas
 
+### 2026-05-13 14:33 — Manual / Antigravity — local
+**Resumo:** Padronização visual avançada e refinamento andragógico nos arquivos de exercícios das unidades A.5 e A.6.
+**Arquivos alterados:**
+- `src/lib/exercicios/a5-acentos.ts` — Adicionados comentários numéricos sequenciais para mapeamento (#1 a #30), padronizada a ênfase visual das palavras-alvo e dicas utilizando negrito Markdown (`**palavra**`) e inseridas quebras duplas de linha (`\n\n`) para melhor legibilidade.
+- `src/lib/exercicios/a6-palavras.ts` — Substituídas aspas simples por negrito Markdown em termos-chave e mnemônicos nos feedbacks de múltiplos exercícios, alinhando a formatação visual ao padrão de excelência de leitura para adultos.
+**Estado atual:** Unidades A.5 e A.6 perfeitamente padronizadas em estrutura visual, legibilidade e marcação em negrito para facilitar a leitura dinâmica.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
+### 2026-05-13 13:36 — Manual / Antigravity — local
+**Resumo:** Tradução andragógica completa dos feedbacks da Unidade A.6 curada pelo usuário para utilizar uma linguagem altamente coloquial, empática e conectada ao dia a dia do público-alvo.
+**Arquivos alterados:**
+- `src/lib/exercicios/a6-palavras.ts` — Reformulação extensiva das propriedades `feedbackAcerto` e `feedbackErro` adotando expressões extremamente palpáveis e memoráveis para adultos (ex: "suar a camisa", "trombar com pequenas palavras", "gastar a sola do sapato", "puxão de orelha").
+**Estado atual:** Feedbacks da Unidade A.6 operando com tom perfeitamente alinhado às diretrizes de andragogia e proteção emocional.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
+### 2026-05-13 13:25 — Manual / Antigravity — local
+**Resumo:** Grande reformulação e padronização dos exercícios da Unidade A.6 curada pelo usuário aplicando sistematicamente a "regra dos opostos" nos feedbacks de mau/mal.
+**Arquivos alterados:**
+- `src/lib/exercicios/a6-palavras.ts` — Ajuste de contexto no Ex. 1 (falta de peças essenciais) e implementação consistente da regra dos opostos (bom/mau, bem/mal) com quebras de linha nativas em múltiplos exercícios para consolidar a fixação.
+**Estado atual:** Unidade A.6 com exercícios totalmente padronizados em torno de mnemônicos altamente eficazes para adultos.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
+### 2026-05-13 10:43 — Manual / Antigravity — local
+**Resumo:** Refinamento textual curado pelo usuário nas âncoras de propósito das unidades A.5 e A.6 para máxima clareza e fluidez, além do ajuste fino de espaçamento no Progressive Disclosure.
+**Arquivos alterados:**
+- `src/lib/curriculo/a5-acentos.ts` — Adicionado prefixo explicativo "Exemplo prático:" e refinada a história da bomba de óleo.
+- `src/lib/curriculo/a6-palavras-armadilha.ts` — Pequenos ajustes na fluidez da escrita das propriedades `corpo` e `exemploPrático`.
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — Mapeamento de quebras de linha em tags `<p>` separadas com espaçamento `space-y-2` para reduzir a altura entre parágrafos.
+**Estado atual:** Unidades A.5 e A.6 com textos extremamente polidos e design de citações aprimorado.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
+### 2026-05-13 09:10 — Antigravity — local
+**Resumo:** Refinamento pedagógico da unidade A.5 com exemplo da bomba de óleo e correção global da renderização de quebras de linha (\n\n) no componente de citação expansível.
+**Arquivos alterados:**
+- `src/lib/curriculo/a5-acentos.ts` — Ajuste do `corpo` para uma introdução concisa de impacto e atribuição da história da bomba de óleo em `exemploPrático` para o Progressive Disclosure na interface.
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — Adicionada a classe CSS `whitespace-pre-line` ao `blockquote` do Exemplo Prático para garantir que quebras de linha literais (\n\n) sejam exibidas nativamente pelo navegador.
+**Estado atual:** Unidade A.5 com exemplo prático extremamente didático e renderização visual corrigida para suportar quebras de linha em qualquer unidade.
+**Próximo passo sugerido:** Sincronizar com o Git remoto.
+
 ### 2026-05-13 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
 **Resumo:** Sessão completa de melhoria pedagógica nas unidades A.5 e A.6: super pacote de pesquisa aplicado, intercalação real na Fase 2, correção de bugs visuais, exercícios novos e documentação de convenções globais.
 
