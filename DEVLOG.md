@@ -1,14 +1,15 @@
 # DEVLOG — Registro de Alterações entre Sessões
 
-> **ATENÇÃO — LEIA ISTO PRIMEIRO**
+> **ATENÇÃO — LEIA ISTO PRIMEIRO (LEITURA OTIMIZADA)**
 >
 > Este arquivo é a **memória compartilhada** entre todas as ferramentas de IA que trabalham neste projeto (Antigravity, Claude Code, ou qualquer outra).
+> Ele utiliza **ordem cronológica reversa** (as atualizações mais recentes ficam sempre no TOPO).
 >
 > **Regras para IAs que abrem este projeto:**
-> 1. **Antes de começar qualquer trabalho**, leia este arquivo inteiro para entender o que mudou desde a última vez
-> 2. **Após concluir qualquer alteração**, adicione uma entrada no topo da seção "Entradas" com o formato abaixo
-> 3. **Nunca apague entradas antigas** — elas são o histórico
-> 4. **Se houver conflito** com algo que outra instância fez, sinalize ao usuário antes de sobrescrever
+> 1. **NÃO LEIA O ARQUIVO INTEIRO:** Para economizar tokens e processamento, leia apenas estas instruções e as **primeiras entradas no topo da seção "Entradas"** para entender perfeitamente o estado atual do projeto.
+> 2. **Após concluir qualquer alteração**, adicione a sua entrada estritamente no **topo da seção "Entradas"** (logo abaixo do cabeçalho `## Entradas`), empurrando o histórico antigo para baixo.
+> 3. **Nunca apague entradas antigas** — elas formam a linha do tempo e auditoria do projeto.
+> 4. **Se houver conflito** com algo que outra instância fez, sinalize ao usuário antes de sobrescrever.
 
 ---
 
