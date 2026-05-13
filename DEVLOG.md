@@ -30,6 +30,37 @@
 
 ## Entradas
 
+### 2026-05-13 — Claude Code (branch: claude/analyze-repo-document-K3Nbq) — sessão 2
+**Resumo:** Unidade A.1 criada, melhorias de UX no sistema de exercícios, botões admin, chip de par reposicionado e comentários de posição nos exercícios.
+
+**Arquivos alterados:**
+
+- `src/lib/curriculo/tipos.ts` — adicionados `Cena`, `cenas?` e `mensagemFinal?` ao tipo `UnidadeCurriculo`
+- `src/lib/curriculo/a1-trailer.ts` — [NOVO] currículo da A.1 com 3 cenas reais (currículo, e-mail, contrato) e mensagem de encerramento
+- `src/app/unidade/[slug]/TrailerUnidade.tsx` — [NOVO] componente que renderiza unidades trailer: badge colorido por contexto, destaque rose na consequência, mensagem final, CTA para próxima unidade
+- `src/app/unidade/[slug]/page.tsx` — detecta `curriculo.cenas` e usa `TrailerUnidade` em vez do fluxo normal; A1 adicionada ao mapa de currículos
+- `src/app/page.tsx` — `"a-1-trailer"` adicionado ao conjunto `UNIDADES_ATIVAS` (sem isso aparecia "EM BREVE")
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — chip de par (`💡 há / a`) movido para dentro do card de enunciado, canto superior direito (antes ficava fora e abaixo do card); botões admin ← Anterior / Próximo → adicionados (visíveis só para isAdmin); estado `dicaVisivel` removido (par agora sempre visível)
+- `src/app/unidade/[slug]/exercicio/page.tsx` — passa `isAdmin` para `ExercicioClient` via `obterSessao()`
+- `src/app/unidade/[slug]/AncoraProposito.tsx` — [NOVO] componente client que substitui bloco estático do "Por que isso importa": texto em parágrafos, botão de olho abre modal com curiosidade
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — curiosidade removida (foi para modal em AncoraProposito)
+- `src/lib/curriculo/a5-acentos.ts` — corpo do ancoraPropósito quebrado em parágrafos (`\n\n`); curiosidade sobre sabiá/sábia/sabia adicionada; exemplos do "Por que isso importa" corrigidos (antes comparavam frases diferentes; agora mostram a mesma frase com/sem acento)
+- `src/lib/curriculo/a6-palavras-armadilha.ts` — corpo quebrado em parágrafos
+- `src/lib/exercicios/a5-acentos.ts` — comentário `// #N` adicionado em cada slug para localização rápida pelo dev
+- `src/lib/exercicios/a6-palavras.ts` — comentário `// #N` adicionado em cada slug
+
+**Decisões tomadas:**
+- Super pacote (dica visível vs. oculta): 4 frentes convergem para par sempre visível em exercícios de escrita de nível A — ocultar adiciona dificuldade indesejável (Bjork) sem benefício pedagógico para iniciantes
+- Super pacote (botão de voltar para usuário): 4 frentes convergem contra — retrieval imediato sem espaçamento não tem benefício (Bjork), linearidade é intencional (CLT), botão persistente fragmenta flow (NNg). Não implementado.
+- A.1 como trailer puro (sem exercícios): unidade de motivação que mostra consequências reais antes de qualquer conteúdo — ancoragem de propósito antes do aprendizado
+- Comentários `// #N` nos slugs: solução de zero overhead para o dev localizar "Exercício 26" no código sem contar posições no array
+
+**Estado atual:** A.1 (trailer), A.5 (30 ex) e A.6 (36 ex) funcionais e visíveis na home. Sistema de exercícios com chip sempre visível, botões admin, modal de curiosidade.
+
+**Próximo passo sugerido:** Desenvolver A.2 (Registros) ou A.3 (Vírgula), ou revisar visualmente a A.1 no browser para ajustes de layout.
+
+---
+
 ### 2026-05-13 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
 **Resumo:** Sessão completa de melhoria pedagógica nas unidades A.5 e A.6: super pacote de pesquisa aplicado, intercalação real na Fase 2, correção de bugs visuais, exercícios novos e documentação de convenções globais.
 
