@@ -2,12 +2,14 @@ import Link from "next/link";
 import { db } from "@/db";
 import { unidades } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { A1_TRAILER } from "@/lib/curriculo/a1-trailer";
 import { A5_ACENTOS } from "@/lib/curriculo/a5-acentos";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
 import { DetalhesUnidade } from "./DetalhesUnidade";
 import { AncoraProposito } from "./AncoraProposito";
+import { TrailerUnidade } from "./TrailerUnidade";
 
 export const dynamic = "force-dynamic";
 
@@ -28,6 +30,7 @@ export default async function UnidadePage({ params }: Props) {
 
   // Currículo completo (com âncora, armadilhas, etc.)
   const CURRICULOS: Record<string, typeof A6_PALAVRAS_ARMADILHA> = {
+    "a-1-trailer": A1_TRAILER,
     "a-5-acentos": A5_ACENTOS,
     "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
   };
@@ -69,32 +72,41 @@ export default async function UnidadePage({ params }: Props) {
 
       {(curriculo || temExercicios) ? (
         <div className="space-y-6">
-          {/* ── Camada 1: Propósito (curto) ─────────────────────────── */}
-          {/* Princípio Knowles: adulto engaja quando sabe o "porquê" */}
-          {proposito && (
-            <AncoraProposito corpo={proposito} curiosidade={curiosidade} />
-          )}
-
-          {/* ── Camada 2: CTA — acima da dobra ─────────────────────── */}
-          {/* Princípio: Fast-Track to Value — botão visível sem scroll */}
-          <Link
-            href={`/unidade/${slug}/exercicio`}
-            className="flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-stone-800"
-          >
-            Começar exercícios
-            <span aria-hidden="true">→</span>
-          </Link>
-
-          {/* ── Camada 3: Detalhes sob demanda (Progressive Disclosure) */}
-          {/* Armadilhas, exemplo prático, competências — expande se quiser */}
-          {armadilhas.length > 0 && (
-            <DetalhesUnidade
-              armadilhas={armadilhas.map((a) => ({
-                id: a.id,
-                titulo: a.titulo,
-              }))}
-              exemploPratico={exemploPratico}
+          {/* ── Unidade trailer (sem exercícios, só cenas) ──────────── */}
+          {curriculo?.cenas ? (
+            <TrailerUnidade
+              intro={proposito ?? ""}
+              cenas={curriculo.cenas}
+              mensagemFinal={curriculo.mensagemFinal ?? ""}
+              proximaUnidadeSlug="a-2-registros"
             />
+          ) : (
+            <>
+              {/* ── Camada 1: Propósito ──────────────────────────────── */}
+              {proposito && (
+                <AncoraProposito corpo={proposito} curiosidade={curiosidade} />
+              )}
+
+              {/* ── Camada 2: CTA ────────────────────────────────────── */}
+              <Link
+                href={`/unidade/${slug}/exercicio`}
+                className="flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-stone-800"
+              >
+                Começar exercícios
+                <span aria-hidden="true">→</span>
+              </Link>
+
+              {/* ── Camada 3: Detalhes sob demanda ───────────────────── */}
+              {armadilhas.length > 0 && (
+                <DetalhesUnidade
+                  armadilhas={armadilhas.map((a) => ({
+                    id: a.id,
+                    titulo: a.titulo,
+                  }))}
+                  exemploPratico={exemploPratico}
+                />
+              )}
+            </>
           )}
         </div>
       ) : (

@@ -34,6 +34,12 @@ export interface TipoExercicio {
   criterios: string[];
 }
 
+export interface Cena {
+  contexto: string;      // badge — "Currículo", "E-mail", "Contrato"
+  historia: string;      // o que a pessoa fez
+  consequencia: string;  // o que aconteceu como resultado
+}
+
 export interface UnidadeCurriculo {
   slug: string;
   titulo: string;
@@ -48,6 +54,8 @@ export interface UnidadeCurriculo {
   };
 
   curiosidade?: string;
+  cenas?: Cena[];          // Unidades trailer — sem exercícios
+  mensagemFinal?: string;  // Frase de encerramento do trailer
 
   preAfericao: PerguntaAfericao[];
   armadilhas?: Armadilha[];         // Para unidades de gramática
