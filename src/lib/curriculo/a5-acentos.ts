@@ -9,7 +9,7 @@ export const A5_ACENTOS: UnidadeCurriculo = {
 
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Alguns acentos parecem detalhe, mas mudam completamente o sentido da frase. "Ela sabia a resposta" é diferente de "ela era sábia". "Ele pode ir agora" é diferente de "ontem ele não pôde". Em e-mail formal, currículo ou mensagem pro chefe, esse tipo de troca passa uma impressão de descuido — mesmo que o resto do texto esteja perfeito.`,
+    corpo: `Esses acentos não são detalhes de ortografia — eles mudam o sentido da frase inteira. Veja: "Ontem ele não pôde resolver" (passado, já aconteceu) vira "Ontem ele não pode resolver" sem acento — e quem lê entende presente, não passado. Ou: "A decisão foi sábia" (foi inteligente) vira "A decisão foi sabia" sem acento — e a frase deixa de fazer sentido. Em e-mail, currículo ou mensagem pro chefe, quem lê percebe a diferença mesmo sem saber explicar a regra.`,
     exemploPrático: `Uma candidata enviou um e-mail ao RH dizendo "Fico a sua disposição para qualquer duvida". O acento faltando em "dúvida" não mudou o sentido, mas o recrutador riscou mentalmente: "não sabe escrever direito". Ela tinha a qualificação. O detalhe custou a entrevista.`,
   },
 
