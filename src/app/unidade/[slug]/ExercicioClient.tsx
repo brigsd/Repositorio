@@ -108,10 +108,11 @@ function gerarFeedbackLocal(
 interface Props {
   armadilhas: Armadilha[];
   exercicios: ExercicioGerado[];
-  slug: string; // slug da unidade
+  slug: string;
+  isAdmin?: boolean;
 }
 
-export default function ExercicioClient({ armadilhas, exercicios, slug }: Props) {
+export default function ExercicioClient({ armadilhas, exercicios, slug, isAdmin = false }: Props) {
   const [exercicioIdx, setExercicioIdx] = useState(0);
   const [opcaoSelecionada, setOpcaoSelecionada] = useState<string | null>(null);
   const [inputEscrita, setInputEscrita] = useState("");
@@ -250,8 +251,56 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
 
   // ── Exercício ──────────────────────────────────────────────────────────
 
+  function handleAdminAnterior() {
+    if (exercicioIdx === 0) return;
+    setExercicioIdx((i) => i - 1);
+    setOpcaoSelecionada(null);
+    setOpcaoConfirmadaErrada(null);
+    setInputEscrita("");
+    setResposta(null);
+    setTentativas(0);
+  }
+
+  function handleAdminProximo() {
+    if (exercicioIdx + 1 >= totalExercicios) return;
+    setExercicioIdx((i) => i + 1);
+    setOpcaoSelecionada(null);
+    setOpcaoConfirmadaErrada(null);
+    setInputEscrita("");
+    setResposta(null);
+    setTentativas(0);
+  }
+
   return (
     <div className="space-y-8">
+      {/* Navegação admin — invisível para alunos */}
+      {isAdmin && (
+        <div className="flex items-center justify-between rounded-xl border border-dashed border-stone-300 bg-stone-50 px-4 py-2">
+          <span className="text-xs font-semibold uppercase tracking-widest text-stone-400">
+            Admin
+          </span>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleAdminAnterior}
+              disabled={exercicioIdx === 0}
+              className="rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-xs font-medium text-stone-600 transition hover:bg-stone-100 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              ← Anterior
+            </button>
+            <span className="text-xs text-stone-400">
+              {exercicioIdx + 1} / {totalExercicios}
+            </span>
+            <button
+              onClick={handleAdminProximo}
+              disabled={exercicioIdx + 1 >= totalExercicios}
+              className="rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-xs font-medium text-stone-600 transition hover:bg-stone-100 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Próximo →
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Progresso */}
       <div>
         <div className="mb-1.5 flex justify-between text-xs text-stone-500">
