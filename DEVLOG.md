@@ -32,6 +32,16 @@
 ## Entradas
 
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Três melhorias: curiosidade da A.2 reescrita (andragogia), prompt de avaliação de registro corrigido (versão sugerida a partir do aluno, sem flagrar ortografia), e contador de tokens IA no painel admin.
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — `curiosidade` reescrita: remove "em linguística", remove metáfora de ator, coloca revelação do repertório existente em primeiro lugar (Bandura), fecha com "Essa adaptação tem um nome: **registro**" (explícito-indutivo híbrido).
+- `src/lib/prompts.ts` — (1) instrução adicionada: não avaliar ortografia/acentuação, focar só em registro; (2) versão sugerida deve ser construída a partir da resposta do aluno, não do zero; (3) condição de log alterada de `alunoId && sessaoId` para apenas `alunoId` — agora todas as chamadas são salvas em `chamadas_ia`, mesmo sem sessão.
+- `src/app/api/admin/tokens/route.ts` — nova rota GET que agrega totais de `chamadas_ia` (chamadas, tokens entrada/saída, custo USD estimado). Restrito a isAdmin.
+- `src/app/admin/page.tsx` — nova seção "Uso de IA — acumulado total" com 4 cards: chamadas, tokens entrada, tokens saída, custo estimado.
+**Estado atual:** Contador de tokens persiste no Neon (independente do git). A cada chamada à IA com alunoId, um registro é inserido em `chamadas_ia`. O painel admin soma tudo em tempo real.
+**Próximo passo sugerido:** Testar o painel admin após algumas chamadas de IA para verificar os totais.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Unidade A.3 "A vírgula que muda o sentido" — criação completa com super pacote de pesquisa (3/4 frentes: Harvard/ERIC, especialistas em ensino, psicólogos cognitivos).
 **Arquivos alterados:**
 - `src/lib/curriculo/a3-virgula.ts` — currículo curado: 2 casos (vocativo + negação com vírgula), âncora com protagonista adulto (Bandura), abordagem explícito-indutiva híbrida (Harvard/DeKeyser).

@@ -206,16 +206,16 @@ Responda em JSON com este formato exato:
       MODELS.sonnet
     );
 
-    // Loga no banco (sempre — mas payload completo só em modo teste)
-    if (opcoes.alunoId && opcoes.sessaoId) {
+    // Loga no banco sempre que há alunoId — sessaoId é opcional
+    if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
-        sessaoId: opcoes.sessaoId,
+        sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
         modelo: MODELS.sonnet,
         promptCompleto: opcoes.modoTeste
           ? { system: systemPrompt, user: userPrompt }
-          : { proposito: opcoes.proposito }, // Em prod, não loga prompts completos
+          : { proposito: opcoes.proposito },
         resposta: textoResposta,
         tokensInput: resposta.usage.input_tokens,
         tokensOutput: resposta.usage.output_tokens,
@@ -350,14 +350,17 @@ INSTRUÇÕES OBRIGATÓRIAS:
 - Se não acertou: diga o que melhorar, não dê a resposta (exceto se pedirVersao = true)
 - Enquadre sempre como "versão mais adequada ao contexto" e não como "correto vs. errado"
 - Feedback em no máximo 4 frases
+- NÃO avalie erros de ortografia, acentuação ou digitação — o escopo desta unidade é exclusivamente o registro (formal vs. informal). Foque apenas em: contrações ("tô", "tá", "q", "vc", "hj"), vocabulário coloquial, abertura/fechamento formal e sentido preservado.
 
-${pedirVersao ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida com uma versão formal completa." : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
+${pedirVersao
+  ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno — preserve o que está correto (estrutura, informações, tom) e ajuste apenas o que prejudica o registro formal. Não reescreva do zero."
+  : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
 
 Responda em JSON exato:
 {
   "acertou": boolean,
   "mensagem": "feedback para o aluno",
-  "versaoSugerida": ${pedirVersao ? '"versão formal completa ou null"' : "null"},
+  "versaoSugerida": ${pedirVersao ? '"versão formal baseada na resposta do aluno, ou null"' : "null"},
   "tipoErro": "um dos tipos listados ou null se acertou",
   "confiancaIa": "seguro" ou "duvida"
 }
@@ -404,10 +407,10 @@ Responda em JSON exato:
       MODELS.sonnet
     );
 
-    if (opcoes.alunoId && opcoes.sessaoId) {
+    if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
-        sessaoId: opcoes.sessaoId,
+        sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
         modelo: MODELS.sonnet,
         promptCompleto: opcoes.modoTeste

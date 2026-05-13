@@ -24,7 +24,7 @@ export const A2_REGISTROS: UnidadeCurriculo = {
     exemploPrático: `Exemplo prático:\n\nPedro é eletricista autônomo e faz um bom trabalho. Um dia, viu o anúncio de uma empresa pedindo orçamentos para uma reforma elétrica grande e mandou a seguinte mensagem: "oi vi q vcs fazem reforma, quanto custa trocar o painel de uma casa de 80m? me fala aí".\n\nA empresa tinha vários eletricistas na lista de contato. O responsável passou para o próximo sem responder.\n\nPedro sabia fazer o serviço. O que faltou foi o tom — informal demais para um contexto em que ele queria ser visto como profissional.\n\nUma mensagem mais adequada seria: "Boa tarde. Meu nome é Pedro e trabalho como eletricista. Vi a sua solicitação de orçamento e tenho experiência com troca de painel elétrico. Poderia me passar mais detalhes para que eu prepare uma proposta? Agradeço a atenção."\n\nMesma informação. Tom diferente. Resultado completamente diferente.`,
   },
 
-  curiosidade: `A palavra **registro** em linguística significa exatamente isso: o tom e o vocabulário que escolhemos de acordo com a situação. Um ator sabe usar diferentes registros no palco — e você também já faz isso na fala. Esta unidade é sobre levar essa habilidade para a escrita.`,
+  curiosidade: `Você já muda de tom dependendo de com quem está falando. Com o amigo, de um jeito. Com o chefe, de outro. Com um cliente ou uma repartição, de outro ainda. Isso já é seu — você faz isso na fala todo dia, sem precisar parar para pensar. Essa adaptação tem um nome: **registro**. O que esta unidade faz é pegar o que você já sabe fazer na fala e levar para a escrita, onde o tom também decide como a mensagem chega.`,
 
   armadilhas: [
     {

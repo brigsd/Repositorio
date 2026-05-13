@@ -12,8 +12,17 @@ interface Aluno {
   criadoEm: string;
 }
 
+interface TotaisTokens {
+  totalChamadas: number;
+  tokensInput: number;
+  tokensOutput: number;
+  totalTokens: number;
+  custoUsd: number;
+}
+
 export default function AdminPage() {
   const [alunos, setAlunos] = useState<Aluno[]>([]);
+  const [tokens, setTokens] = useState<TotaisTokens | null>(null);
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -31,9 +40,18 @@ export default function AdminPage() {
     setAlunos(data.alunos || []);
   }, [router]);
 
+  const carregarTokens = useCallback(async () => {
+    const res = await fetch("/api/admin/tokens");
+    if (res.ok) {
+      const data = await res.json();
+      setTokens(data.totais);
+    }
+  }, []);
+
   useEffect(() => {
     carregarAlunos();
-  }, [carregarAlunos]);
+    carregarTokens();
+  }, [carregarAlunos, carregarTokens]);
 
   async function handleAdicionar(e: React.FormEvent) {
     e.preventDefault();
@@ -87,6 +105,38 @@ export default function AdminPage() {
             ← Voltar
           </a>
         </div>
+
+        {/* Contador de tokens IA */}
+        {tokens && (
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 mb-8">
+            <h2 className="text-lg font-semibold text-stone-900 mb-4">
+              Uso de IA — acumulado total
+            </h2>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div className="rounded-xl bg-stone-50 border border-stone-100 px-4 py-3">
+                <p className="text-xs font-medium text-stone-500 uppercase tracking-wide">Chamadas</p>
+                <p className="mt-1 text-2xl font-bold text-stone-900">{tokens.totalChamadas.toLocaleString("pt-BR")}</p>
+              </div>
+              <div className="rounded-xl bg-stone-50 border border-stone-100 px-4 py-3">
+                <p className="text-xs font-medium text-stone-500 uppercase tracking-wide">Tokens entrada</p>
+                <p className="mt-1 text-2xl font-bold text-stone-900">{tokens.tokensInput.toLocaleString("pt-BR")}</p>
+              </div>
+              <div className="rounded-xl bg-stone-50 border border-stone-100 px-4 py-3">
+                <p className="text-xs font-medium text-stone-500 uppercase tracking-wide">Tokens saída</p>
+                <p className="mt-1 text-2xl font-bold text-stone-900">{tokens.tokensOutput.toLocaleString("pt-BR")}</p>
+              </div>
+              <div className="rounded-xl bg-amber-50 border border-amber-100 px-4 py-3">
+                <p className="text-xs font-medium text-amber-700 uppercase tracking-wide">Custo estimado</p>
+                <p className="mt-1 text-2xl font-bold text-amber-900">
+                  US$ {tokens.custoUsd.toFixed(4)}
+                </p>
+              </div>
+            </div>
+            <p className="mt-3 text-xs text-stone-400">
+              Dados salvos na tabela <code className="rounded bg-stone-100 px-1">chamadas_ia</code> · atualizado a cada chamada
+            </p>
+          </div>
+        )}
 
         {/* Formulário de cadastro */}
         <div className="rounded-2xl border border-stone-200 bg-white p-6 mb-8">
