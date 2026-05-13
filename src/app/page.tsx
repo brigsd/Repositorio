@@ -8,6 +8,7 @@ import { LogoutButton } from "./LogoutButton";
 
 // Unidades com currículo interativo pronto
 const UNIDADES_ATIVAS = new Set([
+  "a-1-trailer",
   "a-5-acentos",
   "a-6-palavras-armadilha",
 ]);
