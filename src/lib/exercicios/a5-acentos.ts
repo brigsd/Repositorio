@@ -17,7 +17,7 @@ import type { ExercicioGerado } from "./tipos";
 
 export const EXERCICIOS_A5: ExercicioGerado[] = [
   {
-    slug: "a5-ex1",
+    slug: "a5-ex1", // #1
     tipo: "lacuna_unica",
     enunciado: "A sala de reunião ___ reservada para amanhã.",
     opcoes: ["está", "esta"],
@@ -32,7 +32,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex2",
+    slug: "a5-ex2", // #2
     tipo: "lacuna_unica",
     enunciado: "Ontem ele não ___ entregar o relatório a tempo.",
     opcoes: ["pôde", "pode"],
@@ -47,7 +47,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex3",
+    slug: "a5-ex3", // #3
     tipo: "lacuna_unica",
     enunciado: "A decisão da chefe foi muito ___.",
     opcoes: ["sábia", "sabia"],
@@ -62,7 +62,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex4",
+    slug: "a5-ex4", // #4
     tipo: "lacuna_unica",
     enunciado: "Não ___ do que eu estou dizendo.",
     opcoes: ["duvida", "dúvida"],
@@ -77,7 +77,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex5",
+    slug: "a5-ex5", // #5
     tipo: "lacuna_unica",
     enunciado: "Terminar esse serviço ___ prioridade.",
     opcoes: ["é", "e"],
@@ -92,7 +92,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex6",
+    slug: "a5-ex6", // #6
     tipo: "lacuna_unica",
     enunciado: "Ele não ___ conta do trabalho sozinho.",
     opcoes: ["dá", "da"],
@@ -113,7 +113,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
 
   // Rodada 1: está | pôde | sábia | dúvida | é | dá
   {
-    slug: "a5-ex7-escrita",
+    slug: "a5-ex7-escrita", // #7
     tipo: "escrita_lacuna",
     enunciado: "O pedido ___ aguardando aprovação desde ontem.",
     gabarito: "está",
@@ -127,7 +127,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex11-escrita",
+    slug: "a5-ex11-escrita", // #8
     tipo: "escrita_lacuna",
     enunciado: "Na semana passada, ninguém ___ resolver o problema.",
     gabarito: "pôde",
@@ -141,7 +141,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex15-escrita",
+    slug: "a5-ex15-escrita", // #9
     tipo: "escrita_lacuna",
     enunciado: "Foi uma escolha muito ___ esperar antes de assinar.",
     gabarito: "sábia",
@@ -155,7 +155,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex19-escrita",
+    slug: "a5-ex19-escrita", // #10
     tipo: "escrita_lacuna",
     enunciado: "Tenho uma ___ sobre o horário da reunião.",
     gabarito: "dúvida",
@@ -169,7 +169,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex23-escrita",
+    slug: "a5-ex23-escrita", // #11
     tipo: "escrita_lacuna",
     enunciado: "Esse ___ o contrato que precisa ser assinado.",
     gabarito: "é",
@@ -183,7 +183,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex27-escrita",
+    slug: "a5-ex27-escrita", // #12
     tipo: "escrita_lacuna",
     enunciado: "___ pra agendar uma reunião para essa semana?",
     gabarito: "Dá",
@@ -199,7 +199,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
 
   // Rodada 2: esta | pode | sabia | duvida | e | da
   {
-    slug: "a5-ex8-escrita",
+    slug: "a5-ex8-escrita", // #13
     tipo: "escrita_lacuna",
     enunciado: "Por favor, assine ___ folha antes de sair.",
     gabarito: "esta",
@@ -213,7 +213,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex12-escrita",
+    slug: "a5-ex12-escrita", // #14
     tipo: "escrita_lacuna",
     enunciado: "Você ___ me ajudar com esse formulário?",
     gabarito: "pode",
@@ -227,7 +227,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex16-escrita",
+    slug: "a5-ex16-escrita", // #15
     tipo: "escrita_lacuna",
     enunciado: "Ela ___ de tudo sobre o assunto, mas ficou quieta.",
     gabarito: "sabia",
@@ -241,7 +241,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex20-escrita",
+    slug: "a5-ex20-escrita", // #16
     tipo: "escrita_lacuna",
     enunciado: "Ele ___ que o projeto vai ser aprovado.",
     gabarito: "duvida",
@@ -255,7 +255,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex24-escrita",
+    slug: "a5-ex24-escrita", // #17
     tipo: "escrita_lacuna",
     enunciado: "Preciso do documento ___ da assinatura do responsável.",
     gabarito: "e",
@@ -269,7 +269,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex28-escrita",
+    slug: "a5-ex28-escrita", // #18
     tipo: "escrita_lacuna",
     enunciado: "O resultado ___ análise vai sair amanhã.",
     gabarito: "da",
@@ -285,7 +285,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
 
   // Rodada 3: esta | pode | sabia | duvida | e | da
   {
-    slug: "a5-ex9-escrita",
+    slug: "a5-ex9-escrita", // #19
     tipo: "escrita_lacuna",
     enunciado: "Pode pegar ___ caixa e levar para o depósito.",
     gabarito: "esta",
@@ -299,7 +299,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex13-escrita",
+    slug: "a5-ex13-escrita", // #20
     tipo: "escrita_lacuna",
     enunciado: "Essa máquina ___ funcionar por mais dois anos.",
     gabarito: "pode",
@@ -313,7 +313,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex17-escrita",
+    slug: "a5-ex17-escrita", // #21
     tipo: "escrita_lacuna",
     enunciado: "Eu não ___ que o prazo era hoje.",
     gabarito: "sabia",
@@ -327,7 +327,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex21-escrita",
+    slug: "a5-ex21-escrita", // #22
     tipo: "escrita_lacuna",
     enunciado: "Ninguém ___ da capacidade dela para o cargo.",
     gabarito: "duvida",
@@ -341,7 +341,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex25-escrita",
+    slug: "a5-ex25-escrita", // #23
     tipo: "escrita_lacuna",
     enunciado: "Você vai representar a empresa ___ o setor comercial.",
     gabarito: "e",
@@ -355,7 +355,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex29-escrita",
+    slug: "a5-ex29-escrita", // #24
     tipo: "escrita_lacuna",
     enunciado: "Vou falar com o chefe ___ equipe.",
     gabarito: "da",
@@ -371,7 +371,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
 
   // Rodada 4: está | pôde | sábia | dúvida | é | dá
   {
-    slug: "a5-ex10-escrita",
+    slug: "a5-ex10-escrita", // #25
     tipo: "escrita_lacuna",
     enunciado: "A entrega ___ prevista para sexta-feira.",
     gabarito: "está",
@@ -385,7 +385,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex14-escrita",
+    slug: "a5-ex14-escrita", // #26
     tipo: "escrita_lacuna",
     enunciado: "Ela não ___ comparecer à reunião de segunda-feira passada.",
     gabarito: "pôde",
@@ -399,7 +399,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex18-escrita",
+    slug: "a5-ex18-escrita", // #27
     tipo: "escrita_lacuna",
     enunciado: "A orientação que ela deu foi muito ___.",
     gabarito: "sábia",
@@ -413,7 +413,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex22-escrita",
+    slug: "a5-ex22-escrita", // #28
     tipo: "escrita_lacuna",
     enunciado: "Em caso de ___, pergunte ao responsável.",
     gabarito: "dúvida",
@@ -427,7 +427,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex26-escrita",
+    slug: "a5-ex26-escrita", // #29
     tipo: "escrita_lacuna",
     enunciado: "A responsável ___ a gerente de operações.",
     gabarito: "é",
@@ -441,7 +441,7 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a5-ex30-escrita",
+    slug: "a5-ex30-escrita", // #30
     tipo: "escrita_lacuna",
     enunciado: "Ela ___ atenção a todos os detalhes do contrato.",
     gabarito: "dá",
