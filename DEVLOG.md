@@ -31,6 +31,14 @@
 
 ## Entradas
 
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Revisão andragógica dos textos da Unidade A.2 — eliminação de vocabulário negativo e alinhamento dos exemplos-modelo (exemploPar) com as melhores práticas de Wheeler & Swords e Bandura.
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — Reescrita do campo `corpo` em `ancoraPropósito`: removido staccato inicial, substituído "não tem nada de errado" por "tem todo o valor que precisa ter", "tom certo" → "o seu tom", "chave errada na hora errada" → "a chave não corresponde à porta".
+- `src/lib/exercicios/a2-registros.ts` — Substituído "descuido / pouco cuidado / descuidada" nos feedbackAcerto de ex1, ex3, ex5 por "imagem menos profissional do que [o contexto / você] gostaria / pede"; corrigidos mismatches nos exemploPar de ex12 (informal→"quero meu dinheiro de volta" / formal→"reembolso"), ex13 (informal agora inclui confusão "não tô entendendo nada"), ex14 (informal agora mostra urgência "preciso entregar hoje").
+**Estado atual:** Unidade A.2 com todo o texto alinhado ao princípio de code-switching sem vocabulário negativo; exemplos-modelo coerentes com os textos informais que modelam.
+**Próximo passo sugerido:** Testar fluxo completo da A.2 no browser (identificação → reescrita → feedback IA).
+
 ### 2026-05-13 15:55 — Manual / Antigravity — local
 **Resumo:** Reescrita completa dos textos e histórias da Unidade A.1 (Trailer) curada pelo usuário para reforçar a imersão e o tom coloquial.
 **Arquivos alterados:**

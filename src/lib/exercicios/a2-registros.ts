@@ -53,7 +53,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Bom dia. Gostaria de solicitar folga na próxima sexta-feira, caso seja possível.",
     feedbackAcerto:
-      "Exatamente. A segunda versão tem saudação, usa palavras completas e termina de forma respeitosa — tudo o que o contexto formal pede.\n\nO tom informal funciona bem numa conversa com um amigo, mas num e-mail ao chefe ele pode passar uma impressão de descuido.",
+      "Exatamente. A segunda versão tem saudação, usa palavras completas e termina de forma respeitosa — tudo o que o contexto formal pede.\n\nO tom informal funciona bem numa conversa com um amigo, mas num e-mail ao chefe ele pode passar uma imagem menos profissional do que você gostaria.",
     feedbackErro: [
       "Pensa no contexto: você está escrevendo para o chefe, num e-mail. Qual das duas versões parece mais cuidadosa e respeitosa?",
       "A versão adequada para um e-mail ao chefe é a segunda: tem saudação, não usa contrações (tô) e faz o pedido de forma clara e respeitosa.",
@@ -89,7 +89,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Informo que chegarei com aproximadamente 20 minutos de atraso devido ao trânsito.",
     feedbackAcerto:
-      "Isso mesmo. A segunda versão é precisa, sem contrações e inclui uma explicação clara — o que um cliente espera receber.\n\nA primeira funciona para um amigo, mas para um cliente passa uma impressão de pouco cuidado.",
+      "Isso mesmo. A segunda versão é precisa, sem contrações e inclui uma explicação clara — o que um cliente espera receber.\n\nA primeira funciona para um amigo, mas para um cliente pode passar uma imagem menos profissional do que o contexto pede.",
     feedbackErro: [
       "Imagine que você é o cliente recebendo essa mensagem. Qual das duas te passaria mais confiança?",
       "A versão adequada para um cliente é a segunda: sem 'tô', com a informação completa e tom profissional.",
@@ -125,7 +125,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Gostaria de verificar o andamento do pedido realizado na semana passada. Poderia me informar?",
     feedbackAcerto:
-      "Certo. A segunda versão é objetiva e respeitosa — ideal para uma comunicação com fornecedor.\n\nA primeira ('e aí, como tá') funciona na informalidade, mas num contexto comercial pode parecer descuidada.",
+      "Certo. A segunda versão é objetiva e respeitosa — ideal para uma comunicação com fornecedor.\n\nA primeira ('e aí, como tá') funciona na informalidade, mas num contexto comercial pode passar uma imagem menos profissional do que o momento pede.",
     feedbackErro: [
       "Com um fornecedor, qual das duas versões transmite mais profissionalismo?",
       "A versão adequada é a segunda: sem 'e aí' ou 'tá', com a pergunta feita de forma clara e respeitosa.",
@@ -237,8 +237,8 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     enunciado: "Reescreva a mensagem abaixo no registro formal, como se fosse enviada para o setor de atendimento de uma empresa.",
     textoInformal: "quero reclamar do serviço que recebi, ficou muito ruim e não gostei nada, quero meu dinheiro de volta",
     exemploPar: {
-      informal: "o produto veio com defeito, quero trocar",
-      formal: "Venho registrar uma reclamação sobre o produto recebido, que apresentou defeito. Solicito a substituição.",
+      informal: "o produto veio com defeito, quero meu dinheiro de volta",
+      formal: "Venho registrar uma reclamação sobre o produto recebido, que apresentou defeito. Solicito o reembolso do valor pago.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -251,8 +251,8 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     enunciado: "Reescreva a mensagem abaixo no registro formal, como se fosse enviada para um responsável de contrato.",
     textoInformal: "pra quando precisa essa assinatura mesmo? tô perdido nessa papelada toda, não entendi nada",
     exemploPar: {
-      informal: "quando vence esse documento?",
-      formal: "Poderia me informar o prazo para a assinatura deste documento? Gostaria de entender melhor os próximos passos.",
+      informal: "quando vence isso? não tô entendendo nada desse processo",
+      formal: "Poderia me informar o prazo para assinatura? Gostaria de entender melhor os próximos passos do processo.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -265,8 +265,8 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     enunciado: "Reescreva a mensagem abaixo no registro formal, como se fosse enviada num grupo de trabalho com colegas e supervisores.",
     textoInformal: "oi galera, alguém viu meu arquivo do cliente João? sumiu do sistema e preciso entregar essa proposta hoje ainda",
     exemploPar: {
-      informal: "alguém viu aquele e-mail que cheguei semana passada?",
-      formal: "Prezados, alguém teria acesso ao arquivo do cliente João no sistema? Preciso dele para finalizar uma proposta ainda hoje.",
+      informal: "alguém viu onde ficou aquele arquivo? preciso entregar hoje",
+      formal: "Prezados, alguém teria acesso àquele arquivo? Preciso dele para finalizar uma entrega ainda hoje.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
