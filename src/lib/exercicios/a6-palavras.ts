@@ -9,7 +9,7 @@ import type { ExercicioGerado } from "./tipos";
 
 export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
-    slug: "a6-ex1",
+    slug: "a6-ex1", // #1
     tipo: "lacuna_unica",
     enunciado: "Quero terminar o serviço hoje, ___ o cliente está esperando.",
     opcoes: ["mas", "mais"],
@@ -24,7 +24,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex2",
+    slug: "a6-ex2", // #2
     tipo: "lacuna_unica",
     enunciado: "Trabalho nesta oficina ___ cinco anos.",
     opcoes: ["há", "a"],
@@ -39,7 +39,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex3",
+    slug: "a6-ex3", // #3
     tipo: "lacuna_unica",
     enunciado: "___ você não avisou antes que ia faltar?",
     opcoes: ["Por que", "Porque"],
@@ -54,7 +54,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex4",
+    slug: "a6-ex4", // #4
     tipo: "lacuna_unica",
     enunciado: "O serviço ficou ___ feito. Precisa refazer.",
     opcoes: ["mau", "mal"],
@@ -69,7 +69,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex5",
+    slug: "a6-ex5", // #5
     tipo: "lacuna_unica",
     enunciado: "Podem deixar o orçamento para ___.",
     opcoes: ["mim", "eu"],
@@ -87,7 +87,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   // ── Múltipla escolha: pares restantes ────────────────────────────────────
 
   {
-    slug: "a6-ex5b",
+    slug: "a6-ex5b", // #6
     tipo: "lacuna_unica",
     enunciado: "___ você vai depois da reunião?",
     opcoes: ["Onde", "Aonde"],
@@ -102,7 +102,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex5c",
+    slug: "a6-ex5c", // #7
     tipo: "lacuna_unica",
     enunciado: "___ me avisar antes, não poderei te ajudar.",
     opcoes: ["Se não", "Senão"],
@@ -132,7 +132,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   // ── Rodada 1: mas | por que | há | mal | mim | onde | se não ───────────────
 
   {
-    slug: "a6-ex6-escrita",
+    slug: "a6-ex6-escrita", // #8
     tipo: "escrita_lacuna",
     enunciado: "Gostei da proposta, ___ o prazo ficou curto demais.",
     gabarito: "mas",
@@ -146,7 +146,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex10-escrita",
+    slug: "a6-ex10-escrita", // #9
     tipo: "escrita_lacuna",
     enunciado: "___ o pedido ainda não saiu para entrega?",
     gabarito: "Por que",
@@ -160,7 +160,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex14-escrita",
+    slug: "a6-ex14-escrita", // #10
     tipo: "escrita_lacuna",
     enunciado: "Moro neste bairro ___ quase dez anos.",
     gabarito: "há",
@@ -174,7 +174,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex18-escrita",
+    slug: "a6-ex18-escrita", // #11
     tipo: "escrita_lacuna",
     enunciado: "O relatório foi muito ___ escrito, cheio de erros.",
     gabarito: "mal",
@@ -188,7 +188,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex22-escrita",
+    slug: "a6-ex22-escrita", // #12
     tipo: "escrita_lacuna",
     enunciado: "O gerente mandou o e-mail para ___ e para o João.",
     gabarito: "mim",
@@ -202,7 +202,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex26-escrita",
+    slug: "a6-ex26-escrita", // #13
     tipo: "escrita_lacuna",
     enunciado: "A loja ___ trabalho fica perto daqui.",
     gabarito: "onde",
@@ -216,7 +216,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex30-escrita",
+    slug: "a6-ex30-escrita", // #14
     tipo: "escrita_lacuna",
     enunciado: "___ confirmar até amanhã, perderá a vaga.",
     gabarito: "Se não",
@@ -233,7 +233,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   // ── Rodada 2: mais | porque | a | mau | eu | aonde | senão ────────────────
 
   {
-    slug: "a6-ex7-escrita",
+    slug: "a6-ex7-escrita", // #15
     tipo: "escrita_lacuna",
     enunciado: "Ela entende muito ___ de vendas do que eu.",
     gabarito: "mais",
@@ -247,7 +247,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex11-escrita",
+    slug: "a6-ex11-escrita", // #16
     tipo: "escrita_lacuna",
     enunciado: "Não pude ir à reunião ___ estava com o carro na oficina.",
     gabarito: "porque",
@@ -261,7 +261,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex15-escrita",
+    slug: "a6-ex15-escrita", // #17
     tipo: "escrita_lacuna",
     enunciado: "A reunião começa daqui ___ meia hora.",
     gabarito: "a",
@@ -275,7 +275,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex19-escrita",
+    slug: "a6-ex19-escrita", // #18
     tipo: "escrita_lacuna",
     enunciado: "Ele tem um ___ hábito de deixar tudo para a última hora.",
     gabarito: "mau",
@@ -289,7 +289,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex23-escrita",
+    slug: "a6-ex23-escrita", // #19
     tipo: "escrita_lacuna",
     enunciado: "___ e o Pedro vamos apresentar o projeto amanhã.",
     gabarito: "Eu",
@@ -303,7 +303,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex27-escrita",
+    slug: "a6-ex27-escrita", // #20
     tipo: "escrita_lacuna",
     enunciado: "___ você foi ontem à noite?",
     gabarito: "Aonde",
@@ -317,7 +317,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex31-escrita",
+    slug: "a6-ex31-escrita", // #21
     tipo: "escrita_lacuna",
     enunciado: "Anote o número, ___ você vai esquecer.",
     gabarito: "senão",
@@ -331,7 +331,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex31b-escrita",
+    slug: "a6-ex31b-escrita", // #22
     tipo: "escrita_lacuna",
     enunciado: "Anote o número, ___ você vai se esquecer.",
     gabarito: "porque",
@@ -348,7 +348,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   // ── Rodada 3: mais | porque | há | mau | mim | onde | senão ──────────────
 
   {
-    slug: "a6-ex8-escrita",
+    slug: "a6-ex8-escrita", // #23
     tipo: "escrita_lacuna",
     enunciado: "Preciso de ___ um dia para revisar esse contrato.",
     gabarito: "mais",
@@ -362,7 +362,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex12-escrita",
+    slug: "a6-ex12-escrita", // #24
     tipo: "escrita_lacuna",
     enunciado: "Assinei o contrato ___ as condições eram boas.",
     gabarito: "porque",
@@ -376,7 +376,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex16-escrita",
+    slug: "a6-ex16-escrita", // #25
     tipo: "escrita_lacuna",
     enunciado: "O pedido foi feito ___ três semanas e ainda não chegou.",
     gabarito: "há",
@@ -390,7 +390,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex20-escrita",
+    slug: "a6-ex20-escrita", // #26
     tipo: "escrita_lacuna",
     enunciado: "Ele é um ___ pagador — sempre atrasa.",
     gabarito: "mau",
@@ -404,7 +404,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex24-escrita",
+    slug: "a6-ex24-escrita", // #27
     tipo: "escrita_lacuna",
     enunciado: "Esse recado é para ___.",
     gabarito: "mim",
@@ -418,7 +418,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex28-escrita",
+    slug: "a6-ex28-escrita", // #28
     tipo: "escrita_lacuna",
     enunciado: "Você sabe ___ eu posso encontrar o documento?",
     gabarito: "onde",
@@ -432,7 +432,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex32-escrita",
+    slug: "a6-ex32-escrita", // #29
     tipo: "escrita_lacuna",
     enunciado: "Ligue para o cliente, ___ ele vai reclamar.",
     gabarito: "senão",
@@ -449,7 +449,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   // ── Rodada 4: mas | por que | a | mal | eu | aonde | se não ──────────────
 
   {
-    slug: "a6-ex9-escrita",
+    slug: "a6-ex9-escrita", // #30
     tipo: "escrita_lacuna",
     enunciado: "A reunião foi longa, ___ valeu a pena.",
     gabarito: "mas",
@@ -463,7 +463,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex13-escrita",
+    slug: "a6-ex13-escrita", // #31
     tipo: "escrita_lacuna",
     enunciado: "Você sabe ___ o chefe cancelou a visita?",
     gabarito: "por que",
@@ -477,7 +477,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex17-escrita",
+    slug: "a6-ex17-escrita", // #32
     tipo: "escrita_lacuna",
     enunciado: "O prazo vence daqui ___ cinco dias.",
     gabarito: "a",
@@ -491,7 +491,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex21-escrita",
+    slug: "a6-ex21-escrita", // #33
     tipo: "escrita_lacuna",
     enunciado: "O mecânico fez o serviço ___ e o carro voltou com o mesmo problema.",
     gabarito: "mal",
@@ -505,7 +505,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex25-escrita",
+    slug: "a6-ex25-escrita", // #34
     tipo: "escrita_lacuna",
     enunciado: "___ sempre chego antes do horário.",
     gabarito: "Eu",
@@ -519,7 +519,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex29-escrita",
+    slug: "a6-ex29-escrita", // #35
     tipo: "escrita_lacuna",
     enunciado: "Não sei ___ ir para resolver esse problema.",
     gabarito: "aonde",
@@ -533,7 +533,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     ],
   },
   {
-    slug: "a6-ex33-escrita",
+    slug: "a6-ex33-escrita", // #36
     tipo: "escrita_lacuna",
     enunciado: "___ houver assinatura, o contrato não vale.",
     gabarito: "Se não",
