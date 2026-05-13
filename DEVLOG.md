@@ -32,11 +32,12 @@
 ## Entradas
 
 ### 2026-05-13 09:10 — Antigravity — local
-**Resumo:** Refinamento pedagógico da unidade A.5 aplicando um exemplo prático cotidiano criado pelo usuário sobre a diferença entre "é" e "e" no diagnóstico de uma bomba de óleo.
+**Resumo:** Refinamento pedagógico da unidade A.5 com exemplo da bomba de óleo e correção global da renderização de quebras de linha (\n\n) no componente de citação expansível.
 **Arquivos alterados:**
-- `src/lib/curriculo/a5-acentos.ts` — Ajuste do `corpo` para uma introdução concisa de impacto e atribuição da história da bomba de óleo em `exemploPrático` para o correto funcionamento do Progressive Disclosure na interface.
-**Estado atual:** Unidade A.5 refinada com exemplo prático extremamente didático e palpável para alunos adultos.
-**Próximo passo sugerido:** Realizar o commit e push das alterações para o Git para sincronização.
+- `src/lib/curriculo/a5-acentos.ts` — Ajuste do `corpo` para uma introdução concisa de impacto e atribuição da história da bomba de óleo em `exemploPrático` para o Progressive Disclosure na interface.
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — Adicionada a classe CSS `whitespace-pre-line` ao `blockquote` do Exemplo Prático para garantir que quebras de linha literais (\n\n) sejam exibidas nativamente pelo navegador.
+**Estado atual:** Unidade A.5 com exemplo prático extremamente didático e renderização visual corrigida para suportar quebras de linha em qualquer unidade.
+**Próximo passo sugerido:** Sincronizar com o Git remoto.
 
 ### 2026-05-13 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
 **Resumo:** Sessão completa de melhoria pedagógica nas unidades A.5 e A.6: super pacote de pesquisa aplicado, intercalação real na Fase 2, correção de bugs visuais, exercícios novos e documentação de convenções globais.
