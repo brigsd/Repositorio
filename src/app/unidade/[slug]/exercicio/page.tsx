@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { obterExercicios } from "@/lib/exercicios";
+import { obterSessao } from "@/lib/auth";
 import ExercicioClient from "../ExercicioClient";
 
 export const dynamic = "force-dynamic";
@@ -15,11 +16,10 @@ interface Props {
 export default async function ExercicioPage({ params }: Props) {
   const { slug } = await params;
 
-  const [unidade] = await db
-    .select()
-    .from(unidades)
-    .where(eq(unidades.slug, slug))
-    .limit(1);
+  const [unidade, sessao] = await Promise.all([
+    db.select().from(unidades).where(eq(unidades.slug, slug)).limit(1).then(r => r[0]),
+    obterSessao(),
+  ]);
 
   if (!unidade) notFound();
 
@@ -71,6 +71,7 @@ export default async function ExercicioPage({ params }: Props) {
         armadilhas={[]}
         exercicios={exercicios}
         slug={slug}
+        isAdmin={sessao?.isAdmin ?? false}
       />
     </div>
   );
