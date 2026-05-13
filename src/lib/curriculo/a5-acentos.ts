@@ -13,7 +13,7 @@ export const A5_ACENTOS: UnidadeCurriculo = {
     exemploPrático: `Uma candidata enviou um e-mail ao RH dizendo "Fico a sua disposição para qualquer duvida". O acento faltando em "dúvida" não mudou o sentido, mas o recrutador riscou mentalmente: "não sabe escrever direito". Ela tinha a qualificação. O detalhe custou a entrevista.`,
   },
 
-  curiosidade: `Você pode estar pensando no **sabiá** — o pássaro famoso do poema "Canção do Exílio". Ele entra na lista aqui porque parece com as outras duas palavras, mas é diferente: o acento dele fica no final (**sabiá**), não no começo (**sábia**) nem em lugar nenhum (**sabia**). Três palavras quase iguais, três significados completamente diferentes.`,
+  curiosidade: `Existe um pássaro chamado **sabiá** que parece com as duas palavras desta unidade, mas é diferente: o acento dele fica no final (**sabiá**), não no começo (**sábia**) nem em lugar nenhum (**sabia**). Três palavras quase iguais, três significados completamente diferentes.`,
 
   armadilhas: [
     {
