@@ -7,6 +7,7 @@ import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
 import { DetalhesUnidade } from "./DetalhesUnidade";
+import { AncoraProposito } from "./AncoraProposito";
 
 export const dynamic = "force-dynamic";
 
@@ -71,14 +72,7 @@ export default async function UnidadePage({ params }: Props) {
           {/* ── Camada 1: Propósito (curto) ─────────────────────────── */}
           {/* Princípio Knowles: adulto engaja quando sabe o "porquê" */}
           {proposito && (
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 px-6 py-5">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-amber-700">
-                Por que isso importa
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-stone-800">
-                {proposito}
-              </p>
-            </div>
+            <AncoraProposito corpo={proposito} curiosidade={curiosidade} />
           )}
 
           {/* ── Camada 2: CTA — acima da dobra ─────────────────────── */}
@@ -100,7 +94,6 @@ export default async function UnidadePage({ params }: Props) {
                 titulo: a.titulo,
               }))}
               exemploPratico={exemploPratico}
-              curiosidade={curiosidade}
             />
           )}
         </div>

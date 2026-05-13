@@ -15,15 +15,6 @@ import { useState } from "react";
  * - Andragogia (Knowles) — adulto escolhe quando quer mais detalhes
  */
 
-function renderNegrito(texto: string) {
-  return texto.split(/(\*\*[^*]+\*\*)/g).map((parte, i) => {
-    if (parte.startsWith("**") && parte.endsWith("**")) {
-      return <strong key={i} className="font-semibold text-stone-800">{parte.slice(2, -2)}</strong>;
-    }
-    return parte;
-  });
-}
-
 interface ArmadilhaResumo {
   id: string;
   titulo: string;
@@ -32,10 +23,9 @@ interface ArmadilhaResumo {
 interface Props {
   armadilhas: ArmadilhaResumo[];
   exemploPratico: string | null;
-  curiosidade?: string | null;
 }
 
-export function DetalhesUnidade({ armadilhas, exemploPratico, curiosidade }: Props) {
+export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
   const [aberto, setAberto] = useState(false);
 
   return (
@@ -85,17 +75,6 @@ export function DetalhesUnidade({ armadilhas, exemploPratico, curiosidade }: Pro
             </blockquote>
           )}
 
-          {/* Curiosidade */}
-          {curiosidade && (
-            <div className="rounded-xl bg-stone-50 px-4 py-3">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-stone-400">
-                Você sabia?
-              </p>
-              <p className="text-sm leading-relaxed text-stone-600">
-                {renderNegrito(curiosidade)}
-              </p>
-            </div>
-          )}
         </div>
       )}
     </div>

@@ -26,7 +26,7 @@ export const A6_PALAVRAS_ARMADILHA: UnidadeCurriculo = {
   // Aparece ANTES de qualquer conteúdo — "por que isso importa pra mim?"
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Você já enviou uma mensagem importante (pra um cliente, pro chefe, pro RH) e depois percebeu um erro que te deu aquela sensação ruim? Essas palavras são armadilhas porque soam igual na fala, mas têm significados completamente diferentes no texto. Quem lê sabe quando alguém errou. Depois desta unidade, você vai parar de errar essas de vez.`,
+    corpo: `Você já enviou uma mensagem importante (pra um cliente, pro chefe, pro RH) e depois percebeu um erro que te deu aquela sensação ruim?\n\nEssas palavras são armadilhas porque soam igual na fala, mas têm significados completamente diferentes no texto. Quem lê sabe quando alguém errou.\n\nDepois desta unidade, você vai parar de errar essas de vez.`,
     exemploPrático: `Um mecânico enviou um orçamento pro cliente com "Vou verificar mais o motor amanhã" quando queria dizer "mas". O cliente cancelou o serviço achando que tinha mais problema do que esperava.`,
   },
 
