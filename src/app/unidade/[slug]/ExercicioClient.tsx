@@ -119,7 +119,6 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
   const [resposta, setResposta] = useState<RespostaIA | null>(null);
   const [concluiu, setConcluiu] = useState(false);
   const [acertosPorExercicio, setAcertosPorExercicio] = useState<boolean[]>([]);
-  const [dicaVisivel, setDicaVisivel] = useState(false);
   const [opcaoConfirmadaErrada, setOpcaoConfirmadaErrada] = useState<string | null>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -176,7 +175,6 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
       setInputEscrita("");
       setResposta(null);
       setTentativas(0);
-      setDicaVisivel(false);
     }
   }
 
@@ -314,23 +312,13 @@ export default function ExercicioClient({ armadilhas, exercicios, slug }: Props)
         )}
       </div>
 
-      {/* Dica de par — apenas para exercícios de escrita */}
+      {/* Par em jogo — sempre visível nos exercícios de escrita */}
       {exercicio.tipo === "escrita_lacuna" && (
         <div className="flex justify-end">
-          {!dicaVisivel ? (
-            <button
-              onClick={() => setDicaVisivel(true)}
-              className="flex items-center gap-1.5 rounded-lg border border-stone-200 bg-white px-3 py-1.5 text-xs text-stone-400 transition hover:border-stone-300 hover:text-stone-600"
-            >
-              <span aria-hidden="true">💡</span>
-              Dica
-            </button>
-          ) : (
-            <span className="flex items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50 px-3 py-1.5 font-mono text-xs font-semibold text-stone-700">
-              <span aria-hidden="true">💡</span>
-              {PAR_NOME[exercicio.armadilhaId] ?? exercicio.armadilhaId}
-            </span>
-          )}
+          <span className="flex items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50 px-3 py-1.5 font-mono text-xs font-semibold text-stone-700">
+            <span aria-hidden="true">💡</span>
+            {PAR_NOME[exercicio.armadilhaId] ?? exercicio.armadilhaId}
+          </span>
         </div>
       )}
 
