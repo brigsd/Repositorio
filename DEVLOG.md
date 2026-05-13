@@ -31,6 +31,13 @@
 
 ## Entradas
 
+### 2026-05-13 15:55 — Manual / Antigravity — local
+**Resumo:** Reescrita completa dos textos e histórias da Unidade A.1 (Trailer) curada pelo usuário para reforçar a imersão e o tom coloquial.
+**Arquivos alterados:**
+- `src/lib/curriculo/a1-trailer.ts` — Reformulação da âncora de propósito, das 3 cenas (Juliana, Carlos e Marcos) e da mensagem final utilizando linguagem altamente empática e conectada ao cotidiano do adulto.
+**Estado atual:** Unidade A.1 totalmente polida com foco no controle das palavras em momentos críticos.
+**Próximo passo sugerido:** Continuar com o desenvolvimento das próximas unidades ou módulos.
+
 ### 2026-05-13 14:33 — Manual / Antigravity — local
 **Resumo:** Padronização visual avançada e refinamento andragógico nos arquivos de exercícios das unidades A.5 e A.6.
 **Arquivos alterados:**
