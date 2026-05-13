@@ -9,6 +9,7 @@
 
 import type { ExercicioGerado } from "./tipos";
 import type { ExercicioReescrita } from "./tipos-reescrita";
+import { EXERCICIOS_A3 } from "./a3-virgula";
 import { EXERCICIOS_A5 } from "./a5-acentos";
 import { EXERCICIOS_A6 } from "./a6-palavras";
 import { EXERCICIOS_A2 } from "./a2-registros";
@@ -17,6 +18,7 @@ export type { ExercicioGerado };
 export type { ExercicioReescrita };
 
 const REGISTRO: Record<string, ExercicioGerado[]> = {
+  "a-3-virgula": EXERCICIOS_A3,
   "a-5-acentos": EXERCICIOS_A5,
   "a-6-palavras-armadilha": EXERCICIOS_A6,
 };

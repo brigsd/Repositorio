@@ -32,6 +32,18 @@
 ## Entradas
 
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Unidade A.3 "A vírgula que muda o sentido" — criação completa com super pacote de pesquisa (3/4 frentes: Harvard/ERIC, especialistas em ensino, psicólogos cognitivos).
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — currículo curado: 2 casos (vocativo + negação com vírgula), âncora com protagonista adulto (Bandura), abordagem explícito-indutiva híbrida (Harvard/DeKeyser).
+- `src/lib/exercicios/a3-virgula.ts` — 15 exercícios tipo `identificar_erro`: ex1–6 vocativo (blocked), ex7–12 negação (blocked), ex13–15 interleaved (Bjork/Rohrer). Feedback: sentido primeiro, regra depois (Hattie nível 2-3).
+- `src/lib/exercicios/index.ts` — `EXERCICIOS_A3` registrado em `REGISTRO`.
+- `src/app/page.tsx` — "a-3-virgula" adicionado a `UNIDADES_ATIVAS`.
+- `src/app/unidade/[slug]/page.tsx` — `A3_VIRGULA` importado e adicionado a `CURRICULOS`.
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — label "Escolha a versão adequada" para tipo `identificar_erro`.
+**Estado atual:** A.3 disponível na home, com currículo e 15 exercícios interativos. Sem avaliação por IA (avaliação local, igual A.5/A.6).
+**Próximo passo sugerido:** Testar fluxo completo da A.3 no browser; ou avançar para A.4.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Revisão andragógica dos textos da Unidade A.2 — eliminação de vocabulário negativo e alinhamento dos exemplos-modelo (exemploPar) com as melhores práticas de Wheeler & Swords e Bandura.
 **Arquivos alterados:**
 - `src/lib/curriculo/a2-registros.ts` — Reescrita do campo `corpo` em `ancoraPropósito`: removido staccato inicial, substituído "não tem nada de errado" por "tem todo o valor que precisa ter", "tom certo" → "o seu tom", "chave errada na hora errada" → "a chave não corresponde à porta".

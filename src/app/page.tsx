@@ -10,6 +10,7 @@ import { LogoutButton } from "./LogoutButton";
 const UNIDADES_ATIVAS = new Set([
   "a-1-trailer",
   "a-2-registros",
+  "a-3-virgula",
   "a-5-acentos",
   "a-6-palavras-armadilha",
 ]);
