@@ -31,6 +31,15 @@
 
 ## Entradas
 
+### 2026-05-13 10:43 — Manual / Antigravity — local
+**Resumo:** Refinamento textual curado pelo usuário nas âncoras de propósito das unidades A.5 e A.6 para máxima clareza e fluidez, além do ajuste fino de espaçamento no Progressive Disclosure.
+**Arquivos alterados:**
+- `src/lib/curriculo/a5-acentos.ts` — Adicionado prefixo explicativo "Exemplo prático:" e refinada a história da bomba de óleo.
+- `src/lib/curriculo/a6-palavras-armadilha.ts` — Pequenos ajustes na fluidez da escrita das propriedades `corpo` e `exemploPrático`.
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx` — Mapeamento de quebras de linha em tags `<p>` separadas com espaçamento `space-y-2` para reduzir a altura entre parágrafos.
+**Estado atual:** Unidades A.5 e A.6 com textos extremamente polidos e design de citações aprimorado.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
 ### 2026-05-13 09:10 — Antigravity — local
 **Resumo:** Refinamento pedagógico da unidade A.5 com exemplo da bomba de óleo e correção global da renderização de quebras de linha (\n\n) no componente de citação expansível.
 **Arquivos alterados:**

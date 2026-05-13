@@ -26,8 +26,8 @@ export const A6_PALAVRAS_ARMADILHA: UnidadeCurriculo = {
   // Aparece ANTES de qualquer conteúdo — "por que isso importa pra mim?"
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Você já enviou uma mensagem importante (pra um cliente, pro chefe, pro RH) e depois percebeu um erro que te deu aquela sensação ruim?\n\nEssas palavras são armadilhas porque soam igual na fala, mas têm significados completamente diferentes no texto. Quem lê sabe quando alguém errou.\n\nDepois desta unidade, você vai parar de errar essas de vez.`,
-    exemploPrático: `Um mecânico enviou um orçamento pro cliente com "Vou verificar mais o motor amanhã" quando queria dizer "mas". O cliente cancelou o serviço achando que tinha mais problema do que esperava.`,
+    corpo: `Você já enviou uma mensagem importante (pra um cliente ou para o chefe) e depois percebeu um erro que te deu aquela sensação ruim?\n\nEssas palavras são armadilhas porque soam igual na fala, mas têm significados completamente diferentes no texto.\n\nSendo que alguns erros de escrita podem causar problemas reais.`,
+    exemploPrático: `Exemplo prático:\n\nCom exceção de "mas" e "mais", os outros pares da nossa lista geram apenas um erro gramatical, sem prejudicar a compreensão prática do que está sendo dito.\n\nComo por exemplo: se um mecânico escreve para um colega via WhatsApp "Aonde está a chave?" no lugar de "Onde está a chave?", ou digita "Foi muito mau feito" em vez de "Foi muito mal feito", o colega dele ainda vai entender o que o mecânico quis dizer.\n\nPorém as duas frases "Aonde está a chave?" e "Foi muito mau feito" estão erradas segundo nossas regras de português.\n\nAgora, confundir o uso de "mas" e "mais" pode causar problemas.\n\nPor exemplo: Um mecânico trocou a porta e o vidro do carro de um cliente, e escreveu a seguinte mensagem para o cliente: "Arrumei a porta mas o vidro." O cliente respondeu: "Mas o vidro...? O que aconteceu com o vidro? Você conseguiu trocar ele também?"\n\nO que o mecânico deveria ter escrito: "Arrumei a porta mais o vidro."`,
   },
 
   // ─── Pré-aferição ────────────────────────────────────────────────────────

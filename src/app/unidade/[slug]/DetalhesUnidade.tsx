@@ -70,8 +70,10 @@ export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
 
           {/* Exemplo prático */}
           {exemploPratico && (
-            <blockquote className="border-l-2 border-amber-300 pl-4 text-sm italic text-stone-600 leading-relaxed whitespace-pre-line">
-              {exemploPratico}
+            <blockquote className="border-l-2 border-amber-300 pl-4 text-sm italic text-stone-600 leading-relaxed space-y-2">
+              {exemploPratico.split("\n\n").map((paragrafo, i) => (
+                <p key={i}>{paragrafo}</p>
+              ))}
             </blockquote>
           )}
 

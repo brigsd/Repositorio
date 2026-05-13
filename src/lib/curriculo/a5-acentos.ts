@@ -10,7 +10,7 @@ export const A5_ACENTOS: UnidadeCurriculo = {
   ancoraPropósito: {
     titulo: "Por que isso importa?",
     corpo: `Esses acentos não são apenas detalhes de ortografia — eles mudam o sentido da frase inteira.\n\nEm mensagens de trabalho, relatórios ou no atendimento a clientes, a falta de um simples acento pode transformar o sentido da frase e até mesmo causar problemas.`,
-    exemploPrático: `Um mecânico terminou de avaliar um motor e mandou mensagem para o dono do veículo: "A peça danificada e a bomba de óleo". \n\nSem o acento, o "e" virou uma soma. O cliente respondeu confuso: "Entendi que a bomba de óleo tá com problema, mas qual seria essa outra 'peça danificada' que você falou?". Na verdade, o mecânico queria afirmar: "A peça danificada **é** a bomba de óleo". A falta do acento fez o cliente achar que o carro tinha dois defeitos em vez de um.`,
+    exemploPrático: `Exemplo prático:\n\nUm mecânico terminou de avaliar um motor e mandou mensagem para o dono do veículo: "A peça danificada e a bomba de óleo". \n\nO cliente respondeu confuso: "Entendi que a bomba de óleo tá com problema, mas qual seria essa outra 'peça danificada' que você falou?". \n\nNa verdade, o mecânico queria afirmar: "A peça danificada é a bomba de óleo". \n\nA falta do acento fez o cliente achar que o carro tinha dois defeitos em vez de um.`,
   },
 
   curiosidade: `Existe um pássaro chamado **sabiá** que se parece com as duas palavras desta unidade, mas é diferente: o acento dele fica no final (**sabiá**), não no começo (**sábia**) nem em lugar nenhum (**sabia**). Três palavras quase iguais, três significados completamente diferentes.`,
