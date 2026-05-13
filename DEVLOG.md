@@ -30,6 +30,59 @@
 
 ## Entradas
 
+### 2026-05-13 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
+**Resumo:** Sessão completa de melhoria pedagógica nas unidades A.5 e A.6: super pacote de pesquisa aplicado, intercalação real na Fase 2, correção de bugs visuais, exercícios novos e documentação de convenções globais.
+
+**Arquivos alterados:**
+
+- `src/lib/exercicios/a6-palavras.ts`
+  - a6-ex5b: substituído exercício com par errado ("ir/onde") pelo correto: "___ você vai depois da reunião?" → ["Onde","Aonde"] → "Aonde"
+  - a6-ex5c: reescrito para remover dupla negação — "___ você não me avisar" → "___ me avisar antes, não poderei te ajudar."
+  - a6-ex30-escrita: corrigida ordem da frase — "___ você confirmar" → "___ confirmar até amanhã, perderá a vaga."
+  - a6-ex18-escrita: naturalizado — "foi escrito muito mal" → "foi muito mal escrito, cheio de erros" (sugestão do curador)
+  - Fase 2 reordenada de bloqueada (4 de cada par) para intercalada em 4 rodadas de 7 pares cada (Rohrer & Bjork — spacing + interleaving)
+  - a6-ex31b-escrita: novo exercício de par mínimo adicionado logo após a6-ex31 — "Anote o número, ___ você vai se esquecer." → gabarito "porque" (contrasta semanticamente com "senão" do exercício anterior)
+  - Total: 36 exercícios (7 MC + 29 escrita)
+
+- `src/lib/curriculo/a6-palavras-armadilha.ts`
+  - Primeira linha de cada `textoAncora` reescrita para resumir os dois lados do par (era apenas a definição de um)
+  - `titulo` de `porque_family` alterado de "por que / porque / porquê / por quê" → "por que / porque" (alinhado com o que os exercícios testam)
+  - Adicionadas armadilhas `onde_aonde` e `senao_se_nao` (estavam faltando no currículo)
+
+- `src/app/unidade/[slug]/DetalhesUnidade.tsx`
+  - "O que você vai aprender": removidas explicações das armadilhas (eram cortadas e poluíam visualmente); substituído por chips compactos apenas com o título do par (ex: `mas / mais`, `há / a`)
+  - Interface `ArmadilhaResumo` simplificada (removido campo `resumo`)
+
+- `src/app/unidade/[slug]/page.tsx`
+  - Removido `resumo: a.textoAncora.split("\n")[0]` do mapeamento de armadilhas
+
+- `src/app/unidade/[slug]/ExercicioClient.tsx`
+  - Adicionado botão 💡 Dica para exercícios de escrita: exibe o par sendo testado (ex: "mas / mais")
+  - Adicionado estado `dicaVisivel` (reset no próximo exercício)
+  - Adicionado estado `opcaoConfirmadaErrada` para corrigir bug visual: ao errar MC e tentar nova opção, a opção clicada ficava vermelha imediatamente — corrigido marcando apenas a que foi confirmada como errada
+  - Adicionado mapa `PAR_NOME` com todos os pares de A.5 e A.6
+
+- `src/lib/exercicios/a5-acentos.ts`
+  - a5-ex6: corrigida dica do feedbackAcerto — "tenta trocar por consegue" → "tenta completar com consegue dar" (idioma "dar conta" é inseparável; a versão anterior produzia frase agramatical)
+  - a5-ex14: corrigida ambiguidade temporal — "reunião de segunda" → "reunião de segunda-feira passada" (deixa claro que é passado)
+  - Fase 2 reordenada de bloqueada (4 exercícios de cada par) para intercalada em 4 rodadas de 6 pares cada (mesmo padrão aplicado à A.6)
+
+- `CLAUDE.md` — [NOVO] Arquivo lido automaticamente pelo Claude Code a cada sessão. Documenta: "super pacote de pesquisa" (4 frentes: Harvard/acadêmico, especialistas em ensino, psicólogos, UX), quando acionar automaticamente, restrições operacionais
+
+- `.ai-instructions.md` — Adicionada seção "super pacote de pesquisa" para compartilhar a convenção com todas as ferramentas de IA (Antigravity e outras)
+
+**Decisões tomadas:**
+- Intercalação (Rohrer & Bjork 2010): prática bloqueada (todos os "mas" juntos) favorece ilusão de fluência; prática intercalada (alternar pares) força discriminação real entre conceitos semelhantes — padrão agora aplicado às duas unidades
+- Dica 💡 visível por demanda (Nielsen NN: progressive disclosure) — não mostra de início para não reduzir esforço cognitivo desejável (Bjork), mas disponível para evitar abandono
+- Bug de cor vermelha ao re-selecionar: `opcao === resposta && !acertou && selecionado` marcava vermelho qualquer seleção após erro — isolamos o estado `opcaoConfirmadaErrada` para marcar apenas o que foi efetivamente confirmado errado
+- "Super pacote" documentado como regra global de projeto: a cada decisão significativa de UX/pedagogia/conteúdo, realizar as 4 buscas paralelas sem precisar de instrução explícita do curador
+
+**Estado atual:** A.5 (30 ex, Fase 2 intercalada) e A.6 (36 ex, Fase 2 intercalada) funcionalmente completas. Bugs visuais corrigidos. Convenções pedagógicas documentadas.
+
+**Próximo passo sugerido:** Testar localmente as duas unidades (npm run dev), depois avançar para a unidade A.7 ou iniciar o sistema de revisão espaçada (spaced repetition).
+
+---
+
 ### 2026-05-12 — Claude Code (branch: claude/analyze-repo-document-K3Nbq)
 **Resumo:** Correção de dois exercícios gramaticalmente incorretos no par senão/se não da A.6.
 **Arquivos alterados:**
