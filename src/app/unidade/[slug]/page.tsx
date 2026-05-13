@@ -39,6 +39,7 @@ export default async function UnidadePage({ params }: Props) {
   const proposito = curriculo?.ancoraPropósito.corpo ?? null;
   const exemploPratico = curriculo?.ancoraPropósito.exemploPrático ?? null;
   const armadilhas = curriculo?.armadilhas ?? [];
+  const curiosidade = curriculo?.curiosidade ?? null;
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-12">
@@ -99,6 +100,7 @@ export default async function UnidadePage({ params }: Props) {
                 titulo: a.titulo,
               }))}
               exemploPratico={exemploPratico}
+              curiosidade={curiosidade}
             />
           )}
         </div>

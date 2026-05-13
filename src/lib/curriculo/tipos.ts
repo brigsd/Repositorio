@@ -47,6 +47,8 @@ export interface UnidadeCurriculo {
     exemploPrático: string;
   };
 
+  curiosidade?: string;
+
   preAfericao: PerguntaAfericao[];
   armadilhas?: Armadilha[];         // Para unidades de gramática
   tiposExercicio: TipoExercicio[];

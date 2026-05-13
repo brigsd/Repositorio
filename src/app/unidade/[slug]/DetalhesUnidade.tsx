@@ -23,9 +23,10 @@ interface ArmadilhaResumo {
 interface Props {
   armadilhas: ArmadilhaResumo[];
   exemploPratico: string | null;
+  curiosidade?: string | null;
 }
 
-export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
+export function DetalhesUnidade({ armadilhas, exemploPratico, curiosidade }: Props) {
   const [aberto, setAberto] = useState(false);
 
   return (
@@ -73,6 +74,18 @@ export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
             <blockquote className="border-l-2 border-amber-300 pl-4 text-sm italic text-stone-600 leading-relaxed">
               {exemploPratico}
             </blockquote>
+          )}
+
+          {/* Curiosidade */}
+          {curiosidade && (
+            <div className="rounded-xl bg-stone-50 px-4 py-3">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-stone-400">
+                Você sabia?
+              </p>
+              <p className="text-sm leading-relaxed text-stone-600">
+                {curiosidade}
+              </p>
+            </div>
           )}
         </div>
       )}
