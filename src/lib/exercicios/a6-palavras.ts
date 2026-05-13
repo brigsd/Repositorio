@@ -396,10 +396,10 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mau",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mau** descreve uma característica ruim de algo ou alguém.\nJá o **mal** descreve como algo foi feito ou como alguém está.\nUma dica: troca por **ruim**. "Um ruim pagador." Soou natural? Então é **mau**.',
+      '**Mau** descreve uma característica ruim de algo ou alguém.\nJá o **mal** descreve como algo foi feito ou como alguém está.\nUma dica: use a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador"). \nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
     feedbackErro: [
       "A palavra descreve como ele é, ou como ele age?",
-      '"Mau pagador" é uma característica dele — como ele é. Tenta trocar por "ruim pagador": faz sentido? Então é **mau**. O **mal** seria para ação: "pagou mal o funcionário".',
+      '"Mau pagador" é uma característica dele — como ele é. Tente usar a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador"). \nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
       '"Mau" é a resposta. Descreve uma característica da pessoa: ser mau pagador é como ele é, não como ele age. O **mal** ficaria para ação: "tratou mal os clientes".',
     ],
   },
