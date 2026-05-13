@@ -24,11 +24,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "está",
     armadilhaId: "esta_esta",
     feedbackAcerto:
-      '**Está** com acento é uma ação, algo que acontece agora.\nJá **esta** sem acento aponta para algo, tipo "esta sala", "esta pessoa".\nUma dica: se você consegue trocar por **encontra-se**, é **está** com acento. "A sala encontra-se reservada." Funcionou!',
+      "A palavra **está** com acento serve para mostrar a situação atual de alguma coisa, enquanto a versão sem o sinal funciona apenas para apontar para um objeto ou pessoa.\n\nSe você conseguir trocar por **encontra-se** e a frase **a sala encontra-se reservada** fizer sentido, o uso do acento é necessário.",
     feedbackErro: [
-      "A frase está dizendo que a sala se encontra reservada, ou está apontando para qual sala?",
-      'Tenta trocar por **encontra-se**: "A sala encontra-se reservada para amanhã." Soou natural? Quando a palavra indica um estado ou situação, leva acento: **está**.',
-      '**Está** com acento é a resposta. A frase diz que a sala se encontra reservada. Sem acento, **esta** seria para apontar: "esta sala aqui".',
+      "A frase quer mostrar como a sala se encontra neste momento ou está apenas apontando para ela?",
+      "Tente fazer a leitura trocando a palavra por **encontra-se**. Como dizer que **a sala encontra-se reservada** soa normal, isso mostra que a situação exige o **está** com acento.",
+      "A resposta certa é **está** com acento, já que a intenção da frase é explicar a situação da sala. A versão sem acento apareceria apenas se você estivesse mostrando o local para alguém, dizendo algo como **esta sala aqui é muito boa**."
     ],
   },
   {
@@ -39,11 +39,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "pôde",
     armadilhaId: "pode_pode",
     feedbackAcerto:
-      '**Pôde** com acento é passado, algo que já aconteceu.\nJá **pode** sem acento é presente, algo que acontece agora ou é possível.\nUma dica: a palavra **ontem** na frase indica passado. Se tem palavra de passado (ontem, na semana passada, ano passado), use **pôde**.',
+      "O **pôde** com acento é usado para avisar que um imprevisto aconteceu lá no passado, enquanto a palavra **pode** sem nenhum sinal indica as coisas que acontecem hoje ou no futuro.\n\nComo a presença da palavra **ontem** joga a situação para trás, a escrita correta exige o acento.",
     feedbackErro: [
-      "Essa situação aconteceu no passado ou está acontecendo agora?",
-      'A frase começa com **ontem**. Quando algo já aconteceu, usamos **pôde** com acento. Sem acento, **pode** é para agora: "Ele pode sair mais cedo hoje."',
-      '**Pôde** com acento é a resposta. A palavra **ontem** mostra que é passado. Sem acento seria presente: "Ele pode entregar hoje." Com acento: "Ontem ele não pôde entregar."',
+      "Essa dificuldade para entregar o relatório aconteceu no passado ou é um problema de agora?",
+      "Repare que a frase já começa com a palavra **ontem**, o que obriga a gente a falar do passado. Sempre que a situação já aconteceu e ficou para trás, colocamos o acento na palavra.",
+      "A resposta é **pôde** com acento, pois o texto deixa claro que o prazo de ontem já foi perdido. A forma sem acento a gente reserva para o dia a dia, como na frase **ele pode entregar o documento hoje**."
     ],
   },
   {
@@ -54,11 +54,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "sábia",
     armadilhaId: "sabia_sabia",
     feedbackAcerto:
-      '**Sábia** com acento descreve alguém que tem sabedoria.\nJá **sabia** sem acento é ação, como em "ela sabia a resposta".\nUma dica: se você consegue trocar por **inteligente**, é **sábia** com acento. "A decisão foi muito inteligente." Funcionou!',
+      "Usamos **sábia** com acento para elogiar uma atitude inteligente, diferente da palavra **sabia** sem o sinal, que indica apenas que a pessoa tinha conhecimento de uma informação.\n\nSe você tentar ler a frase usando a palavra **inteligente** no lugar e o sentido bater certinho, a escolha leva o acento.",
     feedbackErro: [
-      "A frase está descrevendo como a decisão foi, ou está dizendo que alguém sabia de algo?",
-      'Tenta trocar por **inteligente**: "A decisão da chefe foi muito inteligente." Soou natural? Quando a palavra descreve uma qualidade, leva acento: **sábia**.',
-      '**Sábia** com acento é a resposta. A frase está descrevendo a qualidade da decisão. Sem acento, **sabia** seria uma ação: "Ela sabia o resultado."',
+      "A palavra que falta serve para dar um elogio ao que a chefe fez ou quer apenas dizer que ela tinha uma informação?",
+      "Tente avaliar a frase usando a palavra **inteligente** como um teste. Como a leitura **a decisão foi muito inteligente** mantém a ideia original, isso indica que o espaço pede o acento.",
+      "A resposta correta é **sábia** com acento, já que o texto quer destacar a ótima qualidade da decisão que foi tomada. A palavra sem acento apareceria caso a frase mostrasse uma ação, do tipo **ela sabia muito bem o que estava fazendo**."
     ],
   },
   {
@@ -69,11 +69,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "duvida",
     armadilhaId: "duvida_duvida",
     feedbackAcerto:
-      '**Duvida** sem acento é uma ação, quando alguém está duvidando.\nJá **dúvida** com acento é uma coisa, tipo "tenho uma dúvida".\nUma dica: se você consegue trocar por **desconfia**, é **duvida** sem acento. "Não desconfia do que eu estou dizendo." Funcionou!',
+      "A palavra **dúvida** com acento dá nome àquela incerteza que você tem na cabeça, enquanto a forma sem acento aponta para a atitude de desconfiar de alguém.\n\nPara tirar a prova, tente trocar por **desconfia**, pois se a leitura **não desconfia do que estou dizendo** fluir naturalmente, o certo é usar a palavra sem acento.",
     feedbackErro: [
-      "A frase está pedindo para alguém não fazer algo (ação), ou está falando sobre uma coisa (um sentimento)?",
-      'Tenta trocar por **desconfia**: "Não desconfia do que eu estou dizendo." Soou natural? Quando é uma ação (alguém duvidando), é sem acento: **duvida**.',
-      '**Duvida** sem acento é a resposta. A frase pede para alguém não duvidar, é uma ação. Com acento seria uma coisa: "Tenho uma **dúvida** sobre o prazo."',
+      "O texto está pedindo para a pessoa não desconfiar da conversa ou está falando sobre ter uma pergunta anotada no papel?",
+      "Faça o teste rápido substituindo a palavra por **desconfia**. Como a frase **não desconfia do que eu estou dizendo** entrega exatamente o mesmo recado, o certo é usar a forma sem acento.",
+      "A resposta é **duvida** sem acento, porque a intenção da mensagem é impedir que quem ouve desconfie da história contada. A versão acentuada funciona apenas para nomear o problema, como quando você avisa que **tem uma dúvida sobre o projeto**."
     ],
   },
   {
@@ -84,11 +84,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "é",
     armadilhaId: "e_e",
     feedbackAcerto:
-      '**É** com acento vem do verbo ser, indica que algo é alguma coisa.\nJá **e** sem acento junta duas coisas, tipo "café e leite".\nUma dica: se você consegue trocar por **significa** ou **representa**, é **é** com acento. "Terminar esse serviço significa prioridade."',
+      "O **é** com acento confirma o que algo significa de verdade. Já a letra **e** sozinha funciona apenas para juntar duas coisas diferentes na mesma frase, como quando pedimos **café e leite**.\n\nSe você conseguir ler com **representa** e perceber que **terminar esse serviço representa prioridade** tem total sentido, o acento precisa ser mantido.",
     feedbackErro: [
-      "A frase está dizendo que algo é alguma coisa, ou está juntando duas coisas?",
-      'Tenta trocar por **significa**: "Terminar esse serviço significa prioridade." Soou natural? Quando a palavra vem do verbo **ser**, leva acento: **é**.',
-      '**É** com acento é a resposta. A frase diz que o serviço é prioridade (verbo ser). Sem acento, **e** seria para juntar: "o serviço e o relatório".',
+      "A frase tenta explicar a importância de terminar o serviço ou quer apenas juntar o serviço com outra tarefa da lista?",
+      "Avalie a frase trocando o espaço em branco pela palavra **significa**. Como a ideia de que o **serviço significa prioridade** amarra muito bem o pensamento, isso mostra que a palavra leva acento.",
+      "A resposta é **é** com acento, visto que a mensagem busca dar um peso de prioridade para a tarefa da oficina. O uso da letra sem acento serve para grudar itens, como ao pedir **o alicate e a chave de fenda**."
     ],
   },
   {
@@ -99,19 +99,13 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "dá",
     armadilhaId: "da_da",
     feedbackAcerto:
-      '**Dá** com acento vem do verbo dar, indica uma ação.\nJá **da** sem acento liga palavras, tipo "a chave da porta".\nUma dica: tenta completar com **consegue dar**: "Ele não consegue dar conta do trabalho sozinho." Se fizer sentido, a palavra é **dá** com acento.',
+      "O **dá** com acento aparece quando alguém faz uma ação, como dar um recado ou dar conta de um serviço. Já o **da** sem acento serve só para juntar palavras, mostrando de quem é a coisa.\n\nUma forma simples de tirar a dúvida é tentar ler a frase com **consegue dar** no lugar do espaço, pois como **ele não consegue dar conta** faz sentido, o acento é garantido.",
     feedbackErro: [
-      "A frase está dizendo que alguém faz algo (ação), ou está ligando palavras?",
-      'Tenta trocar por **consegue**: "Ele não consegue conta do trabalho sozinho." Soou natural? Quando a palavra vem do verbo **dar**, leva acento: **dá**.',
-      '**Dá** com acento é a resposta. A frase fala de uma ação (dar conta). Sem acento, **da** seria para ligar: "a porta da sala".',
+      "A frase está falando de uma pessoa tentando fazer uma tarefa difícil ou está apenas ligando duas palavras soltas?",
+      "Tente ler a frase colocando **consegue dar** no lugar do espaço. Como essa troca funciona bem para explicar que o rapaz não vai vencer o serviço, a palavra pede o uso do acento.",
+      "A resposta certa é **dá** com acento, porque o texto fala diretamente sobre a ação de fazer um trabalho pesado. A versão sem acento funciona só para conectar as coisas, como quando dizemos que **a chave da oficina sumiu**."
     ],
   },
-
-  // ── Fase 2: escrita (cenários novos, intercalados por rodada) ──────────────
-  // Estrutura: 4 rodadas × 6 pares = 24 exercícios
-  // Cada rodada mistura todos os 6 pares antes de repetir qualquer um (Rohrer & Bjork)
-
-  // Rodada 1: está | pôde | sábia | dúvida | é | dá
   {
     slug: "a5-ex7-escrita", // #7
     tipo: "escrita_lacuna",
@@ -119,11 +113,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "está",
     armadilhaId: "esta_esta",
     feedbackAcerto:
-      '**Está** com acento indica um estado ou situação: o pedido se encontra aguardando.\nJá **esta** sem acento aponta para algo: "esta pasta", "esta pessoa".\nUma dica: tenta trocar por **encontra-se**. "O pedido encontra-se aguardando." Funcionou? Então é **está**.',
+      "A palavra **está** com acento mostra como um processo se encontra no momento, enquanto a versão **esta** sem o sinal serve para apontar para algo perto de você.\n\nSe você conseguir ler **o pedido encontra-se aguardando** e achar o sentido claro, o uso do acento está correto.",
     feedbackErro: [
-      "A frase está descrevendo o estado do pedido, ou apontando para ele?",
-      'Tenta trocar por "encontra-se": "O pedido encontra-se aguardando." Soou natural? Quando indica um estado, leva acento: **está**. Sem acento, **esta** seria para apontar: "esta pasta aqui".',
-      '**Está** com acento é a resposta. A frase descreve o estado do pedido (aguardando). Sem acento, **esta** aponta para algo: "esta solicitação que você vê".',
+      "A mensagem quer informar em que pé está o pedido ou quer apenas apontar para um pacote na mesa?",
+      "Tente substituir a palavra que falta por **encontra-se**. Como a leitura flui muito bem explicando a situação de espera do pacote, o acento na palavra é necessário.",
+      "A resposta é **está** com acento, porque a frase informa a situação daquele pedido que aguarda liberação. A palavra sem acento seria usada para apontar o dedo, como em **esta caixa deve ser enviada hoje**."
     ],
   },
   {
@@ -133,11 +127,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "pôde",
     armadilhaId: "pode_pode",
     feedbackAcerto:
-      '**Pôde** com acento é passado: aconteceu antes.\nJá **pode** sem acento é presente: acontece agora ou é possível.\nUma dica: "na semana passada" indica passado. Quando há palavra de passado na frase, use **pôde**.',
+      "O **pôde** com o acento de chapéu serve para relatar situações que já passaram, deixando o **pode** sem acento livre para cuidar das coisas de hoje ou de amanhã.\n\nComo o começo da frase avisa que tudo aconteceu na **semana passada**, usamos o acento para marcar o passado.",
     feedbackErro: [
-      "Isso aconteceu no passado ou está acontecendo agora?",
-      '"Na semana passada" indica passado. Para passado, use **pôde** com acento. Sem acento, **pode** é para o presente: "ninguém pode resolver agora".',
-      '**Pôde** com acento é a resposta. "Na semana passada" mostra que é passado. Com acento para passado, sem acento para presente: "ninguém pode sair agora".',
+      "Essa falha na hora de resolver o problema rolou nos dias de hoje ou é um assunto que ficou para trás?",
+      "A leitura já entrega que a situação ocorreu na semana passada, o que joga o assunto para o passado. Toda vez que relatamos algo que já foi, o acento entra na palavra para fazer essa marcação.",
+      "A resposta correta é **pôde** com acento, visto que o texto relata uma dor de cabeça antiga que ninguém conseguiu resolver. A versão sem acento a gente guarda para o cenário atual, como quando você pergunta se **alguém pode ajudar agora**."
     ],
   },
   {
@@ -147,11 +141,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "sábia",
     armadilhaId: "sabia_sabia",
     feedbackAcerto:
-      '**Sábia** com acento descreve uma qualidade: a escolha tinha sabedoria.\nJá **sabia** sem acento é ação: "ela sabia o resultado".\nUma dica: tenta trocar por **inteligente**. "Uma escolha muito inteligente." Funcionou? Então é **sábia** com acento.',
+      "Nós usamos **sábia** com acento para elogiar uma atitude inteligente, enquanto a palavra **sabia** sem sinal relata apenas que uma pessoa tinha conhecimento de algo.\n\nSe você testar a palavra **inteligente** na frase e vir que **foi uma escolha muito inteligente** faz sentido, o acento entra no texto.",
     feedbackErro: [
-      "A palavra está descrevendo uma qualidade da escolha, ou dizendo que alguém sabia de algo?",
-      'Tenta trocar por "inteligente": "Foi uma escolha muito inteligente." Soou natural? Para qualidade, use **sábia** com acento.',
-      '**Sábia** com acento é a resposta. A frase descreve a qualidade da escolha. Sem acento, **sabia** seria ação: "ela sabia que devia esperar".',
+      "A frase está tentando elogiar quem decidiu esperar ou quer apenas contar que alguém conhecia uma informação?",
+      "Avalie a frase usando a palavra **inteligente**. Como a leitura funciona bem e mostra que a atitude foi positiva, isso confirma que a lacuna exige a versão com acento.",
+      "A resposta é **sábia** com acento, porque o objetivo do texto é destacar que ter paciência antes de assinar foi uma ótima escolha. O uso sem acento ficaria bom se o foco fosse outro, como em **ela já sabia que não devia assinar correndo**."
     ],
   },
   {
@@ -161,11 +155,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "dúvida",
     armadilhaId: "duvida_duvida",
     feedbackAcerto:
-      '**Dúvida** com acento é uma coisa, um sentimento que você tem.\nJá **duvida** sem acento é uma ação: "ele duvida de tudo".\nUma dica: tenta trocar por **questão**. "Tenho uma questão sobre o horário." Funcionou? Então é **dúvida** com acento.',
+      "A forma **dúvida** com acento dá nome àquela incerteza que fica martelando na nossa cabeça, enquanto a versão **duvida** sem o sinal mostra que alguém está desconfiando de uma história.\n\nSe você fizer o teste trocando por **pergunta** e a frase mantiver a mesma ideia sobre o horário, o uso da palavra acentuada resolve o problema.",
     feedbackErro: [
-      "A frase está falando de uma coisa que você tem (sentimento), ou de uma ação de duvidar?",
-      'Você tem uma dúvida — é uma coisa, como ter uma questão. Para a coisa, use **dúvida** com acento. Sem acento, **duvida** seria ação: "ele duvida do horário".',
-      '**Dúvida** com acento é a resposta. A frase fala de algo que você tem, como "uma questão". Para a coisa, com acento. Para a ação, sem acento: "ninguém duvida disso".',
+      "O texto fala sobre ter um questionamento guardado na cabeça ou está apontando para o ato de desconfiar da chefia?",
+      "Tente ler o pedaço trocando o espaço em branco pela palavra **pergunta**. Visto que ter uma **pergunta sobre o horário** faz todo o sentido, o acento ajuda a dar nome a essa incerteza.",
+      "A resposta certa é **dúvida** com acento, já que a mensagem quer dar nome ao problema de não ter certeza sobre a agenda. A falta de acento apareceria caso alguém agisse com desconfiança, como na frase **ele duvida do horário combinado**."
     ],
   },
   {
@@ -175,11 +169,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "é",
     armadilhaId: "e_e",
     feedbackAcerto:
-      '**É** com acento vem do verbo ser: o contrato é algo.\nJá **e** sem acento junta coisas: "o contrato e o recibo".\nUma dica: tenta trocar por **representa**. "Esse representa o contrato que precisa ser assinado." Funcionou? Então é **é** com acento.',
+      "O **é** com acento serve para confirmar exatamente o que uma coisa é. A letra **e** sem acento, por outro lado, serve apenas para somar duas coisas na conversa, como na união de **caneta e papel**.\n\nAo conseguir ler que **esse representa o contrato** sem perder a lógica, fica provado que o acento precisa estar lá.",
     feedbackErro: [
-      "A frase está dizendo que algo é alguma coisa, ou está juntando duas coisas?",
-      'A frase diz que "esse" é o contrato — verbo ser. Tenta trocar por "representa": funcionou? Para o verbo ser, use **é** com acento.',
-      '**É** com acento é a resposta. A frase usa o verbo ser. Sem acento, **e** seria para juntar: "o contrato e a nota fiscal".',
+      "A frase serve para confirmar qual é o papel certo na mesa ou tenta somar dois papéis diferentes?",
+      "Aplique a dica de substituir a lacuna pela palavra **representa**. Como o texto ganha um sentido firme apontando o documento certo, a escolha com acento vira a única opção viável.",
+      "A resposta é o **é** com acento, porque a pessoa está confirmando exatamente qual papel precisa ganhar uma assinatura. A letra desacompanhada costuma aparecer quando juntamos as coisas, como em **entregue a nota fiscal e a via do contrato**."
     ],
   },
   {
@@ -189,15 +183,13 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "Dá",
     armadilhaId: "da_da",
     feedbackAcerto:
-      '**Dá** com acento vem do verbo dar: é possível fazer algo.\nJá **da** sem acento liga palavras: "da empresa", "da semana".\nUma dica: tenta trocar por **é possível**. "É possível agendar uma reunião?" Funcionou? Então é **dá** com acento.',
+      "A palavra **dá** com acento mostra uma possibilidade ou esforço para fazer algo, diferente do **da** sem acento que só liga palavras.\n\nSe você conseguir ler a pergunta começando com **tem como** e o sentido continuar sendo o mesmo sobre agendar a reunião, pode colocar o acento sem medo.",
     feedbackErro: [
-      "A frase pergunta se é possível fazer algo (ação), ou está ligando palavras?",
-      'Tenta trocar por "é possível": "É possível agendar?" Soou natural? Para possibilidade ou ação do verbo dar, use **dá** com acento.',
-      '**Dá** com acento é a resposta. A frase pergunta sobre possibilidade — verbo dar. Sem acento, **da** ligaria palavras: "reunião da semana".',
+      "A pergunta quer saber se existe a possibilidade de realizar a reunião ou está tentando grudar duas palavras na mesma linha?",
+      "Faça o teste prático lendo o começo da frase com a expressão **tem como**. Como investigar se **tem como agendar** soa super normal no ambiente de trabalho, o acento precisa marcar presença.",
+      "A resposta é **dá** com acento, visto que o colega está tentando descobrir se é possível encaixar mais um compromisso na semana. A forma sem acento fica responsável apenas por amarrar os detalhes, como quando pedimos **a pauta da reunião**."
     ],
   },
-
-  // Rodada 2: esta | pode | sabia | duvida | e | da
   {
     slug: "a5-ex8-escrita", // #13
     tipo: "escrita_lacuna",
@@ -205,11 +197,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "esta",
     armadilhaId: "esta_esta",
     feedbackAcerto:
-      '**Esta** sem acento aponta para algo próximo: esta folha aqui, na sua frente.\nJá **está** com acento indica um estado ou ação: "o documento está pronto".\nUma dica: se você pode trocar por **essa** sem mudar o sentido, é **esta** sem acento.',
+      "A palavra **esta** sem acento serve perfeitamente para apontar para um papel que está na sua frente, deixando o **está** com acento para explicar se um documento já foi preenchido ou não.\n\nUma tática boa é colocar a palavra **essa** no lugar, pois se a frase não perder o sentido, o certo é não usar o acento.",
     feedbackErro: [
-      "A frase está apontando para uma folha específica, ou descrevendo o estado de algo?",
-      'A frase aponta para a folha que está na frente da pessoa. Para apontar, use **esta** sem acento. O **está** com acento indicaria estado: "a folha está assinada".',
-      '**Esta** sem acento é a resposta. A frase aponta para um objeto específico. Sem acento, **esta** e **essa** servem para apontar. Com acento, **está** indicaria estado: "a folha já está assinada".',
+      "A pessoa está apontando para o papel em que o cliente deve assinar ou está descrevendo a aparência da folha?",
+      "Tente ler o recado substituindo o termo pela palavra **essa**. Visto que pedir para **assinar essa folha** passa exatamente a mesma mensagem, a palavra correta exige a ausência do acento.",
+      "A resposta é **esta** sem acento, porque a pessoa está simplesmente indicando em qual papel a caneta deve ser usada. O uso do acento mudaria totalmente a ideia da frase, como em **a folha já está assinada**."
     ],
   },
   {
@@ -219,11 +211,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "pode",
     armadilhaId: "pode_pode",
     feedbackAcerto:
-      '**Pode** sem acento é presente, algo possível agora.\nJá **pôde** com acento é passado: "ontem ele não pôde".\nUma dica: a pergunta é sobre agora, sobre possibilidade. Para presente, use **pode** sem acento.',
+      "O **pode** sem acento funciona como um pedido de socorro para o momento atual, enquanto a forma **pôde** com acento fala sobre as dificuldades que já aconteceram no passado.\n\nComo o colega está querendo uma ajuda no formulário agora mesmo, a escrita certa não leva acento.",
     feedbackErro: [
-      "Essa pergunta é sobre algo que aconteceu no passado ou sobre o que é possível agora?",
-      'A pergunta é sobre agora, sobre possibilidade presente. Para presente, use **pode** sem acento. Com acento, **pôde** seria passado: "ontem você pôde me ajudar?"',
-      '**Pode** sem acento é a resposta. A pergunta é sobre agora. Para presente e possibilidade, sem acento. Com acento, **pôde** é só para passado: "ela não pôde comparecer ontem".',
+      "Esse pedido de ajuda para preencher o documento vale para hoje ou é uma reclamação sobre algo da semana passada?",
+      "A leitura revela um pedido de auxílio que precisa ser resolvido no presente. Como não existe nenhuma indicação de que esse problema ficou para trás, descartamos o uso do acento.",
+      "A resposta certa é **pode** sem acento, visto que a pergunta tenta descobrir se o colega tem tempo para ajudar neste exato momento. A versão acentuada serviria apenas para perguntar sobre o passado, do tipo **você pôde avaliar aquele caso ontem?**."
     ],
   },
   {
@@ -233,11 +225,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "sabia",
     armadilhaId: "sabia_sabia",
     feedbackAcerto:
-      '**Sabia** sem acento é uma ação no passado: ela tinha conhecimento, ela conhecia.\nJá **sábia** com acento descreve uma qualidade: "uma pessoa sábia".\nUma dica: tenta trocar por **conhecia**. "Ela conhecia tudo sobre o assunto." Funcionou? Então é **sabia** sem acento.',
+      "A versão **sabia** sem acento mostra que alguém guardava um conhecimento sobre a situação, ao passo que a palavra **sábia** com acento aparece para elogiar atitudes inteligentes.\n\nSe você conseguir trocar a lacuna por **conhecia** e a leitura **ela conhecia de tudo** ficar coerente, a palavra não leva acento.",
     feedbackErro: [
-      "A frase está dizendo que ela tinha conhecimento de algo, ou descrevendo como ela é?",
-      'Tenta trocar por "conhecia": "Ela conhecia tudo sobre o assunto." Soou natural? Para ação de conhecer, use **sabia** sem acento.',
-      '**Sabia** sem acento é a resposta. A frase indica que ela tinha conhecimento — é uma ação. Com acento, **sábia** descreveria uma qualidade: "uma pessoa muito sábia".',
+      "O texto conta que a moça tinha bastante informação escondida ou tenta fazer um elogio para a atitude dela de ficar em silêncio?",
+      "Aplique o teste da palavra **conhecia** na hora de entender a frase. Como avisar que **ela conhecia de tudo** transmite a mesma ideia de que ela tinha informações, a forma correta ignora o uso do acento.",
+      "A resposta é **sabia** sem acento, porque a intenção é mostrar que a pessoa estava bem informada sobre os bastidores. O acento entraria na jogada apenas se você quisesse exaltar o silêncio dela, como em **ficar quieta foi uma decisão muito sábia**."
     ],
   },
   {
@@ -247,11 +239,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "duvida",
     armadilhaId: "duvida_duvida",
     feedbackAcerto:
-      '**Duvida** sem acento é uma ação: ele está duvidando, desconfiando.\nJá **dúvida** com acento é uma coisa: "tenho uma dúvida".\nUma dica: tenta trocar por **desconfia**. "Ele desconfia que o projeto vai ser aprovado." Funcionou? Então é **duvida** sem acento.',
+      "A palavra **duvida** sem o acento mostra a atitude de alguém que está com o pé atrás sobre uma ideia, enquanto a versão acentuada dá o nome a esse sentimento de incerteza.\n\nSe a frase aceitar a palavra **desconfia** tranquilamente, confirmando que **ele desconfia que o projeto vai ser aprovado**, a versão sem sinal está correta.",
     feedbackErro: [
-      "A frase fala de uma ação (alguém duvidando), ou de uma coisa (um sentimento que se tem)?",
-      'Tenta trocar por "desconfia": "Ele desconfia que vai ser aprovado." Soou natural? Para a ação de duvidar, use **duvida** sem acento.',
-      '**Duvida** sem acento é a resposta. É uma ação: ele está duvidando. Com acento, **dúvida** seria uma coisa: "ele tem uma dúvida sobre o projeto".',
+      "A frase mostra a desconfiança agindo na cabeça do rapaz ou apenas informa que ele tem uma pergunta anotada no caderno?",
+      "Tente ler o problema colocando a palavra **desconfia** no espaço em branco. Como esse teste prova que a pessoa não leva muita fé na aprovação, fica claro que a atitude não exige acentuação.",
+      "A resposta é **duvida** sem acento, já que o foco da mensagem é apontar a postura de desconfiança do rapaz. O uso com acento serviria apenas para identificar uma falha na explicação, como em **ele ficou com uma dúvida sobre os custos do projeto**."
     ],
   },
   {
@@ -261,11 +253,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "e",
     armadilhaId: "e_e",
     feedbackAcerto:
-      '**E** sem acento junta duas coisas: o documento e a assinatura.\nJá **é** com acento vem do verbo ser.\nUma dica: tenta trocar por **mais**. "Preciso do documento mais da assinatura." Funcionou com o mesmo sentido? Então é **e** sem acento.',
+      "A letra **e** livre de acentos funciona apenas para somar coisas diferentes em um mesmo pedido, diferente do **é** agudo que afirma o que algo é de verdade.\n\nAo tentar fazer a leitura usando a palavra **mais** no meio do caminho, você percebe que precisar do documento **mais** a assinatura faz todo o sentido, garantindo a versão sem acento.",
     feedbackErro: [
-      "A frase está juntando duas coisas que você precisa, ou está dizendo que algo é alguma coisa?",
-      'A frase junta duas coisas: o documento e a assinatura. Para juntar, use **e** sem acento. Com acento, **é** seria verbo ser: "o documento é obrigatório".',
-      '**E** sem acento é a resposta. A frase une dois itens necessários. Para juntar, sem acento. Com acento, **é** indicaria verbo ser: "a assinatura é necessária".',
+      "A frase está somando os papéis necessários para liberar o atendimento ou está tentando explicar quem é o responsável?",
+      "Faça a prova trocando a letra em branco pela palavra **mais**. Como a ideia de exigir um papel **mais** um carimbo organiza os pedidos perfeitamente, a ausência do acento resolve a questão.",
+      "A resposta é a letra **e** sem acento, porque a pessoa está simplesmente juntando duas obrigações diferentes para o serviço. A forma acentuada mudaria a conversa para uma confirmação, do tipo **a assinatura do gerente é obrigatória**."
     ],
   },
   {
@@ -275,15 +267,13 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "da",
     armadilhaId: "da_da",
     feedbackAcerto:
-      '**Da** sem acento liga palavras: o resultado pertence à análise.\nJá **dá** com acento vem do verbo dar: "ela dá o resultado".\nUma dica: tenta trocar por **de + a**. "O resultado de a análise" tem o mesmo sentido que "da análise". Para ligar palavras, use **da** sem acento.',
+      "O termo **da** sem acento age apenas para ligar palavras e mostrar que o resultado pertence àquela análise, enquanto o **dá** acentuado indica a ação de entregar ou realizar algo.\n\nSe você puder ler a frase pensando no resultado **de a** análise de forma separada na cabeça, usar o termo sem acento funciona perfeitamente.",
     feedbackErro: [
-      "A frase está ligando duas coisas (resultado e análise), ou indicando uma ação?",
-      '"Da" liga o resultado à análise — é a preposição "de" + artigo "a". Para ligar, sem acento: **da**. Com acento, **dá** seria verbo: "ela dá o resultado amanhã".',
-      '**Da** sem acento é a resposta. A frase liga "resultado" a "análise" — é preposição. Sem acento para ligar. Com acento, **dá** seria ação: "ela dá o resultado amanhã".',
+      "O texto mostra de qual processo vem esse resultado ou relata o esforço de um funcionário para liberar os dados?",
+      "Tente quebrar a palavra mentalmente em dois pedaços, pensando no **resultado de a análise**. Como a intenção é só amarrar o dado com o lugar de onde ele veio, o acento fica de fora.",
+      "A resposta é **da** sem acento, porque a palavra só conecta o resultado com a análise que foi feita. A versão com acento entra apenas quando destacamos a ação, como em **o sistema dá o resultado amanhã de manhã**."
     ],
   },
-
-  // Rodada 3: esta | pode | sabia | duvida | e | da
   {
     slug: "a5-ex9-escrita", // #19
     tipo: "escrita_lacuna",
@@ -291,11 +281,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "esta",
     armadilhaId: "esta_esta",
     feedbackAcerto:
-      '**Esta** sem acento aponta para algo: esta caixa aqui, na sua frente.\nJá **está** com acento indica estado: "a caixa está pesada".\nUma dica: tenta trocar por **essa**. "Pode pegar essa caixa." Funcionou? Então é **esta** sem acento.',
+      "Nós usamos **esta** sem acento quando a intenção é apontar diretamente para a caixa, deixando a forma acentuada **está** para avisar se o pacote se encontra pesado ou amassado.\n\nSe a troca pela palavra **essa** funcionar bem durante a leitura, a falta de acento é garantida.",
     feedbackErro: [
-      "A frase está apontando para a caixa, ou descrevendo como ela está?",
-      'A frase aponta para a caixa. Para apontar, use **esta** sem acento. Tenta trocar por "essa": funcionou? Então é **esta**. O **está** com acento indicaria estado: "a caixa está vazia".',
-      '**Esta** sem acento é a resposta. A frase aponta para a caixa. O **está** com acento indicaria estado: "a caixa está pesada".',
+      "A frase está apontando para qual caixa deve ser levada ou está reclamando da situação em que o papelão se encontra?",
+      "Avalie o recado tentando colocar a palavra **essa** no meio. Visto que a ordem de **pegar essa caixa** não muda a mensagem, a palavra cumpre seu papel de apontar e dispensa o acento.",
+      "A resposta correta é **esta** sem acento, porque a fala serve apenas para mostrar qual caixa precisa ser transportada. O uso do acento criaria um aviso sobre a condição do pacote, como na frase **a caixa está no fundo do corredor**."
     ],
   },
   {
@@ -305,11 +295,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "pode",
     armadilhaId: "pode_pode",
     feedbackAcerto:
-      '**Pode** sem acento indica possibilidade no presente ou futuro.\nJá **pôde** com acento é passado: "ano passado ela pôde funcionar bem".\nUma dica: a frase fala sobre o que é possível a partir de agora. Para isso, use **pode** sem acento.',
+      "A palavra **pode** sem acento projeta o que vai acontecer daqui para a frente, enquanto a versão **pôde** com acento avalia algo que a máquina fez lá no passado.\n\nComo a expectativa envolve o futuro dos próximos dois anos, o acento não tem espaço nessa frase.",
     feedbackErro: [
-      "A frase está falando de uma possibilidade de agora em diante, ou de algo que já aconteceu?",
-      'A frase fala de possibilidade futura. Para presente e possibilidade, use **pode** sem acento. Com acento, **pôde** é para passado: "ano passado ela pôde funcionar bem".',
-      '**Pode** sem acento é a resposta. Indica possibilidade a partir de agora. O **pôde** com acento é só para o passado: "no ano passado, essa máquina pôde funcionar por dois anos".',
+      "A avaliação diz respeito à força da máquina para trabalhar no futuro ou analisa os defeitos dela em anos passados?",
+      "A presença da expressão **por mais dois anos** joga a situação diretamente para o futuro. Quando a frase não fala de um problema antigo, a gente não usa o acento.",
+      "A resposta é **pode** sem acento, visto que é uma previsão de funcionamento para os dias que ainda vão chegar. A forma acentuada entra na frase apenas em relatos antigos, como ao lamentar que **a máquina pôde operar muito pouco na gestão passada**."
     ],
   },
   {
@@ -319,11 +309,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "sabia",
     armadilhaId: "sabia_sabia",
     feedbackAcerto:
-      '**Sabia** sem acento é a ação de saber, de ter conhecimento.\nJá **sábia** com acento descreve uma qualidade: "a orientação foi sábia".\nUma dica: tenta trocar por **tinha conhecimento**. "Eu não tinha conhecimento de que o prazo era hoje." Funcionou? Então é **sabia** sem acento.',
+      "A forma **sabia** sem acento mostra a falta de conhecimento sobre uma informação, como o prazo de entrega, diferente da palavra **sábia** acentuada que elogia uma atitude madura.\n\nSe você ler a frase substituindo por **tinha conhecimento** e fizer sentido, a regra confirma que não há acento.",
     feedbackErro: [
-      "A frase diz que você não tinha conhecimento de algo, ou está descrevendo uma qualidade?",
-      'Tenta trocar por "tinha conhecimento": funcionou? Para a ação de saber, use **sabia** sem acento. Com acento, **sábia** descreveria qualidade: "foi uma decisão sábia".',
-      '**Sabia** sem acento é a resposta. A frase indica que você não tinha o conhecimento. Para a ação de saber, sem acento. Com acento, **sábia** descreve qualidade.',
+      "A pessoa está admitindo que não dominava as informações sobre a data ou está querendo elogiar a qualidade do prazo?",
+      "Faça o teste de leitura confirmando que a pessoa não **tinha conhecimento** do assunto. Como o resultado passa a mesma mensagem, a palavra acerta o alvo sem precisar de acentuação.",
+      "A resposta é **sabia** sem acento, porque a frase é um aviso bem direto sobre o desconhecimento da data. O uso do acento mudaria a conversa para um elogio, como em **cobrar esse prazo agora não foi uma atitude muito sábia**."
     ],
   },
   {
@@ -333,11 +323,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "duvida",
     armadilhaId: "duvida_duvida",
     feedbackAcerto:
-      '**Duvida** sem acento é ação: ninguém está duvidando.\nJá **dúvida** com acento é a coisa em si: "não há dúvida sobre isso".\nUma dica: tenta trocar por **questiona**. "Ninguém questiona a capacidade dela." Funcionou? Então é **duvida** sem acento.',
+      "A versão **duvida** sem acento indica que ninguém tem atitudes de desconfiar da moça, enquanto a forma **dúvida** com acento serviria para falar da incerteza em si.\n\nSe a troca por **desconfia** mantiver o respeito intacto dizendo que **ninguém desconfia da capacidade dela**, a palavra fica sem acento.",
     feedbackErro: [
-      "A frase diz que as pessoas fazem uma ação (duvidar), ou fala de um sentimento que existe?",
-      'Tenta trocar por "questiona": funcionou? Para a ação, use **duvida** sem acento. Com acento, **dúvida** seria a coisa: "não há dúvida sobre isso".',
-      '**Duvida** sem acento é a resposta. É uma ação: ninguém está questionando. Com acento, **dúvida** seria a coisa: "não existe dúvida sobre a capacidade dela".',
+      "A oração afirma que não há gente com postura de desconfiar da moça ou fala sobre ter uma pergunta anotada na gaveta?",
+      "Tente ler o elogio trocando o espaço vazio pela palavra **desconfia**. Como a ideia de que o setor confia nela continua igual, isso comprova que o acento não deve ser usado.",
+      "A resposta certa é **duvida** sem acento, já que o texto destaca a falta de atitudes negativas da equipe em relação a ela. A versão com acento serviria para dar um nome à insegurança, do tipo **não restou nenhuma dúvida sobre a promoção dela**."
     ],
   },
   {
@@ -347,11 +337,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "e",
     armadilhaId: "e_e",
     feedbackAcerto:
-      '**E** sem acento une duas coisas: a empresa e o setor.\nJá **é** com acento vem do verbo ser.\nUma dica: tenta substituir por **mais**. "Vai representar a empresa mais o setor." Faz sentido? Então é **e** sem acento.',
+      "A letra **e** sem acento serve para unir coisas, juntando a missão de cuidar da empresa com a de cuidar do setor. A versão com acento tentaria confirmar quem o setor é.\n\nAo testar a leitura imaginando a empresa **mais** o setor comercial, a conta fecha perfeitamente sem necessidade de acentuação.",
     feedbackErro: [
-      "A frase está unindo duas coisas, ou dizendo que algo é alguma coisa?",
-      'Há duas coisas sendo unidas: a empresa e o setor. Para unir, use **e** sem acento. Com acento, **é** seria verbo ser: "a empresa é conhecida".',
-      '**E** sem acento é a resposta. A frase une dois elementos. Sem acento para unir. Com acento, **é** é verbo ser: "o setor é importante".',
+      "A chefia está somando o setor comercial nas responsabilidades do funcionário ou está tentando explicar o que a empresa faz?",
+      "Avalie a frase trocando a lacuna pela palavra **mais**. Visto que cuidar da empresa **mais** o setor resume bem a promoção, a ponte fica pronta sem a ajuda do acento.",
+      "A resposta é a letra **e** sem acento, porque o recado junta duas tarefas nas costas do mesmo funcionário. O acento ganharia espaço apenas para confirmar informações, como avisar que **o setor comercial é o que mais trabalha**."
     ],
   },
   {
@@ -361,15 +351,13 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "da",
     armadilhaId: "da_da",
     feedbackAcerto:
-      '**Da** sem acento liga palavras: o chefe pertence à equipe.\nJá **dá** com acento vem do verbo dar: "ela dá ordens à equipe".\nUma dica: tenta trocar por **de + a**. "O chefe de a equipe" tem o mesmo sentido. Para ligar, use **da** sem acento.',
+      "O termo **da** sem acento funciona para ligar o chefe ao grupo dele, mostrando de onde ele é. Já o **dá** com acento seria para indicar a ação de dar alguma coisa.\n\nComo a intenção é só mostrar que ele é o chefe daquele grupo, a ligação é feita de forma simples e sem acento.",
     feedbackErro: [
-      "A frase liga duas coisas (chefe e equipe), ou indica uma ação do verbo dar?",
-      '"Da" une "chefe" e "equipe" — preposição. Para ligar, sem acento: **da**. Com acento, **dá** seria ação: "ela dá ordens à equipe".',
-      '**Da** sem acento é a resposta. Liga "chefe" a "equipe". Para preposição, sem acento. Com acento, **dá** seria verbo: "o chefe dá instruções".',
+      "O funcionário está tentando dizer de qual grupo é aquele chefe ou relata uma atitude dele ajudando a equipe?",
+      "Tente pensar na união da palavra **de** com **a**, apenas ligando o chefe com a equipe dele. Como o objetivo é costurar a relação dos dois, o acento não entra na frase.",
+      "A resposta correta é **da** sem acento, pois a palavra funciona como um elo entre o líder e o grupo que trabalha com ele. A versão com acento destacaria uma atitude, como na frase em que **o chefe dá muito apoio para todos**."
     ],
   },
-
-  // Rodada 4: está | pôde | sábia | dúvida | é | dá
   {
     slug: "a5-ex10-escrita", // #25
     tipo: "escrita_lacuna",
@@ -377,11 +365,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "está",
     armadilhaId: "esta_esta",
     feedbackAcerto:
-      '**Está** com acento indica o estado da entrega: ela se encontra prevista.\nJá **esta** sem acento aponta para algo: "esta entrega aqui".\nUma dica: tenta trocar por **encontra-se**. "A entrega encontra-se prevista." Funcionou? Então é **está**.',
+      "A forma **está** com acento indica a situação em que o pacote se encontra no momento, enquanto o **esta** sem o sinal serviria apenas para apontar para um pacote específico.\n\nSe você conseguir ler que a entrega **encontra-se prevista** para logo e a promessa fizer sentido, o uso do acento está correto.",
     feedbackErro: [
-      "A frase descreve o estado da entrega, ou aponta para ela?",
-      'Tenta trocar por "encontra-se": "A entrega encontra-se prevista." Soou natural? Para estado, use **está** com acento.',
-      '**Está** com acento é a resposta. A frase descreve o estado da entrega. Sem acento, **esta** seria para apontar: "esta entrega que você mencionou".',
+      "A mensagem tenta informar o andamento da entrega ou a pessoa está apenas apontando para um pacote na mesa?",
+      "Avalie a frase aplicando a palavra **encontra-se** na leitura. Como a explicação de que o pacote **encontra-se previsto** ajuda a passar a informação, o acento é necessário ali.",
+      "A resposta é **está** com acento, porque a frase avisa exatamente a situação da encomenda no fim da semana. O emprego da versão sem acento focaria em apontar algo, como em **esta entrega vai por avião**."
     ],
   },
   {
@@ -391,11 +379,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "pôde",
     armadilhaId: "pode_pode",
     feedbackAcerto:
-      '**Pôde** com acento indica passado: a reunião já aconteceu.\nJá **pode** sem acento é presente: "ela não pode vir hoje".\nUma dica: "segunda-feira passada" indica que já foi. Para passado, use **pôde** com acento.',
+      "A palavra **pôde** ganhando o acento joga o problema diretamente para o passado, enquanto o **pode** sem acento define avisos e regras para o dia de hoje.\n\nComo a desculpa cita uma **segunda-feira passada** que já foi embora, o uso do acento entra para fechar a conta.",
     feedbackErro: [
-      "A reunião de segunda-feira passada já aconteceu (passado) ou ainda vai acontecer?",
-      '"Segunda-feira passada" indica que a reunião já foi. Para passado, use **pôde** com acento. Sem acento, **pode** seria para o presente: "ela não pode vir agora".',
-      '**Pôde** com acento é a resposta. A reunião já aconteceu, é passado. Para passado, **pôde**. Para presente, **pode**: "ela não pode vir hoje".',
+      "O aviso justifica a falta num compromisso que ocorreu no passado ou diz que a colega não vai aparecer na empresa mais tarde?",
+      "A presença da palavra **passada** joga a conversa direto para a semana anterior. Toda vez que falamos de pendências antigas, o acento ajuda a mostrar que é passado.",
+      "A resposta certa é **pôde** com acento, já que a moça tenta explicar o motivo de ter faltado em dias anteriores. A versão que não traz acento cuida das coisas atuais, do tipo **ela não pode entrar na sala agora**."
     ],
   },
   {
@@ -405,11 +393,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "sábia",
     armadilhaId: "sabia_sabia",
     feedbackAcerto:
-      '**Sábia** com acento descreve a qualidade da orientação: tinha sabedoria.\nJá **sabia** sem acento seria ação: "ela sabia orientar".\nUma dica: tenta trocar por **inteligente**. "A orientação foi muito inteligente." Funcionou? Então é **sábia** com acento.',
+      "Nós escolhemos **sábia** com acento para elogiar o conselho dado pela colega, diferente do **sabia** sem acento que diz apenas que alguém conhecia um assunto.\n\nSe colocar a palavra **inteligente** no lugar mantiver o elogio na leitura, você pode confirmar o acento.",
     feedbackErro: [
-      "A palavra descreve como foi a orientação (qualidade), ou diz que alguém sabia de algo (ação)?",
-      'Tenta trocar por "inteligente": "A orientação foi muito inteligente." Soou natural? Para qualidade, use **sábia** com acento.',
-      '**Sábia** com acento é a resposta. A frase descreve a qualidade da orientação. Sem acento, **sabia** seria ação: "ela sabia que a orientação estava certa".',
+      "A frase foca em elogiar a qualidade do conselho dela ou apenas avisa que a funcionária conhecia a informação?",
+      "Faça o teste de colocar a palavra **inteligente** no final da frase. Como o reconhecimento de que a ajuda dela foi **muito inteligente** funciona com perfeição, a versão acentuada é a resposta.",
+      "A resposta é **sábia** com acento, porque o foco do texto é valorizar a qualidade da orientação dela. O formato sem acento contaria o que se passava na cabeça da pessoa, como em **ela já sabia que a planilha ia dar erro**."
     ],
   },
   {
@@ -419,11 +407,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "dúvida",
     armadilhaId: "duvida_duvida",
     feedbackAcerto:
-      '**Dúvida** com acento é uma coisa: a dúvida que você pode ter.\nJá **duvida** sem acento seria ação: "ele duvida disso".\nUma dica: tenta trocar por **questão**. "Em caso de questão, pergunte." Funcionou? Então é **dúvida** com acento.',
+      "A forma **dúvida** com acento age prevendo aquela incerteza comum que surge durante o trabalho, enquanto a escrita **duvida** sem a marcação aponta para o ato de desconfiar de alguém.\n\nSe você usar o termo **pergunta** e a ideia do aviso de **em caso de pergunta** fluir muito bem nas orientações, a regra crava o uso do acento.",
     feedbackErro: [
-      "A frase fala de uma coisa que pode existir (sentimento), ou de uma ação de duvidar?",
-      'Tenta trocar por "questão": "Em caso de questão..." soou natural? Para a coisa, use **dúvida** com acento. Sem acento, **duvida** seria ação: "ele duvida de tudo".',
-      '**Dúvida** com acento é a resposta. A frase fala da coisa em si — o sentimento de incerteza. Para a ação, sem acento: "ela duvida da informação".',
+      "O aviso da empresa prevê o surgimento de uma incerteza durante o serviço ou relata atitudes desconfiadas de alguém?",
+      "Tente ler o aviso pensando na palavra **pergunta** para ajudar na checagem. Como a sugestão de procurar o chefe em **caso de pergunta** faz sentido, a palavra certa exige o acento.",
+      "A resposta é **dúvida** com acento, visto que o documento tenta orientar a pessoa caso o serviço pareça muito confuso. A falta de acento focaria na atitude das pessoas, como em **o cliente duvida que o aparelho funcione**."
     ],
   },
   {
@@ -433,11 +421,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "é",
     armadilhaId: "e_e",
     feedbackAcerto:
-      '**É** com acento vem do verbo ser: a gerente é a responsável.\nJá **e** sem acento une coisas: "a gerente e o coordenador".\nUma dica: tenta trocar por **significa** ou **trata-se de**. "A responsável trata-se da gerente." Faz sentido? Então é **é** com acento.',
+      "O **é** acompanhado de acento confirma quem realmente é a pessoa que manda no setor, diferente do **e** sozinho que juntaria duas pessoas diferentes na frase, somando forças.\n\nAo testar que **a responsável trata-se da gerente** e encontrar total sentido na ideia, o acento é a escolha correta.",
     feedbackErro: [
-      "A frase está dizendo que ela é alguém, ou está unindo duas pessoas?",
-      'A frase identifica quem é a responsável — verbo ser. Para o verbo ser, use **é** com acento. Sem acento, **e** uniria pessoas: "a gerente e o coordenador".',
-      '**É** com acento é a resposta. A frase usa o verbo ser para identificar a responsável. Sem acento, **e** uniria: "a gerente e o supervisor são responsáveis".',
+      "A frase está confirmando a verdadeira função da funcionária ou está tentando somar a gerente com outra pessoa?",
+      "Avalie a frase usando a expressão **trata-se da** no lugar. Como informar que a responsável **trata-se da gerente de operações** mostra muito bem a situação, a letra pede o apoio do acento.",
+      "A resposta é o **é** com acento, porque a frase esclarece de quem é o cargo mais alto. A letra simples que não carrega acento serviria apenas para juntar mais de uma pessoa, como em **a responsável e a gerente saíram agora**."
     ],
   },
   {
@@ -447,11 +435,11 @@ export const EXERCICIOS_A5: ExercicioGerado[] = [
     gabarito: "dá",
     armadilhaId: "da_da",
     feedbackAcerto:
-      '**Dá** com acento vem do verbo dar: ela pratica a ação de dar atenção.\nJá **da** sem acento ligaria palavras: "a atenção da equipe".\nUma dica: tenta trocar por **presta**. "Ela presta atenção a todos os detalhes." Funcionou? Então é **dá** com acento.',
+      "A palavra **dá** recebendo o acento mostra o esforço e a ação de prestar muita atenção, enquanto o **da** sem acento tentaria só conectar palavras, indicando de qual lugar o contrato é.\n\nSe a tentativa de trocar a palavra por **presta** mantiver a ação de olhar os detalhes com cuidado, o acento entra na frase.",
     feedbackErro: [
-      "A frase diz que ela pratica uma ação, ou está ligando duas palavras?",
-      'Tenta trocar por "presta": "Ela presta atenção aos detalhes." Soou natural? Para a ação do verbo dar, use **dá** com acento.',
-      '**Dá** com acento é a resposta. A frase indica a ação de dar atenção — verbo dar. Sem acento, **da** ligaria palavras: "a atenção da equipe".',
+      "A mensagem descreve o esforço de leitura com bastante foco ou apenas tenta ligar a palavra com a funcionária?",
+      "Faça o teste rápido usando o verbo **presta** durante a leitura. Como dizer que a moça **presta atenção aos detalhes** mostra a dedicação dela, o espaço pede o uso do acento.",
+      "A resposta certa é **dá** com acento, já que o texto destaca a ação ativa de despejar muito foco em cima das páginas de um contrato. A versão sem acento atuaria apenas localizando as partes, do tipo **aquele erro da folha final nos assustou**."
     ],
   },
 ];

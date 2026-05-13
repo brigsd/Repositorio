@@ -31,6 +31,14 @@
 
 ## Entradas
 
+### 2026-05-13 14:33 — Manual / Antigravity — local
+**Resumo:** Padronização visual avançada e refinamento andragógico nos arquivos de exercícios das unidades A.5 e A.6.
+**Arquivos alterados:**
+- `src/lib/exercicios/a5-acentos.ts` — Adicionados comentários numéricos sequenciais para mapeamento (#1 a #30), padronizada a ênfase visual das palavras-alvo e dicas utilizando negrito Markdown (`**palavra**`) e inseridas quebras duplas de linha (`\n\n`) para melhor legibilidade.
+- `src/lib/exercicios/a6-palavras.ts` — Substituídas aspas simples por negrito Markdown em termos-chave e mnemônicos nos feedbacks de múltiplos exercícios, alinhando a formatação visual ao padrão de excelência de leitura para adultos.
+**Estado atual:** Unidades A.5 e A.6 perfeitamente padronizadas em estrutura visual, legibilidade e marcação em negrito para facilitar a leitura dinâmica.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
 ### 2026-05-13 13:36 — Manual / Antigravity — local
 **Resumo:** Tradução andragógica completa dos feedbacks da Unidade A.6 curada pelo usuário para utilizar uma linguagem altamente coloquial, empática e conectada ao dia a dia do público-alvo.
 **Arquivos alterados:**
