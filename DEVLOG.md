@@ -31,6 +31,13 @@
 
 ## Entradas
 
+### 2026-05-13 13:25 — Manual / Antigravity — local
+**Resumo:** Grande reformulação e padronização dos exercícios da Unidade A.6 curada pelo usuário aplicando sistematicamente a "regra dos opostos" nos feedbacks de mau/mal.
+**Arquivos alterados:**
+- `src/lib/exercicios/a6-palavras.ts` — Ajuste de contexto no Ex. 1 (falta de peças essenciais) e implementação consistente da regra dos opostos (bom/mau, bem/mal) com quebras de linha nativas em múltiplos exercícios para consolidar a fixação.
+**Estado atual:** Unidade A.6 com exercícios totalmente padronizados em torno de mnemônicos altamente eficazes para adultos.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
 ### 2026-05-13 10:43 — Manual / Antigravity — local
 **Resumo:** Refinamento textual curado pelo usuário nas âncoras de propósito das unidades A.5 e A.6 para máxima clareza e fluidez, além do ajuste fino de espaçamento no Progressive Disclosure.
 **Arquivos alterados:**

@@ -11,16 +11,16 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex1", // #1
     tipo: "lacuna_unica",
-    enunciado: "Quero terminar o serviço hoje, ___ o cliente está esperando.",
+    enunciado: "Quero terminar o serviço hoje, ___ faltam algumas peças essenciais.",
     opcoes: ["mas", "mais"],
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, exemplo: "preciso de **mais** tempo". \nUma dica: se você consegue trocar o **mas** por **porém** e a frase continua fazendo sentido, use **mas** e não **mais**. ',
+      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, exemplo: "preciso de **mais** tempo". \nUma dica: se você consegue trocar o **mas** por **porém** e a frase continua fazendo sentido, use **mas** e não **mais**.',
     feedbackErro: [
       "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
-      '**Mais** fala de quantidade: **mais** café, **mais** tempo, **mais** dinheiro. Aqui a frase não está falando de quantidade. O cliente esperando vai contra a ideia de terminar o serviço. Qual palavra liga ideias opostas?',
-      '**Mas** é a resposta deste exercício. Essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "o cliente está esperando". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
+      '**Mais** fala de quantidade: **mais** café, **mais** tempo, **mais** dinheiro. Aqui a frase não está falando de quantidade. A falta de peças vai contra a ideia de terminar o serviço hoje. Qual palavra liga ideias opostas?',
+      '**Mas** é a resposta deste exercício. Essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "faltam peças". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
     ],
   },
   {
@@ -61,11 +61,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".\nUma dica: tenta trocar por **de forma ruim**. "O serviço ficou feito de forma ruim." Soou natural? Então é **mal**.',
+      '**Mal** descreve como algo foi feito.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".\nUma dica: use a regra dos opostos. Se a frase fizer sentido com "bem", o correto é usar "mal" com L ("serviço bem feito" vira "serviço mal feito").',
     feedbackErro: [
-      "A palavra está descrevendo como o serviço foi feito, ou descrevendo como o serviço é em si?",
-      'Tenta trocar por "de forma ruim": "O serviço ficou feito de forma ruim." Ficou certo? Então é "mal". O "mau" descreveria o serviço como coisa ("um mau serviço"), mas aqui estamos falando de como ele foi executado.',
-      '"Mal" é a resposta. Ele descreve como algo foi feito ou como alguém está: "trabalhou mal", "se sentiu mal". O "mau" descreve como algo ou alguém é: "mau funcionário", "mau hábito". Aqui, o serviço foi feito de forma ruim, então é "mal".',
+      "A palavra está descrevendo como o serviço foi feito, ou descrevendo uma característica permanente dele?",
+      'Tenta aplicar a regra dos opostos encaixando a palavra "bem". Como você diria "o serviço ficou bem feito", a versão negativa correspondente exige o uso de "mal" com a letra L.',
+      '"Mal" é a resposta. Ele atua como o oposto direto de "bem", indicando a execução da tarefa. O "mau" com U serve como o oposto de "bom", e descreveria o serviço como uma coisa ("um mau serviço"), mas aqui falamos da ação de fazer.',
     ],
   },
   {
@@ -83,9 +83,6 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Mim" é a resposta. Depois de preposições como "para", "por", "de" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "para eu" não funciona.',
     ],
   },
-
-  // ── Múltipla escolha: pares restantes ────────────────────────────────────
-
   {
     slug: "a6-ex5b", // #6
     tipo: "lacuna_unica",
@@ -116,21 +113,6 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Se não" separado é a resposta. A frase tem uma condição: "se não avisar → não posso ajudar". Quando há condição com "se", a negação é sempre separada. **Senão** junto é para "caso contrário": "Chegue cedo, senão perde a vaga."',
     ],
   },
-
-  // ── Fase 2: escrita — intercalada entre pares (7 pares × 4 rodadas) ────────
-  //
-  // Estrutura: rodada 1 (1 exercício de cada par) → rodada 2 → rodada 3 → rodada 4
-  // Dentro de cada par, os dois lados são alternados entre rodadas.
-  // Base: Rohrer & Bjork — prática intercalada produz discriminação superior
-  // à prática bloqueada (todos os exercícios do mesmo par juntos).
-  //
-  // Rodada 1: mas | por que | há | mal | mim | onde | se não
-  // Rodada 2: mais | porque | a | mau | eu | aonde | senão
-  // Rodada 3: mais | porque | há | mau | mim | onde | senão
-  // Rodada 4: mas | por que | a | mal | eu | aonde | se não
-
-  // ── Rodada 1: mas | por que | há | mal | mim | onde | se não ───────────────
-
   {
     slug: "a6-ex6-escrita", // #8
     tipo: "escrita_lacuna",
@@ -180,11 +162,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito ou como alguém está.\nJá o **mau** descreve como algo ou alguém é: "mau caráter", "mau exemplo".\nUma dica: tenta trocar por **de forma ruim**. "O relatório foi muito mal escrito" → feito de forma ruim. Funcionou? Então é **mal**.',
+      '**Mal** descreve como algo foi feito ou como alguém está.\nJá o **mau** descreve como algo ou alguém é: "mau caráter", "mau exemplo".\nUma dica: use a regra dos opostos. Se o encaixe da palavra "bem" funcionar ("muito bem escrito"), a grafia correta na versão negativa é usar "mal".',
     feedbackErro: [
-      "A palavra está descrevendo como o relatório foi escrito, ou como o relatório é?",
-      'A frase diz como ele foi escrito — de forma ruim. Tenta trocar por "de forma ruim": funcionou? Então é **mal**. O **mau** seria para descrever o relatório como coisa: "um mau relatório".',
-      '"Mal" é a resposta. Ele descreve como a ação foi feita: escrito de forma ruim. O **mau** descreveria a qualidade da coisa em si: "um mau documento", "um mau funcionário".',
+      "A palavra está descrevendo a ação de escrever o relatório, ou atuando como uma característica da coisa em si?",
+      'Tenta testar a regra dos opostos aplicando a palavra "bem". Como a frase "muito bem escrito" faz todo o sentido prático, isso sinaliza que a versão com problema exige a escrita de "mal".',
+      '"Mal" é a resposta. Ele atua como o contrário direto da palavra "bem" e descreve como a ação foi feita. O uso de "mau" descreveria a qualidade da coisa em si, servindo como oposto de "bom" (ex: "um mau documento").',
     ],
   },
   {
@@ -229,9 +211,6 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Se não" separado é a resposta. A frase tem uma condição com "se". Quando o "não" faz parte da condição introduzida por "se", escreve separado. O **senão** junto equivale a "caso contrário".',
     ],
   },
-
-  // ── Rodada 2: mais | porque | a | mau | eu | aonde | senão ────────────────
-
   {
     slug: "a6-ex7-escrita", // #15
     tipo: "escrita_lacuna",
@@ -281,11 +260,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mau",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mau** descreve como algo ou alguém é — uma característica, uma qualidade ruim.\nJá o **mal** descreve como algo foi feito: "dormiu mal", "trabalhou mal".\nUma dica: tenta trocar por **ruim**. "Um ruim hábito." Funcionou? Então é **mau**.',
+      '**Mau** descreve como algo ou alguém é — uma característica, uma qualidade ruim.\nJá o **mal** descreve como algo foi feito: "dormiu mal", "trabalhou mal".\nUma dica: teste a regra dos opostos na frase. Como a construção "um bom hábito" tem total sentido, a versão contrária pede a palavra "mau".',
     feedbackErro: [
-      "A palavra está descrevendo como o hábito é, ou como ele foi praticado?",
-      'A frase descreve como o hábito é — uma característica negativa. Tenta trocar por "ruim": "um ruim hábito" tem o mesmo sentido. Quando você descreve uma característica ruim, use **mau**.',
-      '"Mau" é a resposta. Ele descreve o hábito como algo de má qualidade. Use **mau** para características: "mau hábito", "mau funcionário". Use **mal** para ações: "agiu mal", "dormiu mal".',
+      "A palavra atua como uma qualidade do hábito, ou indica como algo foi feito?",
+      'Aplique a mecânica dos opostos inserindo "bom" na frase. Como a frase "um bom hábito" tem significado lógico, isso indica que você deve usar "mau" com a letra U na versão correspondente.',
+      '"Mau" é a resposta. Essa palavra funciona como o oposto direto de "bom" e define características (ex: "mau hábito", "mau funcionário"). O uso de "mal" com L descreveria ações, funcionando como oposto de "bem" (ex: "agiu mal").',
     ],
   },
   {
@@ -344,9 +323,6 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Porque" é a resposta. A frase dá o motivo: você deve anotar *porque* vai se esquecer. Compare com o exercício anterior: "Anote, **senão** vai esquecer" (= caso contrário). Mesma estrutura, significado diferente.',
     ],
   },
-
-  // ── Rodada 3: mais | porque | há | mau | mim | onde | senão ──────────────
-
   {
     slug: "a6-ex8-escrita", // #23
     tipo: "escrita_lacuna",
@@ -399,7 +375,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '**Mau** descreve uma característica ruim de algo ou alguém.\nJá o **mal** descreve como algo foi feito ou como alguém está.\nUma dica: use a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador"). \nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
     feedbackErro: [
       "A palavra descreve como ele é, ou como ele age?",
-      '"Mau pagador" é uma característica dele — como ele é. Tente usar a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador"). \nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
+      '"Mau pagador" é uma característica dele — como ele é. Tente usar a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador").\nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
       '"Mau" é a resposta. Descreve uma característica da pessoa: ser mau pagador é como ele é, não como ele age. O **mal** ficaria para ação: "tratou mal os clientes".',
     ],
   },
@@ -445,9 +421,6 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
       '"Senão" junto é a resposta. Significa "caso contrário": se você não ligar, ele reclama. O **se não** separado ficaria numa condição: "Se não ligar até as três, ele reclama."',
     ],
   },
-
-  // ── Rodada 4: mas | por que | a | mal | eu | aonde | se não ──────────────
-
   {
     slug: "a6-ex9-escrita", // #30
     tipo: "escrita_lacuna",
@@ -497,11 +470,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como a ação foi executada — de forma ruim.\nJá o **mau** descreveria a característica: "um mau mecânico".\nUma dica: tenta trocar por **de forma ruim**. "Fez o serviço de forma ruim." Funcionou? Então é **mal**.',
+      '**Mal** descreve como a ação foi executada.\nJá o **mau** descreveria a característica da coisa em si: "um mau mecânico".\nUma dica: teste aplicar a palavra "bem". Como a construção "fez o serviço bem" soa coerente no lado positivo, a versão de erro da frase pede o uso de "mal".',
     feedbackErro: [
-      "A palavra diz como o serviço foi feito, ou diz como o mecânico é?",
-      'A frase fala de como o serviço foi executado. Tenta trocar por "de forma ruim": funcionou? Então é **mal**. O **mau** descreveria o mecânico como pessoa: "um mau mecânico".',
-      '"Mal" é a resposta. Ele indica como a ação foi feita — de forma ruim. O **mau** seria para uma característica: "mau profissional", "mau serviço" (a coisa em si).',
+      "A palavra indica a forma como a ação do serviço foi feita, ou descreve diretamente o mecânico?",
+      'Avalie a regra dos opostos aplicando a palavra "bem". Visto que a frase "fez o serviço bem" não gera estranheza, a palavra correta para preencher a lacuna da versão oposta é "mal".',
+      '"Mal" é a resposta. Ele indica a qualidade da execução da ação, funcionando como o oposto da palavra "bem". O uso de "mau" descreveria uma característica direta de algo ("um mau profissional").',
     ],
   },
   {
