@@ -16,11 +16,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, exemplo: "preciso de **mais** tempo". \nUma dica: se você consegue trocar o **mas** por **porém** e a frase continua fazendo sentido, use **mas** e não **mais**.',
+      "A palavra 'mas' serve para ligar duas ideias contrárias, enquanto 'mais' funciona para falar de quantidade. Para tirar a dúvida na hora de escrever, tente trocar por 'porém', pois se a frase continuar fazendo sentido, o correto é usar 'mas'.",
     feedbackErro: [
-      "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
-      '**Mais** fala de quantidade: **mais** café, **mais** tempo, **mais** dinheiro. Aqui a frase não está falando de quantidade. A falta de peças vai contra a ideia de terminar o serviço hoje. Qual palavra liga ideias opostas?',
-      '**Mas** é a resposta deste exercício. Essa palavra conecta duas ideias que se contradizem: "quero terminar" vai contra "faltam peças". **Mais** seria para quantidade, como em "preciso de **mais** tempo".',
+      "A segunda parte da frase ajuda a primeira ideia ou acaba atrapalhando ela?",
+      "A palavra 'mais' serve para quantidade, como em 'mais café' ou 'mais tempo', mas a falta de peças na verdade atrapalha a entrega do serviço. Qual palavra usamos para juntar coisas que vão para lados opostos?",
+      "A resposta certa é 'mas', porque essa palavra conecta duas situações que brigam entre si, já que a vontade de terminar o serviço bate de frente com a falta de peças."
     ],
   },
   {
@@ -31,11 +31,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**Há** indica tempo que já passou.\nJá o **a** indica tempo que ainda vem, como em "vou sair daqui a duas horas".\nUma dica: tenta trocar por **faz**. "Trabalho nesta oficina faz cinco anos." Soou natural? Então é **há**.',
+      "Usamos 'há' com a letra H para falar de um tempo que já passou e ficou para trás, deixando a letra 'a' sozinha para um tempo que ainda vai chegar. Uma boa dica é tentar trocar pela palavra 'faz', pois se você disser 'trabalho nesta oficina faz cinco anos' e achar que soa natural, o correto é usar 'há'.",
     feedbackErro: [
-      "Esse tempo de cinco anos já aconteceu (começou no passado) ou ainda vai acontecer?",
-      'Tenta trocar pela palavra "faz": "Trabalho nesta oficina faz cinco anos." Ficou natural? Se sim, a palavra certa é "há", não "a". O "a" aparece quando o tempo ainda vai acontecer, tipo "daqui a dois dias".',
-      '"Há" é a resposta. Sempre que o tempo já começou no passado, use "há". O teste é trocar por "faz": "faz cinco anos" soa certo, então é "há cinco anos". O "a" ficaria errado porque ele aponta para o futuro.',
+      "Esse tempo de cinco anos já passou lá atrás ou ainda vai acontecer no futuro?",
+      "Tente trocar a palavra por 'faz' para testar como a frase fica. Como 'faz cinco anos' soa muito normal no dia a dia, a palavra certa é 'há', deixando a letra 'a' apenas para o futuro.",
+      "A resposta é 'há'. Sempre que o tempo já começou no passado, a gente usa o 'há' com H, e o teste de trocar por 'faz' ajuda a confirmar isso rapidinho."
     ],
   },
   {
@@ -46,11 +46,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Por que** separado aparece quando você está fazendo uma pergunta.\nQuando você está respondendo ou explicando o motivo, aí usa **porque** junto. Por exemplo: "Não avisei porque esqueci."\nUma dica: se a frase tem ponto de interrogação ou está pedindo um motivo, use **por que** separado.',
+      "O 'por que' separado é usado na hora de fazer uma pergunta para alguém, enquanto o 'porque' escrito todo junto serve para dar a resposta ou explicar o motivo das coisas. Se a frase tiver um ponto de interrogação no final ou estiver pedindo uma explicação, pode usar ele separado sem medo.",
     feedbackErro: [
-      "Essa frase está fazendo uma pergunta ou dando uma resposta?",
-      'É uma pergunta — você quer saber o motivo. Em perguntas, sempre "por que" separado. O "porque" junto só aparece nas respostas: "Não fui porque estava doente."',
-      '"Por que" separado é a resposta. A frase é uma pergunta, então precisa do "por que" em duas palavras. O "porque" junto é só para respostas e explicações: "Fiz isso porque achei certo."',
+      "Essa frase está fazendo uma pergunta para alguém ou já está entregando a resposta?",
+      "Como você quer saber o motivo de algo, isso é uma pergunta. Em perguntas, a gente sempre usa o 'por que' separado, guardando a versão junta apenas para as explicações.",
+      "A resposta é o 'por que' separado. Como a frase é uma pergunta direta querendo saber um motivo, as palavras precisam ficar separadas."
     ],
   },
   {
@@ -61,11 +61,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito.\nJá o **mau** descreve como algo é, tipo "mau serviço" ou "mau funcionário".\nUma dica: use a regra dos opostos. Se a frase fizer sentido com "bem", o correto é usar "mal" com L ("serviço bem feito" vira "serviço mal feito").',
+      "A palavra 'mal' com a letra L serve para explicar de que jeito um serviço foi feito, diferente do 'mau' com U que funciona para dar uma característica direta para uma pessoa ou coisa. Para tirar a dúvida, tente testar a palavra 'bem', e como a gente sempre diz que um serviço ficou 'bem feito', o lado negativo precisa ser escrito com 'mal'.",
     feedbackErro: [
-      "A palavra está descrevendo como o serviço foi feito, ou descrevendo uma característica permanente dele?",
-      'Tenta aplicar a regra dos opostos encaixando a palavra "bem". Como você diria "o serviço ficou bem feito", a versão negativa correspondente exige o uso de "mal" com a letra L.',
-      '"Mal" é a resposta. Ele atua como o oposto direto de "bem", indicando a execução da tarefa. O "mau" com U serve como o oposto de "bom", e descreveria o serviço como uma coisa ("um mau serviço"), mas aqui falamos da ação de fazer.',
+      "A palavra está falando sobre a forma como o serviço foi executado ou está dando um apelido para o serviço em si?",
+      "Tente fazer o teste colocando a palavra 'bem' na frase. Como a gente costuma dizer tranquilamente que o serviço ficou 'bem feito', isso mostra que a versão com problema pede o 'mal' com a letra L.",
+      "A resposta é 'mal' com L. Essa palavra funciona como o contrário direto de 'bem' e ajuda a explicar exatamente como o trabalho foi executado na oficina."
     ],
   },
   {
@@ -76,11 +76,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem depois de preposições como "para", "por", "de" e "sem".\nJá o **eu** aparece quando você é quem faz a ação: "Eu vou resolver."\nUma dica: tenta trocar por **ele**. "Podem deixar o orçamento para ele." Soou natural? Então é **mim**.',
+      "A palavra 'mim' costuma aparecer logo depois de pequenas palavras de ligação, como 'para', 'por' e 'de', enquanto o 'eu' só entra em cena quando você mesmo vai tomar uma atitude e fazer algo. Se você conseguir trocar por 'ele' e a frase 'deixar para ele' fizer sentido, o correto é usar 'mim'.",
     feedbackErro: [
-      'Tem uma palavra logo antes do espaço em branco. Qual é ela? Isso dá uma pista sobre qual pronome usar.',
-      'A palavra "para" vem antes. Depois de "para", "por", "de" e "sem", a forma correta é sempre "mim", nunca "eu". O "eu" aparece quando você é quem faz a ação: "Eu vou buscar."',
-      '"Mim" é a resposta. Depois de preposições como "para", "por", "de" e "sem", use sempre "mim". O "eu" só aparece antes do verbo, quando você é o sujeito da ação: "Eu resolvo" funciona, "para eu" não funciona.',
+      "Dê uma olhada na palavra que vem logo antes do espaço em branco, pois ela sempre entrega a pista do que usar.",
+      "A palavra 'para' vem logo antes do espaço. Toda vez que usamos 'para', 'por' ou 'de', a forma certa de terminar é com 'mim', guardando o 'eu' para quando você vai fazer uma ação, tipo 'eu vou buscar'.",
+      "A resposta é 'mim', pois essa é a palavra certa para vir depois do 'para'. O 'eu' a gente deixa apenas para o começo da ação, quando dizemos coisas como 'eu resolvo o problema'."
     ],
   },
   {
@@ -91,11 +91,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Aonde",
     armadilhaId: "onde_aonde",
     feedbackAcerto:
-      '**Aonde** indica destino — para onde alguém vai ou está indo.\nJá o **onde** indica localização fixa, o lugar onde algo está ou acontece.\nUma dica: tenta trocar por **para onde**. "Para onde você vai depois da reunião?" Soou natural? Então é **aonde**.',
+      "Nós usamos 'aonde' quando existe algum movimento de ir para um destino, diferente do 'onde', que serve mais para falar de um lugar fixo e parado. Se você puder trocar o começo por 'para onde' e a frase continuar com o mesmo sentido, a escolha certa com certeza é 'aonde'.",
     feedbackErro: [
-      "A pergunta quer saber onde você está agora, ou para onde você está indo?",
-      'Há movimento: você vai para algum lugar. Tenta trocar por "para onde": funcionou? Então é **aonde**. O **onde** ficaria para localização fixa: "onde você estava durante a reunião?".',
-      '"Aonde" é a resposta. A frase pergunta o destino de um movimento. Quando há movimento ("vai", "foi", "ir"), use **aonde**. O **onde** fica para localização: "onde fica o escritório?".',
+      "A pergunta quer saber em qual lugar você está parado agora, ou para qual caminho você vai andar?",
+      "Como existe uma ideia de movimento e você vai para algum lugar, tente trocar por 'para onde'. Se essa troca funcionar bem, a palavra certa para usar é o 'aonde'.",
+      "A resposta é 'aonde', pois a frase quer descobrir o destino de um trajeto. Toda vez que tiver ideia de movimento, como nos verbos ir e andar, a gente junta o 'a' na palavra."
     ],
   },
   {
@@ -106,11 +106,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Se não",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
-      '**Se não** (separado) aparece quando você tem uma condição: "se não acontecer X, então Y".\nJá **senão** (junto) aparece como alternativa ou consequência, com sentido de "caso contrário" ou "além disso".\nUma dica: tenta trocar por "caso não". Se funcionar, é **se não** separado.',
+      "A forma separada 'se não' aparece quando a gente tem uma condição clara para algo dar certo, enquanto a versão 'senão' tudo junto funciona mais como um aviso de 'caso contrário'. Para ter certeza, tente colocar a palavra 'você' no meio, pois se a frase 'se você não me avisar' fizer todo o sentido, isso mostra que as palavras devem ficar separadas.",
     feedbackErro: [
-      "A frase está colocando uma condição, ou apresentando uma alternativa?",
-      'Tenta trocar por "caso não me avisar": funcionou? Quando tem uma condição ("caso não"), usa-se **se não** separado. O **senão** junto aparece como "caso contrário": "Estude, senão vai se arrepender."',
-      '"Se não" separado é a resposta. A frase tem uma condição: "se não avisar → não posso ajudar". Quando há condição com "se", a negação é sempre separada. **Senão** junto é para "caso contrário": "Chegue cedo, senão perde a vaga."',
+      "A frase está colocando uma condição necessária para a ajuda acontecer ou apenas dando um aviso para o final do dia?",
+      "Tente incluir a palavra 'você' na hora de ler para ver como fica. Como a leitura 'se você não me avisar' funciona com bastante clareza, fica provado que existe uma condição solta aí, pedindo o uso separado.",
+      "A resposta correta é 'se não' separado, porque a frase cria uma regra direta para a pessoa receber a ajuda. A palavra junta costuma substituir a ideia de 'caso contrário', como em 'me avise logo, senão eu vou embora'."
     ],
   },
   {
@@ -120,11 +120,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mas** liga duas ideias que se opõem.\nJá o **mais** é para quantidade, como em "preciso de mais tempo".\nUma dica: se você consegue trocar por **porém** sem mudar o sentido, use **mas**.',
+      "A palavra 'mas' serve para ligar duas ideias contrárias, enquanto 'mais' funciona para falar de quantidade. Para tirar a dúvida, tente trocar por 'porém', pois se a frase continuar fazendo sentido sem mudar a ideia, o correto é usar 'mas'.",
     feedbackErro: [
-      "A segunda parte da frase vai na mesma direção da primeira, ou contradiz ela?",
-      'Gostar da proposta e o prazo ser curto são ideias que se contradizem. Qual palavra conecta ideias opostas: **mas** ou **mais**?',
-      '**Mas** é a resposta. Ele conecta dois lados que se opõem: você gostou, mas o prazo foi um problema. **Mais** seria para quantidade: "preciso de mais tempo".',
+      "A segunda parte da mensagem ajuda a primeira ideia ou acaba criando um problema para ela?",
+      "Gostar do negócio e achar o prazo apertado são duas coisas que vão para lados opostos. Para juntar essas duas ideias que não combinam muito, a palavra que usamos é o 'mas'.",
+      "A resposta é 'mas', porque ele serve justamente para juntar duas coisas que batem de frente na frase, já que você gostou do assunto geral, mas o prazo acabou virando um obstáculo."
     ],
   },
   {
@@ -134,11 +134,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Por que** separado aparece nas perguntas, quando você quer saber o motivo de algo.\nJá o **porque** junto aparece nas respostas, quando você está explicando o motivo.\nUma dica: se a frase tem ponto de interrogação ou está pedindo uma explicação, use **por que** separado.',
+      "O 'por que' separado é usado sempre que a gente quer fazer uma pergunta para descobrir o motivo de alguma coisa, deixando o 'porque' junto para a hora de dar a resposta. Se a frase tem um ponto de interrogação ou está cobrando uma explicação de alguém, use separado.",
     feedbackErro: [
-      "A frase está fazendo uma pergunta ou dando uma resposta?",
-      'É uma pergunta sobre o motivo do atraso. Em perguntas, sempre **por que** separado. O **porque** junto aparece só nas respostas: "Não saiu porque teve um problema."',
-      '**Por que** separado é a resposta. A frase é uma pergunta: você quer saber o motivo. O **porque** junto só aparece quando você está explicando: "Não saiu porque o estoque zerou."',
+      "A pessoa que enviou a frase está fazendo uma pergunta ou já está dando a explicação pronta?",
+      "Como a frase é uma pergunta tentando descobrir o motivo do atraso, a gente usa a versão separada. O 'porque' junto aparece só na hora de responder, do tipo 'não saiu porque furou o pneu'.",
+      "A resposta é 'por que' separado. Como a frase é claramente uma pergunta querendo uma informação que falta, as duas palavras precisam ficar desgrudadas."
     ],
   },
   {
@@ -148,11 +148,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**Há** indica tempo que já passou, que já começou.\nJá o **a** aponta para tempo que ainda vai acontecer: "daqui a dois dias".\nUma dica: tenta trocar por **faz**. "Moro neste bairro faz quase dez anos." Soou natural? Então é **há**.',
+      "A palavra 'há' com H mostra um tempo que já começou lá no passado, enquanto o 'a' aponta para algo que ainda vai chegar. Se você conseguir trocar por 'faz' e a frase 'moro neste bairro faz dez anos' continuar soando muito bem, o correto é usar 'há'.",
     feedbackErro: [
-      "Esse tempo de dez anos já começou no passado ou ainda vai acontecer?",
-      'Você mora lá faz dez anos — o tempo já aconteceu. Tenta trocar por "faz": "Moro neste bairro faz quase dez anos." Funcionou? Então é **há**.',
-      '"Há" é a resposta. O tempo já começou. Sempre que o tempo é passado, use **há**. O **a** ficaria errado aqui porque ele indica tempo futuro: "vou voltar daqui a dez anos".',
+      "Esse tempo de dez anos já passou na sua vida ou ainda vai começar a contar no futuro?",
+      "Como você já mora lá e o tempo passou, tente trocar pela palavra 'faz'. Se a frase 'moro neste bairro faz quase dez anos' funcionar bem para você, a palavra certa a usar é o 'há'.",
+      "A resposta é 'há'. Sempre que o tempo já aconteceu e ficou para trás, a gente usa o 'há' com H. A letra 'a' sozinha a gente deixa para coisas do futuro, como em 'volto daqui a dez anos'."
     ],
   },
   {
@@ -162,11 +162,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como algo foi feito ou como alguém está.\nJá o **mau** descreve como algo ou alguém é: "mau caráter", "mau exemplo".\nUma dica: use a regra dos opostos. Se o encaixe da palavra "bem" funcionar ("muito bem escrito"), a grafia correta na versão negativa é usar "mal".',
+      "A palavra 'mal' com L serve para explicar a forma como algo foi feito, diferente do 'mau' com U que funciona para dar uma característica para uma pessoa ou objeto. Para não errar, tente testar a palavra 'bem', pois se a frase 'muito bem escrito' fizer sentido para você, a versão negativa exige o uso de 'mal'.",
     feedbackErro: [
-      "A palavra está descrevendo a ação de escrever o relatório, ou atuando como uma característica da coisa em si?",
-      'Tenta testar a regra dos opostos aplicando a palavra "bem". Como a frase "muito bem escrito" faz todo o sentido prático, isso sinaliza que a versão com problema exige a escrita de "mal".',
-      '"Mal" é a resposta. Ele atua como o contrário direto da palavra "bem" e descreve como a ação foi feita. O uso de "mau" descreveria a qualidade da coisa em si, servindo como oposto de "bom" (ex: "um mau documento").',
+      "A palavra está explicando de que jeito o papel foi escrito ou está dando um apelido ruim para o papel em si?",
+      "Tente fazer o teste rápido aplicando a palavra 'bem'. Como a frase 'o relatório foi muito bem escrito' faz todo o sentido prático na nossa cabeça, isso sinaliza que o erro precisa ser escrito com 'mal'.",
+      "A resposta é 'mal' com a letra L. Ele atua como o contrário direto da palavra 'bem' e descreve perfeitamente o jeito descuidado com que o texto foi feito."
     ],
   },
   {
@@ -176,11 +176,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem depois de preposições como "para", "com", "de", "por" e "sem".\nJá o **eu** aparece quando você é quem faz a ação: "Eu resolvo".\nUma dica: tenta trocar por **ele**. "Mandou o e-mail para ele." Soou natural? Então é **mim**.',
+      "Nós usamos o 'mim' sempre que ele vem depois de palavras curtas que dão direção, como 'para', 'com' ou 'de', deixando o 'eu' para a hora em que você mesmo toma a frente e faz alguma ação. Se você conseguir trocar por 'ele' e achar que 'mandou para ele' soa natural, o correto é usar 'mim'.",
     feedbackErro: [
-      'Tem uma preposição logo antes do espaço. Qual é ela?',
-      'A palavra "para" vem antes. Depois de "para", "com", "de", "por" e "sem", use sempre **mim**. O **eu** aparece quando você é o sujeito da ação: "Eu recebi o e-mail".',
-      '"Mim" é a resposta. Depois de preposições como "para", use **mim**. O teste: troca por "ele" — "para ele" soa natural, então é "para mim". O **eu** só aparece antes do verbo: "Eu abri o e-mail".',
+      "Existe uma palavra bem importante logo antes do espaço em branco. Qual é ela?",
+      "Como a palavra 'para' aparece logo antes, a gente sempre deve completar com 'mim'. O 'eu' fica reservado para quando você é o dono da ação, como quando você diz 'eu recebi o recado'.",
+      "A resposta é 'mim', pois essa é a palavra oficial para usar depois do 'para'. Se você testar trocando por 'ele', vai ver que 'para ele' soa bem natural, comprovando o uso da palavra certa."
     ],
   },
   {
@@ -190,11 +190,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "onde",
     armadilhaId: "onde_aonde",
     feedbackAcerto:
-      '**Onde** indica um lugar fixo, sem movimento — você está lá ou o lugar está descrito.\nJá o **aonde** indica destino, movimento em direção a algum lugar.\nUma dica: tenta trocar por **no qual**. "A loja na qual trabalho." Soou natural? Então é **onde**.',
+      "A gente usa 'onde' para falar de um lugar fixo onde as coisas ficam paradas, deixando o 'aonde' para situações que envolvem movimento e destino. Se você puder trocar o termo por 'na qual' e a frase 'a loja na qual trabalho' fizer sentido, o correto é ficar com o 'onde'.",
     feedbackErro: [
-      "A frase está descrevendo o lugar onde você trabalha, ou para onde você vai?",
-      'A loja é um lugar fixo onde você trabalha — não há movimento. Para lugar fixo, use **onde**. O **aonde** seria para destino: "aonde você vai trabalhar?".',
-      '"Onde" é a resposta. Você está descrevendo um lugar fixo. Use **onde** para lugares sem movimento. O **aonde** é para destino: "aonde você vai?"',
+      "A frase está apontando para o lugar fixo do seu emprego ou falando de um trajeto que você vai fazer?",
+      "A loja é um prédio parado onde você já está trabalhando, sem nenhum movimento de viagem. Como o lugar é fixo, a gente usa apenas o 'onde'.",
+      "A resposta é 'onde', pois você está apontando para o seu local de trabalho, que é um ponto fixo. O 'aonde' a gente usa apenas quando alguém se movimenta, como em 'aonde você vai ir'."
     ],
   },
   {
@@ -204,11 +204,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Se não",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
-      '**Se não** separado aparece quando há uma condição: "se não acontecer X, então Y".\nJá o **senão** junto é equivalente a "caso contrário" ou "além disso".\nUma dica: tenta trocar por **caso não**. "Caso não confirmar até amanhã..." Funcionou? Então é **se não** separado.',
+      "Nós escrevemos 'se não' separado quando existe uma regra ou condição para as coisas darem certo, guardando o 'senão' junto para avisos do tipo 'caso contrário'. Uma boa dica é tentar incluir a palavra 'você', pois se a leitura 'se você não confirmar' funcionar bem para você, fica provado que as palavras ficam separadas.",
     feedbackErro: [
-      "A frase está impondo uma condição ou apresentando uma alternativa?",
-      'Há uma condição: "se não confirmar → perde a vaga". Tenta trocar por "caso não": funcionou? Então é **se não** separado. O **senão** junto seria: "Confirme, senão perderá a vaga."',
-      '"Se não" separado é a resposta. A frase tem uma condição com "se". Quando o "não" faz parte da condição introduzida por "se", escreve separado. O **senão** junto equivale a "caso contrário".',
+      "A mensagem está criando uma regra obrigatória para garantir a vaga ou está apenas entregando uma alternativa?",
+      "Tente fazer o teste colocando a palavra 'você' no começo da leitura. Como dizer 'se você não confirmar' não muda em nada a ideia principal da frase, isso prova que o 'se' funciona sozinho e precisa ficar separado.",
+      "A resposta certa é 'se não' separado, já que a frase monta uma regrinha básica para não perder a vaga. A versão junta 'senão' combina mais com o final das frases, do tipo 'confirme logo, senão você perde a vaga'."
     ],
   },
   {
@@ -218,11 +218,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mais",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mais** aparece quando você está comparando quantidade ou intensidade.\nJá o **mas** conecta ideias opostas, como em "quero ir, mas não posso".\nUma dica: se você consegue trocar por **menos** e a frase ainda faz sentido (mesmo que com significado contrário), é **mais**.',
+      "Nós usamos 'mais' com a letra I para comparar quantidades ou o tamanho de alguma coisa, deixando o 'mas' apenas para juntar ideias que brigam entre si. Uma dica fácil é testar a palavra 'menos', pois se ela encaixar na frase entregando o sentido contrário, o correto é mesmo o 'mais'.",
     feedbackErro: [
-      "A frase está comparando o quanto duas pessoas entendem, ou está ligando duas ideias contrárias?",
-      'Está comparando: ela entende mais, eu entendo menos. Comparação de quantidade usa **mais**, não **mas**.',
-      '**Mais** é a resposta. A frase compara o quanto cada um sabe. Para comparações e quantidades, use **mais**. O **mas** serve para ligar ideias opostas: "quero ir, mas não posso".',
+      "A frase quer comparar o tamanho do conhecimento de duas pessoas ou está tentando ligar ideias que não combinam?",
+      "Como a frase está medindo quem entende mais e quem entende menos, o assunto é quantidade. Para coisas de quantidade, a gente usa sempre o 'mais'.",
+      "A resposta é 'mais', porque a intenção da frase é comparar a quantidade de experiência que cada um tem. O 'mas' serviria apenas para situações opostas, como 'eu tentei vender, mas não consegui'."
     ],
   },
   {
@@ -232,11 +232,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "porque",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Porque** junto aparece quando você está explicando ou dando o motivo de algo.\nJá o **por que** separado aparece nas perguntas.\nUma dica: se você consegue trocar por **pois** e a frase continua fazendo sentido, é **porque** junto.',
+      "A versão 'porque' escrita toda junta serve para dar uma justificativa ou explicar o motivo das coisas, enquanto a versão separada fica para a hora de fazer perguntas. Se você conseguir trocar por 'pois' e a frase continuar fluindo bem na leitura, a escolha certa é o 'porque' junto.",
     feedbackErro: [
-      "A frase está fazendo uma pergunta ou explicando um motivo?",
-      'A frase explica um motivo: você não foi por causa do carro. Quando você explica o motivo, use **porque** junto. Tenta trocar por "pois": "Não pude ir pois estava com o carro na oficina." Funcionou? Então é **porque**.',
-      '**Porque** é a resposta. A frase explica o motivo da ausência. Sempre que você está justificando ou explicando algo, use **porque** junto. O **por que** separado seria para perguntar: "Por que você não foi?"',
+      "A pessoa está fazendo uma pergunta para alguém ou já está entregando a desculpa pronta?",
+      "Como a frase serve para explicar o motivo de você não ter aparecido, usamos a versão junta. Tente trocar a palavra por 'pois' para ver se soa natural, o que confirma o uso do 'porque' junto.",
+      "A resposta é o 'porque' todo junto, pois a frase inteira serve como uma grande explicação do motivo da sua ausência, sem nenhuma tentativa de pergunta no meio."
     ],
   },
   {
@@ -246,11 +246,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "a",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**A** indica tempo que ainda vai acontecer, que está por vir.\nJá o **há** indica tempo que já passou: "trabalho aqui há dois anos".\nUma dica: se você puder trocar por "em" e a frase continuar fazendo sentido, é **a**: "daqui em meia hora" tem o mesmo sentido.',
+      "A letra 'a' sozinha aponta para um tempo que ainda não chegou, deixando a palavra 'há' com H apenas para as coisas que já passaram na nossa vida. Se você puder trocar a expressão por 'dentro de' e achar que 'começa dentro de meia hora' tem todo o sentido, a escolha certa é usar o 'a'.",
     feedbackErro: [
-      "Essa meia hora já passou ou ainda vai acontecer?",
-      'A reunião ainda não começou — o tempo é futuro. Para tempo futuro, use **a**, não **há**. O **há** seria para passado: "a reunião acabou há meia hora".',
-      '"A" é a resposta. O tempo ainda vai acontecer. Use **a** para o futuro: "daqui a pouco", "daqui a dois dias". O **há** é para o passado: "chegou há meia hora".',
+      "Essa meia hora de espera já passou no relógio ou ainda vai acontecer?",
+      "A reunião ainda nem começou e você vai ter que esperar, então estamos falando de um tempo no futuro. Para o que ainda vem pela frente, usamos apenas o 'a'.",
+      "A resposta é a letra 'a' sozinha, já que estamos falando de um prazo que vai acontecer lá no futuro. O uso da palavra 'há' fica reservado só para coisas antigas, como na frase 'ele chegou há meia hora'."
     ],
   },
   {
@@ -260,11 +260,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mau",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mau** descreve como algo ou alguém é — uma característica, uma qualidade ruim.\nJá o **mal** descreve como algo foi feito: "dormiu mal", "trabalhou mal".\nUma dica: teste a regra dos opostos na frase. Como a construção "um bom hábito" tem total sentido, a versão contrária pede a palavra "mau".',
+      "A palavra 'mau' com a letra U descreve a característica ruim de uma pessoa ou coisa, enquanto o 'mal' com L diz respeito ao jeito que uma tarefa foi feita. A dica de ouro é testar a frase usando o contrário. Como a gente consegue falar 'um bom hábito' com facilidade, a versão negativa pede o uso da palavra 'mau'.",
     feedbackErro: [
-      "A palavra atua como uma qualidade do hábito, ou indica como algo foi feito?",
-      'Aplique a mecânica dos opostos inserindo "bom" na frase. Como a frase "um bom hábito" tem significado lógico, isso indica que você deve usar "mau" com a letra U na versão correspondente.',
-      '"Mau" é a resposta. Essa palavra funciona como o oposto direto de "bom" e define características (ex: "mau hábito", "mau funcionário"). O uso de "mal" com L descreveria ações, funcionando como oposto de "bem" (ex: "agiu mal").',
+      "A palavra está apenas mostrando de que jeito uma tarefa foi feita ou virou uma característica daquele costume de atrasar?",
+      "Tente aplicar a regra do contrário testando colocar a palavra 'bom' na frase. Como a gente entende perfeitamente o que significa 'um bom hábito', isso avisa que a versão com problema exige o 'mau' com U.",
+      "A resposta é 'mau' com a letra U, porque ela funciona como o oposto direto da palavra 'bom' e serve para dar características para as coisas. O uso do 'mal' com L só entra quando falamos de ações, do tipo 'ele agiu muito mal'."
     ],
   },
   {
@@ -274,11 +274,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Eu",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Eu** aparece quando você é quem faz a ação — o sujeito da frase.\nJá o **mim** aparece depois de preposições: "para mim", "comigo", "de mim".\nUma dica: tenta tirar "e o Pedro" da frase. "Eu vou apresentar." Soou natural? Então é **eu**.',
+      "A palavra 'eu' aparece sempre que você é a pessoa que vai botar a mão na massa e praticar a ação, deixando o 'mim' para o fim das frases ou depois de pequenas palavras como 'para' e 'comigo'. Se você tentar tirar o nome do colega e a frase 'eu vou apresentar' continuar firme, a escolha é fácil.",
     feedbackErro: [
-      "Quem está fazendo a ação de apresentar?",
-      'Você e o Pedro são quem vai apresentar — vocês são o sujeito. Quando você pratica a ação, use **eu**. Tira "e o Pedro": "Eu vou apresentar." Funcionou? Então é **eu**.',
-      '"Eu" é a resposta. Você é quem vai apresentar — é o sujeito da frase. O **eu** sempre aparece quando você pratica a ação. O **mim** aparece depois de preposições: "foi apresentado por mim".',
+      "Quem é a pessoa que vai ter que ficar de pé e fazer a apresentação amanhã?",
+      "Você e o seu amigo são as pessoas que vão trabalhar de verdade nessa apresentação. Quando você é o dono da ação, o certo é usar o 'eu'. Tente tirar o Pedro da frase e veja como 'eu vou apresentar' funciona bem.",
+      "A resposta é o 'eu', porque você é quem vai suar a camisa e executar a tarefa de apresentar. A gente reserva o 'mim' apenas para receber coisas, como em 'entregaram o projeto para mim'."
     ],
   },
   {
@@ -288,11 +288,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Aonde",
     armadilhaId: "onde_aonde",
     feedbackAcerto:
-      '**Aonde** aparece quando há movimento ou destino — "para onde você foi?".\nJá o **onde** é para lugar fixo, sem movimento: "onde você estava?".\nUma dica: tenta trocar por **para onde**. "Para onde você foi?" Funcionou? Então é **aonde**.',
+      "Nós usamos 'aonde' quando perguntamos sobre um passeio, destino ou movimento, enquanto o 'onde' serve mais para descobrir em qual local fixo um objeto está guardado. Se você conseguir trocar o começo por 'para onde' e a pergunta continuar fazendo sentido na sua cabeça, o certo é o 'aonde'.",
     feedbackErro: [
-      "A pergunta quer saber o lugar fixo onde algo estava, ou o destino de um movimento?",
-      'A frase pergunta para onde você foi — há movimento. Tenta trocar por "para onde": "Para onde você foi?" Funcionou? Então é **aonde**.',
-      '"Aonde" é a resposta. A frase pergunta o destino de um movimento. Quando há movimento ("foi", "vai", "correu"), use **aonde**. O **onde** fica para lugar fixo: "onde você estava?".',
+      "A pergunta quer descobrir em qual lugar fixo você ficou sentado ou qual foi o destino do seu passeio?",
+      "A frase está querendo saber qual trajeto você fez ontem à noite. Tente trocar o começo por 'para onde' e repare que o sentido continua igual, o que confirma o uso do 'aonde'.",
+      "A resposta é 'aonde', porque a pessoa quer descobrir o destino do movimento que você fez. Toda vez que envolve ir de um lado para o outro, a gente bota a letra 'a' no começo da palavra."
     ],
   },
   {
@@ -302,11 +302,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "senão",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
-      '**Senão** junto equivale a "caso contrário" — indica o que acontece se a ação não for feita.\nJá o **se não** separado aparece em condições com "se": "se não fizer X, então Y".\nUma dica: tenta trocar por **caso contrário**. "Anote o número, caso contrário vai esquecer." Funcionou? Então é **senão** junto.',
+      "A palavra 'senão' tudo junto funciona como um alerta de consequência, substituindo muito bem a ideia de 'caso contrário'. Já a versão separada 'se não' aparece quando você cria regras, do tipo 'se não fizer tal coisa'. Se você trocar por 'caso contrário' e a frase avisar sobre o esquecimento de forma natural, a resposta é a palavra junta.",
     feedbackErro: [
-      "A frase está estabelecendo uma condição com 'se', ou dizendo o que acontece se não agir?",
-      'A frase avisa o que vai acontecer se você não anotar. Tenta trocar por "caso contrário": "Anote, caso contrário vai esquecer." Funcionou? Então é **senão** junto.',
-      '"Senão" junto é a resposta. Ele equivale a "caso contrário". Use **senão** quando a frase diz o que vai acontecer se nada for feito. O **se não** separado ficaria em: "Se não anotar, vai esquecer."',
+      "A frase está criando uma regra nova para a pessoa seguir ou está avisando o problema que vai dar se ela ficar parada?",
+      "Essa segunda parte da frase avisa o que vai acontecer de ruim se o número não for anotado. Tente ler trocando as palavras por 'caso contrário', pois se o sentido bater, o certo é escrever tudo junto.",
+      "A resposta é a palavra 'senão' toda junta, porque ela funciona do mesmo jeito que a expressão 'caso contrário'. O uso separado ficaria reservado para condições, como na frase 'se não anotar agora, vai dar branco depois'."
     ],
   },
   {
@@ -316,11 +316,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "porque",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Porque** explica o motivo da ação — você deve anotar *por causa* do risco de esquecer.\nPerceba a diferença com a frase anterior: "Anote, **senão** vai esquecer" avisa a consequência. "Anote, **porque** vai se esquecer" explica o motivo.\nMesma frase, conector diferente, sentido diferente.',
+      "O 'porque' junto serve para explicar o motivo de alguma coisa, mostrando que você deve anotar justamente para evitar o risco de apagão na memória. Fica diferente do 'senão', que a gente usa mais para dar um alerta do que acontece caso a pessoa não faça o que foi pedido.",
     feedbackErro: [
-      "A frase está explicando por que você deve anotar, ou avisando o que acontece se não anotar?",
-      'A segunda parte da frase dá o motivo da ação — você vai se esquecer, e é *por isso* que deve anotar. Quando a segunda parte explica o motivo, use **porque**. O "senão" seria para consequência: "Anote, senão vai esquecer."',
-      '"Porque" é a resposta. A frase dá o motivo: você deve anotar *porque* vai se esquecer. Compare com o exercício anterior: "Anote, **senão** vai esquecer" (= caso contrário). Mesma estrutura, significado diferente.',
+      "A frase está tentando explicar o motivo da anotação ser importante ou apenas jogando um alerta de problema?",
+      "A segunda parte da mensagem justifica por que gastar tinta com o número vale a pena, que é o esquecimento. Quando você quer justificar ou dar o motivo, o certo é usar o 'porque'.",
+      "A resposta é 'porque' junto, já que a frase fornece uma explicação direta para o conselho de anotar as coisas. Fica bem diferente da estrutura de alerta, que usaria o 'senão' para dizer que vai dar problema."
     ],
   },
   {
@@ -330,11 +330,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mais",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mais** indica quantidade, seja de tempo, dinheiro, esforço ou qualquer outra coisa.\nJá o **mas** conecta duas ideias contrárias.\nUma dica: se a palavra se refere a quanto de algo você precisa ou quer, é **mais**.',
+      "Usamos 'mais' com I quando falamos de quantidade, seja para dias, dinheiro ou paciência, enquanto a palavra 'mas' entra na jogada para ligar ideias contrárias. Se a sua mensagem pede um volume maior de qualquer coisa, a escolha vai ser sempre o 'mais'.",
     feedbackErro: [
-      "A frase está pedindo uma quantidade de tempo, ou ligando duas ideias opostas?",
-      'Você está pedindo quantidade: mais um dia. Para quantidade, use **mais**, não **mas**.',
-      '**Mais** é a resposta. Sempre que a frase fala de quantidade (mais tempo, mais dinheiro, mais dias), use **mais**. O **mas** conecta ideias contrárias: "quero terminar, mas preciso de mais tempo".',
+      "Você está pedindo uma quantidade extra de dias na agenda ou está tentando dizer que as ideias da frase brigam entre si?",
+      "Você está claramente pedindo um aumento na quantidade do prazo, que é mais um dia. Toda vez que o assunto envolver matemática, soma ou quantidades, usamos a palavra 'mais'.",
+      "A resposta é 'mais' com a letra I, pois a frase fala o tempo todo sobre aumentar a quantidade de dias para o trabalho. O uso do 'mas' sem a letra I serve para oposição, como na desculpa 'queria acabar, mas acabou a luz'."
     ],
   },
   {
@@ -344,11 +344,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "porque",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Porque** junto introduz a razão ou o motivo de algo que foi feito.\nJá o **por que** separado é para perguntas.\nUma dica: tenta trocar por **pois**. "Assinei o contrato pois as condições eram boas." Ficou natural? Então é **porque**.',
+      "A gente usa o 'porque' todo junto na hora de apresentar os motivos que levaram a uma ação, diferente da versão separada que serve para interrogar alguém. Se você conseguir trocar a palavra por 'pois' e a frase 'assinei pois as condições eram boas' soar tranquila, a escolha é a versão junta.",
     feedbackErro: [
-      "A frase está pedindo um motivo ou explicando um motivo?",
-      'A frase explica por que o contrato foi assinado. Tenta trocar por "pois": ficou natural? Então é **porque** junto.',
-      '**Porque** é a resposta. Você está dando o motivo da assinatura. Quando a frase explica ou justifica algo, use **porque** junto. Para perguntar o motivo, aí seria **por que** separado.',
+      "A frase está fazendo uma pergunta querendo descobrir um motivo ou está entregando a justificativa no prato?",
+      "A frase conta exatamente a razão por trás de a pessoa ter assinado os papéis. Tente colocar a palavra 'pois' no lugar para ver se a leitura flui, o que garante o uso do 'porque' escrito junto.",
+      "A resposta é o 'porque' todo junto, já que você está apenas contando as razões que facilitaram a assinatura do documento. Para usar a versão separada, a frase precisaria ser uma pergunta direta."
     ],
   },
   {
@@ -358,11 +358,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "há",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**Há** indica que o tempo já aconteceu — o pedido foi feito no passado.\nJá o **a** seria para algo que ainda vai acontecer.\nUma dica: troca por **faz**. "O pedido foi feito faz três semanas." Soou natural? Então é **há**.',
+      "Nós usamos 'há' com H para mostrar um tempo que já rodou e ficou para trás, enquanto a letra 'a' sozinha serve para o tempo que ainda vamos viver. Se você testar trocando por 'faz' e a frase 'feito faz três semanas' fizer total sentido, o correto é ficar com o 'há'.",
     feedbackErro: [
-      "O pedido foi feito no passado ou ainda vai ser feito?",
-      'O pedido já foi feito — é passado. Tenta trocar por "faz": funcionou? Então é **há**. O **a** seria para "daqui a três semanas", tempo que ainda vai acontecer.',
-      '"Há" é a resposta. O pedido é passado. Quando o tempo já passou, use **há**. Para confirmar, troca por "faz": "foi feito faz três semanas" — soou natural, então é **há**.',
+      "A compra que originou o pedido aconteceu no passado ou ainda vai ser feita mês que vem?",
+      "O pedido já foi faturado e o tempo de três semanas passou, o que prova que é passado. Tente trocar pela palavra 'faz' na leitura, pois se der certo, a resposta exige a letra H.",
+      "A resposta é 'há', pois o evento de fazer o pedido aconteceu no tempo passado e já começou a contar os dias. A letra 'a' sozinha seria ótima para falar do futuro, como em 'vai chegar daqui a três semanas'."
     ],
   },
   {
@@ -372,11 +372,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mau",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mau** descreve uma característica ruim de algo ou alguém.\nJá o **mal** descreve como algo foi feito ou como alguém está.\nUma dica: use a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador"). \nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
+      "A palavra 'mau' com a letra U descreve a característica natural de uma pessoa, enquanto o 'mal' com L serve para mostrar de que jeito uma tarefa foi feita em um dia específico. A dica mais segura é testar a regra do contrário na frase, e como dizer 'um bom pagador' tem um sentido muito claro para nós, isso confirma que a versão de quem não paga precisa do 'mau'.",
     feedbackErro: [
-      "A palavra descreve como ele é, ou como ele age?",
-      '"Mau pagador" é uma característica dele — como ele é. Tente usar a regra dos opostos. Se a frase fizer sentido com bom, use mau com U ("um bom pagador" vira "um mau pagador").\nSe a frase pedir a palavra bem, o correto é mal com L ("serviço bem feito" vira "serviço mal feito")',
-      '"Mau" é a resposta. Descreve uma característica da pessoa: ser mau pagador é como ele é, não como ele age. O **mal** ficaria para ação: "tratou mal os clientes".',
+      "A palavra que falta funciona como uma característica conhecida do cliente ou está descrevendo uma tarefa isolada?",
+      "Esse título de devedor acabou virando uma característica da pessoa ao longo do tempo. Tente pensar no contrário aplicando a palavra 'bom', e veja que como 'bom pagador' faz sentido, a palavra certa para quem atrasa leva a letra U.",
+      "A resposta é 'mau' com U, pois essa palavra bate de frente com a palavra 'bom' e serve para dar características para as pessoas. O uso do 'mal' com L fica reservado para quando você fala de uma ação que deu errado, como 'ele dirigiu mal hoje'."
     ],
   },
   {
@@ -386,11 +386,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mim",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Mim** vem sempre depois de preposições como "para", "por", "de" e "sem".\nJá o **eu** é para quando você pratica a ação.\nUma dica: tenta trocar por **ele**. "Esse recado é para ele." Soou natural? Então é **mim**.',
+      "Sempre que você trombar com pequenas palavras de direção, como 'para', 'por' e 'de', a finalização certa é com 'mim', pois o 'eu' fica apenas para a pessoa que vai dar início a uma ação importante. Se você conseguir trocar por 'ele' e a frase 'para ele' soar normal na hora da conversa, a escolha mais segura é o 'mim'.",
     feedbackErro: [
-      'Qual palavra vem logo antes do espaço?',
-      'A preposição "para" vem antes. Depois de "para", sempre **mim**. O **eu** seria antes do verbo: "Eu recebi o recado".',
-      '"Mim" é a resposta. Depois de preposições como "para", use sempre **mim**. O **eu** ficaria antes do verbo: "Eu entendo o recado".',
+      "Olhe bem para a palavra que encosta no espaço em branco, porque ela entrega a regra inteira.",
+      "A palavra 'para' aparece puxando a linha. Sempre que o 'para' der as caras, a gente encerra a ideia com 'mim'. O pronome 'eu' fica melhor no começo da ação, quando você avisa 'eu vou anotar o recado'.",
+      "A resposta certa é o 'mim', já que ele é o par perfeito para vir logo em seguida da palavra 'para'. O pronome 'eu' ficaria esquisito aí porque ele só quer saber de agir, como em 'eu vou entregar o recado'."
     ],
   },
   {
@@ -400,11 +400,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "onde",
     armadilhaId: "onde_aonde",
     feedbackAcerto:
-      '**Onde** indica localização — o documento está em algum lugar fixo.\nJá o **aonde** seria para destino de movimento: "aonde você vai buscar?".\nUma dica: tenta trocar por **em que lugar**. "Em que lugar posso encontrar?" Soou natural? Então é **onde**.',
+      "Nós usamos 'onde' quando a intenção é descobrir em qual gaveta ou lugar fixo um objeto está escondido, deixando o 'aonde' para situações em que a pessoa vai andar e buscar um destino. Se você tentar trocar a palavra da lacuna pela expressão 'em que lugar' e a frase continuar com o sentido intacto, pode confirmar o 'onde'.",
     feedbackErro: [
-      "A pergunta quer saber o lugar onde o documento está, ou para onde você vai?",
-      'O documento está em um lugar — não há movimento de destino. Para localização fixa, use **onde**. O **aonde** seria para movimento: "aonde você vai para buscá-lo?".',
-      '"Onde" é a resposta. A frase pergunta a localização de algo fixo. O **aonde** ficaria para destino de movimento: "aonde ir para buscar?".',
+      "A pergunta quer descobrir em que lugar parado o documento foi guardado ou está pedindo uma rota de caminhada?",
+      "O papel está parado em alguma prateleira esperando alguém ir buscar, sem nenhum movimento do próprio objeto. Para tratar de localizações estáticas, a gente opta pelo 'onde'.",
+      "A resposta é 'onde', pois a frase tenta descobrir o esconderijo fixo de um documento. O 'aonde' só entraria na brincadeira se você fosse perguntar para qual destino o funcionário está indo procurar o papel."
     ],
   },
   {
@@ -414,11 +414,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "senão",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
-      '**Senão** junto indica consequência — o que vai acontecer se a ação não for tomada.\nJá o **se não** separado aparece em condições: "se não ligar, então...".\nUma dica: troca por **caso contrário**. "Ligue, caso contrário ele vai reclamar." Funcionou? Então é **senão**.',
+      "A versão de 'senão' escrita toda junta serve como um puxão de orelha para mostrar as consequências do que vai acontecer se nada for feito, diferente da versão separada que cria regras novas. Se a leitura fluir bem ao testar a troca por 'caso contrário', a resposta que você procura é o 'senão' junto.",
     feedbackErro: [
-      "A frase diz o que vai acontecer se você não agir, ou coloca uma condição com 'se'?",
-      'Tenta trocar por "caso contrário": "Ligue, caso contrário ele vai reclamar." Soou natural? Então é **senão** junto.',
-      '"Senão" junto é a resposta. Significa "caso contrário": se você não ligar, ele reclama. O **se não** separado ficaria numa condição: "Se não ligar até as três, ele reclama."',
+      "A segunda parte da frase mostra a bagunça que vai acontecer se você ficar de braços cruzados ou cria uma regra burocrática?",
+      "A frase inteira é um alerta do chefe sobre o risco de o cliente abrir uma reclamação. Tente fazer a troca mental por 'caso contrário' na leitura, pois se der certo, o termo correto é sempre escrito junto.",
+      "A resposta é a palavra 'senão' toda junta, porque ela entrega a mesma mensagem de 'caso contrário' de forma direta. A versão separada ficaria boa em construções diferentes, tipo 'se não ligar logo de manhã, o chefe briga'."
     ],
   },
   {
@@ -428,11 +428,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mas",
     armadilhaId: "mas_mais",
     feedbackAcerto:
-      '**Mas** liga duas ideias que se contradizem: ser longa (ruim) e ter valido a pena (bom).\nJá o **mais** é para quantidade.\nUma dica: troca por **porém** e veja se a frase continua fazendo sentido.',
+      "Nós usamos a palavra 'mas' para costurar duas ideias que normalmente iriam brigar entre si, enquanto o 'mais' serve apenas para falar de quantidades numéricas. Uma boa dica é tentar trocar pela palavra 'porém' durante a leitura, pois se o sentido continuar valendo, o certo é sempre o 'mas'.",
     feedbackErro: [
-      "As duas partes da frase estão de acordo, ou uma contradiz a outra?",
-      'Uma reunião longa geralmente é cansativa, mas ela valeu a pena. São ideias contrárias. Qual palavra conecta ideias opostas?',
-      '**Mas** é a resposta. A frase tem duas ideias que se contradizem: foi longa (ponto negativo) e valeu a pena (ponto positivo). O **mas** faz exatamente esse trabalho.',
+      "Pense no assunto: o cansaço da reunião longa combina com a sensação boa de que o tempo valeu a pena, ou essas coisas são meio opostas?",
+      "Ficar preso em uma reunião comprida é bem cansativo, enquanto a ideia de valer a pena é muito positiva. Para amarrar um lado ruim com um lado bom na mesma frase, usamos o 'mas'.",
+      "A resposta correta é 'mas', porque a frase precisa de uma palavra capaz de juntar o lado chato de um evento demorado com a surpresa boa de o resultado ser excelente."
     ],
   },
   {
@@ -442,11 +442,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "por que",
     armadilhaId: "porque_family",
     feedbackAcerto:
-      '**Por que** separado aparece em perguntas sobre motivo, diretas ou indiretas.\nJá o **porque** junto aparece nas respostas e explicações.\nUma dica: mesmo que a frase não termine com ponto de interrogação, se ela está pedindo uma informação sobre o motivo, é **por que** separado.',
+      "A gente recorre ao 'por que' separado toda vez que lança uma pergunta solta no ar para tentar descobrir o motivo das coisas, enquanto a versão junta aparece na hora de contar as fofocas ou explicar as causas. Se você está tentando pescar uma informação sobre as razões do chefe, a escrita certa é separada.",
     feedbackErro: [
-      "Essa frase está pedindo uma informação (motivo do cancelamento) ou explicando algo?",
-      'Mesmo sem ponto de interrogação, a frase está perguntando: "você sabe o motivo?" Perguntas, diretas ou indiretas, usam **por que** separado.',
-      '**Por que** separado é a resposta. Mesmo sem "?", a frase é uma pergunta indireta: você está pedindo uma informação. O **porque** junto seria numa resposta: "Ele cancelou porque ficou doente."',
+      "Mesmo sem um sinal claro de pergunta ali no final, a frase está investigando um motivo escondido ou já entrega as razões mastigadas?",
+      "Essa frase funciona como uma pergunta indireta tentando arrancar a verdade do colega. Sempre que existir a intenção de perguntar sobre um motivo de trás das cortinas, usamos o 'por que' separado.",
+      "A resposta é 'por que' separado, visto que toda a estrutura do texto tenta investigar os motivos secretos para o cancelamento do evento. A versão toda junta apareceria caso você estivesse apenas fofocando que ele 'cancelou porque torceu o pé'."
     ],
   },
   {
@@ -456,11 +456,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "a",
     armadilhaId: "ha_a",
     feedbackAcerto:
-      '**A** aponta para tempo futuro, que ainda está por vir.\nJá o **há** é para tempo passado: "o prazo venceu há cinco dias".\nUma dica: se a frase fala de algo que ainda vai acontecer, é sempre **a**.',
+      "A letra 'a' trabalha muito bem apontando o calendário para frente em um tempo que ainda não chegou, enquanto a palavra 'há' com a letra H foca exclusivamente em coisas do passado. Se o seu relógio ou calendário marcar um evento que ainda vai chegar, você pode apostar na letra 'a' de olhos fechados.",
     feedbackErro: [
-      "O prazo já venceu ou ainda vai vencer?",
-      'O prazo ainda vai vencer — é futuro. Para tempo futuro, use **a**: "daqui a cinco dias". O **há** seria para passado: "venceu há cinco dias".',
-      '"A" é a resposta. O prazo está no futuro. Use **a** para tempo que ainda vai acontecer. O **há** fica para o passado: "venceu há cinco dias".',
+      "O prazo terrível de entrega já chegou e venceu na semana passada ou você ainda tem alguns dias pela frente?",
+      "Os cinco dias citados na frase ainda não rodaram, então temos uma situação escancarada de futuro. Para falar dos dias que ainda vão pintar pela frente, o certo é usar apenas a letra 'a'.",
+      "A resposta é a letra 'a' sozinha, já que a preocupação da frase envolve um prazo de futuro. Se você tentasse colocar o 'há' com H, a frase precisaria avisar que o tempo já se foi, como em 'o contrato venceu há cinco dias'."
     ],
   },
   {
@@ -470,11 +470,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "mal",
     armadilhaId: "mau_mal",
     feedbackAcerto:
-      '**Mal** descreve como a ação foi executada.\nJá o **mau** descreveria a característica da coisa em si: "um mau mecânico".\nUma dica: teste aplicar a palavra "bem". Como a construção "fez o serviço bem" soa coerente no lado positivo, a versão de erro da frase pede o uso de "mal".',
+      "A palavra 'mal' com a letra L explica para a gente a forma descuidada com que uma ação foi realizada pelas mãos de alguém, diferente do 'mau' com U que atua como um carimbo de qualidade nas pessoas e coisas. Para testar rápido na cabeça, avalie colocar a palavra 'bem', pois como soaria normal dizer que alguém 'fez o serviço bem', fica provado que a versão negativa precisa do L.",
     feedbackErro: [
-      "A palavra indica a forma como a ação do serviço foi feita, ou descreve diretamente o mecânico?",
-      'Avalie a regra dos opostos aplicando a palavra "bem". Visto que a frase "fez o serviço bem" não gera estranheza, a palavra correta para preencher a lacuna da versão oposta é "mal".',
-      '"Mal" é a resposta. Ele indica a qualidade da execução da ação, funcionando como o oposto da palavra "bem". O uso de "mau" descreveria uma característica direta de algo ("um mau profissional").',
+      "A palavra está sendo usada para criticar a forma como ele apertou os parafusos no serviço ou quer apenas afirmar que ele não presta como ser humano?",
+      "Avalie a frase tentando colocar a palavra 'bem' na leitura. Visto que a frase positiva 'o mecânico fez o serviço bem' não causa estranheza nos ouvidos, isso garante que a versão de quem pisou na bola pede a escrita com 'mal'.",
+      "A resposta certa é o 'mal' com a letra L, porque a palavra critica a qualidade da execução e o jeito que o conserto foi levado, funcionando como o inverso de dizer que ele fez o trampo 'bem' feito."
     ],
   },
   {
@@ -484,11 +484,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Eu",
     armadilhaId: "mim_eu",
     feedbackAcerto:
-      '**Eu** aparece quando você é o sujeito — quem pratica a ação.\nJá o **mim** vem depois de preposições: "para mim", "de mim", "por mim".\nUma dica: se a frase faz sentido com "Eu faço isso", é **eu**.',
+      "A palavra 'eu' entra em cena no papel principal sempre que você mesmo toma a iniciativa de praticar a ação e chegar aos lugares, deixando o 'mim' apenas para a passividade de vir depois do 'para' ou do 'de'. Se o início da frase mostrar alguém pegando no pesado ou chegando cedo de propósito, não tenha dúvidas de que é 'eu'.",
     feedbackErro: [
-      "Quem é que chega antes do horário?",
-      'Você é quem chega — é o sujeito da frase. Quando você pratica a ação, use **eu**. O **mim** ficaria depois de preposição: "eles confiam em mim".',
-      '"Eu" é a resposta. Você é o sujeito que pratica a ação de chegar. O **mim** aparece depois de preposições: "chegaram antes de mim".',
+      "Pense com clareza: quem é que levanta cedo e chega antes da hora marcada bater no relógio?",
+      "A ação de chegar cedo no trabalho foi sua e não do vizinho. Quando você assume o controle da ação para você mesmo, o correto é usar o 'eu'.",
+      "A resposta é 'eu', visto que você é a pessoa dedicada que toma a atitude e chega antes do batente. O 'mim' a gente deixa para os momentos inofensivos em que só recebemos coisas, como 'ele chegou antes de mim'."
     ],
   },
   {
@@ -498,11 +498,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "aonde",
     armadilhaId: "onde_aonde",
     feedbackAcerto:
-      '**Aonde** indica destino — para onde ir.\nJá o **onde** indica localização fixa: o lugar onde algo está.\nUma dica: tenta trocar por **para onde**. "Não sei para onde ir." Soou natural? Então é **aonde**.',
+      "O uso do 'aonde' serve perfeitamente para tratar de destinos e caminhadas de um lugar para o outro, enquanto o 'onde' gosta mais de assuntos parados e objetos escondidos num canto. Se você conseguir ler com 'para onde ir' e o sentido do deslocamento continuar normal, a resposta pede o 'aonde'.",
     feedbackErro: [
-      "A frase está falando de um lugar fixo ou de para onde ir?",
-      'Há movimento: você precisa "ir" a algum lugar. Tenta trocar por "para onde": "Não sei para onde ir." Funcionou? Então é **aonde**.',
-      '"Aonde" é a resposta. A frase indica destino de movimento. Quando há movimento ("ir", "vir", "correr"), use **aonde**. O **onde** ficaria para localização: "onde está o responsável?".',
+      "A frase fala sobre um local fixo que você não sabe em qual rua fica, ou está discutindo qual caminho você vai ter que percorrer de carro para resolver o estresse?",
+      "Você precisa pegar os seus pertences e se deslocar. Tente realizar a troca por 'para onde' mentalmente, pois ver que 'para onde ir' dá na mesma garante que o termo tem a letra A no começo.",
+      "A resposta certa é 'aonde', porque a frase indica claramente que você vai precisar gastar a sola do sapato em algum destino para resolver a situação. O 'onde' funcionaria melhor se você parasse e perguntasse 'onde fica o escritório responsável?'."
     ],
   },
   {
@@ -512,11 +512,11 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
     gabarito: "Se não",
     armadilhaId: "senao_se_nao",
     feedbackAcerto:
-      '**Se não** separado aparece em condições: "se a assinatura não estiver lá, então o contrato não vale".\nJá o **senão** junto equivale a "caso contrário" e não abre uma condição com "se".\nUma dica: tenta trocar por **caso não**. "Caso não houver assinatura..." Funcionou? Então é **se não** separado.',
+      "A gente escreve 'se não' separado quando existe uma condição claríssima para o negócio dar certo, enquanto a palavra toda junta funciona mais como um simples aviso de 'caso contrário'. Se você tentar repassar a lógica lendo 'se a assinatura não estiver lá' e vir que dá no mesmo, isso mostra que o 'se' tem poder sozinho e não deve grudar no 'não'.",
     feedbackErro: [
-      "A frase está colocando uma condição com 'se', ou dizendo 'caso contrário'?",
-      'Há uma condição: "se não houver assinatura → contrato não vale". Tenta trocar por "caso não": funcionou? Então é **se não** separado.',
-      '"Se não" separado é a resposta. A frase tem uma condição introduzida por "se". Quando o "não" faz parte dessa condição, escrevemos separado. O **senão** junto não abriria uma condição: seria "Assine, senão o contrato não vale."',
+      "A oração está deixando bem claro qual é a regra do jogo para garantir que o papel seja legal, ou está apenas puxando a sua orelha sobre o final do dia?",
+      "Tente reler a mensagem pensando rapidamente na regra de papelada. Visto que a frase 'se você não assinar' continua comunicando o mesmo alerta grave, isso comprova que as palavras são independentes e andam separadas.",
+      "A resposta é 'se não' separado, porque essa forma de escrita estabelece a regra de vida do contrato para ter validade. O uso do 'senão' junto trabalha melhor como ameaça nos momentos em que você diria para um parceiro 'vem assinar logo de uma vez, senão você tranca o processo'."
     ],
   },
 ];

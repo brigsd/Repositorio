@@ -31,6 +31,13 @@
 
 ## Entradas
 
+### 2026-05-13 13:36 — Manual / Antigravity — local
+**Resumo:** Tradução andragógica completa dos feedbacks da Unidade A.6 curada pelo usuário para utilizar uma linguagem altamente coloquial, empática e conectada ao dia a dia do público-alvo.
+**Arquivos alterados:**
+- `src/lib/exercicios/a6-palavras.ts` — Reformulação extensiva das propriedades `feedbackAcerto` e `feedbackErro` adotando expressões extremamente palpáveis e memoráveis para adultos (ex: "suar a camisa", "trombar com pequenas palavras", "gastar a sola do sapato", "puxão de orelha").
+**Estado atual:** Feedbacks da Unidade A.6 operando com tom perfeitamente alinhado às diretrizes de andragogia e proteção emocional.
+**Próximo passo sugerido:** Sincronizar com o repositório Git remoto.
+
 ### 2026-05-13 13:25 — Manual / Antigravity — local
 **Resumo:** Grande reformulação e padronização dos exercícios da Unidade A.6 curada pelo usuário aplicando sistematicamente a "regra dos opostos" nos feedbacks de mau/mal.
 **Arquivos alterados:**
