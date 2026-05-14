@@ -32,9 +32,11 @@ export const A3_VIRGULA: UnidadeCurriculo = {
 
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Dona Vera deixou um bilhete na geladeira antes de sair para o trabalho: "Posso buscar mãe hoje de tarde?" O marido leu e ficou parado — ela estava perguntando para ele ou deixando um aviso? Só mais tarde ele percebeu o que faltava: duas vírgulas. A frase certa era "Posso buscar, mãe, hoje de tarde?" — uma pergunta direta para a mãe dela. Sem elas, o leitor ficou sem saber para quem o bilhete era.
+    corpo: `Quando você fala, faz pausas naturalmente — o tempo certo entre uma ideia e outra, entre chamar alguém e dar o recado. A vírgula é a forma de marcar essas pausas na escrita.
 
-A vírgula não é enfeite. Ela marca quem está sendo chamado, onde um pensamento termina e onde começa o próximo. Esta unidade mostra dois momentos em que ela muda o sentido inteiro de uma frase — e como usar isso a seu favor.`,
+Parece um detalhe pequeno, mas é um detalhe que carrega peso. Uma mesma frase, com vírgula ou sem vírgula, pode comunicar coisas completamente diferentes — e quem lê só tem o que está escrito, não tem como adivinhar o tom da sua voz nem o que você quis dizer.
+
+Esta unidade mostra dois momentos em que a vírgula muda o sentido inteiro de uma frase: quando você chama alguém diretamente pelo nome, e quando você usa "não" para corrigir alguma coisa. Dois casos que aparecem o tempo todo em mensagens, e-mails e bilhetes — e que, sem a vírgula no lugar, podem virar o oposto do que você queria dizer.`,
     exemploPrático: `Exemplo prático:
 
 Marcelo é encanador. Terminou um conserto na casa de uma cliente e, antes de fechar tudo, mandou uma mensagem rápida para confirmar: "Posso liberar a água?"

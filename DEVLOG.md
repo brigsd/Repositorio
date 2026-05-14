@@ -32,6 +32,13 @@
 ## Entradas
 
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Refinamento estrutural da A.3 — `corpo` da `ancoraPropósito` reescrito sem narrativa embutida (Dona Vera removida). A história agora vive só no `exemploPrático` (Marcelo), restaurando o padrão da A.2: princípio no corpo, exemplo no exemploPrático.
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — `corpo` reformulado em três parágrafos: (1) conexão com habilidade existente (pausas na fala — Bandura), (2) princípio (vírgula carrega peso), (3) preview dos dois casos da unidade (Harvard — adultos preferem framing explícito).
+**Estado atual:** A.3 sem duplicação narrativa. Tela "Por que isso importa?" carrega só o princípio; tela "Exemplo prático" carrega a história.
+**Próximo passo sugerido:** Conferir o mesmo padrão nas demais unidades (A.5, A.6) para garantir consistência.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Correção do `exemploPrático` da A.3 — cenário do zelador era implausível (ninguém coloca placa de "não pode entrar" querendo permitir). Substituído por troca de mensagens entre encanador e cliente, onde a omissão da vírgula em mensagem rápida realmente causa o tipo de mal-entendido descrito.
 **Arquivos alterados:**
 - `src/lib/curriculo/a3-virgula.ts` — `ancoraPropósito.exemploPrático` reescrito. Marcelo (encanador) pergunta se pode liberar a água; cliente em reunião responde "Não pode liberar" sem vírgula; serviço fica parado meia hora. Cenário plausível, consequência concreta, contraste mantido.
