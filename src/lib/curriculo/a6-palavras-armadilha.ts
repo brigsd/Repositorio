@@ -83,7 +83,7 @@ Exemplo: "Quero ir, porém não posso." Ficou certo? Então é "mas".
       id: "ha_a",
       titulo: "há / a",
       textoAncora: `
-"Há" indica tempo passado ou existência — troca por "faz" e funciona. "A" aponta lugar ou tempo futuro.
+"Há" indica tempo passado ou existência. Troca por "faz" e funciona. "A" aponta lugar ou tempo futuro.
 Teste: tente trocar por "faz". Se ficou certo, use "há". Se ficou estranho, use "a".
 
 Exemplo: "Trabalho aqui faz dois anos." Ficou certo? Então é "há": "Trabalho aqui há dois anos."
@@ -155,7 +155,7 @@ O mais usado no dia a dia é a diferença entre os dois primeiros: pergunta usa 
       id: "mim_eu",
       titulo: "mim / eu",
       textoAncora: `
-"Eu" é sujeito — vem antes do verbo, quando você age. "Mim" vem depois de preposições: para mim, por mim, sem mim.
+"Eu" é sujeito: vem antes do verbo, quando você age. "Mim" vem depois de preposições: para mim, por mim, sem mim.
 "Mim" aparece depois de palavras como "para", "por", "de", "sem".
 
 Teste: se você pode trocar por "ele" ou "ela" sem precisar mudar mais nada na frase, use "eu". Se aparecer uma dessas palavras antes (para, por, de, com, sem), use "mim".
@@ -180,7 +180,7 @@ Atenção: "comigo" já está correto do jeito que está. Não precisa mudar.
       id: "onde_aonde",
       titulo: "onde / aonde",
       textoAncora: `
-"Onde" indica localização fixa — o lugar onde algo está ou acontece. "Aonde" indica destino, quando há movimento em direção a algum lugar.
+"Onde" indica localização fixa: o lugar onde algo está ou acontece. "Aonde" indica destino, quando há movimento em direção a algum lugar.
 Teste: tente trocar por "para onde". Se ficou certo, use "aonde". Se ficou estranho, use "onde".
 
 Exemplo: "Para onde você vai?" Ficou certo? Então é "aonde": "Aonde você vai?"
@@ -201,7 +201,7 @@ Outro: "Em que lugar você trabalha?" Ficou certo? Então é "onde": "Onde você
       id: "senao_se_nao",
       titulo: "senão / se não",
       textoAncora: `
-"Senão" (junto) equivale a "caso contrário" — indica consequência. "Se não" (separado) abre uma condição com "se": "se não fizer X, então Y".
+"Senão" (junto) equivale a "caso contrário". Indica consequência. "Se não" (separado) abre uma condição com "se": "se não fizer X, então Y".
 Teste: tente trocar por "caso contrário". Se ficou certo, é "senão" junto. Se ficou estranho, é "se não" separado.
 
 Exemplo: "Estude, caso contrário vai reprovar." Ficou certo? Então é "senão": "Estude, senão vai reprovar."

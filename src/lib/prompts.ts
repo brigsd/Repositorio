@@ -206,16 +206,16 @@ Responda em JSON com este formato exato:
       MODELS.sonnet
     );
 
-    // Loga no banco (sempre — mas payload completo só em modo teste)
-    if (opcoes.alunoId && opcoes.sessaoId) {
+    // Loga no banco sempre que há alunoId — sessaoId é opcional
+    if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
-        sessaoId: opcoes.sessaoId,
+        sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
         modelo: MODELS.sonnet,
         promptCompleto: opcoes.modoTeste
           ? { system: systemPrompt, user: userPrompt }
-          : { proposito: opcoes.proposito }, // Em prod, não loga prompts completos
+          : { proposito: opcoes.proposito },
         resposta: textoResposta,
         tokensInput: resposta.usage.input_tokens,
         tokensOutput: resposta.usage.output_tokens,
@@ -293,6 +293,149 @@ Responda em JSON:
       explicacao: texto,
       exemplos: [],
     };
+  }
+}
+
+// ============================================================================
+// Função: avalia reescrita de registro (exercícios de texto livre — A.2)
+// ============================================================================
+
+export interface RespostaFeedbackRegistro extends RespostaFeedback {
+  versaoSugerida?: string; // Fornecida pela IA após 2+ tentativas sem acerto
+}
+
+export async function avaliarRespostaRegistro(params: {
+  modelo: ModeloAluno;
+  exercicio: {
+    slug: string;
+    textoInformal: string;   // Original que o aluno devia transformar
+    respostaAluno: string;   // Reescrita enviada
+    contexto: string;        // "E-mail para o chefe", etc.
+    rubrica: string[];       // Critérios de avaliação
+    tiposErroValidos: string[];
+    numTentativas: number;   // Quantas tentativas já foram feitas neste exercício
+  };
+  opcoes: OpcoesChamada;
+}): Promise<RespostaFeedbackRegistro> {
+  const { modelo, exercicio, opcoes } = params;
+
+  const systemPrompt = SYSTEM_POR_MODO[modelo.modoRecomendado];
+  const modeloSerializado = serializarModeloParaPrompt(modelo);
+
+  // versaoSugerida só é pedida após 2+ tentativas — reduz dependência do aluno
+  const pedirVersao = exercicio.numTentativas >= 2;
+
+  const userPrompt = `
+${modeloSerializado}
+
+---
+CONTEXTO DO EXERCÍCIO: ${exercicio.contexto}
+
+TEXTO ORIGINAL (registro informal que o aluno devia transformar):
+"${exercicio.textoInformal}"
+
+REESCRITA DO ALUNO:
+"${exercicio.respostaAluno}"
+
+RUBRICA DE AVALIAÇÃO (avalie cada critério):
+${exercicio.rubrica.map((c, i) => `${i + 1}. ${c}`).join("\n")}
+
+TENTATIVAS DO ALUNO NESTE EXERCÍCIO: ${exercicio.numTentativas + 1}
+
+TIPOS DE ERRO POSSÍVEIS (use EXATAMENTE um se houver problema):
+${exercicio.tiposErroValidos.join(", ")}
+
+INSTRUÇÕES OBRIGATÓRIAS:
+- NUNCA use "errado", "incorreto" ou equivalentes
+- Se não acertou: diga o que melhorar, não dê a resposta (exceto se pedirVersao = true)
+- Enquadre sempre como "versão mais adequada ao contexto" e não como "correto vs. errado"
+- Feedback em no máximo 4 frases
+- NÃO avalie erros de ortografia, acentuação ou digitação — o escopo desta unidade é exclusivamente o registro (formal vs. informal). Foque apenas em: contrações ("tô", "tá", "q", "vc", "hj"), vocabulário coloquial, abertura/fechamento formal e sentido preservado.
+
+${pedirVersao
+  ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno — preserve o que está correto (estrutura, informações, tom) e ajuste apenas o que prejudica o registro formal. Não reescreva do zero."
+  : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
+
+Responda em JSON exato:
+{
+  "acertou": boolean,
+  "mensagem": "feedback para o aluno",
+  "versaoSugerida": ${pedirVersao ? '"versão formal baseada na resposta do aluno, ou null"' : "null"},
+  "tipoErro": "um dos tipos listados ou null se acertou",
+  "confiancaIa": "seguro" ou "duvida"
+}
+`.trim();
+
+  const inicio = Date.now();
+
+  try {
+    const resposta = await anthropic.messages.create({
+      model: MODELS.sonnet,
+      max_tokens: 600,
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    });
+
+    const latenciaMs = Date.now() - inicio;
+    const textoResposta =
+      resposta.content[0].type === "text" ? resposta.content[0].text : "";
+
+    let parsed: {
+      acertou: boolean;
+      mensagem: string;
+      versaoSugerida: string | null;
+      tipoErro: string | null;
+      confiancaIa: "seguro" | "duvida";
+    };
+
+    try {
+      const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
+      parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
+    } catch {
+      parsed = {
+        acertou: false,
+        mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
+        versaoSugerida: null,
+        tipoErro: null,
+        confiancaIa: "duvida",
+      };
+    }
+
+    const custoUsd = calcularCusto(
+      resposta.usage.input_tokens,
+      resposta.usage.output_tokens,
+      MODELS.sonnet
+    );
+
+    if (opcoes.alunoId) {
+      await db.insert(chamadasIa).values({
+        alunoId: opcoes.alunoId,
+        sessaoId: opcoes.sessaoId ?? null,
+        proposito: opcoes.proposito,
+        modelo: MODELS.sonnet,
+        promptCompleto: opcoes.modoTeste
+          ? { system: systemPrompt, user: userPrompt }
+          : { proposito: opcoes.proposito },
+        resposta: textoResposta,
+        tokensInput: resposta.usage.input_tokens,
+        tokensOutput: resposta.usage.output_tokens,
+        latenciaMs,
+        custoUsd: custoUsd.toString(),
+        confiancaIa: parsed.confiancaIa,
+      });
+    }
+
+    return {
+      mensagem: parsed.mensagem,
+      acertou: parsed.acertou,
+      tipoErro: parsed.tipoErro ?? undefined,
+      confiancaIa: parsed.confiancaIa,
+      modoUsado: modelo.modoRecomendado,
+      versaoSugerida: parsed.versaoSugerida ?? undefined,
+    };
+  } catch (err) {
+    console.error("[prompts] Erro em avaliarRespostaRegistro:", err);
+    throw err;
   }
 }
 

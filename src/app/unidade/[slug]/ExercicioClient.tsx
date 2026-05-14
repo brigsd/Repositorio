@@ -327,7 +327,11 @@ export default function ExercicioClient({ armadilhas, exercicios, slug, isAdmin 
       <div className="rounded-2xl border border-stone-200 bg-white px-6 py-6">
         <div className="mb-3 flex items-center justify-between gap-3">
           <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">
-            {exercicio.tipo === "escrita_lacuna" ? "Escreva a palavra certa" : "Complete a frase"}
+            {exercicio.tipo === "escrita_lacuna"
+              ? "Escreva a palavra certa"
+              : exercicio.tipo === "identificar_erro"
+                ? "Escolha a versão adequada"
+                : "Complete a frase"}
           </p>
           {/* Par em jogo — sempre visível nos exercícios de escrita */}
           {exercicio.tipo === "escrita_lacuna" && (

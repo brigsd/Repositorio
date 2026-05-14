@@ -31,6 +31,63 @@
 
 ## Entradas
 
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Varredura completa de travessões (em-dash) em todo o conteúdo visível ao aluno. Substituídos por vírgula, dois-pontos ou ponto final caso a caso, conforme super pacote (4 frentes convergem que pontuação não-canônica gera carga cognitiva extra para leitores de baixa proficiência: Perfetti Lexical Quality; Stanovich Matthew effect; Mellard et al. "ignoram/interpretam mal pontuação"; plain language guides US/UK/AU; WCAG O3P06).
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — 4 travessões substituídos (corpo, exemploPrático, curiosidade).
+- `src/lib/curriculo/a3-virgula.ts` — 11 travessões substituídos (corpo, exemploPrático, curiosidade, armadilhas, projetoIntegrador).
+- `src/lib/curriculo/a5-acentos.ts` — 6 travessões substituídos (corpo, textoAncora de 5 armadilhas).
+- `src/lib/curriculo/a6-palavras-armadilha.ts` — 4 travessões substituídos (textoAncora de ha_a, mim_eu, onde_aonde, senao_se_nao).
+- `src/lib/exercicios/a2-registros.ts` — 8 travessões substituídos (feedbackAcerto de ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8).
+- `src/lib/exercicios/a3-virgula.ts` — 27 travessões substituídos (feedbackAcerto e feedbackErro de quase todos os 15 exercícios).
+- `src/lib/exercicios/a6-palavras.ts` — 1 travessão substituído (enunciado do ex20 com par mau/mal).
+**Estado atual:** 61 travessões de conteúdo eliminados. Restam 38 em comentários de código (não visíveis ao aluno). Cada substituição foi feita caso a caso, escolhendo entre vírgula (apposição), dois-pontos (definição), ponto final (frase nova) ou reestruturação (apposições duplas), priorizando leitura natural em voz alta.
+**Próximo passo sugerido:** Política a partir de agora — evitar travessões em qualquer texto novo visto pelo aluno; aplicar o mesmo filtro a unidades futuras desde a primeira escrita.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Refinamento estrutural da A.3 — `corpo` da `ancoraPropósito` reescrito sem narrativa embutida (Dona Vera removida). A história agora vive só no `exemploPrático` (Marcelo), restaurando o padrão da A.2: princípio no corpo, exemplo no exemploPrático.
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — `corpo` reformulado em três parágrafos: (1) conexão com habilidade existente (pausas na fala — Bandura), (2) princípio (vírgula carrega peso), (3) preview dos dois casos da unidade (Harvard — adultos preferem framing explícito).
+**Estado atual:** A.3 sem duplicação narrativa. Tela "Por que isso importa?" carrega só o princípio; tela "Exemplo prático" carrega a história.
+**Próximo passo sugerido:** Conferir o mesmo padrão nas demais unidades (A.5, A.6) para garantir consistência.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Correção do `exemploPrático` da A.3 — cenário do zelador era implausível (ninguém coloca placa de "não pode entrar" querendo permitir). Substituído por troca de mensagens entre encanador e cliente, onde a omissão da vírgula em mensagem rápida realmente causa o tipo de mal-entendido descrito.
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — `ancoraPropósito.exemploPrático` reescrito. Marcelo (encanador) pergunta se pode liberar a água; cliente em reunião responde "Não pode liberar" sem vírgula; serviço fica parado meia hora. Cenário plausível, consequência concreta, contraste mantido.
+**Estado atual:** A.3 com exemplo coerente. Lição para próximos exemplos: validar plausibilidade do cenário antes de fechar o texto.
+**Próximo passo sugerido:** Revisar exemplos das demais unidades pelo mesmo critério (cenário precisa fazer sentido no mundo real, não ser engenharia reversa para encaixar a regra).
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Três melhorias: curiosidade da A.2 reescrita (andragogia), prompt de avaliação de registro corrigido (versão sugerida a partir do aluno, sem flagrar ortografia), e contador de tokens IA no painel admin.
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — `curiosidade` reescrita: remove "em linguística", remove metáfora de ator, coloca revelação do repertório existente em primeiro lugar (Bandura), fecha com "Essa adaptação tem um nome: **registro**" (explícito-indutivo híbrido).
+- `src/lib/prompts.ts` — (1) instrução adicionada: não avaliar ortografia/acentuação, focar só em registro; (2) versão sugerida deve ser construída a partir da resposta do aluno, não do zero; (3) condição de log alterada de `alunoId && sessaoId` para apenas `alunoId` — agora todas as chamadas são salvas em `chamadas_ia`, mesmo sem sessão.
+- `src/app/api/admin/tokens/route.ts` — nova rota GET que agrega totais de `chamadas_ia` (chamadas, tokens entrada/saída, custo USD estimado). Restrito a isAdmin.
+- `src/app/admin/page.tsx` — nova seção "Uso de IA — acumulado total" com 4 cards: chamadas, tokens entrada, tokens saída, custo estimado.
+**Estado atual:** Contador de tokens persiste no Neon (independente do git). A cada chamada à IA com alunoId, um registro é inserido em `chamadas_ia`. O painel admin soma tudo em tempo real.
+**Próximo passo sugerido:** Testar o painel admin após algumas chamadas de IA para verificar os totais.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Unidade A.3 "A vírgula que muda o sentido" — criação completa com super pacote de pesquisa (3/4 frentes: Harvard/ERIC, especialistas em ensino, psicólogos cognitivos).
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — currículo curado: 2 casos (vocativo + negação com vírgula), âncora com protagonista adulto (Bandura), abordagem explícito-indutiva híbrida (Harvard/DeKeyser).
+- `src/lib/exercicios/a3-virgula.ts` — 15 exercícios tipo `identificar_erro`: ex1–6 vocativo (blocked), ex7–12 negação (blocked), ex13–15 interleaved (Bjork/Rohrer). Feedback: sentido primeiro, regra depois (Hattie nível 2-3).
+- `src/lib/exercicios/index.ts` — `EXERCICIOS_A3` registrado em `REGISTRO`.
+- `src/app/page.tsx` — "a-3-virgula" adicionado a `UNIDADES_ATIVAS`.
+- `src/app/unidade/[slug]/page.tsx` — `A3_VIRGULA` importado e adicionado a `CURRICULOS`.
+- `src/app/unidade/[slug]/ExercicioClient.tsx` — label "Escolha a versão adequada" para tipo `identificar_erro`.
+**Estado atual:** A.3 disponível na home, com currículo e 15 exercícios interativos. Sem avaliação por IA (avaliação local, igual A.5/A.6).
+**Próximo passo sugerido:** Testar fluxo completo da A.3 no browser; ou avançar para A.4.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Revisão andragógica dos textos da Unidade A.2 — eliminação de vocabulário negativo e alinhamento dos exemplos-modelo (exemploPar) com as melhores práticas de Wheeler & Swords e Bandura.
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — Reescrita do campo `corpo` em `ancoraPropósito`: removido staccato inicial, substituído "não tem nada de errado" por "tem todo o valor que precisa ter", "tom certo" → "o seu tom", "chave errada na hora errada" → "a chave não corresponde à porta".
+- `src/lib/exercicios/a2-registros.ts` — Substituído "descuido / pouco cuidado / descuidada" nos feedbackAcerto de ex1, ex3, ex5 por "imagem menos profissional do que [o contexto / você] gostaria / pede"; corrigidos mismatches nos exemploPar de ex12 (informal→"quero meu dinheiro de volta" / formal→"reembolso"), ex13 (informal agora inclui confusão "não tô entendendo nada"), ex14 (informal agora mostra urgência "preciso entregar hoje").
+**Estado atual:** Unidade A.2 com todo o texto alinhado ao princípio de code-switching sem vocabulário negativo; exemplos-modelo coerentes com os textos informais que modelam.
+**Próximo passo sugerido:** Testar fluxo completo da A.2 no browser (identificação → reescrita → feedback IA).
+
 ### 2026-05-13 15:55 — Manual / Antigravity — local
 **Resumo:** Reescrita completa dos textos e histórias da Unidade A.1 (Trailer) curada pelo usuário para reforçar a imersão e o tom coloquial.
 **Arquivos alterados:**

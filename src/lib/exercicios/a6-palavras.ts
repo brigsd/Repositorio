@@ -368,7 +368,7 @@ export const EXERCICIOS_A6: ExercicioGerado[] = [
   {
     slug: "a6-ex20-escrita", // #26
     tipo: "escrita_lacuna",
-    enunciado: "Ele é um ___ pagador — sempre atrasa.",
+    enunciado: "Ele é um ___ pagador, sempre atrasa.",
     gabarito: "mau",
     armadilhaId: "mau_mal",
     feedbackAcerto:
