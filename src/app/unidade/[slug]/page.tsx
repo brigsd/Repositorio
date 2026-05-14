@@ -5,6 +5,7 @@ import { eq } from "drizzle-orm";
 import { A1_TRAILER } from "@/lib/curriculo/a1-trailer";
 import { A2_REGISTROS } from "@/lib/curriculo/a2-registros";
 import { A3_VIRGULA } from "@/lib/curriculo/a3-virgula";
+import { A4_PONTUACAO } from "@/lib/curriculo/a4-pontuacao";
 import { A5_ACENTOS } from "@/lib/curriculo/a5-acentos";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
 import { obterExercicios } from "@/lib/exercicios";
@@ -35,6 +36,7 @@ export default async function UnidadePage({ params }: Props) {
     "a-1-trailer": A1_TRAILER,
     "a-2-registros": A2_REGISTROS,
     "a-3-virgula": A3_VIRGULA,
+    "a-4-outros-sinais": A4_PONTUACAO,
     "a-5-acentos": A5_ACENTOS,
     "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
   };

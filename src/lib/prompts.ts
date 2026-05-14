@@ -440,6 +440,157 @@ Responda em JSON exato:
 }
 
 // ============================================================================
+// Função: avalia reconstrução de pontuação (exercícios de texto livre — A.4)
+// ============================================================================
+
+export interface RespostaFeedbackPontuacao extends RespostaFeedback {
+  versaoSugerida?: string; // Fornecida pela IA após 2+ tentativas sem acerto
+}
+
+export async function avaliarRespostaPontuacao(params: {
+  modelo: ModeloAluno;
+  exercicio: {
+    slug: string;
+    textoSemPontuacao: string;   // Texto original sem pontuação
+    textoPontuado: string;       // Gabarito de referência
+    respostaAluno: string;       // Versão pontuada pelo aluno
+    contexto: string;            // "Aviso ao time", etc.
+    sinalFoco: string;           // Qual sinal é o foco principal
+    rubrica: string[];           // Critérios de avaliação
+    tiposErroValidos: string[];
+    numTentativas: number;
+  };
+  opcoes: OpcoesChamada;
+}): Promise<RespostaFeedbackPontuacao> {
+  const { modelo, exercicio, opcoes } = params;
+
+  const systemPrompt = SYSTEM_POR_MODO[modelo.modoRecomendado];
+  const modeloSerializado = serializarModeloParaPrompt(modelo);
+
+  const pedirVersao = exercicio.numTentativas >= 2;
+
+  const userPrompt = `
+${modeloSerializado}
+
+---
+CONTEXTO DO EXERCÍCIO: ${exercicio.contexto}
+
+TEXTO ORIGINAL (sem pontuação):
+"${exercicio.textoSemPontuacao}"
+
+VERSÃO PONTUADA PELO ALUNO:
+"${exercicio.respostaAluno}"
+
+VERSÃO DE REFERÊNCIA (gabarito do curador, NÃO mostre ao aluno):
+"${exercicio.textoPontuado}"
+
+SINAL EM FOCO NESTE EXERCÍCIO: ${exercicio.sinalFoco}
+
+RUBRICA DE AVALIAÇÃO (avalie cada critério):
+${exercicio.rubrica.map((c, i) => `${i + 1}. ${c}`).join("\n")}
+
+TENTATIVAS DO ALUNO NESTE EXERCÍCIO: ${exercicio.numTentativas + 1}
+
+TIPOS DE ERRO POSSÍVEIS (use EXATAMENTE um se houver problema):
+${exercicio.tiposErroValidos.join(", ")}
+
+INSTRUÇÕES OBRIGATÓRIAS:
+- NUNCA use "errado", "incorreto" ou equivalentes
+- NUNCA mostre o gabarito diretamente (exceto se pedirVersao = true)
+- A pontuação do aluno NÃO precisa ser idêntica ao gabarito. Aceite variações que preservem o sentido e a clareza
+- NÃO avalie erros de ortografia, acentuação, registro ou gramática. O escopo é EXCLUSIVAMENTE pontuação
+- Foque em: ponto final, dois-pontos, ponto-e-vírgula, travessão e vírgula
+- Feedback em no máximo 4 frases
+- Use a estrutura: (1) o que o sinal faz, (2) onde ficou diferente do ideal, (3) dica prática
+
+${pedirVersao
+  ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno, preservando o que está correto e ajustando apenas a pontuação. Não reescreva do zero."
+  : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
+
+Responda em JSON exato:
+{
+  "acertou": boolean,
+  "mensagem": "feedback para o aluno",
+  "versaoSugerida": ${pedirVersao ? '"versão pontuada baseada na resposta do aluno, ou null"' : "null"},
+  "tipoErro": "um dos tipos listados ou null se acertou",
+  "confiancaIa": "seguro" ou "duvida"
+}
+`.trim();
+
+  const inicio = Date.now();
+
+  try {
+    const resposta = await anthropic.messages.create({
+      model: MODELS.sonnet,
+      max_tokens: 600,
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    });
+
+    const latenciaMs = Date.now() - inicio;
+    const textoResposta =
+      resposta.content[0].type === "text" ? resposta.content[0].text : "";
+
+    let parsed: {
+      acertou: boolean;
+      mensagem: string;
+      versaoSugerida: string | null;
+      tipoErro: string | null;
+      confiancaIa: "seguro" | "duvida";
+    };
+
+    try {
+      const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
+      parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
+    } catch {
+      parsed = {
+        acertou: false,
+        mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
+        versaoSugerida: null,
+        tipoErro: null,
+        confiancaIa: "duvida",
+      };
+    }
+
+    const custoUsd = calcularCusto(
+      resposta.usage.input_tokens,
+      resposta.usage.output_tokens,
+      MODELS.sonnet
+    );
+
+    if (opcoes.alunoId) {
+      await db.insert(chamadasIa).values({
+        alunoId: opcoes.alunoId,
+        sessaoId: opcoes.sessaoId ?? null,
+        proposito: opcoes.proposito,
+        modelo: MODELS.sonnet,
+        promptCompleto: opcoes.modoTeste
+          ? { system: systemPrompt, user: userPrompt }
+          : { proposito: opcoes.proposito },
+        resposta: textoResposta,
+        tokensInput: resposta.usage.input_tokens,
+        tokensOutput: resposta.usage.output_tokens,
+        latenciaMs,
+        custoUsd: custoUsd.toString(),
+        confiancaIa: parsed.confiancaIa,
+      });
+    }
+
+    return {
+      mensagem: parsed.mensagem,
+      acertou: parsed.acertou,
+      tipoErro: parsed.tipoErro ?? undefined,
+      confiancaIa: parsed.confiancaIa,
+      modoUsado: modelo.modoRecomendado,
+      versaoSugerida: parsed.versaoSugerida ?? undefined,
+    };
+  } catch (err) {
+    console.error("[prompts] Erro em avaliarRespostaPontuacao:", err);
+    throw err;
+  }
+}
+
+// ============================================================================
 // Utilitário: calcula custo aproximado em USD
 // ============================================================================
 
