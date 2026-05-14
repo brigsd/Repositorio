@@ -3,10 +3,11 @@ import { unidades } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { obterExercicios, obterExerciciosReescrita } from "@/lib/exercicios";
+import { obterExercicios, obterExerciciosReescrita, obterExerciciosPontuacao } from "@/lib/exercicios";
 import { obterSessao } from "@/lib/auth";
 import ExercicioClient from "../ExercicioClient";
 import ReescritaRegistroClient from "../ReescritaRegistroClient";
+import PontuacaoClient from "../PontuacaoClient";
 
 export const dynamic = "force-dynamic";
 
@@ -26,8 +27,9 @@ export default async function ExercicioPage({ params }: Props) {
 
   const exercicios = obterExercicios(slug);
   const exerciciosReescrita = obterExerciciosReescrita(slug);
+  const exerciciosPontuacao = obterExerciciosPontuacao(slug);
 
-  if (!exercicios && !exerciciosReescrita) {
+  if (!exercicios && !exerciciosReescrita && !exerciciosPontuacao) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-12 text-center">
         <p className="text-stone-500">Esta unidade ainda não tem exercícios interativos.</p>
@@ -69,7 +71,13 @@ export default async function ExercicioPage({ params }: Props) {
       </header>
 
       {/* Exercícios interativos */}
-      {exerciciosReescrita ? (
+      {exerciciosPontuacao ? (
+        <PontuacaoClient
+          exercicios={exerciciosPontuacao}
+          slug={slug}
+          isAdmin={sessao?.isAdmin ?? false}
+        />
+      ) : exerciciosReescrita ? (
         <ReescritaRegistroClient
           exercicios={exerciciosReescrita}
           slug={slug}

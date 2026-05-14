@@ -17,7 +17,8 @@ Documentação viva do projeto. Toda decisão importante mora aqui.
 11. [Decisões de Design](./11-decisoes-design.md) — histórico de mudanças de design com justificativa (D-01 a D-07)
 12. [Guia de Feedback do Tutor](./12-guia-feedback-tutor.md) — como escrever os textos da caixa de feedback (tom, estrutura, checklist)
 13. [Guia de Criação de Unidades](./13-guia-criacao-unidades.md) — padronização: tipos de unidade, layout da página, checklist de criação
-
+14. [Workflow de Criação de Unidades](./14-workflow-criacao-unidades.md) — roteiro integrando código, conteúdo e pesquisa (Super Pacote).
+15. [Unidades Existentes](./15-unidades-existentes.md) — foco, função e estrutura das unidades já desenvolvidas (A.1, A.2, A.3, A.5, A.6).
 ## Status atual
 
 - **Fase:** auth funcional + 2 unidades interativas (A.5 e A.6)

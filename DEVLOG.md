@@ -31,6 +31,43 @@
 
 ## Entradas
 
+### 2026-05-14 09:57 — Antigravity — local
+**Resumo:** Criação completa da Unidade A.4 "Os outros sinais" (Pontuação), incluindo novo componente de reconstrução de texto com avaliação por IA, pesquisa do Super Pacote (4 frentes) e integração total no ecossistema.
+**Arquivos alterados:**
+- `src/lib/curriculo/a4-pontuacao.ts` — [NOVO] Currículo com âncora de propósito (auxiliar administrativo Marcelo) e 4 armadilhas (ponto final, dois-pontos, ponto-e-vírgula, travessão).
+- `src/lib/exercicios/tipos-pontuacao.ts` — [NOVO] Tipos ExercicioPontuacao com subtipos identificar_pontuacao e reconstrucao_pontuacao.
+- `src/lib/exercicios/a4-pontuacao.ts` — [NOVO] 12 exercícios curados: 8 MC (scaffolding por sinal) + 4 reconstrução de texto com IA.
+- `src/app/unidade/[slug]/PontuacaoClient.tsx` — [NOVO] Componente React com textarea pré-preenchido (Sweller/Bandura) e integração IA.
+- `src/app/api/exercicio/avaliar-pontuacao/route.ts` — [NOVO] Rota API para avaliação de pontuação via IA.
+- `src/lib/prompts.ts` — Adicionada função avaliarRespostaPontuacao com prompt focado exclusivamente em sinais de pontuação.
+- `src/lib/exercicios/index.ts` — EXERCICIOS_A4 registrado + obterExerciciosPontuacao().
+- `src/app/page.tsx` — a-4-pontuacao adicionado ao UNIDADES_ATIVAS.
+- `src/app/unidade/[slug]/page.tsx` — A4_PONTUACAO importado e adicionado ao CURRICULOS.
+- `src/app/unidade/[slug]/exercicio/page.tsx` — Roteamento para PontuacaoClient adicionado.
+- `docs/15-unidades-existentes.md` — A.4 documentada com foco, função e estrutura.
+**Super Pacote aplicado (4 frentes convergentes):**
+- Harvard/Dictogloss: reconstrução de texto é o método mais eficaz para ensinar pontuação a adultos
+- Sweller (CLT): texto pré-preenchido no textarea reduz carga cognitiva extrínseca vs. textarea vazio
+- Bandura: textarea vazio gera ansiedade ("página em branco"), pré-preenchido cria micro-vitórias
+- Nielsen (UX): textarea dedicado com tamanho proporcional ao texto, texto original visível como referência
+**Decisões tomadas:**
+- Travessão ENSINADO no currículo (é conteúdo necessário), mas continua proibido nos textos da interface (D-01)
+- Textarea pré-preenchido (não vazio): todas as 4 frentes de pesquisa concordaram que textarea vazio paralisa adultos com baixa autoeficácia
+- Fase 1 (MC) antes da Fase 2 (reconstrução): scaffolding — reconhecimento antes da produção
+- IA aceita variações de pontuação que preservem sentido (gabarito não é único)
+**Estado atual:** 6 unidades interativas (A.1, A.2, A.3, A.4, A.5, A.6). A.4 com novo tipo de exercício (reconstrução de texto com IA).
+**Próximo passo sugerido:** Testar localmente a A.4 (npm run dev), depois avançar para A.7 (Concordância verbal).
+
+### 2026-05-14 09:33 — Antigravity — local
+**Resumo:** Criação do Workflow de Criação de Unidades, Documento de Unidades Existentes, e atualização das instruções para as IAs lerem quando estiverem sem contexto.
+**Arquivos alterados:**
+- `docs/14-workflow-criacao-unidades.md` — [NOVO] Molde/Roteiro integrando código, conteúdo e pesquisa do Super Pacote.
+- `docs/15-unidades-existentes.md` — [NOVO] Arquivo detalhando foco, função e estrutura de todas as unidades já criadas (A.1, A.2, A.3, A.5, A.6).
+- `docs/README.md` — Adição dos arquivos 14 e 15 ao índice.
+- `.ai-instructions.md` — Adição da regra de "fallback" ensinando qualquer IA a ler as docs 15, 14 e 13 caso esteja perdida ou precise de contexto antes de criar unidades novas.
+**Estado atual:** Documentação expandida para garantir padrão na criação de novas unidades e evitar alucinação por falta de contexto.
+**Próximo passo sugerido:** Iniciar o desenvolvimento de uma nova unidade (ex: A.4 ou A.7) usando o novo Workflow 14 como base.
+
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Varredura completa de travessões (em-dash) em todo o conteúdo visível ao aluno. Substituídos por vírgula, dois-pontos ou ponto final caso a caso, conforme super pacote (4 frentes convergem que pontuação não-canônica gera carga cognitiva extra para leitores de baixa proficiência: Perfetti Lexical Quality; Stanovich Matthew effect; Mellard et al. "ignoram/interpretam mal pontuação"; plain language guides US/UK/AU; WCAG O3P06).
 **Arquivos alterados:**

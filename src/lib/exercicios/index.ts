@@ -9,13 +9,16 @@
 
 import type { ExercicioGerado } from "./tipos";
 import type { ExercicioReescrita } from "./tipos-reescrita";
+import type { ExercicioPontuacao } from "./tipos-pontuacao";
 import { EXERCICIOS_A3 } from "./a3-virgula";
 import { EXERCICIOS_A5 } from "./a5-acentos";
 import { EXERCICIOS_A6 } from "./a6-palavras";
 import { EXERCICIOS_A2 } from "./a2-registros";
+import { EXERCICIOS_A4 } from "./a4-pontuacao";
 
 export type { ExercicioGerado };
 export type { ExercicioReescrita };
+export type { ExercicioPontuacao };
 
 const REGISTRO: Record<string, ExercicioGerado[]> = {
   "a-3-virgula": EXERCICIOS_A3,
@@ -23,9 +26,13 @@ const REGISTRO: Record<string, ExercicioGerado[]> = {
   "a-6-palavras-armadilha": EXERCICIOS_A6,
 };
 
-// Unidades com exercícios de reescrita (avaliação por IA)
 const REGISTRO_REESCRITA: Record<string, ExercicioReescrita[]> = {
   "a-2-registros": EXERCICIOS_A2,
+};
+
+// Unidades com exercícios de pontuação (identificação + reconstrução com IA)
+const REGISTRO_PONTUACAO: Record<string, ExercicioPontuacao[]> = {
+  "a-4-outros-sinais": EXERCICIOS_A4,
 };
 
 /**
@@ -45,8 +52,16 @@ export function obterExerciciosReescrita(slug: string): ExercicioReescrita[] | n
 }
 
 /**
+ * Retorna exercícios de pontuação pelo slug.
+ * Retorna null se a unidade não usa esse formato.
+ */
+export function obterExerciciosPontuacao(slug: string): ExercicioPontuacao[] | null {
+  return REGISTRO_PONTUACAO[slug] ?? null;
+}
+
+/**
  * Retorna os slugs de todas as unidades com exercícios prontos.
  */
 export function unidadesComExercicios(): string[] {
-  return [...Object.keys(REGISTRO), ...Object.keys(REGISTRO_REESCRITA)];
+  return [...Object.keys(REGISTRO), ...Object.keys(REGISTRO_REESCRITA), ...Object.keys(REGISTRO_PONTUACAO)];
 }
