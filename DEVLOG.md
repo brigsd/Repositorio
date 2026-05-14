@@ -32,6 +32,13 @@
 ## Entradas
 
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Correção do `exemploPrático` da A.3 — cenário do zelador era implausível (ninguém coloca placa de "não pode entrar" querendo permitir). Substituído por troca de mensagens entre encanador e cliente, onde a omissão da vírgula em mensagem rápida realmente causa o tipo de mal-entendido descrito.
+**Arquivos alterados:**
+- `src/lib/curriculo/a3-virgula.ts` — `ancoraPropósito.exemploPrático` reescrito. Marcelo (encanador) pergunta se pode liberar a água; cliente em reunião responde "Não pode liberar" sem vírgula; serviço fica parado meia hora. Cenário plausível, consequência concreta, contraste mantido.
+**Estado atual:** A.3 com exemplo coerente. Lição para próximos exemplos: validar plausibilidade do cenário antes de fechar o texto.
+**Próximo passo sugerido:** Revisar exemplos das demais unidades pelo mesmo critério (cenário precisa fazer sentido no mundo real, não ser engenharia reversa para encaixar a regra).
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Três melhorias: curiosidade da A.2 reescrita (andragogia), prompt de avaliação de registro corrigido (versão sugerida a partir do aluno, sem flagrar ortografia), e contador de tokens IA no painel admin.
 **Arquivos alterados:**
 - `src/lib/curriculo/a2-registros.ts` — `curiosidade` reescrita: remove "em linguística", remove metáfora de ator, coloca revelação do repertório existente em primeiro lugar (Bandura), fecha com "Essa adaptação tem um nome: **registro**" (explícito-indutivo híbrido).

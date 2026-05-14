@@ -37,14 +37,16 @@ export const A3_VIRGULA: UnidadeCurriculo = {
 A vírgula não é enfeite. Ela marca quem está sendo chamado, onde um pensamento termina e onde começa o próximo. Esta unidade mostra dois momentos em que ela muda o sentido inteiro de uma frase — e como usar isso a seu favor.`,
     exemploPrático: `Exemplo prático:
 
-Um zelador colocou um aviso na porta do condomínio: "Não pode entrar." Dois dias depois, o síndico pediu para ele trocar a placa. "Está afastando o pessoal da manutenção. Eles precisam entrar."
+Marcelo é encanador. Terminou um conserto na casa de uma cliente e, antes de fechar tudo, mandou uma mensagem rápida para confirmar: "Posso liberar a água?"
 
-O zelador havia escrito querendo dar permissão — queria dizer que a área estava liberada para a equipe. Mas a leitura natural da frase, sem vírgula, é de proibição.
+A cliente estava no meio de uma reunião e respondeu correndo: "Não pode liberar."
 
-"Não, pode entrar." — permissão. Quem escreve "não" está corrigindo uma impressão errada: "Não [há impedimento], pode entrar."
-"Não pode entrar." — proibição. Nenhuma exceção.
+Marcelo leu, achou que tinha aparecido algum problema, parou o serviço e ficou esperando uma explicação. Meia hora depois, a cliente saiu da reunião e estranhou o trabalho travado. A intenção dela tinha sido o oposto: "Não [tem nenhum problema], pode liberar." Sem a vírgula, a leitura natural virou proibição — e o Marcelo seguiu exatamente o que estava escrito.
 
-Uma vírgula, dois sentidos opostos.`,
+"Não, pode liberar." — permissão. O "não" responde a uma preocupação que estava no ar; o que vem depois é que libera a ação.
+"Não pode liberar." — proibição. O "não" cola no verbo e bloqueia.
+
+Uma vírgula, dois sentidos opostos — e meia hora de serviço parado por causa dela.`,
   },
 
   curiosidade: `A palavra **vírgula** vem do latim *virgula*, que significa "pequeno galho" ou "pequena vara". Na escrita medieval, copistas usavam um traço fino para separar partes do texto — a "varinha" que ajudava o leitor a respirar e entender. Ela sobreviveu por séculos porque cumpre algo que não pode ser eliminado: entregar a intenção de quem escreveu.`,
