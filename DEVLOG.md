@@ -32,6 +32,19 @@
 ## Entradas
 
 ### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
+**Resumo:** Varredura completa de travessões (em-dash) em todo o conteúdo visível ao aluno. Substituídos por vírgula, dois-pontos ou ponto final caso a caso, conforme super pacote (4 frentes convergem que pontuação não-canônica gera carga cognitiva extra para leitores de baixa proficiência: Perfetti Lexical Quality; Stanovich Matthew effect; Mellard et al. "ignoram/interpretam mal pontuação"; plain language guides US/UK/AU; WCAG O3P06).
+**Arquivos alterados:**
+- `src/lib/curriculo/a2-registros.ts` — 4 travessões substituídos (corpo, exemploPrático, curiosidade).
+- `src/lib/curriculo/a3-virgula.ts` — 11 travessões substituídos (corpo, exemploPrático, curiosidade, armadilhas, projetoIntegrador).
+- `src/lib/curriculo/a5-acentos.ts` — 6 travessões substituídos (corpo, textoAncora de 5 armadilhas).
+- `src/lib/curriculo/a6-palavras-armadilha.ts` — 4 travessões substituídos (textoAncora de ha_a, mim_eu, onde_aonde, senao_se_nao).
+- `src/lib/exercicios/a2-registros.ts` — 8 travessões substituídos (feedbackAcerto de ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8).
+- `src/lib/exercicios/a3-virgula.ts` — 27 travessões substituídos (feedbackAcerto e feedbackErro de quase todos os 15 exercícios).
+- `src/lib/exercicios/a6-palavras.ts` — 1 travessão substituído (enunciado do ex20 com par mau/mal).
+**Estado atual:** 61 travessões de conteúdo eliminados. Restam 38 em comentários de código (não visíveis ao aluno). Cada substituição foi feita caso a caso, escolhendo entre vírgula (apposição), dois-pontos (definição), ponto final (frase nova) ou reestruturação (apposições duplas), priorizando leitura natural em voz alta.
+**Próximo passo sugerido:** Política a partir de agora — evitar travessões em qualquer texto novo visto pelo aluno; aplicar o mesmo filtro a unidades futuras desde a primeira escrita.
+
+### 2026-05-13 — Claude Code — claude/analyze-repo-document-K3Nbq
 **Resumo:** Refinamento estrutural da A.3 — `corpo` da `ancoraPropósito` reescrito sem narrativa embutida (Dona Vera removida). A história agora vive só no `exemploPrático` (Marcelo), restaurando o padrão da A.2: princípio no corpo, exemplo no exemploPrático.
 **Arquivos alterados:**
 - `src/lib/curriculo/a3-virgula.ts` — `corpo` reformulado em três parágrafos: (1) conexão com habilidade existente (pausas na fala — Bandura), (2) princípio (vírgula carrega peso), (3) preview dos dois casos da unidade (Harvard — adultos preferem framing explícito).

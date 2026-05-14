@@ -53,7 +53,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Bom dia. Gostaria de solicitar folga na próxima sexta-feira, caso seja possível.",
     feedbackAcerto:
-      "Exatamente. A segunda versão tem saudação, usa palavras completas e termina de forma respeitosa — tudo o que o contexto formal pede.\n\nO tom informal funciona bem numa conversa com um amigo, mas num e-mail ao chefe ele pode passar uma imagem menos profissional do que você gostaria.",
+      "Exatamente. A segunda versão tem saudação, usa palavras completas e termina de forma respeitosa, tudo o que o contexto formal pede.\n\nO tom informal funciona bem numa conversa com um amigo, mas num e-mail ao chefe ele pode passar uma imagem menos profissional do que você gostaria.",
     feedbackErro: [
       "Pensa no contexto: você está escrevendo para o chefe, num e-mail. Qual das duas versões parece mais cuidadosa e respeitosa?",
       "A versão adequada para um e-mail ao chefe é a segunda: tem saudação, não usa contrações (tô) e faz o pedido de forma clara e respeitosa.",
@@ -71,7 +71,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Confirmo minha presença. Poderia me informar o horário de início?",
     feedbackAcerto:
-      "Certo. A primeira versão é direta, sem gírias e usa palavras completas — registro certo para uma comunicação profissional.\n\nA segunda tem 'blz' (abreviação) e um tom de conversa informal, que pode passar uma imagem menos profissional.",
+      "Certo. A primeira versão é direta, sem gírias e usa palavras completas, registro certo para uma comunicação profissional.\n\nA segunda tem 'blz' (abreviação) e um tom de conversa informal, que pode passar uma imagem menos profissional.",
     feedbackErro: [
       "Qual das duas versões usaria em uma mensagem para um colega de trabalho ou supervisor?",
       "A versão adequada é a primeira: sem abreviações ('blz'), com palavras completas e tom respeitoso.",
@@ -89,7 +89,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Informo que chegarei com aproximadamente 20 minutos de atraso devido ao trânsito.",
     feedbackAcerto:
-      "Isso mesmo. A segunda versão é precisa, sem contrações e inclui uma explicação clara — o que um cliente espera receber.\n\nA primeira funciona para um amigo, mas para um cliente pode passar uma imagem menos profissional do que o contexto pede.",
+      "Isso mesmo. A segunda versão é precisa, sem contrações e inclui uma explicação clara, o que um cliente espera receber.\n\nA primeira funciona para um amigo, mas para um cliente pode passar uma imagem menos profissional do que o contexto pede.",
     feedbackErro: [
       "Imagine que você é o cliente recebendo essa mensagem. Qual das duas te passaria mais confiança?",
       "A versão adequada para um cliente é a segunda: sem 'tô', com a informação completa e tom profissional.",
@@ -107,7 +107,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Infelizmente não conseguirei entregar o material hoje. Seria possível prorrogar o prazo para amanhã?",
     feedbackAcerto:
-      "Perfeito. A primeira versão reconhece o problema, explica com objetividade e faz o pedido de forma respeitosa — o tom certo para esse contexto.\n\nUsar 'cara' e 'não vou conseguir... não' num pedido formal pode comprometer a imagem de quem escreve.",
+      "Perfeito. A primeira versão reconhece o problema, explica com objetividade e faz o pedido de forma respeitosa, o tom certo para esse contexto.\n\nUsar 'cara' e 'não vou conseguir... não' num pedido formal pode comprometer a imagem de quem escreve.",
     feedbackErro: [
       "Qual das duas versões parece mais profissional para uma mensagem ao supervisor?",
       "A versão adequada é a primeira: sem 'cara', com conjugação correta e pedido claro e respeitoso.",
@@ -125,7 +125,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Gostaria de verificar o andamento do pedido realizado na semana passada. Poderia me informar?",
     feedbackAcerto:
-      "Certo. A segunda versão é objetiva e respeitosa — ideal para uma comunicação com fornecedor.\n\nA primeira ('e aí, como tá') funciona na informalidade, mas num contexto comercial pode passar uma imagem menos profissional do que o momento pede.",
+      "Certo. A segunda versão é objetiva e respeitosa, ideal para uma comunicação com fornecedor.\n\nA primeira ('e aí, como tá') funciona na informalidade, mas num contexto comercial pode passar uma imagem menos profissional do que o momento pede.",
     feedbackErro: [
       "Com um fornecedor, qual das duas versões transmite mais profissionalismo?",
       "A versão adequada é a segunda: sem 'e aí' ou 'tá', com a pergunta feita de forma clara e respeitosa.",
@@ -143,7 +143,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Informo que o equipamento apresentou uma falha e está fora de operação.",
     feedbackAcerto:
-      "Exato. A primeira versão comunica o problema com objetividade e tom neutro — o que um gerente precisa receber.\n\nA segunda, além de informal, não especifica qual equipamento e usa 'tá' no lugar de 'está'.",
+      "Exato. A primeira versão comunica o problema com objetividade e tom neutro, o que um gerente precisa receber.\n\nA segunda, além de informal, não especifica qual equipamento e usa 'tá' no lugar de 'está'.",
     feedbackErro: [
       "Qual das duas versões dá mais informação clara e tem tom mais adequado para um gerente?",
       "A versão adequada é a primeira: objetiva, sem 'tá', e informa exatamente o problema.",
@@ -161,7 +161,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Agradeço pela atenção e pela oportunidade. Foi muito produtivo.",
     feedbackAcerto:
-      "Isso mesmo. A segunda versão usa palavras completas, é respeitosa e específica — o tom certo para um agradecimento profissional.\n\n'Valeu mesmo' funciona entre amigos, mas num contexto de cliente pode parecer informal demais.",
+      "Isso mesmo. A segunda versão usa palavras completas, é respeitosa e específica, o tom certo para um agradecimento profissional.\n\n'Valeu mesmo' funciona entre amigos, mas num contexto de cliente pode parecer informal demais.",
     feedbackErro: [
       "Qual das duas deixaria uma impressão mais profissional num cliente?",
       "A versão adequada é a segunda: sem 'valeu', com agradecimento claro e tom profissional.",
@@ -179,7 +179,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     ],
     gabarito: "Coloco-me à disposição para qualquer esclarecimento. Att.",
     feedbackAcerto:
-      "Perfeito. A primeira versão tem um encerramento formal clássico ('Att.') e usa 'coloco-me à disposição' — exatamente o tom esperado num e-mail profissional.\n\nA segunda, apesar de amigável, não pertence ao contexto formal.",
+      "Perfeito. A primeira versão tem um encerramento formal clássico ('Att.') e usa 'coloco-me à disposição', exatamente o tom esperado num e-mail profissional.\n\nA segunda, apesar de amigável, não pertence ao contexto formal.",
     feedbackErro: [
       "Para encerrar um e-mail profissional, qual das duas versões soa mais cuidadosa?",
       "A versão adequada é a primeira: sem 'tô', com 'Att.' e a frase de encerramento formal.",

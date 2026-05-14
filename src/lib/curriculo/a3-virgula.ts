@@ -32,33 +32,33 @@ export const A3_VIRGULA: UnidadeCurriculo = {
 
   ancoraPropósito: {
     titulo: "Por que isso importa?",
-    corpo: `Quando você fala, faz pausas naturalmente — o tempo certo entre uma ideia e outra, entre chamar alguém e dar o recado. A vírgula é a forma de marcar essas pausas na escrita.
+    corpo: `Quando você fala, faz pausas naturalmente. É o tempo certo entre uma ideia e outra, entre chamar alguém e dar o recado. A vírgula é a forma de marcar essas pausas na escrita.
 
-Parece um detalhe pequeno, mas é um detalhe que carrega peso. Uma mesma frase, com vírgula ou sem vírgula, pode comunicar coisas completamente diferentes — e quem lê só tem o que está escrito, não tem como adivinhar o tom da sua voz nem o que você quis dizer.
+Parece um detalhe pequeno, mas é um detalhe que carrega peso. Uma mesma frase, com vírgula ou sem vírgula, pode comunicar coisas completamente diferentes. E quem lê só tem o que está escrito, não tem como adivinhar o tom da sua voz nem o que você quis dizer.
 
-Esta unidade mostra dois momentos em que a vírgula muda o sentido inteiro de uma frase: quando você chama alguém diretamente pelo nome, e quando você usa "não" para corrigir alguma coisa. Dois casos que aparecem o tempo todo em mensagens, e-mails e bilhetes — e que, sem a vírgula no lugar, podem virar o oposto do que você queria dizer.`,
+Esta unidade mostra dois momentos em que a vírgula muda o sentido inteiro de uma frase: quando você chama alguém diretamente pelo nome, e quando você usa "não" para corrigir alguma coisa. Dois casos que aparecem o tempo todo em mensagens, e-mails e bilhetes. Sem a vírgula no lugar, podem virar o oposto do que você queria dizer.`,
     exemploPrático: `Exemplo prático:
 
 Marcelo é encanador. Terminou um conserto na casa de uma cliente e, antes de fechar tudo, mandou uma mensagem rápida para confirmar: "Posso liberar a água?"
 
 A cliente estava no meio de uma reunião e respondeu correndo: "Não pode liberar."
 
-Marcelo leu, achou que tinha aparecido algum problema, parou o serviço e ficou esperando uma explicação. Meia hora depois, a cliente saiu da reunião e estranhou o trabalho travado. A intenção dela tinha sido o oposto: "Não [tem nenhum problema], pode liberar." Sem a vírgula, a leitura natural virou proibição — e o Marcelo seguiu exatamente o que estava escrito.
+Marcelo leu, achou que tinha aparecido algum problema, parou o serviço e ficou esperando uma explicação. Meia hora depois, a cliente saiu da reunião e estranhou o trabalho travado. A intenção dela tinha sido o oposto: "Não [tem nenhum problema], pode liberar." Sem a vírgula, a leitura natural virou proibição. E o Marcelo seguiu exatamente o que estava escrito.
 
-"Não, pode liberar." — permissão. O "não" responde a uma preocupação que estava no ar; o que vem depois é que libera a ação.
-"Não pode liberar." — proibição. O "não" cola no verbo e bloqueia.
+"Não, pode liberar." Isso é permissão. O "não" responde a uma preocupação que estava no ar; o que vem depois é que libera a ação.
+"Não pode liberar." Isso é proibição. O "não" cola no verbo e bloqueia.
 
-Uma vírgula, dois sentidos opostos — e meia hora de serviço parado por causa dela.`,
+Uma vírgula, dois sentidos opostos. E meia hora de serviço parado por causa dela.`,
   },
 
-  curiosidade: `A palavra **vírgula** vem do latim *virgula*, que significa "pequeno galho" ou "pequena vara". Na escrita medieval, copistas usavam um traço fino para separar partes do texto — a "varinha" que ajudava o leitor a respirar e entender. Ela sobreviveu por séculos porque cumpre algo que não pode ser eliminado: entregar a intenção de quem escreveu.`,
+  curiosidade: `A palavra **vírgula** vem do latim *virgula*, que significa "pequeno galho" ou "pequena vara". Na escrita medieval, copistas usavam um traço fino para separar partes do texto. Essa "varinha" ajudava o leitor a respirar e entender. Ela sobreviveu por séculos porque cumpre algo que não pode ser eliminado: entregar a intenção de quem escreveu.`,
 
   armadilhas: [
     {
       id: "vocativo",
-      titulo: "Vocativo — chamar alguém pelo nome",
+      titulo: "Vocativo: chamar alguém pelo nome",
       textoAncora:
-        "Quando você escreve diretamente para alguém — chamando pelo nome, título ou relação —, use vírgula para separar esse chamado do resto da frase.",
+        "Quando você chama alguém diretamente pelo nome, título ou relação, use vírgula para separar esse chamado do resto da frase.",
       exemplosCertos: [
         "Carlos, pode ajudar aqui?",
         "Obrigado, dona Maria.",
@@ -72,9 +72,9 @@ Uma vírgula, dois sentidos opostos — e meia hora de serviço parado por causa
     },
     {
       id: "negacao_virgula",
-      titulo: "Não + vírgula — permissão ou proibição",
+      titulo: "Não + vírgula: permissão ou proibição",
       textoAncora:
-        'Com vírgula depois de "não", a frase contradiz ou corrige algo — sentido oposto ao de proibição.',
+        'Com vírgula depois de "não", a frase contradiz ou corrige algo. É o sentido oposto ao de proibição.',
       exemplosCertos: [
         "Não, pode entrar.",
         "Não, precisa trazer o RG.",
@@ -135,7 +135,7 @@ Uma vírgula, dois sentidos opostos — e meia hora de serviço parado por causa
     enunciado: `Escreva duas mensagens curtas (2–3 frases cada):
 1. Uma mensagem em que você chama alguém pelo nome para pedir ou avisar algo.
 2. Uma mensagem em que você usa "não" com vírgula para corrigir uma informação.
-As mensagens podem ser no contexto que você quiser — trabalho, família, vizinhos.`,
+As mensagens podem ser no contexto que você quiser: trabalho, família, vizinhos.`,
     rubrica: [
       "Vírgula usada para separar vocativo do resto da frase",
       "Vírgula após 'não' quando o sentido é de correção/permissão",
