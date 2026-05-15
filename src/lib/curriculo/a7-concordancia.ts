@@ -35,7 +35,9 @@ export const A7_CONCORDANCIA: UnidadeCurriculo = {
 
 O problema é que, na escrita, o olho às vezes trai. Numa frase mais comprida, a pessoa começa certo e o verbo escorrega para o singular no meio do caminho. Quando você fala, a frase sai de uma vez só e o erro raramente acontece. Quando você escreve, a frase fica parada na tela, e é justamente aí que o deslize aparece e fica registrado para quem vai ler.
 
-Esta unidade trabalha dois momentos em que esse escorregão é mais comum. O primeiro é o "a gente": na escrita formal, ele pede verbo no singular, mesmo quando você está falando de um grupo. O segundo é o sujeito no plural: quando são várias coisas ou várias pessoas, o verbo precisa ir junto, no plural também.`,
+Antes de tudo, uma coisa importante: não estamos dizendo que o jeito que você fala está errado. O jeito de falar de cada um funciona, todo mundo entende e está tudo certo. O que esta unidade faz é colocar mais uma ferramenta na sua mão, a forma que a escrita formal pede em mensagem de trabalho, documento, recado para quem manda. É uma habilidade que você ganha de presente, não uma correção do seu jeito de falar.
+
+Com isso em mente, esta unidade trabalha dois momentos em que essa diferença mais aparece na escrita. O primeiro é o "a gente": na escrita formal, ele pede verbo no singular, mesmo quando você está falando de um grupo. O segundo é o sujeito no plural: quando são várias coisas ou várias pessoas, o verbo precisa ir junto, no plural também.`,
     exemploPrático: `Exemplo prático:
 
 Rosana é auxiliar administrativa de uma construtora pequena. No fim da tarde, o dono pediu por mensagem um resumo do dia. Ela escreveu rápido, pelo celular, antes de sair.
@@ -54,7 +56,7 @@ A lição da Rosana é simples: o conteúdo era o mesmo nas duas mensagens. O qu
       id: "a_gente_singular",
       titulo: "A gente vai (não vão)",
       textoAncora:
-        'Quando você diz "a gente", está falando de um grupo, e por isso a tentação é colocar o verbo no plural. Mas, na escrita formal, "a gente" funciona como "ele" ou "ela": é tratado como singular. Você quer dizer "nós", mas o verbo combina com a forma da expressão, não com a quantidade de pessoas. Por isso é "a gente vai", "a gente fez", "a gente quer", sempre no singular.',
+        'Na conversa do dia a dia, tanto "a gente vai" quanto "a gente vão" andam pelo Brasil inteiro, e todo mundo entende as duas sem nenhum problema. Aqui a gente está olhando uma coisa diferente: como a escrita formal pede essa frase. Na escrita formal, "a gente" funciona como "ele" ou "ela", é tratado como singular. Você quer dizer "nós", mas, nesse jeito de escrever, o verbo combina com a forma da expressão, não com a quantidade de pessoas. Por isso, na escrita formal, é "a gente vai", "a gente fez", "a gente quer", sempre no singular.',
       exemplosCertos: [
         "A gente vai resolver isso hoje.",
         "A gente fez o relatório antes do prazo.",
@@ -70,7 +72,7 @@ A lição da Rosana é simples: o conteúdo era o mesmo nas duas mensagens. O qu
       id: "sujeito_plural",
       titulo: "Os documentos chegaram (não chegou)",
       textoAncora:
-        "Quando o sujeito está no plural, ou seja, são várias coisas ou várias pessoas, o verbo vai junto, também no plural. Em frases curtas isso é fácil de sentir. O escorregão costuma acontecer quando o sujeito está no plural mas alguma palavra perto dele está no singular e puxa o verbo para o lado errado. Volte sempre a quem está fazendo a ação: se são vários, o verbo é plural.",
+        "Quando o sujeito está no plural, ou seja, são várias coisas ou várias pessoas, o verbo vai junto, também no plural. Em frases curtas isso é fácil de sentir. O escorregão costuma acontecer quando o sujeito está no plural mas alguma palavra perto dele está no singular e puxa o verbo para o singular. Volte sempre a quem está fazendo a ação: se são vários, o verbo é plural.",
       exemplosCertos: [
         "Os documentos chegaram pela manhã.",
         "As pessoas querem uma resposta.",
@@ -158,8 +160,8 @@ Use o contexto que quiser: trabalho, escola dos filhos, compras, vizinhança.`,
   perguntasRevisao: [
     {
       slug: "rev-con-a",
-      enunciado: 'Por que "a gente vai" está certo e "a gente vão" está errado na escrita formal?',
-      gabarito: '"A gente" funciona como "ele" ou "ela" na frase, mesmo significando "nós". Por isso o verbo fica no singular.',
+      enunciado: 'Na escrita formal, qual das duas formas a gente usa: "a gente vai" ou "a gente vão"? Por quê?',
+      gabarito: 'Na escrita formal, usa-se "a gente vai", porque "a gente" funciona como "ele" ou "ela" na frase, mesmo significando "nós". Na fala do dia a dia, as duas formas circulam e são entendidas.',
       conceito: "a_gente_singular",
     },
     {
