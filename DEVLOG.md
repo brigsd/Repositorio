@@ -32,6 +32,18 @@
 ## Entradas
 
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade B.1 "Tipologias textuais", primeira unidade do Nível B, com currículo e 16 exercícios de classificação textual.
+**Arquivos alterados:**
+- `src/lib/curriculo/b1-tipologias.ts` — [NOVO] Currículo: ancoraPropósito (saber o tipo ativa o esquema correto), curiosidade sobre heterogeneidade tipológica (Marcuschi 2002), 3 armadilhas (narrar×descrever, expor×dissertar, instruir), pre/posAfericao, projetoIntegrador (escrever mesma situação em 2 tipologias).
+- `src/lib/exercicios/b1-tipologias.ts` — [NOVO] 16 exercícios: Fase 1 (ex01-05) 1 protótipo por tipologia; Fase 2 (ex06-12) pares de confusão narrar×descrever e expor×dissertar; Fase 3 (ex13-16) interleaved com todas as 5 tipologias.
+- `src/lib/exercicios/index.ts` — EXERCICIOS_B1 importado e registrado.
+- `src/app/unidade/[slug]/page.tsx` — B1_TIPOLOGIAS importado e registrado em CURRICULOS.
+- `src/app/page.tsx` — "b-1-tipologias" em UNIDADES_ATIVAS.
+**Base pedagógica:** Marcuschi 2002 (tipos vs. gêneros); Rumelhart 1980/Kintsch 1998 (formal schemata, g=0.25-0.57); Kornell & Bjork 2008 (protótipos bloqueados → interleaved); NNGroup (trechos curtos para leitores iniciantes). Confusões documentadas: narrar×descrever (sequência temporal vs. estado estático) e expor×dissertar (informação neutra vs. tese autoral).
+**Estado atual:** B.1 completa e ativa. Nível A integralmente publicado (A.1–A.10). Nível B iniciado.
+**Próximo passo sugerido:** Desenvolvver B.2 "Ideia principal e secundárias" com super pacote de pesquisa primeiro.
+
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade A.10 "Projeto Integrador do Nível A", unidade capstone que fecha o Nível A com prática intercalada de todos os 9 tópicos.
 **Arquivos alterados:**
 - `src/lib/curriculo/a10-projeto.ts` — [NOVO] Currículo: âncora celebratória ("você chegou à última unidade"), curiosidade sobre prática intercalada, preAfericao (A.9/A.7/A.8), tiposExercicio (lacuna_unica + identificar_erro), projetoIntegrador completo com rubrica de 6 itens, posAfericao e perguntasRevisao.

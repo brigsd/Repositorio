@@ -18,6 +18,7 @@ const UNIDADES_ATIVAS = new Set([
   "a-8-concordancia-nominal",
   "a-9-regencia",
   "a-10-projeto",
+  "b-1-tipologias",
 ]);
 
 export const dynamic = "force-dynamic";
