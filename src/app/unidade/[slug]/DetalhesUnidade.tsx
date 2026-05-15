@@ -38,7 +38,7 @@ export function DetalhesUnidade({ armadilhas, exemploPratico }: Props) {
       >
         <div>
           <p className="text-sm font-semibold text-stone-900">
-            O que você vai aprender
+            Ver um exemplo prático
           </p>
           <p className="mt-0.5 text-xs text-stone-500">
             {armadilhas.length} tópicos nesta unidade

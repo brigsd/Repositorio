@@ -101,16 +101,7 @@ export default async function UnidadePage({ params }: Props) {
                 <AncoraProposito corpo={proposito} curiosidade={curiosidade} />
               )}
 
-              {/* ── Camada 2: CTA ────────────────────────────────────── */}
-              <Link
-                href={`/unidade/${slug}/exercicio`}
-                className="flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-stone-800"
-              >
-                Começar exercícios
-                <span aria-hidden="true">→</span>
-              </Link>
-
-              {/* ── Camada 3: Detalhes sob demanda ───────────────────── */}
+              {/* ── Camada 2: Detalhes sob demanda (antes do CTA) ───────── */}
               {armadilhas.length > 0 && (
                 <DetalhesUnidade
                   armadilhas={armadilhas.map((a) => ({
@@ -120,6 +111,15 @@ export default async function UnidadePage({ params }: Props) {
                   exemploPratico={exemploPratico}
                 />
               )}
+
+              {/* ── Camada 3: CTA ────────────────────────────────────── */}
+              <Link
+                href={`/unidade/${slug}/exercicio`}
+                className="flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-stone-800"
+              >
+                Começar exercícios
+                <span aria-hidden="true">→</span>
+              </Link>
             </>
           )}
         </div>
