@@ -32,7 +32,27 @@
 ## Entradas
 
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
-**Resumo:** Correção factual profunda da A.7: Caso 1 trocado de "a gente" (premissa linguisticamente furada) para "nós" com/sem -mos (variação real e documentada).
+**Resumo:** Criação completa da Unidade A.8 "Concordância Nominal Essencial", com super pacote de pesquisa aplicado antes de qualquer escrita de conteúdo.
+**Arquivos alterados:**
+- `src/lib/curriculo/a8-concordancia-nominal.ts` — [NOVO] Currículo: âncora de propósito (Jorge, recepcionista), curiosidade sobre pesquisa UFRJ de posição linear, 2 armadilhas: `substantivo_plural` e `adjetivo_plural`.
+- `src/lib/exercicios/a8-concordancia-nominal.ts` — [NOVO] 16 exercícios `lacuna_unica`: Fase 1 (ex01-06, substantivo_plural blocked), Fase 2 (ex07-12, adjetivo_plural blocked), Fase 3 (ex13-16, interleaved).
+- `src/lib/exercicios/index.ts` — EXERCICIOS_A8 importado e registrado em REGISTRO.
+- `src/app/page.tsx` — "a-8-concordancia-nominal" adicionado ao UNIDADES_ATIVAS.
+- `src/app/unidade/[slug]/page.tsx` — A8_CONCORDANCIA_NOMINAL importado e adicionado ao CURRICULOS.
+**Super Pacote aplicado (4 frentes) — ANTES de escrever conteúdo:**
+- Sociolinguística peer-reviewed (Scherre 1988 UFRJ; Naro & Scherre 2007): artigo retém plural ~99,7%; substantivo e adjetivo mostram marcação variável — "os livro novo" é sistemático, não erro aleatório. Armadilhas baseadas nessa evidência.
+- Sweller (CLT): número e gênero não são ensinados juntos; esta unidade cobre só número (plural) no SN.
+- Bjork/Rohrer + Hwang 2025: blocked (substantivo) → blocked (adjetivo) → interleaved para discriminação.
+- Labov/Bandura: forma vernácula "os documento" validada explicitamente; escrita formal apresentada como repertório adicional.
+**Decisões tomadas:**
+- Slug correto confirmado no seed.ts antes de qualquer código: "a-8-concordancia-nominal".
+- Não há erros de TypeScript nos novos arquivos (tsc --noEmit --skipLibCheck sem output).
+- Nenhum em-dash em texto visível ao aluno (regra D-01 aplicada).
+**Estado atual:** A.8 pronta. 16 exercícios, typecheck limpo, integrada em index.ts, page.tsx e unidade/[slug]/page.tsx.
+**Próximo passo sugerido:** Testar A.8 no browser (npm run dev); avaliar desenvolvimento de A.9 "Regência" com o mesmo processo de verificação factual prévia.
+
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Correção factual profunda da A.7: Caso 1 trocado de "a gente" (premissa linguisticamente furada) para "nós" com/sem -mos (variação real e documentada). Caso 1 trocado de "a gente" (premissa linguisticamente furada) para "nós" com/sem -mos (variação real e documentada).
 **Arquivos alterados:**
 - `src/lib/curriculo/a7-concordancia.ts` — armadilha `a_gente_singular` → `nos_mos`; corpo, exemploPrático (Rosana com "nós fechou/fechamos"), curiosidade (origem latina do -mos), pré/pós-aferição, projetoIntegrador e perguntasRevisao reescritos.
 - `src/lib/exercicios/a7-concordancia.ts` — ex1-6, ex13, ex15 reescritos para `nos_mos` ("nós vamos" vs "nós vai"); cabeçalho e comentários de fase atualizados. Ex7-12, ex14, ex16 (sujeito_plural) intactos.
