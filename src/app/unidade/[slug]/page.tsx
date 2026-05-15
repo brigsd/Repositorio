@@ -40,7 +40,7 @@ export default async function UnidadePage({ params }: Props) {
     "a-4-outros-sinais": A4_PONTUACAO,
     "a-5-acentos": A5_ACENTOS,
     "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
-    "a-7-concordancia": A7_CONCORDANCIA,
+    "a-7-concordancia-verbal": A7_CONCORDANCIA,
   };
   const curriculo = CURRICULOS[slug] ?? null;
 

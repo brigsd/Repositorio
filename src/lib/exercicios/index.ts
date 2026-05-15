@@ -25,7 +25,7 @@ const REGISTRO: Record<string, ExercicioGerado[]> = {
   "a-3-virgula": EXERCICIOS_A3,
   "a-5-acentos": EXERCICIOS_A5,
   "a-6-palavras-armadilha": EXERCICIOS_A6,
-  "a-7-concordancia": EXERCICIOS_A7,
+  "a-7-concordancia-verbal": EXERCICIOS_A7,
 };
 
 const REGISTRO_REESCRITA: Record<string, ExercicioReescrita[]> = {

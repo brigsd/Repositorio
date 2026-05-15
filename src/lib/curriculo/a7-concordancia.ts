@@ -23,7 +23,7 @@
 import type { UnidadeCurriculo } from "./tipos";
 
 export const A7_CONCORDANCIA: UnidadeCurriculo = {
-  slug: "a-7-concordancia",
+  slug: "a-7-concordancia-verbal",
   titulo: "O verbo combina com quem faz a ação",
   nivel: "A",
   numero: 7,
