@@ -32,6 +32,20 @@
 ## Entradas
 
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Correção factual profunda da A.7: Caso 1 trocado de "a gente" (premissa linguisticamente furada) para "nós" com/sem -mos (variação real e documentada).
+**Arquivos alterados:**
+- `src/lib/curriculo/a7-concordancia.ts` — armadilha `a_gente_singular` → `nos_mos`; corpo, exemploPrático (Rosana com "nós fechou/fechamos"), curiosidade (origem latina do -mos), pré/pós-aferição, projetoIntegrador e perguntasRevisao reescritos.
+- `src/lib/exercicios/a7-concordancia.ts` — ex1-6, ex13, ex15 reescritos para `nos_mos` ("nós vamos" vs "nós vai"); cabeçalho e comentários de fase atualizados. Ex7-12, ex14, ex16 (sujeito_plural) intactos.
+**Por que mudou (super pacote — verificação factual):**
+- Pesquisa peer-reviewed (Naro & Scherre; Cambridge LVC; SciELO DELTA): "a gente vai" (3ª sing.) é a forma DOMINANTE na fala E na escrita, não havendo "armadilha" real; "a gente vão" (3ª pl.) é a MAIS RARA das três variantes, contradizendo o texto que afirmava circular livremente.
+- A dificuldade de concordância genuína e documentada de adultos de baixa escolaridade é o "nós" SEM -mos ("nós vai", "nós foi"), variante vernacular sistemática e estigmatizada — agora o Caso 1.
+**Decisões tomadas:**
+- Framing Labov/bidialetalismo mantido e agora factualmente correto: a fala vernacular é validada explicitamente; a forma com -mos é apresentada como ferramenta adicional para escrita formal, nunca como conserto.
+- Estrutura blocked→interleaved preservada (validada por Hwang 2025, Language Learning, para baixa proficiência). Slugs de exercício mantidos; só pré/pós-aferição mudaram de slug (conceito mudou).
+**Estado atual:** A.7 com base linguística sólida. Caso 1 = nós+-mos; Caso 2 = sujeito plural. 16 exercícios, typecheck limpo nos arquivos da unidade.
+**Próximo passo sugerido:** Testar A.7 no browser (npm run dev); avaliar aplicar o mesmo rigor de verificação factual às demais unidades de gramática.
+
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade A.7 "O verbo combina com quem faz a ação" (Concordância Verbal), com super pacote de pesquisa aplicado (4 frentes) e conteúdo gerado pelo Opus 4.7.
 **Arquivos alterados:**
 - `src/lib/curriculo/a7-concordancia.ts` — [NOVO] Currículo com âncora de propósito (Rosana, auxiliar administrativa), curiosidade sobre "a gente" e 2 armadilhas: `a_gente_singular` e `sujeito_plural`.

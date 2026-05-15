@@ -3,8 +3,9 @@
  *
  * Estrutura (super pacote — 2026-05-15):
  *
- * Fase 1 (Ex 1–6, blocked): armadilha a_gente_singular
- *   Fácil (verbo isolado) → difícil (palavra-atratora no meio).
+ * Fase 1 (Ex 1–6, blocked): armadilha nos_mos
+ *   "nós" sem -mos (fala, legítimo) vs com -mos (escrita formal).
+ *   Base factual: Naro & Scherre — variação real de 1ª pessoa do plural.
  *
  * Fase 2 (Ex 7–12, blocked): armadilha sujeito_plural
  *   Mesmo padrão. Ex 11/12 introduzem palavra atratora singular perto do verbo.
@@ -20,22 +21,22 @@ import type { ExercicioGerado } from "./tipos";
 
 export const EXERCICIOS_A7: ExercicioGerado[] = [
 
-  // ─── Fase 1: a_gente_singular (Ex 1–6, blocked) ──────────────────────────
+  // ─── Fase 1: nos_mos (Ex 1–6, blocked) ───────────────────────────────────
 
   {
     slug: "a7-ex1",
     tipo: "lacuna_unica",
     enunciado:
-      'Você está mandando uma mensagem para o chefe sobre o serviço de hoje. Complete: "A gente ___ terminar tudo antes das cinco."',
-    opcoes: ["vai", "vão"],
-    gabarito: "vai",
-    armadilhaId: "a_gente_singular",
+      'Você está mandando uma mensagem para o chefe sobre o serviço de hoje. Complete: "Nós ___ terminar tudo antes das cinco."',
+    opcoes: ["vamos", "vai"],
+    gabarito: "vamos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      'O verbo **vai** combina com "a gente", que na escrita formal funciona como "ele" ou "ela". Por isso ele fica no singular.\n\nA opção "vão" pareceria certa porque você está falando de um grupo, mas "a gente" não pede o verbo no plural, mesmo querendo dizer "nós".\n\nMacete: troque "a gente" por "ele" na cabeça. "Ele vai terminar" soa natural. É esse o verbo que você usa.',
+      'O finalzinho **vamos** mostra na escrita que somos nós, mais de uma pessoa. É essa marca no fim do verbo que a escrita formal espera quando o sujeito é "nós".\n\nDizer "nós vai" é o jeito de muita gente e todo mundo entende numa boa. Numa mensagem de trabalho como essa, a escrita formal pede a forma com "-mos".\n\nMacete: se dá para trocar por "eu vou", é uma pessoa só. Se é "nós", a escrita formal pede o "-mos" no fim: "vamos".',
     feedbackErro: [
-      'Experimente trocar "a gente" por "ele" e leia a frase de novo. Qual verbo combina: "ele vai" ou "ele vão"?',
-      'Mesmo que "a gente" signifique um grupo, na escrita ela se comporta como uma pessoa só, igual a "ele" ou "ela". Pensando assim, qual das duas formas combina?',
-      'A forma é **"vai"**. "A gente" pede verbo no singular na escrita formal, do mesmo jeito que "ele vai". Por isso: "A gente vai terminar tudo antes das cinco."',
+      'Quantas pessoas vão terminar o serviço: você sozinho ou vocês? Qual das duas formas mostra na escrita que são mais de um?',
+      'Numa mensagem de trabalho, quando o sujeito é "nós", o verbo costuma ganhar o finalzinho "-mos". Olhe as duas opções: qual delas tem esse pedacinho no fim?',
+      'A escrita formal pede **"vamos"**. Quando o sujeito é "nós", o verbo leva o "-mos" no fim: "Nós vamos terminar tudo antes das cinco."',
     ],
   },
 
@@ -43,16 +44,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex2",
     tipo: "lacuna_unica",
     enunciado:
-      'Você combinou uma tarefa com um colega e está confirmando por escrito. Complete: "A gente ___ os dois jeitos e escolhe o melhor."',
-    opcoes: ["testa", "testam"],
-    gabarito: "testa",
-    armadilhaId: "a_gente_singular",
+      'Você combinou uma tarefa com um colega e está confirmando por escrito. Complete: "Nós ___ ao depósito de manhã e voltamos logo."',
+    opcoes: ["fomos", "foi"],
+    gabarito: "fomos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      'O verbo **testa** combina com "a gente", que funciona como "ele" ou "ela" na escrita. Fica no singular.\n\n"Testam" daria a impressão de concordar com o grupo de pessoas, mas "a gente" não puxa o verbo para o plural, mesmo sendo você e o colega.\n\nMacete: "ele testa" soa certo, "ele testam" não. É "testa".',
+      'O finalzinho **fomos** marca na escrita que foram vocês dois, mais de uma pessoa. É essa marca que a escrita formal espera com o sujeito "nós".\n\n"Nós foi" é o jeito de falar de muita gente e funciona bem na conversa. Num recado de trabalho, a escrita formal pede a forma com "-mos".\n\nMacete: se dá para trocar por "eu fui", é uma pessoa só. Se é "nós", a escrita formal pede o "-mos": "fomos".',
     feedbackErro: [
-      'Troque "a gente" por "ele" e teste no ouvido: "ele testa" ou "ele testam"?',
-      '"A gente" se comporta como uma pessoa só na frase, igual a "ele". Qual verbo combina com essa forma?',
-      'A forma é **"testa"**. "A gente" pede o singular: "A gente testa os dois jeitos e escolhe o melhor."',
+      'Foi você sozinho ao depósito ou foram vocês dois? Qual forma mostra na escrita que foram mais de um?',
+      'Quando o sujeito é "nós", na escrita formal o verbo costuma terminar em "-mos". Qual das duas opções tem esse finalzinho?',
+      'A escrita formal pede **"fomos"**. Com o sujeito "nós", o verbo leva o "-mos" no fim: "Nós fomos ao depósito de manhã e voltamos logo."',
     ],
   },
 
@@ -60,16 +61,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex3",
     tipo: "lacuna_unica",
     enunciado:
-      'Numa reunião rápida da equipe, você anota o que ficou combinado. Complete: "A gente ___ resolver isso até sexta."',
-    opcoes: ["precisa", "precisam"],
-    gabarito: "precisa",
-    armadilhaId: "a_gente_singular",
+      'Numa reunião rápida da equipe, você anota o que ficou combinado. Complete: "Nós ___ resolver isso até sexta."',
+    opcoes: ["precisamos", "precisa"],
+    gabarito: "precisamos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Precisa** combina com "a gente", que na escrita formal vale como "ele" ou "ela". Por isso o singular.\n\n"Precisam" parece encaixar porque é a equipe inteira, mas a expressão "a gente" não acompanha a quantidade de gente, e sim a sua forma.\n\nMacete: "ele precisa resolver". Esse é o som certo. É "precisa".',
+      'O finalzinho **precisamos** mostra na escrita que somos nós, a equipe inteira, mais de um. É essa marca que a escrita formal espera com "nós".\n\n"Nós precisa" é o jeito de falar de muita gente e todo mundo entende sem esforço. Numa anotação de trabalho, a escrita formal pede a forma com "-mos".\n\nMacete: se dá para trocar por "eu preciso", é só um. Se é "nós", a escrita formal pede o "-mos" no fim: "precisamos".',
     feedbackErro: [
-      'Se você trocar "a gente" por "ele", fica "ele precisa" ou "ele precisam"?',
-      'Mesmo sendo a equipe toda, "a gente" funciona como uma pessoa só na frase. Qual forma combina com isso?',
-      'A forma é **"precisa"**. "A gente" pede o singular: "A gente precisa resolver isso até sexta."',
+      'Quem precisa resolver isso: você sozinho ou a equipe toda? Qual forma mostra na escrita que são vários?',
+      'Com o sujeito "nós", na escrita formal o verbo ganha o finalzinho "-mos". Qual das duas opções tem esse pedacinho no fim?',
+      'A escrita formal pede **"precisamos"**. Com o sujeito "nós", o verbo leva o "-mos": "Nós precisamos resolver isso até sexta."',
     ],
   },
 
@@ -77,16 +78,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex4",
     tipo: "lacuna_unica",
     enunciado:
-      'Você vai ao banco com um colega resolver uma pendência da empresa e avisa o setor. Complete: "A gente ___ ao banco agora e volta logo."',
-    opcoes: ["vai", "vamos"],
-    gabarito: "vai",
-    armadilhaId: "a_gente_singular",
+      'Você está avisando seu setor que vocês vão sair para uma tarefa externa. Complete: "Nós ___ ao banco agora e voltamos logo."',
+    opcoes: ["vamos", "vai"],
+    gabarito: "vamos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Vai** combina com "a gente". Apesar de você querer dizer "nós vamos", a escrita formal trata "a gente" como "ele" ou "ela".\n\n"Vamos" é a forma que combina com "nós", e é fácil cair nela porque o sentido é "nós". Mas a palavra escrita é "a gente", e ela pede o singular.\n\nMacete: o sentido é "nós", a forma é "ele". O verbo segue a forma: "vai".',
+      'O finalzinho **vamos** marca na escrita que somos nós, mais de uma pessoa. É essa marca que a escrita formal espera no aviso ao setor.\n\nDizer "nós vai" é o jeito de muita gente e a mensagem chega tranquila na conversa. Num aviso escrito de trabalho, a escrita formal pede a forma com "-mos".\n\nMacete: se dá para trocar por "eu vou", é uma pessoa só. Se é "nós", a escrita formal pede o "-mos": "vamos".',
     feedbackErro: [
-      'O sentido é "nós", mas a palavra escrita é "a gente". Trocando por "ele": "ele vai" ou "ele vamos"?',
-      'Esse é o pulo do gato: "a gente" quer dizer "nós", mas se comporta como "ele". O verbo combina com a forma, não com o sentido. Qual é a forma certa?',
-      'A forma é **"vai"**. Mesmo significando "nós", "a gente" pede o singular: "A gente vai ao banco agora e volta logo."',
+      'Vai você sozinho ao banco ou vão vocês? Qual das formas mostra na escrita que são mais de um?',
+      'Num aviso de trabalho, quando o sujeito é "nós", o verbo costuma terminar em "-mos". Qual das duas opções tem esse finalzinho?',
+      'A escrita formal pede **"vamos"**. Com o sujeito "nós", o verbo leva o "-mos" no fim: "Nós vamos ao banco agora e voltamos logo."',
     ],
   },
 
@@ -94,16 +95,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex5",
     tipo: "lacuna_unica",
     enunciado:
-      'Você está entregando um relatório atrasado e explica por escrito o que aconteceu. Complete: "A gente ___ o relatório ontem, mas o sistema caiu."',
-    opcoes: ["terminou", "terminamos"],
-    gabarito: "terminou",
-    armadilhaId: "a_gente_singular",
+      'Você está entregando um relatório atrasado e explica por escrito o que aconteceu. Complete: "Nós ___ o relatório ontem, mas o sistema caiu."',
+    opcoes: ["terminamos", "terminou"],
+    gabarito: "terminamos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Terminou** combina com "a gente" no passado também. Ela continua valendo como "ele" ou "ela", mesmo quando a ação já aconteceu.\n\n"Terminamos" é a forma de "nós", e o sentido aqui é mesmo "nós". Por isso ela atrai. Mas a palavra escrita continua sendo "a gente", e ela pede o singular.\n\nMacete: "ele terminou" soa certo. No passado, a regra é a mesma: "terminou".',
+      'O finalzinho **terminamos** mostra na escrita que fomos nós, mais de um, e funciona também no passado. É essa marca que a escrita formal espera com "nós".\n\n"Nós terminou" é o jeito de falar de muita gente e todo mundo entende numa boa. Numa explicação escrita para quem manda, a escrita formal pede a forma com "-mos".\n\nMacete: se dá para trocar por "eu terminei", é só um. Se é "nós", a escrita formal pede o "-mos" no fim, mesmo no passado: "terminamos".',
     feedbackErro: [
-      'No passado vale a mesma lógica. Troque por "ele": "ele terminou" ou "ele terminamos"?',
-      '"Terminamos" combina com "nós", mas a palavra na frase é "a gente", que se comporta como "ele". Qual forma combina com "a gente"?',
-      'A forma é **"terminou"**. "A gente" pede o singular também no passado: "A gente terminou o relatório ontem, mas o sistema caiu."',
+      'Quem terminou o relatório: você sozinho ou vocês? No passado vale a mesma ideia. Qual forma mostra que foram mais de um?',
+      'Mesmo no passado, com o sujeito "nós" a escrita formal costuma usar o finalzinho "-mos". Qual das duas opções tem esse pedacinho?',
+      'A escrita formal pede **"terminamos"**. Com o sujeito "nós", o verbo leva o "-mos" também no passado: "Nós terminamos o relatório ontem, mas o sistema caiu."',
     ],
   },
 
@@ -111,16 +112,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex6",
     tipo: "lacuna_unica",
     enunciado:
-      'Você vai pedir uma folga por escrito e quer explicar o motivo com cuidado. Complete: "Se a gente ___ adiantar o serviço hoje, dá para folgar na sexta."',
-    opcoes: ["conseguir", "conseguirmos"],
-    gabarito: "conseguir",
-    armadilhaId: "a_gente_singular",
+      'Você vai pedir uma folga por escrito e quer explicar o motivo com cuidado. Complete: "Se nós ___ adiantar o serviço hoje, dá para folgar na sexta."',
+    opcoes: ["conseguirmos", "conseguir"],
+    gabarito: "conseguirmos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Conseguir** combina com "a gente" mesmo nessa frase mais comprida, com "se" no começo. Ela continua valendo como "ele" ou "ela".\n\n"Conseguirmos" é a forma de "nós", e em frases longas é ainda mais fácil escorregar para ela. Mas a palavra escrita não mudou: continua "a gente", no singular.\n\nMacete: por mais comprida que seja a frase, volte ao "a gente" e troque por "ele": "se ele conseguir". É "conseguir".',
+      'O finalzinho **conseguirmos** mostra na escrita que somos nós, mais de um, mesmo nessa frase mais comprida que começa com "se". É essa marca que a escrita formal espera.\n\n"Se nós conseguir" é o jeito de falar de muita gente e a frase é entendida sem nenhum esforço. Num pedido escrito para quem manda, a escrita formal pede a forma com "-mos".\n\nMacete: por mais comprida que seja a frase, volte ao "nós". Se não dá para trocar por "eu", é "nós", e a escrita formal pede o "-mos" no fim: "conseguirmos".',
     feedbackErro: [
-      'A frase é mais longa, mas a regra não muda. Troque "a gente" por "ele": "se ele conseguir" ou "se ele conseguirmos"?',
-      'Em frases compridas o "nós" puxa mais forte, mas a palavra ainda é "a gente", que se comporta como "ele". Qual forma combina?',
-      'A forma é **"conseguir"**. "A gente" pede o singular mesmo em frase longa: "Se a gente conseguir adiantar o serviço hoje, dá para folgar na sexta."',
+      'A frase é mais longa, mas a ideia não muda. Quem vai adiantar o serviço: você sozinho ou vocês? Qual forma mostra que são mais de um?',
+      'Em frases compridas é mais fácil escorregar, mas o sujeito ainda é "nós". Na escrita formal, qual das duas opções tem o finalzinho "-mos"?',
+      'A escrita formal pede **"conseguirmos"**. Com o sujeito "nós", o verbo leva o "-mos" mesmo em frase longa: "Se nós conseguirmos adiantar o serviço hoje, dá para folgar na sexta."',
     ],
   },
 
@@ -234,16 +235,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex13",
     tipo: "lacuna_unica",
     enunciado:
-      'Você está fechando o dia por mensagem para o chefe. Complete: "A gente ___ tudo o que estava na lista."',
-    opcoes: ["fez", "fizemos"],
-    gabarito: "fez",
-    armadilhaId: "a_gente_singular",
+      'Você está fechando o dia por mensagem para o chefe. Complete: "Nós ___ tudo o que estava na lista."',
+    opcoes: ["fizemos", "fez"],
+    gabarito: "fizemos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Fez** combina com "a gente", que na escrita formal vale como "ele" ou "ela", também no passado.\n\n"Fizemos" é a forma de "nós", e o sentido aqui é "nós". Por isso ela atrai. Mas a palavra escrita é "a gente", que pede o singular.\n\nMacete: pare e pergunte qual é o sujeito. Se é "a gente", troque por "ele": "ele fez". É "fez".',
+      'O finalzinho **fizemos** mostra na escrita que fomos nós, mais de uma pessoa, também no passado. É essa marca que a escrita formal espera com o sujeito "nós".\n\n"Nós fez" é o jeito de falar de muita gente e todo mundo entende na hora. Numa mensagem de fechamento de dia para o chefe, a escrita formal pede a forma com "-mos".\n\nMacete: pare e veja quem é o sujeito. Se não dá para trocar por "eu fiz", é "nós", e a escrita formal pede o "-mos": "fizemos".',
     feedbackErro: [
-      'Qual é o sujeito da frase? Se for "a gente", troque por "ele": "ele fez" ou "ele fizemos"?',
-      'O sujeito é "a gente", que se comporta como "ele", não como "nós". Qual forma combina com "a gente"?',
-      'A forma é **"fez"**. "A gente" pede o singular: "A gente fez tudo o que estava na lista."',
+      'Qual é o sujeito da frase e quantos são? Fez você sozinho ou foram vocês? Qual forma mostra que são mais de um?',
+      'O sujeito é "nós". Na escrita formal, com "nós", o verbo costuma terminar em "-mos". Qual das duas opções tem esse finalzinho?',
+      'A escrita formal pede **"fizemos"**. Com o sujeito "nós", o verbo leva o "-mos", também no passado: "Nós fizemos tudo o que estava na lista."',
     ],
   },
 
@@ -268,16 +269,16 @@ export const EXERCICIOS_A7: ExercicioGerado[] = [
     slug: "a7-ex15",
     tipo: "lacuna_unica",
     enunciado:
-      'Você está combinando com um colega como vão dividir uma tarefa e registra por escrito. Complete: "A gente ___ os dois jeitos antes de decidir."',
-    opcoes: ["compara", "comparam"],
-    gabarito: "compara",
-    armadilhaId: "a_gente_singular",
+      'Você está combinando com um colega como vão dividir uma tarefa e registra por escrito. Complete: "Nós ___ os dois jeitos antes de decidir."',
+    opcoes: ["comparamos", "compara"],
+    gabarito: "comparamos",
+    armadilhaId: "nos_mos",
     feedbackAcerto:
-      '**Compara** combina com "a gente", que se comporta como "ele" ou "ela" na escrita formal.\n\n"Comparam" parece combinar com o grupo, você e o colega, mas "a gente" não acompanha a quantidade de pessoas, e sim a sua forma, que é singular.\n\nMacete: antes de escolher o verbo, identifique o sujeito. "A gente" vira "ele": "ele compara". É "compara".',
+      'O finalzinho **comparamos** mostra na escrita que somos nós, você e o colega, mais de um. É essa marca que a escrita formal espera com o sujeito "nós".\n\n"Nós compara" é o jeito de falar de muita gente e a ideia chega clara na conversa. Num registro escrito do que foi combinado, a escrita formal pede a forma com "-mos".\n\nMacete: antes de escolher, identifique o sujeito. Se é "nós" e não dá para trocar por "eu", a escrita formal pede o "-mos": "comparamos".',
     feedbackErro: [
-      'Pare e veja o sujeito: é "a gente". Trocando por "ele": "ele compara" ou "ele comparam"?',
-      'Mesmo sendo você e o colega, "a gente" se comporta como uma pessoa só. Qual forma combina com isso?',
-      'A forma é **"compara"**. "A gente" pede o singular: "A gente compara os dois jeitos antes de decidir."',
+      'Pare e veja o sujeito: quem vai comparar os jeitos, você sozinho ou você e o colega? Qual forma mostra que são mais de um?',
+      'O sujeito é "nós", você e o colega. Na escrita formal, com "nós", o verbo ganha o finalzinho "-mos". Qual das duas opções tem esse pedacinho?',
+      'A escrita formal pede **"comparamos"**. Com o sujeito "nós", o verbo leva o "-mos": "Nós comparamos os dois jeitos antes de decidir."',
     ],
   },
 
