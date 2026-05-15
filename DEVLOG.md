@@ -32,6 +32,26 @@
 ## Entradas
 
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade A.10 "Projeto Integrador do Nível A", unidade capstone que fecha o Nível A com prática intercalada de todos os 9 tópicos.
+**Arquivos alterados:**
+- `src/lib/curriculo/a10-projeto.ts` — [NOVO] Currículo: âncora celebratória ("você chegou à última unidade"), curiosidade sobre prática intercalada, preAfericao (A.9/A.7/A.8), tiposExercicio (lacuna_unica + identificar_erro), projetoIntegrador completo com rubrica de 6 itens, posAfericao e perguntasRevisao.
+- `src/lib/exercicios/a10-projeto.ts` — [NOVO] 16 exercícios intercalados: A.2 registro (1), A.3 vírgula (1), A.4 pontuação (1), A.5 acentos (1), A.6 palavras (2), A.7 verbal (3), A.8 nominal (4), A.9 regência (3). Tipos: lacuna_unica (13) + identificar_erro (3).
+- `src/lib/exercicios/index.ts` — EXERCICIOS_A10 importado e registrado.
+- `src/app/page.tsx` — "a-10-projeto" em UNIDADES_ATIVAS.
+- `src/app/unidade/[slug]/page.tsx` — A10_PROJETO importado e em CURRICULOS.
+**Super Pacote aplicado (4 frentes):**
+- UbD/Wiggins + Knowles: tarefa autêntica única (mensagem completa) com rubrica visível antecipadamente; adultos precisam ver o critério antes da tarefa.
+- Kornell & Bjork (2008) + Roediger: todos os 9 tópicos intercalados, pesos maiores para A.7/A.8/A.9 (mais recentes e mais difíceis). Interleaving sobre conjunto completo > blocked.
+- Zeigarnik + Bandura: fechamento de nível nomeado como conquista, não como teste. Feedback celebra domínio específico. projetoIntegrador é "demonstração para você mesmo".
+- NN/G: feedback imediato para mapeamentos arbitrários (acentos, palavras); 2 opções mantidas; identificar_erro para exercícios de reconhecimento de frase inteira.
+**Decisões tomadas:**
+- Slug confirmado: "a-10-projeto". Typecheck limpo.
+- Usados dois tipos de exercício na mesma unidade (lacuna_unica e identificar_erro) — ambos válidos no enum ExercicioGerado.tipo.
+- Nenhum em-dash em texto visível (D-01). Conteúdo novo zero: revisão pura.
+**Estado atual:** Nível A completo (A.1 a A.10). 10 unidades ativas, typecheck limpo nos arquivos das unidades.
+**Próximo passo sugerido:** Testar A.10 no browser (npm run dev) e avaliar desenvolvimento do Nível B.
+
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade A.9 "Regência: tropeços clássicos", com super pacote aplicado ANTES do conteúdo e filtro antimito rigoroso.
 **Arquivos alterados:**
 - `src/lib/curriculo/a9-regencia.ts` — [NOVO] Currículo: âncora (Vera, técnica de manutenção), curiosidade (origem antiga do "a", recuo na fala), 2 armadilhas: `ir_a` e `chegar_a`.
