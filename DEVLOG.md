@@ -31,6 +31,26 @@
 
 ## Entradas
 
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade A.7 "O verbo combina com quem faz a ação" (Concordância Verbal), com super pacote de pesquisa aplicado (4 frentes) e conteúdo gerado pelo Opus 4.7.
+**Arquivos alterados:**
+- `src/lib/curriculo/a7-concordancia.ts` — [NOVO] Currículo com âncora de propósito (Rosana, auxiliar administrativa), curiosidade sobre "a gente" e 2 armadilhas: `a_gente_singular` e `sujeito_plural`.
+- `src/lib/exercicios/a7-concordancia.ts` — [NOVO] 16 exercícios tipo `lacuna_unica`: Fase 1 (ex1-6, a_gente blocked), Fase 2 (ex7-12, sujeito_plural blocked), Fase 3 (ex13-16, interleaved). Progressão fácil para difícil com palavra-atratora nos exercícios finais de cada fase.
+- `src/lib/exercicios/index.ts` — EXERCICIOS_A7 importado e registrado em REGISTRO.
+- `src/app/page.tsx` — "a-7-concordancia" adicionado ao UNIDADES_ATIVAS.
+- `src/app/unidade/[slug]/page.tsx` — A7_CONCORDANCIA importado e adicionado ao CURRICULOS.
+**Super Pacote aplicado (4 frentes convergentes):**
+- ERIC/Harvard: análise contrastiva (certo vs. errado em contexto real) supera memorização de regras para adultos
+- Bjork/Rohrer: scaffolding blocked (fácil para difícil) + Fase 3 interleaved força discriminação entre os dois casos
+- Bandura: mastery first, casos simples antes dos com palavra-atratora; feedbacks no efeito comunicativo, nunca na pessoa
+- Nielsen Norman: lacuna_unica com 2 opções (recognition > recall), frases curtas e contextos plausíveis
+**Decisões tomadas:**
+- Dois casos apenas (Sweller CLT): "a gente" + singular e sujeito plural + verbo plural. Um princípio por fase.
+- Palavra-atratora introduzida nos ex11, ex12 e ex16: a palavra singular perto do verbo que "puxa" para o erro. Exercícios finais testam se o aluno aprendeu a ignorar o ruído e voltar ao sujeito real.
+- Conteúdo textual gerado pelo Opus 4.7 (conforme dica do curador); estrutura TypeScript e integração por Sonnet 4.6.
+**Estado atual:** 7 unidades ativas (A.1 a A.7). A.7 com currículo completo e 16 exercícios interativos.
+**Próximo passo sugerido:** Testar localmente a A.7 (npm run dev), depois avançar para A.8 ou iniciar o sistema de revisão espaçada (spaced repetition).
+
 ### 2026-05-14 21:56 — Antigravity — local
 **Resumo:** Inversão de prioridade de IA (DeepSeek como principal, Claude como fallback), nova regra dura de prompt contra travessões e adoção de Chain of Thought no output JSON.
 **Arquivos alterados:**

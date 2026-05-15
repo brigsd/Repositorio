@@ -8,6 +8,7 @@ import { A3_VIRGULA } from "@/lib/curriculo/a3-virgula";
 import { A4_PONTUACAO } from "@/lib/curriculo/a4-pontuacao";
 import { A5_ACENTOS } from "@/lib/curriculo/a5-acentos";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
+import { A7_CONCORDANCIA } from "@/lib/curriculo/a7-concordancia";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
 import { DetalhesUnidade } from "./DetalhesUnidade";
@@ -39,6 +40,7 @@ export default async function UnidadePage({ params }: Props) {
     "a-4-outros-sinais": A4_PONTUACAO,
     "a-5-acentos": A5_ACENTOS,
     "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
+    "a-7-concordancia": A7_CONCORDANCIA,
   };
   const curriculo = CURRICULOS[slug] ?? null;
 
