@@ -28,6 +28,10 @@ export default function AdminPage() {
   const [mensagem, setMensagem] = useState("");
   const [erro, setErro] = useState("");
   const [carregando, setCarregando] = useState(false);
+  const [editandoId, setEditandoId] = useState<string | null>(null);
+  const [nomeEditando, setNomeEditando] = useState("");
+  const [salvandoId, setSalvandoId] = useState<string | null>(null);
+  const [erroEdicao, setErroEdicao] = useState("");
   const router = useRouter();
 
   const carregarAlunos = useCallback(async () => {
@@ -52,6 +56,45 @@ export default function AdminPage() {
     carregarAlunos();
     carregarTokens();
   }, [carregarAlunos, carregarTokens]);
+
+  function handleIniciarEdicao(aluno: Aluno) {
+    setEditandoId(aluno.id);
+    setNomeEditando(aluno.nome);
+    setErroEdicao("");
+  }
+
+  function handleCancelarEdicao() {
+    setEditandoId(null);
+    setNomeEditando("");
+    setErroEdicao("");
+  }
+
+  async function handleSalvarNome(id: string) {
+    if (!nomeEditando.trim()) return;
+    setSalvandoId(id);
+    setErroEdicao("");
+
+    try {
+      const res = await fetch(`/api/admin/alunos/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome: nomeEditando }),
+      });
+      const data = await res.json();
+
+      if (data.ok) {
+        setEditandoId(null);
+        setNomeEditando("");
+        carregarAlunos();
+      } else {
+        setErroEdicao(data.erro ?? "Erro ao salvar.");
+      }
+    } catch {
+      setErroEdicao("Erro ao salvar. Tenta de novo.");
+    } finally {
+      setSalvandoId(null);
+    }
+  }
 
   async function handleAdicionar(e: React.FormEvent) {
     e.preventDefault();
@@ -217,20 +260,62 @@ export default function AdminPage() {
                   key={aluno.id}
                   className="flex items-center justify-between rounded-xl border border-stone-100 bg-stone-50 px-4 py-3"
                 >
-                  <div>
-                    <p className="font-medium text-stone-900">
-                      {aluno.nome}
-                      {aluno.isAdmin && (
-                        <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
-                          curador
-                        </span>
-                      )}
-                    </p>
+                  <div className="flex-1 min-w-0">
+                    {editandoId === aluno.id ? (
+                      <>
+                        <div className="flex items-center gap-2">
+                          <input
+                            type="text"
+                            value={nomeEditando}
+                            onChange={(e) => setNomeEditando(e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") handleSalvarNome(aluno.id);
+                              if (e.key === "Escape") handleCancelarEdicao();
+                            }}
+                            autoFocus
+                            className="rounded-lg border border-stone-300 bg-white px-2 py-1 text-sm text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                          />
+                          <button
+                            onClick={() => handleSalvarNome(aluno.id)}
+                            disabled={salvandoId === aluno.id || !nomeEditando.trim()}
+                            className="text-xs font-medium text-emerald-700 hover:text-emerald-900 disabled:opacity-40 transition"
+                          >
+                            {salvandoId === aluno.id ? "salvando..." : "salvar"}
+                          </button>
+                          <button
+                            onClick={handleCancelarEdicao}
+                            className="text-xs text-stone-400 hover:text-stone-700 transition"
+                          >
+                            cancelar
+                          </button>
+                        </div>
+                        {erroEdicao && (
+                          <p className="mt-1 text-xs text-rose-600">{erroEdicao}</p>
+                        )}
+                      </>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <p className="font-medium text-stone-900">
+                          {aluno.nome}
+                          {aluno.isAdmin && (
+                            <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
+                              curador
+                            </span>
+                          )}
+                        </p>
+                        <button
+                          onClick={() => handleIniciarEdicao(aluno)}
+                          className="text-xs text-stone-400 hover:text-stone-700 transition"
+                        >
+                          editar
+                        </button>
+                      </div>
+                    )}
                     <p className="text-xs text-stone-500">
                       Login: <strong>{aluno.primeiroNome}</strong> · {aluno.email}
                     </p>
                   </div>
-                  <p className="text-xs text-stone-400">
+                  <p className="text-xs text-stone-400 shrink-0 ml-4">
                     {new Date(aluno.criadoEm).toLocaleDateString("pt-BR")}
                   </p>
                 </div>
