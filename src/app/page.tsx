@@ -16,6 +16,7 @@ const UNIDADES_ATIVAS = new Set([
   "a-6-palavras-armadilha",
   "a-7-concordancia-verbal",
   "a-8-concordancia-nominal",
+  "a-9-regencia",
 ]);
 
 export const dynamic = "force-dynamic";

@@ -10,6 +10,7 @@ import { A5_ACENTOS } from "@/lib/curriculo/a5-acentos";
 import { A6_PALAVRAS_ARMADILHA } from "@/lib/curriculo/a6-palavras-armadilha";
 import { A7_CONCORDANCIA } from "@/lib/curriculo/a7-concordancia";
 import { A8_CONCORDANCIA_NOMINAL } from "@/lib/curriculo/a8-concordancia-nominal";
+import { A9_REGENCIA } from "@/lib/curriculo/a9-regencia";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
 import { DetalhesUnidade } from "./DetalhesUnidade";
@@ -43,6 +44,7 @@ export default async function UnidadePage({ params }: Props) {
     "a-6-palavras-armadilha": A6_PALAVRAS_ARMADILHA,
     "a-7-concordancia-verbal": A7_CONCORDANCIA,
     "a-8-concordancia-nominal": A8_CONCORDANCIA_NOMINAL,
+    "a-9-regencia": A9_REGENCIA,
   };
   const curriculo = CURRICULOS[slug] ?? null;
 

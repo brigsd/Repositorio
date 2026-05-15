@@ -17,6 +17,7 @@ import { EXERCICIOS_A2 } from "./a2-registros";
 import { EXERCICIOS_A4 } from "./a4-pontuacao";
 import { EXERCICIOS_A7 } from "./a7-concordancia";
 import { EXERCICIOS_A8 } from "./a8-concordancia-nominal";
+import { EXERCICIOS_A9 } from "./a9-regencia";
 
 export type { ExercicioGerado };
 export type { ExercicioReescrita };
@@ -28,6 +29,7 @@ const REGISTRO: Record<string, ExercicioGerado[]> = {
   "a-6-palavras-armadilha": EXERCICIOS_A6,
   "a-7-concordancia-verbal": EXERCICIOS_A7,
   "a-8-concordancia-nominal": EXERCICIOS_A8,
+  "a-9-regencia": EXERCICIOS_A9,
 };
 
 const REGISTRO_REESCRITA: Record<string, ExercicioReescrita[]> = {

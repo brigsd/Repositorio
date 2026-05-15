@@ -32,6 +32,25 @@
 ## Entradas
 
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade A.9 "Regência: tropeços clássicos", com super pacote aplicado ANTES do conteúdo e filtro antimito rigoroso.
+**Arquivos alterados:**
+- `src/lib/curriculo/a9-regencia.ts` — [NOVO] Currículo: âncora (Vera, técnica de manutenção), curiosidade (origem antiga do "a", recuo na fala), 2 armadilhas: `ir_a` e `chegar_a`.
+- `src/lib/exercicios/a9-regencia.ts` — [NOVO] 16 exercícios `lacuna_unica`: Fase 1 (ex01-06, ir_a blocked), Fase 2 (ex07-12, chegar_a blocked), Fase 3 (ex13-16, interleaved).
+- `src/lib/exercicios/index.ts` — EXERCICIOS_A9 importado e registrado.
+- `src/app/page.tsx` — "a-9-regencia" em UNIDADES_ATIVAS.
+- `src/app/unidade/[slug]/page.tsx` — A9_REGENCIA importado e em CURRICULOS.
+**Super Pacote aplicado (4 frentes) — verificação factual prévia (lição da A.7):**
+- ALERTA crítico das 4 frentes: regência é o terreno mais minado de mitos prescritivos. Bagno ("Preconceito Linguístico") aponta "assistir ao filme", "namorar com", "obedecer a", "preferir X a Y" como shibboleths sociais, NÃO norma culta real. Esses foram DELIBERADAMENTE EXCLUÍDOS.
+- Base sólida usada: variação genuína e documentada (Wiedemer; Mollica; Berlinck — variacionismo peer-reviewed): verbos de movimento + destino, fala "em/no/na" vs. escrita formal "a/ao/à". Variação estável, não erro.
+- Decisão: um único fenômeno (movimento + "a"), dividido em 2 contextos de prática (ir / chegar) — sem inventar 2ª premissa frágil. Cognição (PMC): regência arbitrária aprende melhor em contexto, não como lista de pares.
+- Framing Labov/Bandura estrito: "vou na reunião" validado como certo na conversa; "vou à reunião" apresentado como costume da escrita formal, nunca como erro, nunca chamado de raro.
+**Decisões tomadas:**
+- Slug confirmado no seed.ts: "a-9-regencia". Typecheck limpo (sem output).
+- Nenhum em-dash em texto visível (D-01). Nenhum mito prescritivo no conteúdo.
+**Estado atual:** A.9 pronta e factualmente defensável. 16 exercícios, integrada nos 4 pontos.
+**Próximo passo sugerido:** Testar A.9 no browser (npm run dev); A.10 conforme seed.ts.
+
+### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade A.8 "Concordância Nominal Essencial", com super pacote de pesquisa aplicado antes de qualquer escrita de conteúdo.
 **Arquivos alterados:**
 - `src/lib/curriculo/a8-concordancia-nominal.ts` — [NOVO] Currículo: âncora de propósito (Jorge, recepcionista), curiosidade sobre pesquisa UFRJ de posição linear, 2 armadilhas: `substantivo_plural` e `adjetivo_plural`.
