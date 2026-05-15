@@ -30,6 +30,7 @@ export default function AdminPage() {
   const [carregando, setCarregando] = useState(false);
   const [editandoId, setEditandoId] = useState<string | null>(null);
   const [nomeEditando, setNomeEditando] = useState("");
+  const [loginEditando, setLoginEditando] = useState("");
   const [salvandoId, setSalvandoId] = useState<string | null>(null);
   const [erroEdicao, setErroEdicao] = useState("");
   const router = useRouter();
@@ -60,17 +61,19 @@ export default function AdminPage() {
   function handleIniciarEdicao(aluno: Aluno) {
     setEditandoId(aluno.id);
     setNomeEditando(aluno.nome);
+    setLoginEditando(aluno.primeiroNome);
     setErroEdicao("");
   }
 
   function handleCancelarEdicao() {
     setEditandoId(null);
     setNomeEditando("");
+    setLoginEditando("");
     setErroEdicao("");
   }
 
-  async function handleSalvarNome(id: string) {
-    if (!nomeEditando.trim()) return;
+  async function handleSalvar(id: string) {
+    if (!nomeEditando.trim() || !loginEditando.trim()) return;
     setSalvandoId(id);
     setErroEdicao("");
 
@@ -78,13 +81,14 @@ export default function AdminPage() {
       const res = await fetch(`/api/admin/alunos/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome: nomeEditando }),
+        body: JSON.stringify({ nome: nomeEditando, primeiroNome: loginEditando }),
       });
       const data = await res.json();
 
       if (data.ok) {
         setEditandoId(null);
         setNomeEditando("");
+        setLoginEditando("");
         carregarAlunos();
       } else {
         setErroEdicao(data.erro ?? "Erro ao salvar.");
@@ -263,31 +267,48 @@ export default function AdminPage() {
                   <div className="flex-1 min-w-0">
                     {editandoId === aluno.id ? (
                       <>
-                        <div className="flex items-center gap-2">
-                          <input
-                            type="text"
-                            value={nomeEditando}
-                            onChange={(e) => setNomeEditando(e.target.value)}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter") handleSalvarNome(aluno.id);
-                              if (e.key === "Escape") handleCancelarEdicao();
-                            }}
-                            autoFocus
-                            className="rounded-lg border border-stone-300 bg-white px-2 py-1 text-sm text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-200"
-                          />
-                          <button
-                            onClick={() => handleSalvarNome(aluno.id)}
-                            disabled={salvandoId === aluno.id || !nomeEditando.trim()}
-                            className="text-xs font-medium text-emerald-700 hover:text-emerald-900 disabled:opacity-40 transition"
-                          >
-                            {salvandoId === aluno.id ? "salvando..." : "salvar"}
-                          </button>
-                          <button
-                            onClick={handleCancelarEdicao}
-                            className="text-xs text-stone-400 hover:text-stone-700 transition"
-                          >
-                            cancelar
-                          </button>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-xs text-stone-400">Nome</span>
+                            <input
+                              type="text"
+                              value={nomeEditando}
+                              onChange={(e) => setNomeEditando(e.target.value)}
+                              onKeyDown={(e) => {
+                                if (e.key === "Escape") handleCancelarEdicao();
+                              }}
+                              autoFocus
+                              className="rounded-lg border border-stone-300 bg-white px-2 py-1 text-sm text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                            />
+                          </div>
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-xs text-stone-400">Login</span>
+                            <input
+                              type="text"
+                              value={loginEditando}
+                              onChange={(e) => setLoginEditando(e.target.value.toUpperCase())}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter") handleSalvar(aluno.id);
+                                if (e.key === "Escape") handleCancelarEdicao();
+                              }}
+                              className="w-28 rounded-lg border border-stone-300 bg-white px-2 py-1 font-mono text-sm text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                            />
+                          </div>
+                          <div className="flex items-end gap-2 pb-0.5">
+                            <button
+                              onClick={() => handleSalvar(aluno.id)}
+                              disabled={salvandoId === aluno.id || !nomeEditando.trim() || !loginEditando.trim()}
+                              className="text-xs font-medium text-emerald-700 hover:text-emerald-900 disabled:opacity-40 transition"
+                            >
+                              {salvandoId === aluno.id ? "salvando..." : "salvar"}
+                            </button>
+                            <button
+                              onClick={handleCancelarEdicao}
+                              className="text-xs text-stone-400 hover:text-stone-700 transition"
+                            >
+                              cancelar
+                            </button>
+                          </div>
                         </div>
                         {erroEdicao && (
                           <p className="mt-1 text-xs text-rose-600">{erroEdicao}</p>

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
 import { alunos } from "@/db/schema";
 import { eq } from "drizzle-orm";
-import { obterSessao } from "@/lib/auth";
+import { obterSessao, normalizarNome } from "@/lib/auth";
 
 export async function PATCH(
   req: NextRequest,
@@ -16,26 +16,38 @@ export async function PATCH(
   const { id } = await params;
   const body = await req.json();
   const nome = typeof body.nome === "string" ? body.nome.trim() : "";
+  const primeiroNome =
+    typeof body.primeiroNome === "string"
+      ? normalizarNome(body.primeiroNome)
+      : "";
 
-  if (!nome) {
+  if (!nome || !primeiroNome) {
     return NextResponse.json(
-      { erro: "Nome não pode ficar em branco." },
+      { erro: "Nome e login não podem ficar em branco." },
       { status: 400 }
     );
   }
 
-  const [atualizado] = await db
-    .update(alunos)
-    .set({ nome })
-    .where(eq(alunos.id, id))
-    .returning();
+  try {
+    const [atualizado] = await db
+      .update(alunos)
+      .set({ nome, primeiroNome })
+      .where(eq(alunos.id, id))
+      .returning();
 
-  if (!atualizado) {
-    return NextResponse.json(
-      { erro: "Aluno não encontrado." },
-      { status: 404 }
-    );
+    if (!atualizado) {
+      return NextResponse.json(
+        { erro: "Aluno não encontrado." },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({ ok: true, aluno: atualizado });
+  } catch (error: unknown) {
+    const mensagem =
+      error instanceof Error && error.message.includes("unique")
+        ? "Esse login já está em uso por outro aluno."
+        : "Erro ao salvar. Tenta de novo.";
+    return NextResponse.json({ erro: mensagem }, { status: 400 });
   }
-
-  return NextResponse.json({ ok: true, aluno: atualizado });
 }
