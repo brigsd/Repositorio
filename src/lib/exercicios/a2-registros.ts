@@ -21,10 +21,12 @@ import type { ExercicioReescrita } from "./tipos-reescrita";
 
 // Rubrica padrão para todos os exercícios de reescrita
 const RUBRICA = [
+  "Incluiu abertura formal (ex: Bom dia, Boa tarde, Prezados)",
   "Evitou contrações informais (tô, tá, hj, vc, pq, blz)",
   "Usou conjugação verbal completa (estou, está, porque)",
   "Manteve o sentido original da mensagem",
   "Tom adequado ao contexto profissional",
+  "Incluiu encerramento adequado (ex: Obrigado, Att., Aguardo retorno)",
 ];
 
 // Lista fechada de tipos de erro para A.2 — reduz alucinação da IA
@@ -196,7 +198,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "oi chefe, tô precisando de folga amanhã pq tenho consulta médica, dá pra liberar?",
     exemploPar: {
       informal: "oi, preciso sair mais cedo hj, tá bom?",
-      formal: "Boa tarde. Gostaria de solicitar saída antecipada hoje. Seria possível?",
+      formal: "Boa tarde. Gostaria de solicitar saída antecipada hoje. Seria possível? Obrigado.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -210,7 +212,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "chefe, a entrega atrasou, o fornecedor sumiu e não atende o telefone, tô tentando resolver",
     exemploPar: {
       informal: "o produto não chegou ainda, tô no prejuízo aqui",
-      formal: "Informo que o produto não foi recebido no prazo. Estou verificando a situação com o fornecedor.",
+      formal: "Bom dia. Informo que o produto não foi recebido no prazo. Estou verificando a situação com o fornecedor. Obrigado.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -224,7 +226,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "desculpa mas não vou conseguir terminar o relatório hoje, tô com muito serviço, posso entregar quinta?",
     exemploPar: {
       informal: "não vou dar conta de entregar hoje",
-      formal: "Infelizmente não conseguirei cumprir o prazo de hoje. Seria possível prorrogar para amanhã?",
+      formal: "Bom dia. Infelizmente não conseguirei cumprir o prazo de hoje. Seria possível prorrogar para amanhã? Obrigado pela compreensão.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -238,7 +240,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "quero reclamar do serviço que recebi, ficou muito ruim e não gostei nada, quero meu dinheiro de volta",
     exemploPar: {
       informal: "o produto veio com defeito, quero meu dinheiro de volta",
-      formal: "Venho registrar uma reclamação sobre o produto recebido, que apresentou defeito. Solicito o reembolso do valor pago.",
+      formal: "Bom dia. Venho registrar uma reclamação sobre o produto recebido, que apresentou defeito. Solicito o reembolso do valor pago. Aguardo retorno.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -252,7 +254,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "pra quando precisa essa assinatura mesmo? tô perdido nessa papelada toda, não entendi nada",
     exemploPar: {
       informal: "quando vence isso? não tô entendendo nada desse processo",
-      formal: "Poderia me informar o prazo para assinatura? Gostaria de entender melhor os próximos passos do processo.",
+      formal: "Bom dia. Poderia me informar o prazo para assinatura? Gostaria de entender melhor os próximos passos do processo. Obrigado.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
@@ -266,7 +268,7 @@ export const EXERCICIOS_A2: ExercicioReescrita[] = [
     textoInformal: "oi galera, alguém viu meu arquivo do cliente João? sumiu do sistema e preciso entregar essa proposta hoje ainda",
     exemploPar: {
       informal: "alguém viu onde ficou aquele arquivo? preciso entregar hoje",
-      formal: "Prezados, alguém teria acesso àquele arquivo? Preciso dele para finalizar uma entrega ainda hoje.",
+      formal: "Prezados, alguém teria acesso àquele arquivo? Preciso dele para finalizar uma entrega ainda hoje. Obrigado.",
     },
     rubrica: RUBRICA,
     tiposErroValidos: TIPOS_ERRO,
