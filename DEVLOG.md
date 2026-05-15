@@ -31,6 +31,17 @@
 
 ## Entradas
 
+### 2026-05-14 21:56 — Antigravity — local
+**Resumo:** Inversão de prioridade de IA (DeepSeek como principal, Claude como fallback), nova regra dura de prompt contra travessões e adoção de Chain of Thought no output JSON.
+**Arquivos alterados:**
+- `src/lib/ai.ts` — Ajuste na lógica para refletir a DeepSeek como motor principal de avaliação de exercícios.
+- `src/lib/prompts.ts` — 
+  1. Invertidos os blocos `try/catch`: `chamarDeepSeekFallback` agora executa primeiro. Apenas se falhar, a `anthropic.messages.create` é acionada.
+  2. Adicionada a regra "7. NUNCA use o símbolo '—' (travessão) nas suas respostas" nas `INSTRUCOES_BASE`.
+  3. Adicionado o campo `"analise_interna"` no TOPO do JSON de resposta de todos os prompts. Isso obriga a IA a realizar um raciocínio passo a passo antes de emitir o veredito (`acertou: boolean`), eliminando alucinações de leitura sem a necessidade de fazer duas consultas separadas à API.
+**Estado atual:** DeepSeek avalia os exercícios com extrema precisão graças ao raciocínio forçado (CoT). Textos devolvidos ao aluno não contêm mais travessões. Redução drástica de falsos negativos na avaliação.
+**Próximo passo sugerido:** Iniciar a criação da nova unidade (A.7 - Concordância Verbal).
+
 ### 2026-05-14 09:57 — Antigravity — local
 **Resumo:** Criação completa da Unidade A.4 "Os outros sinais" (Pontuação), incluindo novo componente de reconstrução de texto com avaliação por IA, pesquisa do Super Pacote (4 frentes) e integração total no ecossistema.
 **Arquivos alterados:**

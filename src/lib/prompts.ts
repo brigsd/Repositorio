@@ -18,7 +18,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { anthropic, MODELS } from "./ai";
+import { anthropic, MODELS, DEEPSEEK_API_KEY } from "./ai";
 import type { ModeloAluno, ModoIA } from "./modelo-aluno";
 import { serializarModeloParaPrompt } from "./modelo-aluno";
 import { db } from "@/db";
@@ -63,12 +63,13 @@ PRINCÍPIOS ABSOLUTOS (nunca violáveis):
 4. Seja CONCISO — máximo 3-4 frases por resposta. Adulto trabalhador tem pouco tempo.
 5. SEMPRE termine com uma pergunta ou ação clara para o aluno fazer a seguir.
 6. Tom: parceiro que ajuda, não professor que avalia. "Vamos ver isso juntos."
+7. NUNCA use o símbolo "—" (travessão) nas suas respostas. Use vírgula, parênteses ou ponto final para separar ideias.
 
 SOBRE O FEEDBACK DE ERRO:
 ❌ Não: "Você errou. A resposta correta é X."
-✅ Sim: "Quase lá — você acertou a ideia. Deixa eu te mostrar um detalhe..."
+✅ Sim: "Quase lá, você acertou a ideia. Deixa eu te mostrar um detalhe..."
 ✅ Sim: "Isso faz sentido na fala do dia a dia. No e-mail pro chefe, o que mudaria?"
-✅ Sim: "Veja essa parte específica aqui — o que você acha que acontece se tirar a vírgula?"
+✅ Sim: "Veja essa parte específica aqui. O que você acha que acontece se tirar a vírgula?"
 `.trim();
 
 // ============================================================================
@@ -121,6 +122,47 @@ O aluno acertou algo que tinha dificuldade antes. RECONHEÇA ESPECIFICAMENTE.
 };
 
 // ============================================================================
+// Fallback: Chamada à DeepSeek via fetch (compatível com API OpenAI)
+// ============================================================================
+
+async function chamarDeepSeekFallback(systemPrompt: string, userPrompt: string): Promise<{ texto: string; inputTokens: number; outputTokens: number; latenciaMs: number }> {
+  if (!DEEPSEEK_API_KEY) {
+    throw new Error("DEEPSEEK_API_KEY não configurada para fallback.");
+  }
+
+  const inicio = Date.now();
+  const res = await fetch("https://api.deepseek.com/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${DEEPSEEK_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "deepseek-chat",
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+      response_format: { type: "json_object" }
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Erro na DeepSeek: ${res.statusText}`);
+  }
+
+  const data = await res.json();
+  const latenciaMs = Date.now() - inicio;
+
+  return {
+    texto: data.choices[0].message.content,
+    inputTokens: data.usage.prompt_tokens,
+    outputTokens: data.usage.completion_tokens,
+    latenciaMs,
+  };
+}
+
+// ============================================================================
 // Função principal: avalia resposta do aluno a um exercício
 // ============================================================================
 
@@ -155,6 +197,7 @@ ${exercicio.tiposErroValidos.join(", ")}
 
 Responda em JSON com este formato exato:
 {
+  "analise_interna": "sua análise passo a passo secreta comparando a resposta do aluno com os critérios",
   "acertou": boolean,
   "mensagem": "sua resposta para o aluno (máx 4 frases, tom parceiro)",
   "tipoErro": "um dos tipos listados acima, ou null se acertou",
@@ -165,63 +208,25 @@ Responda em JSON com este formato exato:
   const inicio = Date.now();
 
   try {
-    const resposta = await anthropic.messages.create({
-      model: MODELS.sonnet,
-      max_tokens: 512,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userPrompt }],
-    });
+    const fallbackResult = await chamarDeepSeekFallback(systemPrompt, userPrompt);
+    const jsonMatch = fallbackResult.texto.match(/\{[\s\S]*\}/);
+    const parsed = JSON.parse(jsonMatch?.[0] ?? fallbackResult.texto);
 
-    const latenciaMs = Date.now() - inicio;
-    const textoResposta =
-      resposta.content[0].type === "text" ? resposta.content[0].text : "";
-
-    // Parse seguro do JSON — se falhar, retorna fallback
-    let parsed: {
-      acertou: boolean;
-      mensagem: string;
-      tipoErro: string | null;
-      confiancaIa: "seguro" | "duvida";
-    };
-
-    try {
-      // Extrai JSON da resposta (às vezes a IA coloca markdown ao redor)
-      const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
-      parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
-    } catch {
-      // Fallback se parsing falhar — modo direta automaticamente
-      parsed = {
-        acertou: false,
-        mensagem:
-          "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
-        tipoErro: null,
-        confiancaIa: "duvida",
-      };
-    }
-
-    // Calcula custo aproximado
-    const custoUsd = calcularCusto(
-      resposta.usage.input_tokens,
-      resposta.usage.output_tokens,
-      MODELS.sonnet
-    );
-
-    // Loga no banco sempre que há alunoId — sessaoId é opcional
     if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
         sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
-        modelo: MODELS.sonnet,
+        modelo: MODELS.deepseek,
         promptCompleto: opcoes.modoTeste
           ? { system: systemPrompt, user: userPrompt }
           : { proposito: opcoes.proposito },
-        resposta: textoResposta,
-        tokensInput: resposta.usage.input_tokens,
-        tokensOutput: resposta.usage.output_tokens,
-        latenciaMs,
-        custoUsd: custoUsd.toString(),
-        confiancaIa: parsed.confiancaIa,
+        resposta: fallbackResult.texto,
+        tokensInput: fallbackResult.inputTokens,
+        tokensOutput: fallbackResult.outputTokens,
+        latenciaMs: fallbackResult.latenciaMs,
+        custoUsd: "0.0",
+        confiancaIa: parsed.confiancaIa ?? "duvida",
       });
     }
 
@@ -229,12 +234,83 @@ Responda em JSON com este formato exato:
       mensagem: parsed.mensagem,
       acertou: parsed.acertou,
       tipoErro: parsed.tipoErro ?? undefined,
-      confiancaIa: parsed.confiancaIa,
+      confiancaIa: parsed.confiancaIa ?? "duvida",
       modoUsado: modelo.modoRecomendado,
     };
   } catch (err) {
-    console.error("[prompts] Erro na chamada à IA:", err);
-    throw err;
+    console.warn("[prompts] Erro na DeepSeek (avaliarResposta). Acionando Anthropic...", err);
+    try {
+      const inicio = Date.now();
+      const resposta = await anthropic.messages.create({
+        model: MODELS.sonnet,
+        max_tokens: 512,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userPrompt }],
+      });
+
+      const latenciaMs = Date.now() - inicio;
+      const textoResposta =
+        resposta.content[0].type === "text" ? resposta.content[0].text : "";
+
+      let parsed: {
+        acertou: boolean;
+        mensagem: string;
+        tipoErro: string | null;
+        confiancaIa: "seguro" | "duvida";
+      };
+
+      try {
+        const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
+        parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
+      } catch {
+        parsed = {
+          acertou: false,
+          mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
+          tipoErro: null,
+          confiancaIa: "duvida",
+        };
+      }
+
+      const custoUsd = calcularCusto(
+        resposta.usage.input_tokens,
+        resposta.usage.output_tokens,
+        MODELS.sonnet
+      );
+
+      if (opcoes.alunoId) {
+        await db.insert(chamadasIa).values({
+          alunoId: opcoes.alunoId,
+          sessaoId: opcoes.sessaoId ?? null,
+          proposito: opcoes.proposito + "_fallback_anthropic",
+          modelo: MODELS.sonnet,
+          promptCompleto: opcoes.modoTeste
+            ? { system: systemPrompt, user: userPrompt }
+            : { proposito: opcoes.proposito },
+          resposta: textoResposta,
+          tokensInput: resposta.usage.input_tokens,
+          tokensOutput: resposta.usage.output_tokens,
+          latenciaMs,
+          custoUsd: custoUsd.toString(),
+          confiancaIa: parsed.confiancaIa,
+        });
+      }
+
+      return {
+        mensagem: parsed.mensagem,
+        acertou: parsed.acertou,
+        tipoErro: parsed.tipoErro ?? undefined,
+        confiancaIa: parsed.confiancaIa,
+        modoUsado: modelo.modoRecomendado,
+      };
+    } catch (fallbackErr) {
+      console.error("[prompts] Falha também na Anthropic:", fallbackErr);
+      return {
+        mensagem: "O sistema está com muitos acessos no momento e não conseguiu avaliar sua resposta. Por favor, tente novamente em alguns segundos.",
+        acertou: false,
+        confiancaIa: "duvida",
+        modoUsado: modelo.modoRecomendado,
+      };
+    }
   }
 }
 
@@ -353,11 +429,12 @@ INSTRUÇÕES OBRIGATÓRIAS:
 - NÃO avalie erros de ortografia, acentuação ou digitação — o escopo desta unidade é exclusivamente o registro (formal vs. informal). Foque apenas em: contrações ("tô", "tá", "q", "vc", "hj"), vocabulário coloquial, abertura/fechamento formal e sentido preservado.
 
 ${pedirVersao
-  ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno — preserve o que está correto (estrutura, informações, tom) e ajuste apenas o que prejudica o registro formal. Não reescreva do zero."
-  : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
+      ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno — preserve o que está correto (estrutura, informações, tom) e ajuste apenas o que prejudica o registro formal. Não reescreva do zero."
+      : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
 
 Responda em JSON exato:
 {
+  "analise_interna": "sua análise passo a passo secreta comparando a reescrita do aluno com a original",
   "acertou": boolean,
   "mensagem": "feedback para o aluno",
   "versaoSugerida": ${pedirVersao ? '"versão formal baseada na resposta do aluno, ou null"' : "null"},
@@ -369,59 +446,25 @@ Responda em JSON exato:
   const inicio = Date.now();
 
   try {
-    const resposta = await anthropic.messages.create({
-      model: MODELS.sonnet,
-      max_tokens: 600,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userPrompt }],
-    });
-
-    const latenciaMs = Date.now() - inicio;
-    const textoResposta =
-      resposta.content[0].type === "text" ? resposta.content[0].text : "";
-
-    let parsed: {
-      acertou: boolean;
-      mensagem: string;
-      versaoSugerida: string | null;
-      tipoErro: string | null;
-      confiancaIa: "seguro" | "duvida";
-    };
-
-    try {
-      const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
-      parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
-    } catch {
-      parsed = {
-        acertou: false,
-        mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
-        versaoSugerida: null,
-        tipoErro: null,
-        confiancaIa: "duvida",
-      };
-    }
-
-    const custoUsd = calcularCusto(
-      resposta.usage.input_tokens,
-      resposta.usage.output_tokens,
-      MODELS.sonnet
-    );
+    const fallbackResult = await chamarDeepSeekFallback(systemPrompt, userPrompt);
+    const jsonMatch = fallbackResult.texto.match(/\{[\s\S]*\}/);
+    const parsed = JSON.parse(jsonMatch?.[0] ?? fallbackResult.texto);
 
     if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
         sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
-        modelo: MODELS.sonnet,
+        modelo: MODELS.deepseek,
         promptCompleto: opcoes.modoTeste
           ? { system: systemPrompt, user: userPrompt }
           : { proposito: opcoes.proposito },
-        resposta: textoResposta,
-        tokensInput: resposta.usage.input_tokens,
-        tokensOutput: resposta.usage.output_tokens,
-        latenciaMs,
-        custoUsd: custoUsd.toString(),
-        confiancaIa: parsed.confiancaIa,
+        resposta: fallbackResult.texto,
+        tokensInput: fallbackResult.inputTokens,
+        tokensOutput: fallbackResult.outputTokens,
+        latenciaMs: fallbackResult.latenciaMs,
+        custoUsd: "0.0",
+        confiancaIa: parsed.confiancaIa ?? "duvida",
       });
     }
 
@@ -429,13 +472,88 @@ Responda em JSON exato:
       mensagem: parsed.mensagem,
       acertou: parsed.acertou,
       tipoErro: parsed.tipoErro ?? undefined,
-      confiancaIa: parsed.confiancaIa,
+      confiancaIa: parsed.confiancaIa ?? "duvida",
       modoUsado: modelo.modoRecomendado,
       versaoSugerida: parsed.versaoSugerida ?? undefined,
     };
   } catch (err) {
-    console.error("[prompts] Erro em avaliarRespostaRegistro:", err);
-    throw err;
+    console.warn("[prompts] Erro na DeepSeek (avaliarRespostaRegistro). Acionando Anthropic...", err);
+    try {
+      const inicio = Date.now();
+      const resposta = await anthropic.messages.create({
+        model: MODELS.sonnet,
+        max_tokens: 600,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userPrompt }],
+      });
+
+      const latenciaMs = Date.now() - inicio;
+      const textoResposta =
+        resposta.content[0].type === "text" ? resposta.content[0].text : "";
+
+      let parsed: {
+        acertou: boolean;
+        mensagem: string;
+        versaoSugerida: string | null;
+        tipoErro: string | null;
+        confiancaIa: "seguro" | "duvida";
+      };
+
+      try {
+        const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
+        parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
+      } catch {
+        parsed = {
+          acertou: false,
+          mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
+          versaoSugerida: null,
+          tipoErro: null,
+          confiancaIa: "duvida",
+        };
+      }
+
+      const custoUsd = calcularCusto(
+        resposta.usage.input_tokens,
+        resposta.usage.output_tokens,
+        MODELS.sonnet
+      );
+
+      if (opcoes.alunoId) {
+        await db.insert(chamadasIa).values({
+          alunoId: opcoes.alunoId,
+          sessaoId: opcoes.sessaoId ?? null,
+          proposito: opcoes.proposito + "_fallback_anthropic",
+          modelo: MODELS.sonnet,
+          promptCompleto: opcoes.modoTeste
+            ? { system: systemPrompt, user: userPrompt }
+            : { proposito: opcoes.proposito },
+          resposta: textoResposta,
+          tokensInput: resposta.usage.input_tokens,
+          tokensOutput: resposta.usage.output_tokens,
+          latenciaMs,
+          custoUsd: custoUsd.toString(),
+          confiancaIa: parsed.confiancaIa,
+        });
+      }
+
+      return {
+        mensagem: parsed.mensagem,
+        acertou: parsed.acertou,
+        tipoErro: parsed.tipoErro ?? undefined,
+        confiancaIa: parsed.confiancaIa,
+        modoUsado: modelo.modoRecomendado,
+        versaoSugerida: parsed.versaoSugerida ?? undefined,
+      };
+    } catch (fallbackErr) {
+      console.error("[prompts] Falha também na Anthropic:", fallbackErr);
+      return {
+        mensagem: "O sistema está com muitos acessos no momento e não conseguiu avaliar sua resposta. Por favor, tente novamente em alguns segundos.",
+        acertou: false,
+        confiancaIa: "duvida",
+        modoUsado: modelo.modoRecomendado,
+        versaoSugerida: undefined,
+      };
+    }
   }
 }
 
@@ -498,17 +616,19 @@ INSTRUÇÕES OBRIGATÓRIAS:
 - NUNCA use "errado", "incorreto" ou equivalentes
 - NUNCA mostre o gabarito diretamente (exceto se pedirVersao = true)
 - A pontuação do aluno NÃO precisa ser idêntica ao gabarito. Aceite variações que preservem o sentido e a clareza
-- NÃO avalie erros de ortografia, acentuação, registro ou gramática. O escopo é EXCLUSIVAMENTE pontuação
-- Foque em: ponto final, dois-pontos, ponto-e-vírgula, travessão e vírgula
+- IMPORTANTE: Antes de dizer que falta um sinal, LEIA ATENTAMENTE a "VERSÃO PONTUADA PELO ALUNO". Não diga que falta um sinal se o aluno já o inseriu no texto dele.
+- NÃO avalie erros de ortografia, acentuação, uso de maiúsculas/minúsculas, registro ou gramática. O escopo é EXCLUSIVAMENTE os sinais de pontuação. Se o aluno começar a frase com minúscula, ignore completamente.
+- Foque APENAS em: ponto final, dois-pontos, ponto-e-vírgula, travessão e vírgula.
 - Feedback em no máximo 4 frases
 - Use a estrutura: (1) o que o sinal faz, (2) onde ficou diferente do ideal, (3) dica prática
 
 ${pedirVersao
-  ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno, preservando o que está correto e ajustando apenas a pontuação. Não reescreva do zero."
-  : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
+      ? "Como o aluno já tentou 2 ou mais vezes, inclua versaoSugerida. IMPORTANTE: construa a versão sugerida a partir da resposta do aluno, preservando o que está correto e ajustando apenas a pontuação. Não reescreva do zero."
+      : "NÃO inclua versaoSugerida (o aluno ainda não esgotou as tentativas)."}
 
 Responda em JSON exato:
 {
+  "analise_interna": "sua análise passo a passo verificando EXATAMENTE quais sinais o aluno digitou",
   "acertou": boolean,
   "mensagem": "feedback para o aluno",
   "versaoSugerida": ${pedirVersao ? '"versão pontuada baseada na resposta do aluno, ou null"' : "null"},
@@ -520,59 +640,25 @@ Responda em JSON exato:
   const inicio = Date.now();
 
   try {
-    const resposta = await anthropic.messages.create({
-      model: MODELS.sonnet,
-      max_tokens: 600,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userPrompt }],
-    });
-
-    const latenciaMs = Date.now() - inicio;
-    const textoResposta =
-      resposta.content[0].type === "text" ? resposta.content[0].text : "";
-
-    let parsed: {
-      acertou: boolean;
-      mensagem: string;
-      versaoSugerida: string | null;
-      tipoErro: string | null;
-      confiancaIa: "seguro" | "duvida";
-    };
-
-    try {
-      const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
-      parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
-    } catch {
-      parsed = {
-        acertou: false,
-        mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
-        versaoSugerida: null,
-        tipoErro: null,
-        confiancaIa: "duvida",
-      };
-    }
-
-    const custoUsd = calcularCusto(
-      resposta.usage.input_tokens,
-      resposta.usage.output_tokens,
-      MODELS.sonnet
-    );
+    const fallbackResult = await chamarDeepSeekFallback(systemPrompt, userPrompt);
+    const jsonMatch = fallbackResult.texto.match(/\{[\s\S]*\}/);
+    const parsed = JSON.parse(jsonMatch?.[0] ?? fallbackResult.texto);
 
     if (opcoes.alunoId) {
       await db.insert(chamadasIa).values({
         alunoId: opcoes.alunoId,
         sessaoId: opcoes.sessaoId ?? null,
         proposito: opcoes.proposito,
-        modelo: MODELS.sonnet,
+        modelo: MODELS.deepseek,
         promptCompleto: opcoes.modoTeste
           ? { system: systemPrompt, user: userPrompt }
           : { proposito: opcoes.proposito },
-        resposta: textoResposta,
-        tokensInput: resposta.usage.input_tokens,
-        tokensOutput: resposta.usage.output_tokens,
-        latenciaMs,
-        custoUsd: custoUsd.toString(),
-        confiancaIa: parsed.confiancaIa,
+        resposta: fallbackResult.texto,
+        tokensInput: fallbackResult.inputTokens,
+        tokensOutput: fallbackResult.outputTokens,
+        latenciaMs: fallbackResult.latenciaMs,
+        custoUsd: "0.0",
+        confiancaIa: parsed.confiancaIa ?? "duvida",
       });
     }
 
@@ -580,13 +666,88 @@ Responda em JSON exato:
       mensagem: parsed.mensagem,
       acertou: parsed.acertou,
       tipoErro: parsed.tipoErro ?? undefined,
-      confiancaIa: parsed.confiancaIa,
+      confiancaIa: parsed.confiancaIa ?? "duvida",
       modoUsado: modelo.modoRecomendado,
       versaoSugerida: parsed.versaoSugerida ?? undefined,
     };
   } catch (err) {
-    console.error("[prompts] Erro em avaliarRespostaPontuacao:", err);
-    throw err;
+    console.warn("[prompts] Erro na DeepSeek (avaliarRespostaPontuacao). Acionando Anthropic...", err);
+    try {
+      const inicio = Date.now();
+      const resposta = await anthropic.messages.create({
+        model: MODELS.sonnet,
+        max_tokens: 600,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userPrompt }],
+      });
+
+      const latenciaMs = Date.now() - inicio;
+      const textoResposta =
+        resposta.content[0].type === "text" ? resposta.content[0].text : "";
+
+      let parsed: {
+        acertou: boolean;
+        mensagem: string;
+        versaoSugerida: string | null;
+        tipoErro: string | null;
+        confiancaIa: "seguro" | "duvida";
+      };
+
+      try {
+        const jsonMatch = textoResposta.match(/\{[\s\S]*\}/);
+        parsed = JSON.parse(jsonMatch?.[0] ?? textoResposta);
+      } catch {
+        parsed = {
+          acertou: false,
+          mensagem: "Não consegui avaliar sua resposta agora. Pode tentar de novo?",
+          versaoSugerida: null,
+          tipoErro: null,
+          confiancaIa: "duvida",
+        };
+      }
+
+      const custoUsd = calcularCusto(
+        resposta.usage.input_tokens,
+        resposta.usage.output_tokens,
+        MODELS.sonnet
+      );
+
+      if (opcoes.alunoId) {
+        await db.insert(chamadasIa).values({
+          alunoId: opcoes.alunoId,
+          sessaoId: opcoes.sessaoId ?? null,
+          proposito: opcoes.proposito + "_fallback_anthropic",
+          modelo: MODELS.sonnet,
+          promptCompleto: opcoes.modoTeste
+            ? { system: systemPrompt, user: userPrompt }
+            : { proposito: opcoes.proposito },
+          resposta: textoResposta,
+          tokensInput: resposta.usage.input_tokens,
+          tokensOutput: resposta.usage.output_tokens,
+          latenciaMs,
+          custoUsd: custoUsd.toString(),
+          confiancaIa: parsed.confiancaIa,
+        });
+      }
+
+      return {
+        mensagem: parsed.mensagem,
+        acertou: parsed.acertou,
+        tipoErro: parsed.tipoErro ?? undefined,
+        confiancaIa: parsed.confiancaIa,
+        modoUsado: modelo.modoRecomendado,
+        versaoSugerida: parsed.versaoSugerida ?? undefined,
+      };
+    } catch (fallbackErr) {
+      console.error("[prompts] Falha também na Anthropic:", fallbackErr);
+      return {
+        mensagem: "O sistema está com muitos acessos no momento e não conseguiu avaliar sua resposta. Por favor, tente novamente em alguns segundos.",
+        acertou: false,
+        confiancaIa: "duvida",
+        modoUsado: modelo.modoRecomendado,
+        versaoSugerida: undefined,
+      };
+    }
   }
 }
 

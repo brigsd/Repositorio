@@ -26,7 +26,6 @@ const RUBRICA = [
   "Ponto-e-vírgula usado para conectar ideias complementares",
   "Travessão usado para destacar informações extras",
   "Sentido original da mensagem preservado",
-  "Maiúscula após ponto final",
 ];
 
 const TIPOS_ERRO = [
