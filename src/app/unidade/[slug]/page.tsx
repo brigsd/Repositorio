@@ -14,6 +14,7 @@ import { A9_REGENCIA } from "@/lib/curriculo/a9-regencia";
 import { A10_PROJETO } from "@/lib/curriculo/a10-projeto";
 import { B1_TIPOLOGIAS } from "@/lib/curriculo/b1-tipologias";
 import { B2_IDEIA_PRINCIPAL } from "@/lib/curriculo/b2-ideia-principal";
+import { B3_INFERENCIA } from "@/lib/curriculo/b3-inferencia";
 import { obterExercicios } from "@/lib/exercicios";
 import { notFound } from "next/navigation";
 import { DetalhesUnidade } from "./DetalhesUnidade";
@@ -51,6 +52,7 @@ export default async function UnidadePage({ params }: Props) {
     "a-10-projeto": A10_PROJETO,
     "b-1-tipologias": B1_TIPOLOGIAS,
     "b-2-ideia-principal": B2_IDEIA_PRINCIPAL,
+    "b-3-inferencia": B3_INFERENCIA,
   };
   const curriculo = CURRICULOS[slug] ?? null;
 

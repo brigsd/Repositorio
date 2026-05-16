@@ -21,6 +21,7 @@ import { EXERCICIOS_A9 } from "./a9-regencia";
 import { EXERCICIOS_A10 } from "./a10-projeto";
 import { EXERCICIOS_B1 } from "./b1-tipologias";
 import { EXERCICIOS_B2 } from "./b2-ideia-principal";
+import { EXERCICIOS_B3 } from "./b3-inferencia";
 
 export type { ExercicioGerado };
 export type { ExercicioReescrita };
@@ -36,6 +37,7 @@ const REGISTRO: Record<string, ExercicioGerado[]> = {
   "a-10-projeto": EXERCICIOS_A10,
   "b-1-tipologias": EXERCICIOS_B1,
   "b-2-ideia-principal": EXERCICIOS_B2,
+  "b-3-inferencia": EXERCICIOS_B3,
 };
 
 const REGISTRO_REESCRITA: Record<string, ExercicioReescrita[]> = {

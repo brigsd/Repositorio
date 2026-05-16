@@ -32,6 +32,18 @@
 ## Entradas
 
 ### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade B.3 "Inferência: ler o que não está escrito", com currículo e 16 exercícios de inferência em 3 tipos progressivos.
+**Arquivos alterados:**
+- `src/lib/curriculo/b3-inferencia.ts` — [NOVO] Currículo: ancoraPropósito (ler só o explícito vs. ler as entrelinhas), curiosidade sobre inferência causal automática (Graesser 1994), 3 armadilhas em sequência de dificuldade crescente (causal, implícita, conclusiva), preAfericao, projetoIntegrador (analisar comunicado real separando explícito de implícito).
+- `src/lib/exercicios/b3-inferencia.ts` — [NOVO] 16 exercícios: Fase 1 (ex01-06) bloqueado por tipo (causal, implícita, conclusiva); Fase 2 (ex07-12) tipos mistos, sempre com "literal lure" obrigatório; Fase 3 (ex13-16) textos mais longos, inferências de múltiplos elementos. Feedback "acknowledge-name-model" em todos os exercícios.
+- `src/lib/exercicios/index.ts` — EXERCICIOS_B3 importado e registrado.
+- `src/app/unidade/[slug]/page.tsx` — B3_INFERENCIA importado e registrado.
+- `src/app/page.tsx` — "b-3-inferencia" em UNIDADES_ATIVAS.
+**Base pedagógica:** Graesser, Singer & Trabasso 1994 (inferências causais quase automáticas); McKoon & Ratcliff 1992 (local antes de global); Kispal 2008 (sequência instrucional local→elaborativa→global); Metcalfe et al. 2009 (feedback acknowledge-name-model); Freire/Soares (textos de contexto familiar reduzem carga cognitiva). "Literal lure" em todos os exercícios — distractor prioritário para leitores em desenvolvimento.
+**Estado atual:** B.1, B.2 e B.3 completas e ativas.
+**Próximo passo sugerido:** Desenvolver B.4 "Ironia, humor e ambiguidade" com super pacote de pesquisa primeiro.
+
+### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade B.2 "Ideia principal e secundárias", com currículo e 16 exercícios de identificação da ideia principal em textos de contexto trabalhista.
 **Arquivos alterados:**
 - `src/lib/curriculo/b2-ideia-principal.ts` — [NOVO] Currículo: ancoraPropósito (80% da compreensão é a ideia principal), curiosidade sobre Kintsch & van Dijk (ideia principal é construída, não encontrada), 3 armadilhas (detalhe, ideia secundária, ideia ampla demais), pre/posAfericao, projetoIntegrador (analisar texto real).
