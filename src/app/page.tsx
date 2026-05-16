@@ -21,6 +21,7 @@ const UNIDADES_ATIVAS = new Set([
   "b-1-tipologias",
   "b-2-ideia-principal",
   "b-3-inferencia",
+  "b-4-ironia",
 ]);
 
 export const dynamic = "force-dynamic";

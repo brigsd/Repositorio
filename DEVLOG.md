@@ -32,6 +32,18 @@
 ## Entradas
 
 ### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade B.4 "Ironia, humor e ambiguidade", com currículo e 16 exercícios em 3 tipos (ironia verbal, ambiguidade, quebra de expectativa).
+**Arquivos alterados:**
+- `src/lib/curriculo/b4-ironia.ts` — [NOVO] Currículo: ancoraPropósito (leitura em dois níveis — literal e real), curiosidade sobre máximas de Grice e violação intencional da verdade, 3 armadilhas (ironia_verbal, ambiguidade, quebra_expectativa), preAfericao, projetoIntegrador (encontrar exemplos reais de cada tipo).
+- `src/lib/exercicios/b4-ironia.ts` — [NOVO] 16 exercícios: Fase 1 (ex01-06) bloqueado por tipo — 2 por armadilha; Fase 2 (ex07-12) tipos mistos com distractor literal obrigatório; Fase 3 (ex13-16) ironia institucional, ambiguidade não intencional, quebra de expectativa com autoironia. Phrasing ENCCEJA/ENEM em todos: "O efeito de sentido é produzido por...", "A ironia reside em...", "O humor decorre de...".
+- `src/lib/exercicios/index.ts` — EXERCICIOS_B4 importado e registrado.
+- `src/app/unidade/[slug]/page.tsx` — B4_IRONIA importado e registrado.
+- `src/app/page.tsx` — "b-4-ironia" em UNIDADES_ATIVAS.
+**Base pedagógica:** Grice 1975 (máximas conversacionais, violação deliberada de "seja verdadeiro"); Glucksberg 1990 (competição paralela de sentidos literal/não-literal); Brait 1996 (ironia polifônica, duas vozes simultâneas); ENCCEJA/ENEM (questões cobram mecanismo, não rótulo). Fase 3 inclui ironia institucional (memorandos, respostas de suporte) — tipo mais comum no contexto adulto.
+**Estado atual:** B.1, B.2, B.3 e B.4 completas e ativas.
+**Próximo passo sugerido:** Desenvolver B.5 "Texto de notícia" com super pacote de pesquisa primeiro.
+
+### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade B.3 "Inferência: ler o que não está escrito", com currículo e 16 exercícios de inferência em 3 tipos progressivos.
 **Arquivos alterados:**
 - `src/lib/curriculo/b3-inferencia.ts` — [NOVO] Currículo: ancoraPropósito (ler só o explícito vs. ler as entrelinhas), curiosidade sobre inferência causal automática (Graesser 1994), 3 armadilhas em sequência de dificuldade crescente (causal, implícita, conclusiva), preAfericao, projetoIntegrador (analisar comunicado real separando explícito de implícito).
