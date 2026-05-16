@@ -31,6 +31,18 @@
 
 ## Entradas
 
+### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Criação completa da Unidade B.2 "Ideia principal e secundárias", com currículo e 16 exercícios de identificação da ideia principal em textos de contexto trabalhista.
+**Arquivos alterados:**
+- `src/lib/curriculo/b2-ideia-principal.ts` — [NOVO] Currículo: ancoraPropósito (80% da compreensão é a ideia principal), curiosidade sobre Kintsch & van Dijk (ideia principal é construída, não encontrada), 3 armadilhas (detalhe, ideia secundária, ideia ampla demais), pre/posAfericao, projetoIntegrador (analisar texto real).
+- `src/lib/exercicios/b2-ideia-principal.ts` — [NOVO] 16 exercícios: Fase 1 (ex01-06) bloqueado por tipo de erro; Fase 2 (ex07-12) distractores mistos; Fase 3 (ex13-16) textos mais longos com ideia principal implícita. Todos os exercícios usam textos autênticos de contexto trabalhista.
+- `src/lib/exercicios/index.ts` — EXERCICIOS_B2 importado e registrado.
+- `src/app/unidade/[slug]/page.tsx` — B2_IDEIA_PRINCIPAL importado e registrado.
+- `src/app/page.tsx` — "b-2-ideia-principal" em UNIDADES_ATIVAS.
+**Base pedagógica:** Kintsch & van Dijk 1978 (macro-operações: deleção, generalização, construção); Fuzzy Trace Theory (leitores de baixa literacia retêm verbatim, não gist); 3 erros documentados (Shanahan, Keys to Literacy); GIST procedure (Cunningham 1982); Soares/letramento (textos autênticos de contexto real).
+**Estado atual:** B.1 e B.2 completas e ativas.
+**Próximo passo sugerido:** Desenvolver B.3 "Inferência" com super pacote de pesquisa primeiro.
+
 ### 2026-05-15 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade B.1 "Tipologias textuais", primeira unidade do Nível B, com currículo e 16 exercícios de classificação textual.
 **Arquivos alterados:**
