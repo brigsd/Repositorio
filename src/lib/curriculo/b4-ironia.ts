@@ -86,20 +86,6 @@ Dois textos exatamente iguais. Dois entendimentos completamente diferentes. A di
       tiposErro: ["leitura_literal_de_ironia", "contexto_ignorado"],
     },
     {
-      id: "ambiguidade",
-      titulo: "Ambiguidade (duplo sentido)",
-      textoAncora:
-        'A ambiguidade ativa dois sentidos ao mesmo tempo com as mesmas palavras. O humor ou o efeito vem da tensão entre os dois significados possíveis — nenhum anula o outro, os dois coexistem.\n\nComo reconhecer: uma palavra ou expressão tem dois sentidos igualmente válidos no contexto. O humor ou o jogo vem de notar os dois ao mesmo tempo.\n\nArmadilha: ficar preso em apenas um dos sentidos — geralmente o mais óbvio — e perder o efeito do jogo de palavras.',
-      exemplosCertos: [
-        '"Mudamos tudo. Até o seu humor." (empresa de mudanças): "mudar" significa tanto "fazer a mudança de casa" quanto "transformar o estado emocional".',
-        '"Problemas com pressão? Pode falar com a gente." (farmácia): "pressão" pode ser pressão arterial e pressão do dia a dia.',
-      ],
-      exemplosErrados: [
-        'Erro de leitura: interpretar só um dos sentidos e perder o jogo de palavras ("a farmácia atende hipertensos" — verdade, mas perde metade do sentido).',
-      ],
-      tiposErro: ["sentido_unico", "jogo_palavras_ignorado"],
-    },
-    {
       id: "quebra_expectativa",
       titulo: "Quebra de expectativa (virada)",
       textoAncora:
@@ -112,6 +98,20 @@ Dois textos exatamente iguais. Dois entendimentos completamente diferentes. A di
         'Erro de leitura: focar no setup e ignorar a virada — achar que a sugestão vai ser algo grandioso sem perceber que a virada esvaziou a expectativa.',
       ],
       tiposErro: ["setup_ignorado", "virada_nao_percebida"],
+    },
+    {
+      id: "ambiguidade",
+      titulo: "Ambiguidade (duplo sentido)",
+      textoAncora:
+        'A ambiguidade ativa dois sentidos ao mesmo tempo com as mesmas palavras. O humor ou o efeito vem da tensão entre os dois significados possíveis — nenhum anula o outro, os dois coexistem.\n\nComo reconhecer: uma palavra ou expressão tem dois sentidos igualmente válidos no contexto. O humor ou o jogo vem de notar os dois ao mesmo tempo.\n\nArmadilha: ficar preso em apenas um dos sentidos — geralmente o mais óbvio — e perder o efeito do jogo de palavras.\n\nNota: a ambiguidade pode ser intencional (quando o autor cria o jogo propositalmente, como em propagandas) ou pode ser descoberta pelo leitor numa expressão que o autor não percebeu ser dupla. Em ambos os casos, os dois sentidos coexistem na língua — reconhecê-los é a habilidade.',
+      exemplosCertos: [
+        '"Mudamos tudo. Até o seu humor." (empresa de mudanças): "mudar" significa tanto "fazer a mudança de casa" quanto "transformar o estado emocional".',
+        '"Problemas com pressão? Pode falar com a gente." (farmácia): "pressão" pode ser pressão arterial e pressão do dia a dia.',
+      ],
+      exemplosErrados: [
+        'Erro de leitura: interpretar só um dos sentidos e perder o jogo de palavras ("a farmácia atende hipertensos" — verdade, mas perde metade do sentido).',
+      ],
+      tiposErro: ["sentido_unico", "jogo_palavras_ignorado"],
     },
   ],
 

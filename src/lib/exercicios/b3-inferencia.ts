@@ -16,7 +16,7 @@
  * é literalmente verdadeiro mas não é a inferência pedida) — diagnostica
  * e treina o principal erro de leitores em desenvolvimento.
  *
- * Feedback padrão "acknowledge-name-model" (Metcalfe et al. 2009):
+ * Feedback padrão "acknowledge-name-model" (Metcalfe 2017; Bandura; SDT):
  *   [0] socrático: reconhece o que está no texto, aponta o movimento faltante
  *   [1] pista: indica o elemento específico que habilita a inferência
  *   [2] direto: modela a inferência completa
@@ -437,14 +437,14 @@ Com base no texto, por que o médico perguntou sobre o deslocamento a pé e os h
       "O entrevistador ainda tinha outros candidatos para entrevistar antes de decidir.",
     ],
     gabarito:
-      "O entrevistador ficou muito satisfeito com o candidato e provavelmente vai contratá-lo.",
+      "O entrevistador ficou muito satisfeito com o candidato e o considerou o escolhido para a vaga.",
     armadilhaId: "inferencia_conclusao",
     feedbackAcerto:
-      "Exato. **'É esse.'** É a frase mais carregada de implicação de todo o texto. Dita para um colega, logo após a saída do candidato, é uma expressão inequívoca de decisão. O 'vou entrar em contato' foi o protocolo formal; 'é esse' é o que o entrevistador realmente concluiu. O texto contrasta as duas falas para que o leitor faça a inferência.",
+      "Exato. **'É esse.'** É a frase mais carregada de implicação de todo o texto. Dita para um colega, logo após a saída do candidato, é uma expressão inequívoca de decisão. O 'vou entrar em contato' foi o protocolo formal; 'é esse' é o que o entrevistador realmente concluiu. O texto contrasta as duas falas para que o leitor faça a inferência — não vai além disso.",
     feedbackErro: [
       "'O entrevistador disse que entraria em contato' é o protocolo — o que se diz formalmente. Mas o texto acrescenta outra fala, privada, dita depois que o candidato saiu. O que 'é esse' significa nesse contexto?",
-      "Compare as duas falas do entrevistador: a que foi dita ao candidato e a que foi dita ao colega depois. Qual das duas revela o que ele realmente pensou?",
-      "É **'o entrevistador ficou satisfeito e provavelmente vai contratar'**. 'É esse', dito ao colega logo após a entrevista, é a forma coloquial de dizer 'esse é o escolhido'. O contraste entre o protocolo formal e a fala privada é a pista para a inferência.",
+      "Compare as duas falas do entrevistador: a que foi dita ao candidato e a que foi dita ao colega depois. Qual das duas revela o que ele realmente pensou sobre o candidato?",
+      "É **'o entrevistador ficou satisfeito e o considerou o escolhido'**. 'É esse', dito ao colega logo após a entrevista, é a forma coloquial de dizer 'esse é o candidato'. O contraste entre o protocolo formal e a fala privada é a pista para a inferência.",
     ],
   },
 ];

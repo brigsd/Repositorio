@@ -32,6 +32,21 @@
 ## Entradas
 
 ### 2026-05-18 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Revisão aprofundada da B.3 e B.4 contra o super pacote (4 frentes: acadêmica, ensino, psicológica, UX). 6 problemas identificados e corrigidos.
+**Arquivos alterados:**
+- `src/lib/exercicios/b4-ironia.ts` — [CORRIGIDO] (1) Erro gramatical ex01 feedbackErro[2]: "as palavras de elogiam" → "as palavras de elogio". (2) Sequência Fase 1 reordenada: era verbal→ambiguidade→quebra; agora verbal→quebra→ambiguidade (slug b4-ex03/04 = quebra_expectativa, b4-ex05/06 = ambiguidade). Alinha ao Princípio 6 e à CLT: ambiguidade tem maior element interactivity (dois sentidos simultâneos), deve vir depois da quebra (sequencial: setup→virada). (3) ex14 feedbackErro: removida frase "a ambiguidade aqui não é intencional" — reframing para "ambiguidade estava na expressão; a leitora a detectou". (4) ex16 feedbackAcerto: removido "ironia involuntária" — reframing para "ironia verbal institucional" (linguagem de cuidado deliberadamente usada enquanto na prática não atende; enquadramento griceano mantido).
+- `src/lib/curriculo/b4-ironia.ts` — [CORRIGIDO] Ordem de `armadilhas` array: quebra_expectativa agora vem antes de ambiguidade (alinha ao Princípio 6). Adicionada nota ao textoAncora de ambiguidade explicando que o recurso pode ser detectado pelo leitor mesmo sem intenção do autor (resolve inconsistência do ex14 sem contradizer o material de revisão).
+- `src/lib/exercicios/b3-inferencia.ts` — [CORRIGIDO] (5) ex16 gabarito: "provavelmente vai contratá-lo" → "o considerou o escolhido para a vaga" (a própria armadilha conclusiva adverte contra projeção de ação futura = overreach; gabarito agora para na inferência autorizada). (6) Header: citação "Metcalfe et al. 2009" → "Metcalfe 2017; Bandura; SDT".
+- `src/lib/curriculo/b3-inferencia.ts` — [CORRIGIDO] Header Princípio 4: "Metcalfe, Kornell & Finn 2009" era citação incorreta (aquele paper = hypercorrection effect, não feedback method). Recitado como Metcalfe (2017) "Learning from Errors" + Bandura + SDT, com nota explicando o que o paper de 2009 realmente contém.
+**Super pacote (4 frentes — resultados principais):**
+- Acadêmica (pendente — validação teórica de Grice/ironia involuntária)
+- Ensino: blocked→interleaved suportado (reforçado por Brunmair & Richter 2019 e Hwang 2025 para material verbal e alunos de baixa habilidade). Caveat: assistance dilemma — camada 2 (modelo completo) deve ser rapidamente alcançável para não frustrar o aluno EJA.
+- Psicológica: citação Metcalfe 2009 INCORRETA confirmada (hypercorrection effect ≠ feedback method). Reframing correto: Metcalfe 2017 + Bandura (atribuição a processo, não capacidade) + SDT (feedback informacional). Error-based learning suportado; produtive failure mais forte para STEM/alta habilidade.
+- UX: phrasing ENCCEJA/ENEM autêntico (ENEM 2012 bate literal). 4 opções + literal lure = boa prática (Haladyna). Caveat: padrão de distrator sempre igual → test-wiseness. Fase 3 textos longos + scroll → NN/g alerta (low-literacy readers "plow", perdem contexto no scroll; ~45-66 CPL recomendado) — pendente decisão de layout/UX.
+**Estado atual:** B.1, B.2, B.3 e B.4 revisadas e corrigidas; B.1–B.4 completas e ativas.
+**Próximos passos sugeridos:** (a) Avaliar chunking/layout dos textos da Fase 3 (NN/g finding); (b) Desenvolver B.5 "Texto de notícia" com super pacote primeiro.
+
+### 2026-05-18 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Revisão da B.2 contra o super pacote: corrigido overclaim "80%" sem fonte e imprecisão factual sobre Kintsch; removido travessão D-01 do curiosidade.
 **Arquivos alterados:**
 - `src/lib/curriculo/b2-ideia-principal.ts` — `ancoraPropósito.corpo`: "Oitenta por cento da compreensão de leitura é encontrar a ideia principal" (estatística não validada por nenhum princípio do super pacote; 2 dos 4 agentes da B.2 falharam) substituído por "A maior parte da compreensão de leitura depende de uma única habilidade: encontrar a ideia principal". `curiosidade`: "Dois pesquisadores europeus, Kintsch e van Dijk" corrigido para "Dois linguistas, o americano Kintsch e o holandês van Dijk" (Kintsch era professor da Univ. of Colorado em 1978, não europeu). Removido travessão do `curiosidade` (texto visível ao aluno via AncoraProposito → regra D-01).

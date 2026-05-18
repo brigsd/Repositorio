@@ -3,7 +3,10 @@ import type { ExercicioGerado } from "./tipos";
 export const EXERCICIOS_B4: ExercicioGerado[] = [
   // ─────────────────────────────────────────────────────────────
   // FASE 1 — Prática bloqueada por tipo de armadilha (ex01–06)
-  // Ironia verbal (01–02) · Ambiguidade (03–04) · Quebra de expectativa (05–06)
+  // Ironia verbal (01–02) · Quebra de expectativa (03–04) · Ambiguidade (05–06)
+  // Sequência por carga cognitiva: ironia = 1 nível de leitura extra;
+  // quebra = sequencial (setup→virada, um sentido de cada vez);
+  // ambiguidade = simultâneo (dois sentidos ativos ao mesmo tempo → maior carga).
   // ─────────────────────────────────────────────────────────────
 
   {
@@ -25,7 +28,7 @@ O sentido real da fala do chefe é:`,
     feedbackErro: [
       "O chefe acabou de ver João chegar atrasado pela terceira vez. Faz sentido que ele esteja elogiando a pontualidade de verdade?",
       "Quando o contexto e as palavras são opostos (atraso versus 'pontualidade exemplar'), o texto está usando ironia verbal: as palavras dizem o contrário do que significam.",
-      "**Ironia verbal:** o chefe elogiou a pontualidade de alguém que chegou atrasado três vezes. O elogio é falso — é crítica disfarçada. O contexto (três atrasos) revela que as palavras de elogiam na verdade punem.",
+      "**Ironia verbal:** o chefe elogiou a pontualidade de alguém que chegou atrasado três vezes. O elogio é falso — é crítica disfarçada. O contexto (três atrasos) revela que as palavras de elogio na verdade punem.",
     ],
   },
 
@@ -56,58 +59,6 @@ A ironia presente na mensagem da supervisora reside em:`,
   {
     slug: "b4-ex03",
     tipo: "lacuna_unica",
-    armadilhaId: "ambiguidade",
-    enunciado: `Uma empresa de mudanças residenciais veiculou o seguinte anúncio:
-
-"Mudamos tudo. Até o seu humor."
-
-O efeito de sentido do anúncio é produzido pelo fato de que:`,
-    opcoes: [
-      '"Mudar" e "humor" funcionam nos sentidos de mudança de casa e de transformação do estado emocional ao mesmo tempo.',
-      "A empresa promete que o processo de mudança não vai causar estresse.",
-      "O anúncio usa linguagem informal para parecer mais próximo do cliente.",
-      "A empresa garante que vai mudar todos os móveis sem danificar nada.",
-    ],
-    gabarito:
-      '"Mudar" e "humor" funcionam nos sentidos de mudança de casa e de transformação do estado emocional ao mesmo tempo.',
-    feedbackAcerto:
-      '**Correto.** O anúncio usa ambiguidade intencional. "Mudamos tudo" refere-se tanto ao serviço de mudança de casa quanto à transformação geral. "Humor" reforça o duplo sentido: muda o humor ruim típico de uma mudança estressante. Os dois sentidos coexistem e se reforçam.',
-    feedbackErro: [
-      '"Mudamos tudo. Até o seu humor." — uma empresa de mudanças resolve o estresse mudando o quê, exatamente?',
-      'Em propagandas com jogo de palavras, procure a palavra que tem dois sentidos igualmente válidos. "Mudar" e "humor" têm sentidos no campo do serviço (mudança de residência) e no campo emocional (mudar o estado de espírito). Os dois funcionam ao mesmo tempo.',
-      '**Ambiguidade intencional:** "mudar" significa tanto realizar a mudança de casa quanto transformar algo. "Humor" ativa o sentido emocional. Os dois sentidos funcionam simultaneamente — é isso que cria o efeito do anúncio.',
-    ],
-  },
-
-  {
-    slug: "b4-ex04",
-    tipo: "lacuna_unica",
-    armadilhaId: "ambiguidade",
-    enunciado: `Uma farmácia colocou esta placa na entrada:
-
-"Problemas com pressão? Pode falar com a gente."
-
-O humor da placa vem do fato de que:`,
-    opcoes: [
-      '"Pressão" pode ser a pressão arterial (serviço da farmácia) e a pressão do cotidiano (estresse), e os dois sentidos funcionam ao mesmo tempo.',
-      "A farmácia atende clientes com pressão alta e oferece medicamentos específicos.",
-      "A placa usa linguagem acolhedora para aproximar a farmácia dos clientes.",
-      "A frase indica que os farmacêuticos têm formação para dar orientação médica.",
-    ],
-    gabarito:
-      '"Pressão" pode ser a pressão arterial (serviço da farmácia) e a pressão do cotidiano (estresse), e os dois sentidos funcionam ao mesmo tempo.',
-    feedbackAcerto:
-      '**Correto.** A placa usa ambiguidade intencional. "Pressão" ativa dois sentidos: pressão arterial (o serviço real da farmácia) e pressão do dia a dia, estresse (sentido figurado). A frase funciona nos dois sentidos ao mesmo tempo — quem tem hipertensão e quem está sobrecarregado se sentiriam chamados pela placa.',
-    feedbackErro: [
-      'Uma farmácia que resolve "pressão" — pressão de que tipo, exatamente? Pressão arterial ou pressão do dia a dia?',
-      'Quando uma palavra tem dois sentidos válidos no mesmo contexto e nenhum exclui o outro, é ambiguidade intencional. "Pressão" funciona como pressão arterial (serviço da farmácia) e como pressão/estresse (sentido emocional). Os dois estão ativos ao mesmo tempo.',
-      '**Ambiguidade:** "pressão" tem dois sentidos igualmente válidos aqui: pressão arterial (medicamentos) e pressão emocional do cotidiano. A placa funciona para os dois públicos simultaneamente — é isso que cria o efeito.',
-    ],
-  },
-
-  {
-    slug: "b4-ex05",
-    tipo: "lacuna_unica",
     armadilhaId: "quebra_expectativa",
     enunciado: `Durante uma reunião que já durava três horas, um funcionário pediu a palavra:
 
@@ -136,7 +87,7 @@ O humor decorre principalmente do fato de que:`,
   },
 
   {
-    slug: "b4-ex06",
+    slug: "b4-ex04",
     tipo: "lacuna_unica",
     armadilhaId: "quebra_expectativa",
     enunciado: `Um folheto de curso de culinária trazia o seguinte texto em destaque:
@@ -162,6 +113,58 @@ O efeito de sentido do folheto é produzido por:`,
       '"Aprenda a cozinhar como um chef." Mas o chef não está incluído. Então como exatamente você vai aprender como um chef?',
       "A quebra de expectativa aqui é intencional e irônica: o texto promete um resultado (cozinhar como chef) mas subtrai o elemento essencial para isso (o chef). A virada nas letras miúdas esvazia o que foi prometido em destaque.",
       "**Quebra de expectativa:** setup ('aprenda como um chef') + virada ('chef não incluído'). O humor vem de prometer o resultado sem incluir o meio. É uma estrutura clássica de ironia publicitária.",
+    ],
+  },
+
+  {
+    slug: "b4-ex05",
+    tipo: "lacuna_unica",
+    armadilhaId: "ambiguidade",
+    enunciado: `Uma empresa de mudanças residenciais veiculou o seguinte anúncio:
+
+"Mudamos tudo. Até o seu humor."
+
+O efeito de sentido do anúncio é produzido pelo fato de que:`,
+    opcoes: [
+      '"Mudar" e "humor" funcionam nos sentidos de mudança de casa e de transformação do estado emocional ao mesmo tempo.',
+      "A empresa promete que o processo de mudança não vai causar estresse.",
+      "O anúncio usa linguagem informal para parecer mais próximo do cliente.",
+      "A empresa garante que vai mudar todos os móveis sem danificar nada.",
+    ],
+    gabarito:
+      '"Mudar" e "humor" funcionam nos sentidos de mudança de casa e de transformação do estado emocional ao mesmo tempo.',
+    feedbackAcerto:
+      '**Correto.** O anúncio usa ambiguidade intencional. "Mudamos tudo" refere-se tanto ao serviço de mudança de casa quanto à transformação geral. "Humor" reforça o duplo sentido: muda o humor ruim típico de uma mudança estressante. Os dois sentidos coexistem e se reforçam.',
+    feedbackErro: [
+      '"Mudamos tudo. Até o seu humor." — uma empresa de mudanças resolve o estresse mudando o quê, exatamente?',
+      'Em propagandas com jogo de palavras, procure a palavra que tem dois sentidos igualmente válidos. "Mudar" e "humor" têm sentidos no campo do serviço (mudança de residência) e no campo emocional (mudar o estado de espírito). Os dois funcionam ao mesmo tempo.',
+      '**Ambiguidade:** "mudar" significa tanto realizar a mudança de casa quanto transformar algo. "Humor" ativa o sentido emocional. Os dois sentidos funcionam simultaneamente — é isso que cria o efeito do anúncio.',
+    ],
+  },
+
+  {
+    slug: "b4-ex06",
+    tipo: "lacuna_unica",
+    armadilhaId: "ambiguidade",
+    enunciado: `Uma farmácia colocou esta placa na entrada:
+
+"Problemas com pressão? Pode falar com a gente."
+
+O humor da placa vem do fato de que:`,
+    opcoes: [
+      '"Pressão" pode ser a pressão arterial (serviço da farmácia) e a pressão do cotidiano (estresse), e os dois sentidos funcionam ao mesmo tempo.',
+      "A farmácia atende clientes com pressão alta e oferece medicamentos específicos.",
+      "A placa usa linguagem acolhedora para aproximar a farmácia dos clientes.",
+      "A frase indica que os farmacêuticos têm formação para dar orientação médica.",
+    ],
+    gabarito:
+      '"Pressão" pode ser a pressão arterial (serviço da farmácia) e a pressão do cotidiano (estresse), e os dois sentidos funcionam ao mesmo tempo.',
+    feedbackAcerto:
+      '**Correto.** A placa usa ambiguidade intencional. "Pressão" ativa dois sentidos: pressão arterial (o serviço real da farmácia) e pressão do dia a dia, estresse (sentido figurado). A frase funciona nos dois sentidos ao mesmo tempo — quem tem hipertensão e quem está sobrecarregado se sentiriam chamados pela placa.',
+    feedbackErro: [
+      'Uma farmácia que resolve "pressão" — pressão de que tipo, exatamente? Pressão arterial ou pressão do dia a dia?',
+      'Quando uma palavra tem dois sentidos válidos no mesmo contexto e nenhum exclui o outro, é ambiguidade. "Pressão" funciona como pressão arterial (serviço da farmácia) e como pressão/estresse (sentido emocional). Os dois estão ativos ao mesmo tempo.',
+      '**Ambiguidade:** "pressão" tem dois sentidos igualmente válidos aqui: pressão arterial (medicamentos) e pressão emocional do cotidiano. A placa funciona para os dois públicos simultaneamente — é isso que cria o efeito.',
     ],
   },
 
@@ -380,11 +383,11 @@ O comentário da leitora ativa qual sentido da frase que o anúncio não pretend
     gabarito:
       "Se cuidassem do dinheiro dos clientes como do próprio, poderiam gastar, investir mal ou guardar pouco — como muitas pessoas fazem com o próprio dinheiro.",
     feedbackAcerto:
-      "**Correto.** O anúncio pretendia transmitir cuidado e dedicação, mas a frase tem ambiguidade: cuidar do dinheiro alheio como se fosse próprio pode significar gastar sem pensar, investir mal, ou guardar embaixo do colchão, dependendo de como cada pessoa cuida do próprio dinheiro. A leitora ativou o sentido não intencional, que é igualmente válido linguisticamente.",
+      "**Correto.** O anúncio pretendia transmitir cuidado e dedicação, mas a frase tem ambiguidade: 'como se fosse nosso' pressupõe que todos cuidam muito bem do próprio dinheiro — o que nem sempre é verdade. A leitora ativou um sentido que sempre existiu na língua, mas que o anúncio não antecipou. A ambiguidade estava lá; ela apenas apontou.",
     feedbackErro: [
       "Como você cuida do seu próprio dinheiro? Sempre de forma perfeita, ou às vezes gasta mais do que devia, deixa parado, investe errado? A empresa prometeu cuidar do dinheiro dos clientes assim.",
-      "A ambiguidade aqui não é intencional pelo anúncio — mas existe. 'Como se fosse nosso' pressupõe que quem faz o anúncio cuida muito bem do próprio dinheiro. A leitora apontou que isso nem sempre é verdade.",
-      "**Ambiguidade:** 'como se fosse nosso' ativa dois sentidos — com dedicação máxima (sentido intencional do anúncio) e da forma como as pessoas comuns cuidam do próprio dinheiro (às vezes mal). A leitora ativou o sentido que o anúncio não queria destacar.",
+      "'Como se fosse nosso' tem dois sentidos possíveis: com dedicação máxima (o que o anúncio pretendia dizer) e da forma como pessoas reais cuidam do próprio dinheiro (às vezes mal). Os dois sentidos coexistem na expressão — a leitora percebeu o que o anúncio não antecipou.",
+      "**Ambiguidade:** 'como se fosse nosso' ativa dois sentidos — com dedicação máxima (sentido pretendido pelo anúncio) e da forma como as pessoas comuns cuidam do próprio dinheiro (que pode ser bem ou mal). A ambiguidade estava na expressão; a leitora a detectou.",
     ],
   },
 
@@ -448,11 +451,11 @@ A ironia da resposta do suporte está em:`,
     gabarito:
       "A resposta usa linguagem de atenção e melhoria contínua mas não resolve o problema relatado, entregando apenas instruções genéricas.",
     feedbackAcerto:
-      "**Correto.** A resposta do suporte usa ironia involuntária (mas muito comum): o vocabulário promete atenção e cuidado ('feedback valioso', 'melhoria contínua', 'experiência dos usuários') mas o conteúdo entrega apenas uma instrução genérica que não responde ao problema específico relatado. O contraste entre o que foi prometido pelo tom e o que foi entregue pelo conteúdo é a ironia.",
+      "**Correto.** A resposta do suporte usa ironia verbal institucional: o vocabulário declara atenção e cuidado ('feedback valioso', 'melhoria contínua', 'experiência dos usuários') mas o conteúdo real entrega apenas uma instrução genérica que não responde ao problema específico. A organização usa palavras de escuta e cuidado enquanto, na prática, não atende — o contraste entre o que o texto declara e o que ele faz é a ironia.",
     feedbackErro: [
       "A funcionária explicou um problema específico (trava no registro de ocorrências). A resposta disse que o feedback é valioso e mandou reiniciar. O problema foi resolvido?",
-      "Ironia verbal institucional: a linguagem promete atenção e resolução, mas o conteúdo entrega resposta genérica. O contraste entre o que o tom promete e o que o conteúdo entrega é a ironia.",
-      "**Ironia verbal:** 'feedback valioso', 'melhoria contínua', 'experiência dos usuários' — linguagem de cuidado e atenção usada para entregar uma resposta que não aborda o problema relatado. O vocabulário promete uma coisa; o conteúdo entrega outra.",
+      "Ironia verbal institucional: a linguagem declara atenção e resolução, mas o conteúdo entrega resposta genérica. O contraste entre o que o tom promete e o que o conteúdo entrega é a ironia. Textos de suporte e comunicados oficiais frequentemente usam esse padrão.",
+      "**Ironia verbal:** 'feedback valioso', 'melhoria contínua', 'experiência dos usuários' — linguagem de cuidado e atenção deliberadamente usada para entregar uma resposta que não aborda o problema relatado. O vocabulário declara uma coisa; a prática entrega outra.",
     ],
   },
 ];

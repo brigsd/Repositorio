@@ -21,12 +21,16 @@
  *    em vez de gerar a inferência. Cada exercício inclui um "literal lure"
  *    como distractor principal — diagnostica e treina simultaneamente.
  *
- * 4. FEEDBACK "acknowledge-name-model" (Metcalfe, Kornell & Finn 2009):
+ * 4. FEEDBACK "acknowledge-name-model" (Metcalfe 2017; Bandura; Deci & Ryan SDT):
  *    (1) Reconhece o que o aluno leu corretamente.
  *    (2) Nomeia o movimento necessário (inferir, não recuperar).
  *    (3) Modela a inferência explicitamente.
- *    Evita dano à autoeficácia (Bandura) — o aluno leu certo, aplicou
- *    o processo errado.
+ *    Princípio: erros + feedback corretivo enriquecem a aprendizagem
+ *    (Metcalfe 2017, "Learning from Errors", Annu. Rev. Psychol. 68:465-489).
+ *    Framing de processo (não de capacidade) protege autoeficácia (Bandura) —
+ *    o aluno leu certo, aplicou o processo errado.
+ *    Nota: Metcalfe, Kornell & Finn (2009) é sobre o hypercorrection effect
+ *    (erros de alta confiança se corrigem melhor) — não é a fonte deste método.
  *
  * 5. FREIRE / SOARES — letramento e conhecimento prévio:
  *    O adulto chega ao texto com esquemas do vivido. Usar contextos
