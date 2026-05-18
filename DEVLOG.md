@@ -32,6 +32,14 @@
 ## Entradas
 
 ### 2026-05-18 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Revisão da B.2 contra o super pacote: corrigido overclaim "80%" sem fonte e imprecisão factual sobre Kintsch; removido travessão D-01 do curiosidade.
+**Arquivos alterados:**
+- `src/lib/curriculo/b2-ideia-principal.ts` — `ancoraPropósito.corpo`: "Oitenta por cento da compreensão de leitura é encontrar a ideia principal" (estatística não validada por nenhum princípio do super pacote; 2 dos 4 agentes da B.2 falharam) substituído por "A maior parte da compreensão de leitura depende de uma única habilidade: encontrar a ideia principal". `curiosidade`: "Dois pesquisadores europeus, Kintsch e van Dijk" corrigido para "Dois linguistas, o americano Kintsch e o holandês van Dijk" (Kintsch era professor da Univ. of Colorado em 1978, não europeu). Removido travessão do `curiosidade` (texto visível ao aluno via AncoraProposito → regra D-01).
+**Base pedagógica:** Kintsch & van Dijk 1978; Fuzzy Trace Theory; Keys to Literacy/Shanahan (ideia principal é habilidade central, mas nenhuma fonte atribui percentual específico). Pendente discussão: Princípio 4 (GIST procedure / Cunningham 1982) recomenda produção > identificação, mas os 16 exercícios são todos `lacuna_unica`.
+**Estado atual:** B.1 e B.2 revisadas e corrigidas; B.1–B.4 completas e ativas.
+**Próximo passo sugerido:** Decidir com o usuário sobre converter 2-3 exercícios da Fase 3 da B.2 para produção (`escrita_lacuna`/reescrita), alinhando ao GIST procedure.
+
+### 2026-05-18 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Revisão da B.1 contra o super pacote: corrigida divergência de fidelidade a Marcuschi (rótulo "dissertar" atribuído a Marcuschi sem ressalva) e adicionada ressalva ao aluno de que "dissertar" = tipo argumentativo.
 **Arquivos alterados:**
 - `src/lib/curriculo/b1-tipologias.ts` — Cabeçalho (princípios 1 e 2): Marcuschi (2002) tem cinco tipos — narração, descrição, exposição, **argumentação**, **injunção**. Adicionada "NOTA DE RÓTULO" explicando que "dissertar" = argumentação de Marcuschi (não "dissertação expositiva" da escola) e "instruir" = injunção; rótulos adaptados para o aluno ENCCEJA, definições operacionais fiéis a Marcuschi. `textoAncora` de `expor_vs_dissertar`: frase de abertura esclarecendo ao aluno que aqui "dissertar = defender uma tese (tipo argumentativo)" e que "dissertação expositiva" não se aplica nesta unidade. De passagem, removidos 2 travessões do `textoAncora` (texto-base curado que alimenta a IA de explicação).

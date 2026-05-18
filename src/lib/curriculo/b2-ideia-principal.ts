@@ -45,7 +45,7 @@ export const B2_IDEIA_PRINCIPAL: UnidadeCurriculo = {
 
   ancoraPropósito: {
     titulo: "Por que isso importa",
-    corpo: `Oitenta por cento da compreensão de leitura é encontrar a ideia principal. Não importa se é uma notícia, um contrato, um comunicado do RH ou uma mensagem do chefe: quem consegue dizer em uma frase o que aquele texto quer dizer está lendo de verdade. Quem não consegue leu as palavras, mas não leu o texto.
+    corpo: `A maior parte da compreensão de leitura depende de uma única habilidade: encontrar a ideia principal. Não importa se é uma notícia, um contrato, um comunicado do RH ou uma mensagem do chefe: quem consegue dizer em uma frase o que aquele texto quer dizer está lendo de verdade. Quem não consegue leu as palavras, mas não leu o texto.
 
 A dificuldade não é falta de vocabulário. É que nosso cérebro naturalmente guarda o que é vívido, específico e concreto: um número, uma multa, uma data, um nome. Esses detalhes ficam na memória com facilidade. Mas eles costumam ser o apoio da ideia principal, não ela mesma.
 
@@ -59,7 +59,7 @@ Mas o comunicado não era sobre o prazo. O prazo era uma instrução secundária
 Sandra leu tudo. Mas guardou o detalhe mais concreto no lugar da ideia central. Isso é o que esta unidade treina: saber o que o texto quer dizer, não apenas o que ficou na memória.`,
   },
 
-  curiosidade: `Dois pesquisadores europeus, Kintsch e van Dijk, descobriram nos anos 1970 que a ideia principal de um texto não está escrita nele — ela é **construída** pelo leitor. Enquanto lê, o cérebro descarta automaticamente os detalhes dispensáveis, sobe os exemplos para regras mais gerais e sintetiza tudo em uma proposição central. Leitores experientes fazem isso sem perceber. Leitores em desenvolvimento podem aprender a fazer **conscientemente** — e é exatamente isso que você vai praticar aqui.`,
+  curiosidade: `Dois linguistas, o americano Kintsch e o holandês van Dijk, descobriram nos anos 1970 que a ideia principal de um texto não está escrita nele: ela é **construída** pelo leitor. Enquanto lê, o cérebro descarta automaticamente os detalhes dispensáveis, sobe os exemplos para regras mais gerais e sintetiza tudo em uma proposição central. Leitores experientes fazem isso sem perceber. Leitores em desenvolvimento podem aprender a fazer isso **conscientemente**, e é exatamente isso que você vai praticar aqui.`,
 
   armadilhas: [
     {
