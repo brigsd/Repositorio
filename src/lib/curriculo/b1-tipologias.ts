@@ -5,19 +5,25 @@
  *
  * Princípios pedagógicos (super pacote — 2026-05-15):
  *
- * 1. MARCUSCHI (2002): tipo textual é categoria estrutural-funcional
- *    (narrar, descrever, expor, dissertar, instruir). Gênero textual é
- *    o texto social concreto. Textos reais misturam tipos, mas um domina.
- *    Essa heterogeneidade tipológica é esperada, não exceção.
+ * 1. MARCUSCHI (2002): cinco tipos textuais — narração, descrição,
+ *    exposição, argumentação e injunção. Tipo é a categoria
+ *    estrutural-funcional; gênero é o texto social concreto. Textos
+ *    reais misturam tipos, mas um domina (heterogeneidade esperada).
+ *    NOTA DE RÓTULO: esta unidade usa "dissertar" e "instruir" por
+ *    serem os termos da tradição escolar/ENCCEJA que o aluno encontra
+ *    na prova. "dissertar" aqui = a ARGUMENTAÇÃO de Marcuschi (defender
+ *    uma tese com argumentos), NÃO a "dissertação expositiva" da
+ *    escola; "instruir" = a INJUNÇÃO de Marcuschi. As definições
+ *    operacionais seguem Marcuschi; apenas os rótulos são adaptados.
  *
  * 2. CONFUSÕES DOCUMENTADAS (ERIC EJ951348, Strucker et al.):
  *    - narrar × descrever: ambos usam linguagem concreta; distinção é
  *      sequência temporal (narrar) vs. estado estático (descrever).
  *    - expor × dissertar: ambos são informativos; distinção é ausência
  *      de posição autoral (expor) vs. tese explícita (dissertar).
- *    - "dissertar" fundido com "expor" em livros didáticos = fonte
- *      principal de confusão no Brasil. Tratamos como tipos separados,
- *      alinhado com Marcuschi.
+ *    - "dissertação" fundida com "exposição" em livros didáticos =
+ *      fonte principal de confusão no Brasil. Tratamos exposição e
+ *      argumentação como tipos separados, conforme Marcuschi.
  *
  * 3. SCHEMA THEORY (Rumelhart 1980; Kintsch 1998):
  *    Reconhecer o tipo antes de ler ativa o esquema correto e melhora
@@ -73,7 +79,7 @@ Saber o tipo antes de ler economiza tempo e evita confusão. Não porque a leitu
       id: "expor_vs_dissertar",
       titulo: "Expor × dissertar",
       textoAncora:
-        'Exposição e dissertação são os tipos mais confundidos no Brasil, inclusive em livros didáticos. Os dois informam, mas de jeitos opostos: a exposição é neutra — explica como algo funciona sem defender posição. A dissertação tem posição autoral explícita — argumenta, defende, quer convencer.\n\nUma forma rápida de identificar: se o texto diz "é necessário", "deveria", "a empresa precisa" ou apresenta justificativas para uma tese, é dissertação. Se apenas explica fatos, dados ou conceitos sem tomar partido, é exposição.',
+        'Aqui, dissertar significa defender uma tese com argumentos: é o que muitos materiais chamam de tipo argumentativo. Não confunda com "dissertação expositiva": nesta unidade, todo texto que apenas informa sem tomar partido é exposição.\n\nExposição e dissertação são os tipos mais confundidos no Brasil, inclusive em livros didáticos. Os dois informam, mas de jeitos opostos. A exposição é neutra: explica como algo funciona sem defender posição. A dissertação tem posição autoral explícita: argumenta, defende, quer convencer.\n\nUma forma rápida de identificar: se o texto diz "é necessário", "deveria", "a empresa precisa" ou apresenta justificativas para uma tese, é dissertação. Se apenas explica fatos, dados ou conceitos sem tomar partido, é exposição.',
       exemplosCertos: [
         'Expor: "O FGTS é composto por depósitos mensais de 8% do salário. O saldo pode ser sacado em casos previstos por lei."',
         'Dissertar: "A empresa deveria investir em treinamento antes de exigir metas maiores. Treinar custa menos do que corrigir erros."',

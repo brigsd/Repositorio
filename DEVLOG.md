@@ -31,6 +31,14 @@
 
 ## Entradas
 
+### 2026-05-18 — Claude Code — claude/review-devlog-instructions-pnoKu
+**Resumo:** Revisão da B.1 contra o super pacote: corrigida divergência de fidelidade a Marcuschi (rótulo "dissertar" atribuído a Marcuschi sem ressalva) e adicionada ressalva ao aluno de que "dissertar" = tipo argumentativo.
+**Arquivos alterados:**
+- `src/lib/curriculo/b1-tipologias.ts` — Cabeçalho (princípios 1 e 2): Marcuschi (2002) tem cinco tipos — narração, descrição, exposição, **argumentação**, **injunção**. Adicionada "NOTA DE RÓTULO" explicando que "dissertar" = argumentação de Marcuschi (não "dissertação expositiva" da escola) e "instruir" = injunção; rótulos adaptados para o aluno ENCCEJA, definições operacionais fiéis a Marcuschi. `textoAncora` de `expor_vs_dissertar`: frase de abertura esclarecendo ao aluno que aqui "dissertar = defender uma tese (tipo argumentativo)" e que "dissertação expositiva" não se aplica nesta unidade. De passagem, removidos 2 travessões do `textoAncora` (texto-base curado que alimenta a IA de explicação).
+**Base pedagógica:** Marcuschi 2002 (cinco tipos textuais; "dissertação" não é tipo, é categoria escolar = argumentação). Opção (a) escolhida pelo usuário: manter "dissertar" (familiar ao ENCCEJA/redação dissertativo-argumentativa) e corrigir a atribuição + esclarecer ao aluno, em vez de renomear para "argumentar".
+**Estado atual:** B.1 revisada e corrigida; B.1–B.4 completas e ativas.
+**Próximo passo sugerido:** Desenvolver B.5 "Texto de notícia" com super pacote de pesquisa primeiro.
+
 ### 2026-05-16 — Claude Code — claude/review-devlog-instructions-pnoKu
 **Resumo:** Criação completa da Unidade B.4 "Ironia, humor e ambiguidade", com currículo e 16 exercícios em 3 tipos (ironia verbal, ambiguidade, quebra de expectativa).
 **Arquivos alterados:**
